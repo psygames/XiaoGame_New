@@ -19,3 +19,6 @@ Tools/protogen/source/server/__pycache__
 Tools/ConfigTool/source/generator/generator/bin
 Server/MainServer/bin
 Server/BattleServer/bin
+Tools/protogen/source/client/build
+protogen.spec
+Tools/protogen/source/client/dist
