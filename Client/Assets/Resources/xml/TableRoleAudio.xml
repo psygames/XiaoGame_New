@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item stepLeftGlass="int" stepLeftMetal="int" stepRightMetal="int" stepRightStone="int" stepLeftWood="int" meleeHit="int" melee="int" changeGun="int" stepRightGlass="int" zhushi="string" stepLeftStone="int" id="int" jumpLand="int" hurtFire="int" dead="int" stepRightWood="int" jumpBegin="int"/>
+	</type>
+	<data>
+		<item stepLeftGlass="12005" stepLeftMetal="12005" stepRightMetal="12006" stepRightStone="12006" stepLeftWood="12005" meleeHit="12009" melee="12008" changeGun="12007" stepRightGlass="12006" zhushi="1号角色" stepLeftStone="12005" id="1" jumpLand="12003" hurtFire="12004" dead="12001" stepRightWood="12006" jumpBegin="12002"/>
+		<item stepLeftGlass="12005" stepLeftMetal="12005" stepRightMetal="12006" stepRightStone="12006" stepLeftWood="12005" meleeHit="12009" melee="12008" changeGun="12007" stepRightGlass="12006" zhushi="2号角色" stepLeftStone="12005" id="2" jumpLand="12003" hurtFire="12004" dead="12001" stepRightWood="12006" jumpBegin="12002"/>
+	</data>
+</table>

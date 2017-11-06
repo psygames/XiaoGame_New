@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item fontSize="int" name="string" fontStyle="int" id="int"/>
+	</type>
+	<data>
+		<item fontSize="0" name="None" fontStyle="0" id="1"/>
+		<item fontSize="26" name="T26" fontStyle="0" id="26"/>
+		<item fontSize="28" name="T28" fontStyle="0" id="28"/>
+		<item fontSize="30" name="T30" fontStyle="0" id="30"/>
+		<item fontSize="32" name="T32" fontStyle="0" id="32"/>
+		<item fontSize="34" name="T34" fontStyle="0" id="34"/>
+		<item fontSize="36" name="T36" fontStyle="0" id="36"/>
+		<item fontSize="38" name="T38" fontStyle="0" id="38"/>
+		<item fontSize="40" name="T40" fontStyle="0" id="40"/>
+		<item fontSize="42" name="T42" fontStyle="0" id="42"/>
+		<item fontSize="44" name="T44" fontStyle="0" id="44"/>
+		<item fontSize="48" name="T48" fontStyle="0" id="48"/>
+		<item fontSize="50" name="T50" fontStyle="0" id="50"/>
+		<item fontSize="52" name="T52" fontStyle="0" id="52"/>
+		<item fontSize="54" name="T54" fontStyle="0" id="54"/>
+		<item fontSize="60" name="T60" fontStyle="0" id="60"/>
+		<item fontSize="62" name="T62" fontStyle="0" id="62"/>
+		<item fontSize="64" name="T64" fontStyle="0" id="64"/>
+		<item fontSize="72" name="T72" fontStyle="0" id="72"/>
+		<item fontSize="74" name="T74" fontStyle="0" id="74"/>
+		<item fontSize="80" name="T80" fontStyle="0" id="80"/>
+		<item fontSize="100" name="T100" fontStyle="0" id="100"/>
+		<item fontSize="250" name="T250" fontStyle="0" id="250"/>
+		<item fontSize="26" name="T26_B" fontStyle="1" id="1026"/>
+		<item fontSize="28" name="T28_B" fontStyle="1" id="1028"/>
+		<item fontSize="30" name="T30_B" fontStyle="1" id="1030"/>
+		<item fontSize="32" name="T32_B" fontStyle="1" id="1032"/>
+		<item fontSize="34" name="T34_B" fontStyle="1" id="1034"/>
+		<item fontSize="36" name="T36_B" fontStyle="1" id="1036"/>
+		<item fontSize="38" name="T38_B" fontStyle="1" id="1038"/>
+		<item fontSize="40" name="T40_B" fontStyle="1" id="1040"/>
+		<item fontSize="44" name="T44_B" fontStyle="1" id="1044"/>
+		<item fontSize="50" name="T50_B" fontStyle="1" id="1050"/>
+		<item fontSize="54" name="T54_B" fontStyle="1" id="1054"/>
+		<item fontSize="60" name="T60_B" fontStyle="1" id="1060"/>
+		<item fontSize="64" name="T64_B" fontStyle="1" id="1064"/>
+		<item fontSize="90" name="T90_B" fontStyle="1" id="1090"/>
+		<item fontSize="140" name="T140_B" fontStyle="1" id="1140"/>
+		<item fontSize="200" name="T200_B" fontStyle="1" id="1200"/>
+	</data>
+</table>

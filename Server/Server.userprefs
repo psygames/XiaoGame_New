@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{41989999-B8E6-48F2-8ABF-4616E0B2C21C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Plugins/Tool/ProtoSerializer.cs">
+    <Files>
+      <File FileName="Plugins/Network/Imp/Websocket/WebSocketClient.cs" Line="19" Column="1" />
+      <File FileName="Plugins/Network/Imp/Websocket/WebSocketServer.cs" Line="46" Column="1" />
+      <File FileName="BattleServer/Program.cs" Line="18" Column="1" />
+      <File FileName="Plugins/Manager/ServerNetworkManager.cs" Line="29" Column="50" />
+      <File FileName="Plugins/Tool/ProtoSerializer.cs" Line="40" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BattleServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MainServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Plugins PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item id="int" name="string" chestId="int" activeness="int" difficulty="int"/>
+	</type>
+	<data>
+		<item id="1" name="活跃度20的宝箱" chestId="35001" activeness="20" difficulty="1"/>
+		<item id="2" name="活跃度40的宝箱" chestId="35002" activeness="40" difficulty="1"/>
+		<item id="3" name="活跃度60的宝箱" chestId="35003" activeness="60" difficulty="1"/>
+		<item id="4" name="活跃度80的宝箱" chestId="35004" activeness="80" difficulty="1"/>
+		<item id="5" name="活跃度100的宝箱" chestId="35005" activeness="100" difficulty="1"/>
+		<item id="6" name="活跃度20的宝箱" chestId="35006" activeness="20" difficulty="2"/>
+		<item id="7" name="活跃度40的宝箱" chestId="35007" activeness="40" difficulty="2"/>
+		<item id="8" name="活跃度60的宝箱" chestId="35008" activeness="60" difficulty="2"/>
+		<item id="9" name="活跃度80的宝箱" chestId="35009" activeness="80" difficulty="2"/>
+		<item id="10" name="活跃度100的宝箱" chestId="35010" activeness="100" difficulty="2"/>
+		<item id="11" name="活跃度20的宝箱" chestId="35011" activeness="20" difficulty="3"/>
+		<item id="12" name="活跃度40的宝箱" chestId="35012" activeness="40" difficulty="3"/>
+		<item id="13" name="活跃度60的宝箱" chestId="35013" activeness="60" difficulty="3"/>
+		<item id="14" name="活跃度80的宝箱" chestId="35014" activeness="80" difficulty="3"/>
+		<item id="15" name="活跃度100的宝箱" chestId="35015" activeness="100" difficulty="3"/>
+	</data>
+</table>

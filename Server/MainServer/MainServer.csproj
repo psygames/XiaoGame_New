@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <RootNamespace>RedStone</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Plugins\Plugins.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GameData\MatchData.cs" />
+    <Compile Remove="GameData\PlaceStatisticsData.cs" />
+    <Compile Remove="GameData\ChessData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Module\" />
+    <Folder Include="Module\Client\" />
+    <Folder Include="Module\BattleServer\" />
+    <Folder Include="Module\Base\" />
+    <Folder Include="Network\" />
+    <Folder Include="Module\BattleServer\Proxy\" />
+    <Folder Include="Module\Client\Proxy\" />
+  </ItemGroup>
+</Project>

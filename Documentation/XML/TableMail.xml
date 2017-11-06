@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>ZahngRuihao</Author>
+  <LastAuthor>Forrest</LastAuthor>
+  <Created>2015-04-22T08:58:50Z</Created>
+  <LastSaved>2017-08-31T08:57:04Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.6028</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>13755</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="微软雅黑" x:CharSet="134" x:Family="Swiss" ss:Size="11"
+    ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="7" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="15.5625">
+   <Column ss:Width="79.5"/>
+   <Column ss:Width="55.5"/>
+   <Column ss:Width="79.5" ss:Span="2"/>
+   <Column ss:Index="6" ss:Width="300"/>
+   <Column ss:Width="129.75" ss:Span="1"/>
+   <Column ss:Index="9" ss:Width="117"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">id</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">type</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">system</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">language</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">title</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">content</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">rewardType</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">rewardSupType</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">rewardAmount</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">int[]</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">ID</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">邮件类型</Data><Comment
+      ss:Author="Forrest"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">Forrest:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;1 不带奖励的邮件 公告等&#10;2 领奖类邮件</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">产出邮件系统</Data><Comment
+      ss:Author="Forrest"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">Forrest:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;1 赛季邮件</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">语言</Data><Comment
+      ss:Author="Forrest"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">Forrest:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;1=英文&#10;2=中文&#10;3=俄文</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">标题</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">内容</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">奖励类型</Data><Comment
+      ss:Author="Forrest"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">Forrest:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;1 普通物品&#10;2 资源&#10;3 消耗品 枪械配件&#10;4 宝箱</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">奖励子类型</Data><Comment
+      ss:Author="Forrest"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">Forrest:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;对应前一列&#10;物品：subType=具体物品id&#10;资源：1 军费&#10;      2 钻石&#10;      3 赛季奖牌</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">奖励数量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">赛季结算邮件</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">你在第%s赛季获得天梯排名为%s级，特发此邮件奖励</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">赛季场次奖励</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">昨天你的赛季场次奖励没有领取，特发此邮件</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">season</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">%sth season, rank level %s, reward</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">season battle reward</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">yesttoday season battle reward</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">[]</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51111111111111096"/>
+    <Footer x:Margin="0.51111111111111096"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <PageBreakZoom>100</PageBreakZoom>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>9</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="15.5625">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51111111111111096"/>
+    <Footer x:Margin="0.51111111111111096"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="15.5625">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51111111111111096"/>
+    <Footer x:Margin="0.51111111111111096"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 2ff4bc3d6337943429a0ee9d6aed7b98
+timeCreated: 1471333081
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Quantico
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c3071e43b9865fb448428bda9d72cc49, type: 3}
+  - {fileID: 12800000, guid: 5dd6600b47069164182dd561ff12ec34, type: 3}
+  - {fileID: 12800000, guid: 41394d5eafcede841b2600faa2f738a3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: font/quantico/quantico.bytes
+  assetBundleVariant: 

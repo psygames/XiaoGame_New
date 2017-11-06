@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>CoolFish002</Author>
+  <LastAuthor>CoolFish002</LastAuthor>
+  <Created>2015-02-10T09:55:29Z</Created>
+  <LastSaved>2016-07-21T10:47:54Z</LastSaved>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.5603</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>14835</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="常规 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Name="常规 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s65" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s67" ss:Parent="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s68" ss:Parent="s62">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s69" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s70" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="18" ss:ExpandedRowCount="29" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="156.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="156"/>
+   <Column ss:AutoFitWidth="0" ss:Width="293.25" ss:Span="2"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="261" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="204"/>
+   <Column ss:AutoFitWidth="0" ss:Width="195"/>
+   <Column ss:AutoFitWidth="0" ss:Width="204.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="381"/>
+   <Column ss:AutoFitWidth="0" ss:Width="246"/>
+   <Column ss:AutoFitWidth="0" ss:Width="273"/>
+   <Column ss:AutoFitWidth="0" ss:Width="261"/>
+   <Column ss:AutoFitWidth="0" ss:Width="210.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="246"/>
+   <Column ss:AutoFitWidth="0" ss:Width="180.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">weaponAnimatonType</Data></Cell>
+    <Cell><Data ss:Type="String">attachPoint</Data></Cell>
+    <Cell><Data ss:Type="String">ikDirection</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterDownPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterCenterPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterUpPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadBeginPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadNormalPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadEndPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimReloadPath</Data></Cell>
+    <Cell><Data ss:Type="String">normalShootPath</Data></Cell>
+    <Cell><Data ss:Type="String">normalIdleUpperPath</Data></Cell>
+    <Cell><Data ss:Type="String">normalRunUpperPath</Data></Cell>
+    <Cell><Data ss:Type="String">hallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">walkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">M4Carbine Rifle</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/M4CarbineAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">H&amp;K MP5 SubmachineGun</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/MPSNaryAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">M60 MachineGun</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AK47Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">Steyr SSG-69</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AWPAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">MossBerg M590</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/NovaAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Franchi SPAS 12</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/NovaAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Striker</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/NovaAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">Imi Uzi</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/MPSNaryAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">SMG9</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/M4CarbineAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">DragunoySYD</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/SYDAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">M870</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/M590RIAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">Serbu Super-Shorty</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/NovaAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">FN P90</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/MPSNaryAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">M1014</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/M590RIAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">AWP</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/Sleyr69Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">FN SCAR</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/BerylAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">AK47 Rifle</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AK47Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">MP7A1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/HKG3Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">UMP SubmachineGun</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/HGKUMPAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/MP5/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">HKG36 Rifle</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/HKG36Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/M4A1/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">RPG</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/HKG36Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-33.511,-19.4288,128.8366)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">DesertEagle</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/DesertEagleAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-33.511,-19.4288,128.8366)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Revolver</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/DesertEagleAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-33.511,-19.4288,128.8366)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/HandGun/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">M249 MachineGun</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AK47Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">Dragunoy SVD</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/SYDAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">SRS</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/Sleyr69Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Nova/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalIdleUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/NormalRunUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/WalkUpper</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Woman/Sniper/Chambering</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <PageBreakZoom>100</PageBreakZoom>
+   <Selected/>
+   <LeftColumnVisible>13</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>25</ActiveRow>
+     <ActiveCol>17</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

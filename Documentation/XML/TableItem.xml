@@ -1,0 +1,2007 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>shuzhi</Author>
+  <LastAuthor>qinyujie</LastAuthor>
+  <Created>2016-03-08T06:17:16Z</Created>
+  <LastSaved>2017-09-07T09:46:40Z</LastSaved>
+  <Company>Microsoft</Company>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12975</WindowHeight>
+  <WindowWidth>20760</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="常规 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Name="常规 2 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s64" ss:Name="常规 2 4">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s65" ss:Name="常规 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s66" ss:Name="常规 4">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s67" ss:Name="常规 6">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s68" ss:Name="常规 7">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s69">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s72" ss:Parent="s66">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s73">
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s75" ss:Parent="s66">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s77" ss:Parent="s67">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s79" ss:Parent="s63">
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s80" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s82" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s84" ss:Parent="s64">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s85" ss:Parent="s63">
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s86" ss:Parent="s63">
+   <Interior ss:Color="#CC66FF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s87" ss:Parent="s63">
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s88" ss:Parent="s63">
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s89" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s91" ss:Parent="s65">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s92" ss:Parent="s63">
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s93" ss:Parent="s66">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s94" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s95" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s96" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s97" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#CC66FF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s98" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s99" ss:Parent="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFD966" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s100">
+   <Alignment ss:Vertical="Bottom"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s101" ss:Parent="s63">
+   <Interior ss:Color="#FFD966" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s102">
+   <Interior ss:Color="#8EA9DB" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s103">
+   <Alignment ss:Vertical="Center"/>
+   <Interior ss:Color="#8EA9DB" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s104">
+   <Alignment ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s108">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#8EA9DB" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s109">
+   <Interior ss:Color="#A9D08E" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s110">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#A9D08E" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s111">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#A9D08E" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s112">
+   <Interior ss:Color="#F4B084" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s113">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#F4B084" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s114">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#F4B084" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s115">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Interior ss:Color="#F4B084" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s116">
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s117">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s118">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s119">
+   <Alignment ss:Vertical="Bottom"/>
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s120">
+   <Interior ss:Color="#A6A6A6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s121">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#A6A6A6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s122">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#A6A6A6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s123">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#A6A6A6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s124">
+   <Alignment ss:Vertical="Bottom"/>
+   <Interior ss:Color="#A6A6A6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s125">
+   <Interior ss:Color="#FFC000" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s126">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#FFC000" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s127">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFC000" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="23" ss:ExpandedRowCount="65" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="158.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="155.25"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="149.25" ss:Span="1"/>
+   <Column ss:Index="8" ss:AutoFitWidth="0" ss:Width="215.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="87"/>
+   <Column ss:AutoFitWidth="0" ss:Width="159.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="56.25" ss:Span="2"/>
+   <Column ss:Index="16" ss:AutoFitWidth="0" ss:Width="72"/>
+   <Column ss:Index="18" ss:AutoFitWidth="0" ss:Width="42"/>
+   <Column ss:Index="21" ss:Width="163.5"/>
+   <Column ss:Width="196.5"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">nameID</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">imageID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">description</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">descriptionID</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">functionType</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">functionParam1</Data></Cell>
+    <Cell><Data ss:Type="String">typeLanguage</Data></Cell>
+    <Cell><Data ss:Type="String">quality</Data></Cell>
+    <Cell><Data ss:Type="String">stage</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;0 为不显示这个星级</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">subType</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;①： 同一个技能的同一个植入体 不同品质的物品ID属于一个植入体&#10;&#10;②：补给品类型&#10;    1 突击兵&#10;    2 侦察兵&#10;    3 工程兵&#10;    4 支援兵&#10;&#10;③：改造包类型&#10;    1 枪口&#10;    2 枪身&#10;    3 枪托</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">fundPrice</Data></Cell>
+    <Cell><Data ss:Type="String">diamondPrice</Data></Cell>
+    <Cell><Data ss:Type="String">fundSellPrice</Data></Cell>
+    <Cell><Data ss:Type="String">diamondSellPrice</Data></Cell>
+    <Cell><Data ss:Type="String">exchangeGoods</Data></Cell>
+    <Cell><Data ss:Type="String">exchangeNumber</Data></Cell>
+    <Cell><Data ss:Type="String">sellGoods</Data></Cell>
+    <Cell><Data ss:Type="String">qualityNameID</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">shopIcon</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">shopName</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="36.75">
+    <Cell><Data ss:Type="String">物品ID</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;10000 &#10;1开头的是合成枪械、枪械升级用的图纸&#10;2开头的是部件升级用的改造包&#10;3开头的是货箱&#10;4开头的是补给品&#10;5开头的是植入体（植入体都是使用完一场之后就消失的）</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">物品名称</Data></Cell>
+    <Cell><Data ss:Type="String">物品名</Data></Cell>
+    <Cell><Data ss:Type="String">物品图标</Data></Cell>
+    <Cell><Data ss:Type="String">物品描述</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">物品描述多语言Id</Data></Cell>
+    <Cell><Data ss:Type="String">物品类型</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;1.枪械图纸&#10;2.改造包&#10;3.槍械普通零件&#10;4.槍械稀有零件&#10;5.植入体&#10;6.补给品&#10;7.可以使用的道具</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">如果物品可以使用，使用后的收益类型</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">物品使用收益数量</Data></Cell>
+    <Cell><Data ss:Type="String">物品类型多语言</Data></Cell>
+    <Cell><Data ss:Type="String">物品品质</Data></Cell>
+    <Cell><Data ss:Type="String">物品stage</Data></Cell>
+    <Cell><Data ss:Type="String">子类型</Data></Cell>
+    <Cell><Data ss:Type="String">军费价格</Data></Cell>
+    <Cell><Data ss:Type="String">钻石价格</Data></Cell>
+    <Cell><Data ss:Type="String">军费出售价格</Data></Cell>
+    <Cell><Data ss:Type="String">钻石出售价格</Data></Cell>
+    <Cell><Data ss:Type="String">兑换所需物品</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;兑换这个物品所需的原材料ID</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">兑换所需数量</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;兑换这个物品所需的原材料数量</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">出售获取物品</Data><Comment ss:Author="shuzhi"><ss:Data
+       xmlns="http://www.w3.org/TR/REC-html40"><B><Font html:Size="9"
+         html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;将这个物品卖掉 所获取的原材料数量</Font></ss:Data></Comment></Cell>
+    <Cell><Data ss:Type="String">多语言</Data></Cell>
+    <Cell><Data ss:Type="String">商店出售ICON ID</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">商店展示名</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10010</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">M4Carbine Rifle图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_M4A1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M4_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">shop_gun_image_m4a1</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_M4A1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10011</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">H&amp;K MP5 SubmachineGun图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MP5</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_MP5_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s80"><Data ss:Type="String">shop_gun_image_mp5</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MP5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10012</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">M60 MachineGun图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_M60</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M60_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">shop_gun_image_m60</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_M60</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10013</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Steyr SSG-69图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SSG69</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SSG69_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">shop_gun_image_sleyr69</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SSG69</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10014</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">MossBerg M590图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MOSSBERG_M590</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M590_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s87"><Data ss:Type="String">shop_gun_image_m590</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MOSSBERG_M590</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10015</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Franchi SPAS 12图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SPAS12</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SPAS_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s88"><Data ss:Type="String">shop_gun_image_spas12</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SPAS12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10016</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Striker图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_STRIKER</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_STRIKER_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s89"><Data ss:Type="String">shop_gun_image_striker</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_STRIKER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10017</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Imi Uzi图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_UZI</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_UZI_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">shop_gun_image_imiuzi</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_UZI</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10018</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">SMG9图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SMG9</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SMG9_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">shop_gun_image_smg9</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SMG9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10019</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">M870图纸</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_M870</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M870_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s94"><Data ss:Type="String">shop_gun_image_m870</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_M870</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10020</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Serbu Super-Shorty图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SERBU_SUPER_SHORTY</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SERBU_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s87"><Data ss:Type="String">shop_gun_image_supershorty</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_SERBU_SUPER_SHORTY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10021</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">FN P90</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_P90</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_P90_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s95"><Data ss:Type="String">shop_gun_image_p90</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_P90</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10022</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">M1014图纸</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_M1014</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M1014_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s96"><Data ss:Type="String">shop_gun_image_m1014</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="String">WEAPON_NAME_M1014</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10023</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">AWP图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_AWP</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_AWP_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">shop_gun_image_awp</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_AWP</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10024</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">FN SCAR图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_FN_SCAR</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_FN_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">shop_126</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_FN_SCAR</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10025</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">AK47 Rifle图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_AK47</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_AK_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">shop_gun_image_ak47</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_AK47</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10026</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">MP7A1图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MP7A1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_MP7_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">shop_128</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_MP7A1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10027</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">UMP SubmachineGun图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_HK_UMP</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_UMP_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">shop_gun_image_ump</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_HK_UMP</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10028</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">HKG36 Rifle图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_HK_G36</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_HKG36_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s79"><Data ss:Type="String">shop_gun_image_hkg36</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_HK_G36</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10029</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">DesertEagle图纸</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_DESERT_EAGLE</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_DESERT_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">shop_gun_image_deserteagles</Data></Cell>
+    <Cell ss:StyleID="s75"><Data ss:Type="String">WEAPON_NAME_DESERT_EAGLE</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10030</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Revolver图纸</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">WEAPON_NAME_REVOLVER</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_REVOLVER_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">shop_gun_image_revolver</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">WEAPON_NAME_REVOLVER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10031</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">M249 MachineGun图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_M249_SAW</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_M249_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s85"><Data ss:Type="String">shop_113</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_M249_SAW</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10032</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">Dragunoy SVD图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SVD</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SVD_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">shop_gun_image_svd</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SVD</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10033</Data></Cell>
+    <Cell ss:StyleID="s82"><Data ss:Type="String">SRS图纸</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SRS</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">GUN_EVOLVE_DESCRIPTION</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s73"><Data ss:Type="String">BLUEPRINT_QUALITY_COMMON</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">shop_114</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">WEAPON_NAME_SRS</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s102">
+    <Cell><Data ss:Type="Number">40001</Data></Cell>
+    <Cell><Data ss:Type="String">突击兵补给品</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ASSAULT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40010</Data></Cell>
+    <Cell><Data ss:Type="String">突击兵升星用补给品</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ASSAULT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">shop_icon_supply_profession_1</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ASSAULT_UPGRADE_SUPPLY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s102">
+    <Cell><Data ss:Type="Number">40002</Data></Cell>
+    <Cell><Data ss:Type="String">工程兵补给品</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ENGINEER_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40012</Data></Cell>
+    <Cell><Data ss:Type="String">工程兵升星用补给品</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ENGINEER_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_supply_profession_3</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ENGINEER_UPGRADE_SUPPLY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s102">
+    <Cell><Data ss:Type="Number">40003</Data></Cell>
+    <Cell><Data ss:Type="String">支援兵补给品</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SUPPORT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40013</Data></Cell>
+    <Cell><Data ss:Type="String">支援兵升星用补给品</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SUPPORT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_supply_profession_4</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SUPPORT_UPGRADE_SUPPLY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s102">
+    <Cell><Data ss:Type="Number">40004</Data></Cell>
+    <Cell><Data ss:Type="String">侦察兵补给品</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SCOUT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40011</Data></Cell>
+    <Cell><Data ss:Type="String">侦察兵升星用补给品</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SCOUT_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_supply_profession_2</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">SCOUT_UPGRADE_SUPPLY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s102">
+    <Cell><Data ss:Type="Number">40005</Data></Cell>
+    <Cell><Data ss:Type="String">之后职业的补给品</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">8203</Data></Cell>
+    <Cell><Data ss:Type="String">可以留作之后的职业使用</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="Number">125</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_supply</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="String">HERO_UPGRADE_SUPPLY</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50001</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40019</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_body</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50002</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40019</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_body</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50003</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL3</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40019</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_body</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50004</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL4</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40019</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_body</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50005</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40019</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪身</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_body</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BODY_MATERIAL5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50006</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40018</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_barrel</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50007</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40018</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_barrel</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50008</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL3</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40018</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_barrel</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50009</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL4</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40018</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_barrel</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50010</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40018</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪口</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_barrel</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_BARREL_MATERIAL5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50011</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40020</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_stock</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50012</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40020</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_stock</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50013</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL3</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40020</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_stock</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50014</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL4</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40020</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_stock</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s109">
+    <Cell><Data ss:Type="Number">50015</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40020</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">枪托</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_GUN_MATERIAL</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ITEM_MATERIAL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_gun_part_stock</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">GUN_PART_STOCK_MATERIAL5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16010</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">突击兵战术手雷图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">突击兵战术手雷图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16011</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">突击兵肾上腺素图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">突击兵肾上腺素图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16020</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">支援兵治疗迷雾图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">支援兵治疗迷雾图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16021</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">支援兵防暴盾牌图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">支援兵防暴盾牌图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16030</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">工程兵地雷图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">工程兵地雷图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16031</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">工程兵哨位炮图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">工程兵哨位炮图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16040</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">侦察兵滚雷图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">侦察兵滚雷图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell><Data ss:Type="Number">16041</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">侦察兵战术目镜图纸</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:Formula="=RC[-3]"><Data ss:Type="String">侦察兵战术目镜图纸</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s115"><Data ss:Type="String">ITEM_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell><Data ss:Type="String">WEAPON_PART_NAME_STOCK</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s116">
+    <Cell><Data ss:Type="Number">20001</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">枪管改造包</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_BARREL_TUNER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40006</Data></Cell>
+    <Cell><Data ss:Type="String">枪械升星用改造包</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_gun_tuner_kit_part_1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_BARREL_TUNER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s116">
+    <Cell><Data ss:Type="Number">20002</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">枪身改造包</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_BODY_TUNER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40007</Data></Cell>
+    <Cell><Data ss:Type="String">枪械升星用改造包</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_gun_tuner_kit_part_2</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_BODY_TUNER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s116">
+    <Cell><Data ss:Type="Number">20003</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="String">枪托改造包</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_STOCK_TUNER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40008</Data></Cell>
+    <Cell><Data ss:Type="String">枪械升星用改造包</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_gun_tuner_kit_part_3</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="String">GUN_PART_STOCK_TUNER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s120">
+    <Cell><Data ss:Type="Number">20004</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="String">外派任务时间卡</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="String">GUN_PART_STOCK_TUNER</Data></Cell>
+    <Cell><Data ss:Type="Number">8103</Data></Cell>
+    <Cell ss:StyleID="s123"><Data ss:Type="String">外派任务时间卡</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">3600</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:Formula="=ROUND(RC[-1]/12,-1)"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">ITEM_RETROFIT_BOX</Data></Cell>
+    <Cell><Data ss:Type="String">icon_gun_material_stock</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="String">GUN_PART_STOCK_TUNER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">30001</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">核心</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CORE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40009</Data></Cell>
+    <Cell><Data ss:Type="String">主动技能升级材料</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CORE</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CORE</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_profession_skill_material</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CORE</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">30002</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">芯片</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CHIP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40005</Data></Cell>
+    <Cell><Data ss:Type="String">枪械特性升级材料</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CHIP</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CHIP</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">shop_icon_gun_skill_material</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_CHIP</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">60001</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">突击兵经验值</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ASSAULT</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40014</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">突击兵经验值</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_exp_profession_1</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ASSAULT</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">60002</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">侦察兵经验值</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_SCOUT</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40015</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">侦察兵经验值</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_exp_profession_2</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_SCOUT</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">60003</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">工程兵经验值</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ENGINEER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40016</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">工程兵经验值</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_exp_profession_3</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ENGINEER</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s125">
+    <Cell><Data ss:Type="Number">60004</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">支援兵经验值</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_SUPPORT</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">40017</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="String">支援兵经验值</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">SHOP_SRS_BLUEPRINT</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_ALL</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">icon_exp_profession_4</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">ITEM_EXP_SUPPORT</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitVertical>2</SplitVertical>
+   <LeftColumnRightPane>15</LeftColumnRightPane>
+   <ActivePane>1</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>21</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>C1</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(C1, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R28C3:R31C3,R28C21:R31C21,R28C23:R31C23</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(C1, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='background:black'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R4C1:R47C1</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R4C1:R32C1, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>

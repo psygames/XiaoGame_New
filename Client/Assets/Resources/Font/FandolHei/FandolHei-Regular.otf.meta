@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f2b527abf4b725b4e8848fe5cb345a10
+timeCreated: 1467687890
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - FandolHei
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 26291b3679edc45498af61978fb776bd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: font/fandolhei/fandolhei.bytes
+  assetBundleVariant: 

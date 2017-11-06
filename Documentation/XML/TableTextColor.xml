@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <LastAuthor>Kimi</LastAuthor>
+  <Created>2006-09-16T00:00:00Z</Created>
+  <LastSaved>2017-06-29T03:35:49Z</LastSaved>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.6065</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>16440</WindowHeight>
+  <WindowWidth>18000</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="TableSkill">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="31" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="87" ss:Span="1"/>
+   <Column ss:Index="4" ss:StyleID="s62" ss:Width="173.25"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">desc</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">order</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Color</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">文本颜色ID</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">文本颜色名</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">文本颜色名</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">色值(可填6位或8位，可以以#开头)</Data></Cell>
+    <Cell><Data ss:Type="String">sort order</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="31.5">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">None</Data></Cell>
+    <Cell><Data ss:Type="String">None</Data></Cell>
+    <Cell><Data ss:Type="String">FFFFFF</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">白1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">white2</Data></Cell>
+    <Cell><Data ss:Type="String">e9fdff</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">白2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">white3</Data></Cell>
+    <Cell><Data ss:Type="String">bbc7c9</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">白3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">white4</Data></Cell>
+    <Cell><Data ss:Type="String">929b9d</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">白4</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">white5</Data></Cell>
+    <Cell><Data ss:Type="String">6f7274</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow1</Data></Cell>
+    <Cell><Data ss:Type="String">f6e2c1</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow2</Data></Cell>
+    <Cell><Data ss:Type="String">fde384</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow3</Data></Cell>
+    <Cell><Data ss:Type="String">f2cd0d</Data></Cell>
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄4</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow4</Data></Cell>
+    <Cell><Data ss:Type="String">ffba00</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄5</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow5</Data></Cell>
+    <Cell><Data ss:Type="String">ffa21d</Data></Cell>
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">黄6</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">yellow6</Data></Cell>
+    <Cell><Data ss:Type="String">90611d</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">白1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">white1</Data></Cell>
+    <Cell><Data ss:Type="String">fffaed</Data></Cell>
+    <Cell><Data ss:Type="Number">0.5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">41</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue1</Data></Cell>
+    <Cell><Data ss:Type="String">bce2e7</Data></Cell>
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">42</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue2</Data></Cell>
+    <Cell><Data ss:Type="String">94b0bd</Data></Cell>
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">43</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue3</Data></Cell>
+    <Cell><Data ss:Type="String">93dfff</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">44</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝4</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue4</Data></Cell>
+    <Cell><Data ss:Type="String">6fc4e6</Data></Cell>
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝5</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue5</Data></Cell>
+    <Cell><Data ss:Type="String">0ddaff</Data></Cell>
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">46</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">蓝6</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">blue6</Data></Cell>
+    <Cell><Data ss:Type="String">4f7ea2</Data></Cell>
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">51</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red1</Data></Cell>
+    <Cell><Data ss:Type="String">ffedec</Data></Cell>
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">52</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red2</Data></Cell>
+    <Cell><Data ss:Type="String">f0cdc9</Data></Cell>
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">53</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red3</Data></Cell>
+    <Cell><Data ss:Type="String">f37474</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">54</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红4</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red4</Data></Cell>
+    <Cell><Data ss:Type="String">fb4925</Data></Cell>
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">55</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红5</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red5</Data></Cell>
+    <Cell><Data ss:Type="String">c63647</Data></Cell>
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红6</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red6</Data></Cell>
+    <Cell><Data ss:Type="String">8f473e</Data></Cell>
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">57</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">红7</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">red7</Data></Cell>
+    <Cell><Data ss:Type="String">9f7676</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">61</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">绿1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">green1</Data></Cell>
+    <Cell><Data ss:Type="String">0ef9f1</Data></Cell>
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">62</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">绿2</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">green2</Data></Cell>
+    <Cell><Data ss:Type="String">2aacaa</Data></Cell>
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">63</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">绿3</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">green3</Data></Cell>
+    <Cell><Data ss:Type="String">327974</Data></Cell>
+    <Cell><Data ss:Type="Number">27</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitHorizontal>3</SplitHorizontal>
+   <TopRowBottomPane>3</TopRowBottomPane>
+   <SplitVertical>2</SplitVertical>
+   <LeftColumnRightPane>2</LeftColumnRightPane>
+   <ActivePane>0</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+     <ActiveCol>8</ActiveCol>
+    </Pane>
+    <Pane>
+     <Number>2</Number>
+     <ActiveRow>84</ActiveRow>
+    </Pane>
+    <Pane>
+     <Number>0</Number>
+     <ActiveRow>15</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>C1</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(C1, RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>C1</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R1C1:R3C1,RC)+COUNTIF(#REF!,RC)+COUNTIF(#REF!,RC)+COUNTIF(R4C1:R1048576C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>

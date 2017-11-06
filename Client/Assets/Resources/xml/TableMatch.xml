@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item matchType="int" energyCost="int" matchName="string" id="int"/>
+	</type>
+	<data>
+		<item matchType="1" energyCost="2" matchName="日常赛事" id="1"/>
+		<item matchType="2" energyCost="2" matchName="每日赛事" id="2"/>
+		<item matchType="3" energyCost="2" matchName="天梯赛事" id="3"/>
+	</data>
+</table>

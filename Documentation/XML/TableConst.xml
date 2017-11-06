@@ -1,0 +1,2563 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>zhangruihao</Author>
+  <LastAuthor>Administrator</LastAuthor>
+  <Created>2015-09-17T08:59:31Z</Created>
+  <LastSaved>2017-09-15T09:33:09Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.6747</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12705</WindowHeight>
+  <WindowWidth>25035</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>7</ActiveSheet>
+  <FirstVisibleSheet>3</FirstVisibleSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s27" ss:Name="差">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#800000"/>
+   <Interior ss:Color="#FFC7CE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s26" ss:Name="好">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#008000"/>
+   <Interior ss:Color="#C6EFCE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s28" ss:Name="适中">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#993300"/>
+   <Interior ss:Color="#FFEB9C" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s89">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s90">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+  </Style>
+  <Style ss:ID="s91">
+   <Interior ss:Color="#D8E4BC" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s92">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior ss:Color="#D8E4BC" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s93">
+   <NumberFormat/>
+  </Style>
+  <Style ss:ID="s94">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s97" ss:Parent="s26">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s100" ss:Parent="s27">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s103" ss:Parent="s28">
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s113">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="CommonConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="85" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Width="54.75"/>
+   <Column ss:Width="176.25"/>
+   <Column ss:Width="90"/>
+   <Column ss:Width="63"/>
+   <Column ss:Width="163.5"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s89"><Data ss:Type="String">fund</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">9000</Data></Cell>
+    <Cell><Data ss:Type="String">军费</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">diamond</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">钻石</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">professionid</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">[1]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">创建角色初始职业</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">medal</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">900</Data></Cell>
+    <Cell><Data ss:Type="String">狗牌</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">primaryGunId</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">主枪械id</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">secondaryGunId</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">副枪械id</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="String">equipLevel</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">[1,1,1]</Data></Cell>
+    <Cell><Data ss:Type="String">装备等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">consumableId</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">[2]</Data></Cell>
+    <Cell><Data ss:Type="String">消耗品</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">9</Data></Cell>
+    <Cell><Data ss:Type="String">matchType</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">赛事类型</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">killScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">击杀得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">mutilKillCount</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">连杀数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">12</Data></Cell>
+    <Cell><Data ss:Type="String">mutilKillRate</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">连杀得分增长率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="String">mutilKillScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">连杀得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">firstBloodScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">一血得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="String">assistsScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">助攻得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="String">meleeFirst</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="String">混战第一名得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="String">meleeSecond</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">混战第二名得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="String">meleeThird</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell><Data ss:Type="String">混战第三名得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="String">winScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell><Data ss:Type="String">胜利得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">drawScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">平局得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell><Data ss:Type="String">revengeScore</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">复仇得分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="String">itemNumber</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">150</Data></Cell>
+    <Cell><Data ss:Type="String">道具数量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">guildMemberMax</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">军团人数上限</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">vicePresidentMax</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">副团长人数上限</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">eliteMax</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">精英人数上限</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">reJoinTime</Data><Comment
+      ss:Author="shuzhi"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;单位：小时</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">退团后重新加入时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">27</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">reJoinDonateTime</Data><Comment
+      ss:Author="shuzhi"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;单位：小时</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">重新加入军团后的捐赠时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">askDonateTime</Data><Comment
+      ss:Author="shuzhi"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;单位：小时</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">请求捐赠的时间间隔</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">openGuildLevel</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">开启军团等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">foundGuildCost</Data><Comment
+      ss:Author="shuzhi"><ss:Data xmlns="http://www.w3.org/TR/REC-html40"><B><Font
+         html:Size="9" html:Color="#000000">shuzhi:</Font></B><Font html:Size="9"
+        html:Color="#000000">&#10;货币单位：钻石</Font></ss:Data></Comment></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">创建军团花费</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">consumableTime</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">86400000</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">消耗品有效时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell><Data ss:Type="String">AccessoryBagSize</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">40</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">枪械配件背包大小</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">33</Data></Cell>
+    <Cell><Data ss:Type="String">SkillImplantUnlockTier</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">技能植入体解锁Tier等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">36</Data></Cell>
+    <Cell><Data ss:Type="String">PassiveSkillUnloLevel</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">人物被动技能解锁等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">37</Data></Cell>
+    <Cell><Data ss:Type="String">ShieldRecoverInterval</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="String">护盾回复间隔</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">38</Data></Cell>
+    <Cell><Data ss:Type="String">characteristicsUnlockTier</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s91"><Data ss:Type="String">枪械特性解锁的tier</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">44</Data></Cell>
+    <Cell><Data ss:Type="String">bornRandomRange</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">出生点范围直径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">safeBornRange</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">扫描安全范围直径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">46</Data></Cell>
+    <Cell><Data ss:Type="String">friendBatteryRobotColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell><Data ss:Type="String">#2E69CBFF</Data></Cell>
+    <Cell><Data ss:Type="String">同队炮台颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">47</Data></Cell>
+    <Cell><Data ss:Type="String">enemyBatteryRobotColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell><Data ss:Type="String">#E52F37FF</Data></Cell>
+    <Cell><Data ss:Type="String">敌对炮台颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">48</Data></Cell>
+    <Cell><Data ss:Type="String">integralMax</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">积分上限</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">49</Data></Cell>
+    <Cell><Data ss:Type="String">integralWin</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">赢一次积分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">integralLose</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">输一次的积分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">51</Data></Cell>
+    <Cell><Data ss:Type="String">integralDraw</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">平局的积分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">52</Data></Cell>
+    <Cell><Data ss:Type="String">escapeReconnectPoints</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">重连逃逸分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">53</Data></Cell>
+    <Cell><Data ss:Type="String">escapeNoReconnectPoints</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">不重连逃逸分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">54</Data></Cell>
+    <Cell><Data ss:Type="String">finishReducePoints</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">完成比赛减少逃逸分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">55</Data></Cell>
+    <Cell><Data ss:Type="String">defaultMapSelect</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s92"><Data ss:Type="String">默认选择的MapID</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">56</Data></Cell>
+    <Cell><Data ss:Type="String">systemMailSenderId</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">-1</Data></Cell>
+    <Cell><Data ss:Type="String">系统邮件规定发送方id为-1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">57</Data></Cell>
+    <Cell><Data ss:Type="String">mailWithRewardLast</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="String">可以领奖的邮件保留14天</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">58</Data></Cell>
+    <Cell><Data ss:Type="String">mailRewardReceivedLast</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">领完奖的邮件保留一天</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">59</Data></Cell>
+    <Cell><Data ss:Type="String">chestDeep</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">宝箱中还可以配置另一个宝箱，这样存在开宝箱死循环的危险，限制循环开宝箱的次数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">60</Data></Cell>
+    <Cell><Data ss:Type="String">hitRateReduceByMoveSpeed</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">命中率受移动影响的比例</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">61</Data></Cell>
+    <Cell><Data ss:Type="String">randomModeEnergyCost</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">随机模式体力消耗</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">62</Data></Cell>
+    <Cell><Data ss:Type="String">battleMatchMaxWait</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">战斗匹配时游戏服最多等待战场管理服5分钟</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">63</Data></Cell>
+    <Cell><Data ss:Type="String">seasonRankMaxShow</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="String">赛季个人排行榜最多显示100人</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">64</Data></Cell>
+    <Cell><Data ss:Type="String">seasonLegionRankMaxShow</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">赛季军团排行榜最多显示50个军团</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">65</Data></Cell>
+    <Cell><Data ss:Type="String">seasonrRankMaxRetain</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">赛季个人排行榜保留上赛季前十的玩家</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">66</Data></Cell>
+    <Cell><Data ss:Type="String">badgeApproach</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell><Data ss:Type="String">1,2,3</Data></Cell>
+    <Cell><Data ss:Type="String">徽章获取途径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">67</Data></Cell>
+    <Cell><Data ss:Type="String">blueprint</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">蓝图获取途径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">68</Data></Cell>
+    <Cell><Data ss:Type="String">initProfessionMedal</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">100</Data></Cell>
+    <Cell><Data ss:Type="String">角色创建角色时拥有的各职业徽章数量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">69</Data></Cell>
+    <Cell><Data ss:Type="String">refreshTime</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">游戏内任务等刷新的时间点，暂定为凌晨4点钟</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">70</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">commomShopRefreshPeriod</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">普通商店每6小时刷新一次</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">71</Data></Cell>
+    <Cell><Data ss:Type="String">missionResetCost</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">每日任务刷新消耗钻石</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">72</Data></Cell>
+    <Cell><Data ss:Type="String">dispatchMissionRefreshCost</Data></Cell>
+    <Cell><Data ss:Type="String">int[]</Data></Cell>
+    <Cell><Data ss:Type="String">10,20,30</Data></Cell>
+    <Cell><Data ss:Type="String">外派任务刷新消耗</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">73</Data></Cell>
+    <Cell><Data ss:Type="String">dispatchMissionMaxRefresh</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">外派任务最大重置次数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">74</Data></Cell>
+    <Cell><Data ss:Type="String">dispatchMissionTimeCardId</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20004</Data></Cell>
+    <Cell><Data ss:Type="String">外派任务时间卡Id</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">75</Data></Cell>
+    <Cell><Data ss:Type="String">energyRecoverInterval</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">900</Data></Cell>
+    <Cell><Data ss:Type="String">能量恢复周期 90秒</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">76</Data></Cell>
+    <Cell><Data ss:Type="String">chatRepeatTime</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">1分钟内不允许重复的聊天条数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">77</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatRepeatMax</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">1分钟内重复聊天&gt;=3时，禁言处理</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">78</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatRepeatForbid</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">重复聊天禁言时间1分钟</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">79</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatRateTime</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">1分钟内聊天频率检查</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatRateMax</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">1分钟内聊天条数&gt;=5时，禁言处理</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">81</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatRateForbid</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">聊天频率禁言1分钟</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">82</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatKeyWords</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">&quot;**&quot;</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">聊天内容关键词替换</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">83</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatNeedLevel</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">聊天需要玩家等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">84</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">chatMaxChars</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">聊天最大字符数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">85</Data></Cell>
+    <Cell><Data ss:Type="String">RushPowerRecoverInterval</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">60</Data></Cell>
+    <Cell><Data ss:Type="String">体力回复间隔</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">86</Data></Cell>
+    <Cell><Data ss:Type="String">buttonPosConfigVersion</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">0.0.3</Data></Cell>
+    <Cell><Data ss:Type="String">自定义按钮位置版本号，不同时重置按钮位置。</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">87</Data></Cell>
+    <Cell><Data ss:Type="String">reviveTotalTime</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="String">复活所需要的时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">88</Data></Cell>
+    <Cell><Data ss:Type="String">stageMaxWin</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">战斗匹配时玩家所选职业stage大于上次战斗stage时，上次战斗时的stage累计胜场超过N时职业等级取值blablabla…</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">89</Data></Cell>
+    <Cell><Data ss:Type="String">aimLockCritDelayTime</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">锁定后持续一定时间后，发送暴击消息</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <TopRowVisible>42</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>93</ActiveRow>
+     <ActiveCol>7</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="FormulaConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="42" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:Width="189.75"/>
+   <Column ss:Index="5" ss:Width="216.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1000</Data></Cell>
+    <Cell><Data ss:Type="String">defRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">伤害公式中的 防御*X中的X</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1001</Data></Cell>
+    <Cell><Data ss:Type="String">lvRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">48</Data></Cell>
+    <Cell><Data ss:Type="String">伤害公式中的等级乘以的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1002</Data></Cell>
+    <Cell><Data ss:Type="String">adjustRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">250</Data></Cell>
+    <Cell><Data ss:Type="String">伤害公式中的调节常量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1003</Data></Cell>
+    <Cell><Data ss:Type="String">defenseMax</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">0.85</Data></Cell>
+    <Cell><Data ss:Type="String">最大的免伤率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1004</Data></Cell>
+    <Cell><Data ss:Type="String">initialHit</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell><Data ss:Type="String">枪械初始命中率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1005</Data></Cell>
+    <Cell><Data ss:Type="String">hitRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">1.65</Data></Cell>
+    <Cell><Data ss:Type="String">命中公式中的命中*x中的x</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1006</Data></Cell>
+    <Cell><Data ss:Type="String">hitLvRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">25</Data></Cell>
+    <Cell><Data ss:Type="String">命中公式中的等级乘以的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1007</Data></Cell>
+    <Cell><Data ss:Type="String">hitAdjustRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="Number">200</Data></Cell>
+    <Cell><Data ss:Type="String">命中公式中的调节常量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1008</Data></Cell>
+    <Cell><Data ss:Type="String">hitMax</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最大命中</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1009</Data></Cell>
+    <Cell><Data ss:Type="String">hitMin</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最小命中</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1010</Data></Cell>
+    <Cell><Data ss:Type="String">initialCrit</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">枪械初始暴击率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1011</Data></Cell>
+    <Cell><Data ss:Type="String">critRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">暴击公式中的暴击*x中的x</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1012</Data></Cell>
+    <Cell><Data ss:Type="String">critLvRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">80</Data></Cell>
+    <Cell><Data ss:Type="String">暴击公式中的等级乘以的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1013</Data></Cell>
+    <Cell><Data ss:Type="String">critAdjustRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">500</Data></Cell>
+    <Cell><Data ss:Type="String">暴击公式中的调节常量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1014</Data></Cell>
+    <Cell><Data ss:Type="String">critMax</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最大暴击</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1015</Data></Cell>
+    <Cell><Data ss:Type="String">critMin</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最小暴击</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1016</Data></Cell>
+    <Cell><Data ss:Type="String">initialCritDamage</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">枪械初始暴击伤害率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1017</Data></Cell>
+    <Cell><Data ss:Type="String">critDamageRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">暴伤公式中的暴伤*x中的x</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1018</Data></Cell>
+    <Cell><Data ss:Type="String">critDamageLvRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">40</Data></Cell>
+    <Cell><Data ss:Type="String">暴伤公式中的等级乘以的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1019</Data></Cell>
+    <Cell><Data ss:Type="String">critDamageAdjustRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">350</Data></Cell>
+    <Cell><Data ss:Type="String">暴伤公式中的调节常量</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1020</Data></Cell>
+    <Cell><Data ss:Type="String">critDamageMax</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最大暴伤率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1021</Data></Cell>
+    <Cell><Data ss:Type="String">critDamageMin</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1.2</Data></Cell>
+    <Cell><Data ss:Type="String">允许的最小暴伤率</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1022</Data></Cell>
+    <Cell><Data ss:Type="String">gunBattleRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell><Data ss:Type="String">枪械战斗力系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1023</Data></Cell>
+    <Cell><Data ss:Type="String">shieldReplyRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell><Data ss:Type="String">护盾回复速度计算系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1024</Data></Cell>
+    <Cell><Data ss:Type="String">professionBattleRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">职业战斗力系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1025</Data></Cell>
+    <Cell><Data ss:Type="String">battleAdjustRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">因为改成了等级匹配，所以这个值改成1了，只有匹配再用</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1026</Data></Cell>
+    <Cell><Data ss:Type="String">variationStandard</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.35</Data></Cell>
+    <Cell><Data ss:Type="String">变异系数进行放大的标准值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1027</Data></Cell>
+    <Cell><Data ss:Type="String">varianceRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">方差过大时对战斗力的修正计算系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1028</Data></Cell>
+    <Cell><Data ss:Type="String">teamRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="String">组队人数的匹配系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1029</Data></Cell>
+    <Cell><Data ss:Type="String">teamMax</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="String">最大队伍人数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1030</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorAttack</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">枪械power计算公式中Attack影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1031</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorHitValue</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.56000000000000005</Data></Cell>
+    <Cell><Data ss:Type="String">枪械Power计算公式中hitValue影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1032</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorFireRate</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">4.5</Data></Cell>
+    <Cell><Data ss:Type="String">枪械power计算公式中FireRate影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1033</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorCritValue</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell><Data ss:Type="String">枪械power计算公式中CritValue影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1034</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorCritDamage</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.78</Data></Cell>
+    <Cell><Data ss:Type="String">枪械power计算公式中CritDamage影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1035</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorHp</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.22</Data></Cell>
+    <Cell><Data ss:Type="String">职业power计算公式中HP影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1036</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorDefense</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">1.1200000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">职业power计算公式中Defense影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1037</Data></Cell>
+    <Cell><Data ss:Type="String">powerFactorHpRecover</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">0.85</Data></Cell>
+    <Cell><Data ss:Type="String">职业power计算公式中HpRecover影响的系数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">1038</Data></Cell>
+    <Cell><Data ss:Type="String">battleAdjustRatio2</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s93"><Data ss:Type="Number">300</Data></Cell>
+    <Cell><Data ss:Type="String">显示和服务器那边用到的调节战力显示值的系数</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <TopRowVisible>9</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>17</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="CheatConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:Width="123"/>
+   <Column ss:Width="45"/>
+   <Column ss:Width="123"/>
+   <Column ss:Width="489"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值(不区分大小写)</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3001</Data></Cell>
+    <Cell><Data ss:Type="String">heroLvTo</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">herolvto</Data></Cell>
+    <Cell><Data ss:Type="String">英雄升级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3002</Data></Cell>
+    <Cell><Data ss:Type="String">expTo</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">expTo</Data></Cell>
+    <Cell><Data ss:Type="String">英雄加经验</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3003</Data></Cell>
+    <Cell><Data ss:Type="String">addExp</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addExp</Data></Cell>
+    <Cell><Data ss:Type="String">加经验</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3004</Data></Cell>
+    <Cell><Data ss:Type="String">addFund</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addFund</Data></Cell>
+    <Cell><Data ss:Type="String">加军费</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3005</Data></Cell>
+    <Cell><Data ss:Type="String">addEnergy</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addEnergy</Data></Cell>
+    <Cell><Data ss:Type="String">修改体力</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3006</Data></Cell>
+    <Cell><Data ss:Type="String">levelUp</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">levelUp</Data></Cell>
+    <Cell><Data ss:Type="String">修改主角 以及所选职业等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3007</Data></Cell>
+    <Cell><Data ss:Type="String">addMail</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addMail</Data></Cell>
+    <Cell><Data ss:Type="String">加邮件的gm命令，依赖TableMail表中的systemId,可以发放TableMail中配置的邮件</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3008</Data></Cell>
+    <Cell><Data ss:Type="String">addElo</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addElo</Data></Cell>
+    <Cell><Data ss:Type="String">添加elo值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3009</Data></Cell>
+    <Cell><Data ss:Type="String">addTechnologies</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addtech</Data></Cell>
+    <Cell><Data ss:Type="String">添加科技</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3010</Data></Cell>
+    <Cell><Data ss:Type="String">addProfessionMedal</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">addbadge</Data></Cell>
+    <Cell><Data ss:Type="String">添加职业徽章</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3011</Data></Cell>
+    <Cell><Data ss:Type="String">addItem</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">additem</Data></Cell>
+    <Cell><Data ss:Type="String">添加Item（用法：additem id count）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3012</Data></Cell>
+    <Cell><Data ss:Type="String">doMission</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">doMission</Data></Cell>
+    <Cell><Data ss:Type="String">完成每日任务（doMission 任务槽id）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3013</Data></Cell>
+    <Cell><Data ss:Type="String">chooseMission</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">chooseMission</Data></Cell>
+    <Cell><Data ss:Type="String">选择每日任务(chooseMission containerId missionId)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">3014</Data></Cell>
+    <Cell><Data ss:Type="String">resetMission</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">resetMission</Data></Cell>
+    <Cell><Data ss:Type="String">重置每日任务</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>17</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="SeasonConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="13" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:Width="143.25"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4005</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonLegendLevel</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//传奇对应的天梯等级默认为0级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4006</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonWinningStreak</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//赛季连赢三场会额外获得一个星星， 并且重新计算连赢场数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4007</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonPunishMinMinute</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//赛季逃逸比赛时间大于1分钟会被处罚</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4008</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonEscape1Minute</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//比赛逃逸大于一分钟扣1分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4009</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonEscape</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//比赛逃逸大于一分钟并且没有重连扣3分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4011</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">seasonBttleRewardNeeds</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//赛季场次奖励需要参加1比赛才能领奖</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4012</Data></Cell>
+    <Cell><Data ss:Type="String">medalFundExchangeRate</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">//一个赛季奖章对应10军费</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4013</Data></Cell>
+    <Cell><Data ss:Type="String">initLevel </Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="String">//初始天梯等级</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4014</Data></Cell>
+    <Cell><Data ss:Type="String">initElo</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1500</Data></Cell>
+    <Cell><Data ss:Type="String">//初始Elo积分</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">4015</Data></Cell>
+    <Cell><Data ss:Type="String">recordRankInterval</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">//记录排行榜的时间间隔,一分钟为单位</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>200</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+     <RangeSelection>R1C1:R3C6</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="BattleRoomConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="8" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="189.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105.75"/>
+   <Column ss:Index="5" ss:AutoFitWidth="0" ss:Width="360"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5001</Data></Cell>
+    <Cell><Data ss:Type="String">battleWaitLoadTime</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">战斗开始前等待加载时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5002</Data></Cell>
+    <Cell><Data ss:Type="String">battleReadyBeginCountdown</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">战斗开始倒计时</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5003</Data></Cell>
+    <Cell><Data ss:Type="String">deadReduceResourcePointNormal</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="String">正常情况下资源模式死亡掉落分数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5004</Data></Cell>
+    <Cell><Data ss:Type="String">deadReduceResourcePointRecover</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">回收状态时资源模式死亡掉落分数</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">5005</Data></Cell>
+    <Cell><Data ss:Type="String">summonedMaxStayTime</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="Number">60000</Data></Cell>
+    <Cell><Data ss:Type="String">召唤物最大停留时间，单位ms</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>20</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="UIConfigExt(ClientOnly)">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="111" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:AutoFitWidth="0" ss:Width="72"/>
+   <Column ss:Width="203.25"/>
+   <Column ss:Width="96.75"/>
+   <Column ss:StyleID="s94" ss:Width="276"/>
+   <Column ss:Width="409.5"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6005</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">maxDragRadius</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">80</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">最大拖动半径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6006</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">centerDeadZoneRadius</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">中心死区半径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6806</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">joystickMaxPowerRadius</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">摇杆达到最大值，半径（用于平滑差值）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6007</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">joystickFullPowerDragPercent</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">0.1875</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">摇杆拖拽最大力量 距离百分比（用于显示）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6008</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">rebornTime</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">复活时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6009</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">showLowHpWarningRatio</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">低血量比例</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6010</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">showWarningFadeinTime</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">溅血效果淡入时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6011</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">showWarningFadeoutTime</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">减血效果淡出时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6014</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">lowHpWarnDuration</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">低血量闪烁周期</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6015</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">lowHpWarnMinAlpha</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">低血量最小Alpha</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6016</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">buffIncrColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">a6ff0c</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">增益BUFF提示颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6017</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">buffDecrColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">ffffff</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">减益BUFF提示颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6018</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">lockPlayerHpBarPosOffset</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Vector2</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">(0, 100)</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">锁定敌人后大血条位置偏移（距2D头顶）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6019</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">showHpLowHintRatio</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">血量少于该比例时，显示低血量提示</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6020</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">showHpLowMagazineRatio</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">弹夹剩余子弹数 小于 该比例时，显示换弹提示</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6021</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">standardDist</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">血条缩放的标准距离（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6022</Data></Cell>
+    <Cell><Data ss:Type="String">personalColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">FFAE00FF</Data></Cell>
+    <Cell><Data ss:Type="String">结算面板 主角颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6023</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">blockedPerceptionAlpha</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.3</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">被遮挡时透明度</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6024</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">teammateHideNamePanelDelay</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">队友延迟隐藏名字板时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6025</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">enemyHideNamePanelDelay</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">敌人延迟隐藏名字板时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6026</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hideShowNamePanelDuration</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">隐藏显示名字板 变化持续时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6027</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">perceptionItemStateChangeCooldown</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知状态切换冷却时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6028</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">teammateHideTagArrowDist</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">队友 超出该距离隐藏提示箭头（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6029</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">enemyHideTagArrowDist</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">敌人 超出该距离隐藏提示箭头（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6030</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">signDistShowDelay</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">从血量状态转换到距离状态延迟时间 秒</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6031</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">teammateSignDistColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">84d70e</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">队友距离颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6032</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">enemySignDistColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">eb0000</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">敌人距离颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6033</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">teammateNameColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell><Data ss:Type="String">0096d4</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">队友名字颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6034</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">enemyNameColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">d5180a</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">敌人名字颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6035</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">perceptionArrowUIRadius</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">300</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">受伤方向 提示 UI 旋转半径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6036</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hurtPerceptionMaxHitRatio4Fill</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">受伤百分比，达到最大伤害提示</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6037</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hurtPerceptionMaxFillAmount</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">0.15</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">最大伤害提示 填充圆</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6038</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hurtPerceptionMinFillAmount</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">0</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">最小伤害提示 填充圆</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6039</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hurtPerceptionDamageDecreaseRatio</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.25</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">受伤提示按 百分比恢复 /s</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6040</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">hurtPerceptionDuration</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">受伤方向 提示 UI 延迟时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6041</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">resourceLargeColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">ffc303</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">大资源颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6042</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">resourceWillAppearColor</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">636363FF</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">资源即将出现提示颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6043</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">perceptionHideDuration</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知渐隐用时</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6044</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionBlockCheckInterval</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">感知射线遮挡检测间隔时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6045</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionSetUIPosThreshold</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">设置UI 位置的像素阈值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6046</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionSetUIScaleThreshold</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.01</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">设置UI 缩放比例阈值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6047</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionSetUIQuaternionAngleThreshold</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">设置UI 旋转的角度阈值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6048</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionUIBlockCheckInterval</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">设置感知数据间隔</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6049</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionUIPosOffset</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Vector2</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">(0, 30)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">感知UI偏移(默认)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6050</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">summonedPerceptionUIPosOffset</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">Vector2</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">(0, 75)</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">感知UI偏移（召唤物）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6051</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionScreenCenterOffset</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">150</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">默认屏幕中心显示方式 圆半径</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6052</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">dropPerceptionMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">掉落物感知缩放最小尺寸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6053</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">hurtPerceptionMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.6</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">受伤感知缩放最小尺寸（建议不动）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6054</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">summonedPerceptionMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">召唤物感知缩放最小尺寸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6055</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">playerPerceptionMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">玩家感知缩放最小尺寸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6056</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">playerPerceptioArrownMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">玩家感知箭头缩放最小尺寸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6057</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">occupationPerceptionMinScale</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">占点区域感知缩放最小尺寸</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6058</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isDropPerceptionUseScale</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6059</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isHurtPerceptionUseScale</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">FALSE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6060</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isSummonedPerceptionUseScale</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6061</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isPlayerPerceptionUseScale</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6062</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isOccupationPerceptionUseScale</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6063</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isDropPerceptionUseBlockCheck</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">FALSE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6064</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isHurtPerceptionUseBlockCheck</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">FALSE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6065</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isSummonedPerceptionUseBlockCheck</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6066</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isPlayerPerceptionUseBlockCheck</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">TRUE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s27"><Data ss:Type="Number">6067</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">isOccupationPerceptionUseBlockCheck</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">FALSE</Data></Cell>
+    <Cell ss:StyleID="s27"><Data ss:Type="String">感知缩放开关</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6068</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionBaseMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 150, 30, 75, 75 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 基准</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6069</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionDropMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 150, 150, 150, 150 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 掉落物</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6070</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionHurtMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 30, 30, 30, 30 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 扇形受伤_op_如果过大就会影响显示，填写一个小数值即可</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6071</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionOccupationPointMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 195, 375, 195, 195 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 占点区域</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6072</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionPlayerMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 45, 45, 45, 45 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 所有玩家</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6073</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionSummonedMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 45, 15, 15, 15 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 召唤物</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6074</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionBatteryRobotMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 15, 15, 15, 15 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 炮台</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6075</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionGrenadeMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 45, 15, 15, 15 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 手雷</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s28"><Data ss:Type="Number">6076</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">perceptionLandmineMargin</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">float[]</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">[ 45, 15, 15, 15 ]</Data></Cell>
+    <Cell ss:StyleID="s28"><Data ss:Type="String">上下左右 地雷</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6077</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">dropPerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">掉落物感知高度（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6078</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">playerPerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">0.35</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">人物感知高度（距离头顶）（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6079</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">summonedPerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">召唤物默认感知高度（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6080</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">batteryRobotPerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">1.2</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">炮台感知高度（召唤物）（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6081</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">grenadePerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">手雷感知高度（召唤物）（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6082</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">landminePerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">地雷感知高度（召唤物）（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6083</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">resourceRecyclePerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">资源回收点感知高度（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6084</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">occupationPointPerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">据点模式占点感知高度（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s26"><Data ss:Type="Number">6085</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">attackDefensePerceptionHeight</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.1</Data></Cell>
+    <Cell ss:StyleID="s26"><Data ss:Type="String">攻防模式占点感知高度（3D距离，米）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s27">
+    <Cell><Data ss:Type="Number">6086</Data></Cell>
+    <Cell><Data ss:Type="String">hitFlyUIMaxScale</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">伤害文字最大缩放</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s27">
+    <Cell><Data ss:Type="Number">6087</Data></Cell>
+    <Cell><Data ss:Type="String">hitFlyUIMinScale</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="String">伤害文字最小缩放</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6088</Data></Cell>
+    <Cell><Data ss:Type="String">hpStyleRedShowPercent</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="String">血条变红 条件</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6089</Data></Cell>
+    <Cell><Data ss:Type="String">hpHitShowRedCD</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="String">变红持续时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6090</Data></Cell>
+    <Cell><Data ss:Type="String">hpStyleNormalMinAlpha</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell><Data ss:Type="String">不受伤害时，血条变透明的透明度</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6091</Data></Cell>
+    <Cell><Data ss:Type="String">hpNormalShowDelay</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">血条血恢复后 延迟变透明时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6094</Data></Cell>
+    <Cell><Data ss:Type="String">damageItemShowAlphaMin</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0</Data></Cell>
+    <Cell><Data ss:Type="String">血条受伤效果展示(Alpha)最小值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6095</Data></Cell>
+    <Cell><Data ss:Type="String">damageItemShowDuration</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.3</Data></Cell>
+    <Cell><Data ss:Type="String">血条受伤效果展示时间</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6096</Data></Cell>
+    <Cell><Data ss:Type="String">damageItemShowMaxHeightRatio</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">10</Data></Cell>
+    <Cell><Data ss:Type="String">血条受伤效果做大拉伸比例</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6097</Data></Cell>
+    <Cell><Data ss:Type="String">hpBarHurtItemColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ff0000</Data></Cell>
+    <Cell><Data ss:Type="String">玩家血条受伤效果 颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6098</Data></Cell>
+    <Cell><Data ss:Type="String">shieldBarHurtItemColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">0099cc</Data></Cell>
+    <Cell><Data ss:Type="String">玩家血条(护盾条)受伤效果 颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6099</Data></Cell>
+    <Cell><Data ss:Type="String">shieldBarNormalColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ffffffb3</Data></Cell>
+    <Cell><Data ss:Type="String">玩家血条(护盾条)半透效果 颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6100</Data></Cell>
+    <Cell><Data ss:Type="String">shieldBarHighColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ffffffe5</Data></Cell>
+    <Cell><Data ss:Type="String">玩家血条(护盾条)半透效果 颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6101</Data></Cell>
+    <Cell><Data ss:Type="String">gunSkillTriggerColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">0099cc</Data></Cell>
+    <Cell><Data ss:Type="String">玩家枪械被动技能触发 颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6102</Data></Cell>
+    <Cell><Data ss:Type="String">weaponMagazineLowPercent</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell><Data ss:Type="String">当前弹夹子弹数过低，HUD效果</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6103</Data></Cell>
+    <Cell><Data ss:Type="String">weaponTotalMagazineLowPercent</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell><Data ss:Type="String">当前总子弹数过低，HUD效果</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6104</Data></Cell>
+    <Cell><Data ss:Type="String">weaponMagazineLowColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">ff0000</Data></Cell>
+    <Cell><Data ss:Type="String">子弹数过低，HUD效果，颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6105</Data></Cell>
+    <Cell><Data ss:Type="String">sniperFrontSightMaxDist</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="Number">50</Data></Cell>
+    <Cell><Data ss:Type="String">狙击枪准星最大扩散范围</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s27">
+    <Cell><Data ss:Type="Number">6106</Data></Cell>
+    <Cell><Data ss:Type="String">uiCenterRadius</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">45</Data></Cell>
+    <Cell><Data ss:Type="String">判断，子弹是否精准命中 UI 半径，影响显示伤害数字的颜色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s27">
+    <Cell><Data ss:Type="Number">6107</Data></Cell>
+    <Cell><Data ss:Type="String">uiCenterMaxRadius</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">300</Data></Cell>
+    <Cell><Data ss:Type="String">中心半径最大扩散（暂时没用）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6108</Data></Cell>
+    <Cell><Data ss:Type="String">sniperWarningDelyTime</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell><Data ss:Type="String">狙击枪提示线，延迟展示时间(暂时没用)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s27">
+    <Cell><Data ss:Type="Number">6115</Data></Cell>
+    <Cell><Data ss:Type="String">resourceZoneHintTextShowDurationRecycleSuccess</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell><Data ss:Type="String">资源模式中心提示文本显示时长【资源回收成功】</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6117</Data></Cell>
+    <Cell><Data ss:Type="String">colorGoldValue</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ffb21d</Data></Cell>
+    <Cell><Data ss:Type="String">金色色值</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6118</Data></Cell>
+    <Cell><Data ss:Type="String">colorGold</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">ffb21d</Data></Cell>
+    <Cell><Data ss:Type="String">金色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s28">
+    <Cell><Data ss:Type="Number">6119</Data></Cell>
+    <Cell><Data ss:Type="String">colorHide</Data></Cell>
+    <Cell><Data ss:Type="String">Color</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">00000000</Data></Cell>
+    <Cell><Data ss:Type="String">透明色</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="13.5" ss:StyleID="s26">
+    <Cell><Data ss:Type="Number">6120</Data></Cell>
+    <Cell><Data ss:Type="String">gunRarityColor</Data></Cell>
+    <Cell><Data ss:Type="String">Color[]</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">[977dba,5a8cba,ffae00,709814,f0f0f0,000000]</Data></Cell>
+    <Cell><Data ss:Type="String">武器库枪械稀有度 颜色 （直接对应rarity 从0开始）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">6121</Data></Cell>
+    <Cell><Data ss:Type="String">dragRotRatioDefault</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="String">0.24</Data></Cell>
+    <Cell><Data ss:Type="String">默认拖屏旋转灵敏度（系数）</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">6122</Data></Cell>
+    <Cell><Data ss:Type="String">autoRotRatioDefault</Data></Cell>
+    <Cell><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="String">0.24</Data></Cell>
+    <Cell><Data ss:Type="String">默认屏幕边缘自动旋转灵敏度（系数）</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <TopRowVisible>6</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>59</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="LockConfig(ClientOnly)">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="29" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:Width="156.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7001</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeShop</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7002</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeMission</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7003</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeMail</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">false</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7004</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeLegion</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7005</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeGift</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7006</Data></Cell>
+    <Cell><Data ss:Type="String">lockHomeSetting</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">false</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7007</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopPageFund</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7008</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopPageDiamond</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7009</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopPageCommon</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">false</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7010</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopPageBlack</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7011</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopPageCompetition</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7012</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopCurrency</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell><Data ss:Type="String">货币商店</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7013</Data></Cell>
+    <Cell><Data ss:Type="String">lockShopGoods</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell><Data ss:Type="String">物品商店</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7014</Data></Cell>
+    <Cell><Data ss:Type="String">lockProfessionPromote</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7015</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunPromote</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7016</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunPartInstall</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7017</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunUpgrade</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7018</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunTraitUpgrade</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7019</Data></Cell>
+    <Cell><Data ss:Type="String">lockSkillUpgrade</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7020</Data></Cell>
+    <Cell><Data ss:Type="String">lockSkillPromote</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7021</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunDecompose</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7022</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunCompare</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7023</Data></Cell>
+    <Cell><Data ss:Type="String">lockGunEquip</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">false</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7024</Data></Cell>
+    <Cell><Data ss:Type="String">lockProfessionUpgrade</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7025</Data></Cell>
+    <Cell><Data ss:Type="String">lockQuickPlaySeason</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">false</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">7026</Data></Cell>
+    <Cell><Data ss:Type="String">lockQuickPlayDispatchMission</Data></Cell>
+    <Cell><Data ss:Type="String">bool</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">true</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">无</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <TopRowVisible>6</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>14</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="TutorialConfig">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="12" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:AutoFitWidth="0" ss:Width="83.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="147"/>
+   <Column ss:AutoFitWidth="0" ss:Width="140.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="585"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">key</Data></Cell>
+    <Cell><Data ss:Type="String">type</Data></Cell>
+    <Cell><Data ss:Type="String">value</Data></Cell>
+    <Cell><Data ss:Type="String">description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">键</Data></Cell>
+    <Cell><Data ss:Type="String">类型</Data></Cell>
+    <Cell><Data ss:Type="String">值</Data></Cell>
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8001</Data></Cell>
+    <Cell><Data ss:Type="String">tutorialStartPos</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">(50.97,0.53,-8.46)</Data></Cell>
+    <Cell><Data ss:Type="String">拖动屏幕教学玩家起始位置</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8002</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialStartDir</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">(0.01633,0,-0.9998667)</Data></Cell>
+    <Cell><Data ss:Type="String">拖动屏幕教学玩家朝向</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8003</Data></Cell>
+    <Cell><Data ss:Type="String">tutorialDragPoints</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3[]</Data></Cell>
+    <Cell><Data ss:Type="String">[(51.894,2.33,-11.847),(50.826,1.275,-11.847),(49.256,2.441,-11.847),(50.598,2.101,-11.847)]</Data></Cell>
+    <Cell><Data ss:Type="String">拖动屏幕教学拖动点</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8004</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialMoveStartDir</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">(0,0.01633,-0.9998667)</Data></Cell>
+    <Cell><Data ss:Type="String">移动教学玩家起始朝向</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8005</Data></Cell>
+    <Cell><Data ss:Type="String">tutorialMovePoints</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3[]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">[(50.47755,0.4312,-19.9486),(52.50982,0.4311252,-28.65359)]</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">移动教学移动点</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8006</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialFireStartDir</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">(0,0.967,12.68)</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">射击教学玩家起始朝向</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8007</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialSprintStartDir</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">(0.0, 0.0, 1.0)</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">冲刺教学玩家起始朝向</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8008</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialSprintPoint</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">(34.68085,-0.15275,-28.5477)</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">冲刺教学目标点</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">8009</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">tutorialSightStartDir</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">(-5.28,1.47,-36.1)</Data></Cell>
+    <Cell ss:StyleID="s90"><Data ss:Type="String">使用瞄准镜教学玩家起始朝向</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

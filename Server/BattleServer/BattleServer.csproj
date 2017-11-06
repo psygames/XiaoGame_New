@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Plugins\Plugins.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manager\" />
+    <Folder Include="GameData\" />
+    <Folder Include="Tools\" />
+    <Folder Include="Network\" />
+    <Folder Include="Module\" />
+  </ItemGroup>
+</Project>

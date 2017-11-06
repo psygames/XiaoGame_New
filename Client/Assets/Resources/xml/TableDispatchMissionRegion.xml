@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item missionType="int[]" maxDifficulty="int" missionPerDay="int" goldenMissionExtraRewardNum="int" goldenMissionRate="float" id="int" missionWeight="int[]" goldenMissionRewardNumber="int" reward="string" icon="int" goldenMissionRewardType="int" location="string"/>
+	</type>
+	<data>
+		<item missionType="[1,2,3,4]" maxDifficulty="5" missionPerDay="1" goldenMissionExtraRewardNum="5" goldenMissionRate="0.1" id="1" missionWeight="[2500,2500,2500,2500]" goldenMissionRewardNumber="5" reward="HERO_UPGRADE_SUPPLY" icon="20001" goldenMissionRewardType="2" location="DISPATCH_MISSION_LOCATION_MIDDLE_EAST"/>
+		<item missionType="[1,2,3,4]" maxDifficulty="5" missionPerDay="1" goldenMissionExtraRewardNum="6" goldenMissionRate="0.1" id="2" missionWeight="[2500,2500,2500,2500]" goldenMissionRewardNumber="6" reward="ITEM_RETROFIT_BOX" icon="20002" goldenMissionRewardType="2" location="DISPATCH_MISSION_LOCATION_ASIA"/>
+		<item missionType="[1,2,3,4]" maxDifficulty="5" missionPerDay="1" goldenMissionExtraRewardNum="8" goldenMissionRate="0.1" id="3" missionWeight="[2500,2500,2500,2500]" goldenMissionRewardNumber="8" reward="GUN_UPGRADE_MATERIAL" icon="20003" goldenMissionRewardType="2" location="DISPATCH_MISSION_LOCATION_EUROPE"/>
+		<item missionType="[1,2,3,4]" maxDifficulty="5" missionPerDay="1" goldenMissionExtraRewardNum="10" goldenMissionRate="0.1" id="4" missionWeight="[2500,2500,2500,2500]" goldenMissionRewardNumber="10" reward="GUN_UPGRADE_MATERIAL" icon="20004" goldenMissionRewardType="2" location="DISPATCH_MISSION_LOCATION_AMERICA"/>
+	</data>
+</table>

@@ -1,0 +1,1618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item nameType="int" description="string" text="string" id="string"/>
+	</type>
+	<data>
+		<item nameType="0" description="1" text="Automatic Rifle" id="WEAPON_TYPE_AUTOMATIC_RIFLE"/>
+		<item nameType="0" description="1" text="Submachine Gun" id="WEAPON_TYPE_SUBMACHINR_GUN"/>
+		<item nameType="0" description="1" text="Machine Gun" id="WEAPON_TYPE_MACHINR_GUN"/>
+		<item nameType="0" description="1" text="Shotgun" id="WEAPON_TYPE_SHOTGUN"/>
+		<item nameType="0" description="1" text="Sniper Rifle" id="WEAPON_TYPE_SNIPER_RIFLE"/>
+		<item nameType="0" description="1" text="Extend" id="WEAPON_TYPE_6"/>
+		<item nameType="0" description="1" text="Extend" id="WEAPON_TYPE_7"/>
+		<item nameType="0" description="1" text="STAGE" id="TIER_WEAPON"/>
+		<item nameType="0" description="1" text="S" id="TIER_SHORT_WEAPON"/>
+		<item nameType="0" description="1" text="Missing Image" id="WEAPON_IMAGE_DEFAULT"/>
+		<item nameType="0" description="1" text="Damage" id="PROPERTY_WEAPON_ATTACKS"/>
+		<item nameType="0" description="1" text="Firing Rate" id="PROPERTY_WEAPON_FIRE_RATE"/>
+		<item nameType="0" description="1" text="Hit Rate" id="PROPERTY_WEAPON_HIT_RATE"/>
+		<item nameType="0" description="1" text="Magazine Size" id="PROPERTY_WEAPON_MAGAZINE"/>
+		<item nameType="0" description="1" text="Shooting Range{0:0}" id="PROPERTY_WEAPON_FIRE_RANGE"/>
+		<item nameType="0" description="1" text="EQUIP" id="GENRAL_EQUIP"/>
+		<item nameType="0" description="1" text="COMPARATIVE" id="GENRAL_COMPARE"/>
+		<item nameType="0" description="1" text="DECOMPOSITION" id="GENRAL_DECOMPOSE"/>
+		<item nameType="0" description="1" text="UPGRADE" id="GENRAL_UPGRADE"/>
+		<item nameType="0" description="1" text="BUY" id="GENRAL_BUY"/>
+		<item nameType="0" description="1" text="RPG" id="CONSUMABLE_NAME_RPG"/>
+		<item nameType="0" description="1" text="Damge" id="WEAPON_PROPERTY_ATTACKS"/>
+		<item nameType="0" description="1" text="Firing Rate" id="WEAPON_PROPERTY_FIRE_RATE"/>
+		<item nameType="0" description="1" text="Magazine Size" id="WEAPON_PROPERTY_MAGAZINE"/>
+		<item nameType="0" description="1" text="Recoil" id="WEAPON_PROPERTY_RECOIL"/>
+		<item nameType="0" description="1" text="Shooting Range" id="WEAPON_PROPERTY_FIRE_RANGE"/>
+		<item nameType="0" description="1" text="ATK" id="WEAPON_PART_PROPERTY_DAMAGE"/>
+		<item nameType="0" description="1" text="Locking Distance" id="WEAPON_PROPERTY_LOCK_DISTANCE"/>
+		<item nameType="0" description="1" text="Critical Damage Rate" id="WEAPON_PROPERTY_CRIT_RATE"/>
+		<item nameType="0" description="1" text="Firing Moving Speed" id="WEAPON_PROPERTY_FIRE_MOVING_SPEED"/>
+		<item nameType="0" description="1" text="Fire Decelerate" id="WEAPON_PROPERTY_FIRE_DECELERATE"/>
+		<item nameType="0" description="1" text="Shooting Range" id="WEAPON_PART_PROPERTY_RANGE"/>
+		<item nameType="0" description="1" text="RELOAD" id="PROPERTY_WEAPON_RELOAD_SPEED"/>
+		<item nameType="0" description="1" text="Firing Rate" id="WEAPON_PART_PROPERTY_FIRE_RATE"/>
+		<item nameType="0" description="1" text="Headshot Damage Muti" id="PROPERTY_WEAPON_HEADSHOT_DAMAGE_MUTI"/>
+		<item nameType="0" description="1" text="Headshot" id="TACTICAL_VISOR_EFFECT_HEADSHOT"/>
+		<item nameType="0" description="1" text="MOBILITY" id="PROPERTY_WEAPOM_MOBILITY"/>
+		<item nameType="0" description="1" text="MAGAZINE" id="WEAPON_PART_PROPERTY_MAGAZINE_SIZE"/>
+		<item nameType="0" description="1" text="MAX" id="GENRAL_MAX"/>
+		<item nameType="0" description="1" text="MAX LEVEL" id="GENRAL_MAX_LEVEL"/>
+		<item nameType="0" description="1" text="UPGRADE" id="WEAPON_PART_UPGRADE"/>
+		<item nameType="0" description="1" text="UPGRADING" id="GENRAL_UPGRADING"/>
+		<item nameType="0" description="1" text="COMPLETE" id="GENRAL_COMPLETE"/>
+		<item nameType="3" description="1" text="LV" id="WEAPON_PART_LEVEL"/>
+		<item nameType="3" description="1" text="Body" id="WEAPON_PART_NAME_BODY"/>
+		<item nameType="3" description="1" text="Barrel" id="WEAPON_PART_NAME_BARREL"/>
+		<item nameType="3" description="1" text="Grip" id="WEAPON_PART_NAME_GRIP"/>
+		<item nameType="3" description="1" text="Bullet" id="WEAPON_PART_NAME_BULLET"/>
+		<item nameType="3" description="1" text="Magazine" id="WEAPON_PART_NAME_MAGAZINE"/>
+		<item nameType="3" description="1" text="Reduction" id="WEAPON_PART_NAME_REDUCTION"/>
+		<item nameType="3" description="1" text="Sight" id="WEAPON_PART_NAME_SIGHT"/>
+		<item nameType="3" description="1" text="Bolt" id="WEAPON_PART_NAME_BOLT"/>
+		<item nameType="3" description="1" text="Stabilizer" id="WEAPON_PART_NAME_STABILIZER"/>
+		<item nameType="3" description="1" text="Stock" id="WEAPON_PART_NAME_STOCK"/>
+		<item nameType="0" description="1" text="USE" id="GENRAL_USE"/>
+		<item nameType="0" description="1" text="BUY" id="EQUIP_BUY"/>
+		<item nameType="0" description="1" text="UPGRADE" id="EQUIP_UPGRADE"/>
+		<item nameType="0" description="1" text="USED" id="GENRAL_USED"/>
+		<item nameType="0" description="1" text="Max HP" id="PROPERTY_EQUIP_HP_MAX"/>
+		<item nameType="0" description="1" text="HP Recover" id="PROPERTY_EQUIP_HP_RECOVER"/>
+		<item nameType="0" description="1" text="Speed" id="PROPERTY_EQUIP_MOVE_SPEED"/>
+		<item nameType="0" description="1" text="Defence" id="PROPERTY_EQUIP_DEFENCE"/>
+		<item nameType="0" description="1" text="Cooldown time" id="PROPERTY_EQUIP_SKILL_CD_REDUCE"/>
+		<item nameType="0" description="1" text="Penetration" id="PROPERTY_EQUIP_DEFENCE_THROUGH"/>
+		<item nameType="0" description="1" text="Max HP" id="EQUIP_PART_PROPERTY_HP_MAX"/>
+		<item nameType="0" description="1" text="HP Recover" id="EQUIP_PART_PROPERTY_HP_RECOVER"/>
+		<item nameType="0" description="1" text="HP Recover Interval" id="PROPERTY_EQUIP_HP_RECOVER_INTERVAL"/>
+		<item nameType="0" description="1" text="HP Recover Delay" id="EQUIP_PART_PROPERTY_HP_RECOVER_DELAY"/>
+		<item nameType="0" description="1" text="Defence" id="EQUIP_PART_PROPERTY_DEFENCE"/>
+		<item nameType="0" description="1" text="Crit Rate" id="PROPERTY_EQUIP_HP_CRIT_RATE"/>
+		<item nameType="0" description="1" text="Crit Damage" id="PROPERTY_EQUIP_HP_CRIT_DAMAGE"/>
+		<item nameType="0" description="1" text="LV" id="GENRAL_LEVEL"/>
+		<item nameType="0" description="1" text="LV." id="GENRAL_LEVEL_DOT"/>
+		<item nameType="0" description="1" text="LEVEL" id="GENRAL_LEVEL_FULL_NAME"/>
+		<item nameType="0" description="1" text="STAGE" id="GENRAL_TIER"/>
+		<item nameType="0" description="1" text="STAGE UP" id="GENRAL_TIER_UP"/>
+		<item nameType="0" description="1" text="MAX" id="EQUIP_PART_UPGRADE_LEVEL_MAX"/>
+		<item nameType="0" description="1" text="UPGRADE" id="EQUIP_PART_UPGRADE"/>
+		<item nameType="0" description="1" text="UPGRADING" id="EQUIP_PART_UPGRADING"/>
+		<item nameType="0" description="1" text="Upgrade complete" id="EQUIP_PART_UPGRADE_COMPLETE"/>
+		<item nameType="0" description="1" text="Upgrade Failed! Doesn't meet the Upgrading requirement." id="EQUIP_PART_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Equipment Upgrade" id="EQUIP_PART_UPGRADE_TITLE"/>
+		<item nameType="3" description="1" text="Broken Helmet" id="EQUIP_PART_NAME_BROKEN_HELMET"/>
+		<item nameType="3" description="1" text="Normal Helmet" id="EQUIP_PART_NAME_NORMAL_HELMET"/>
+		<item nameType="3" description="1" text="Good Helmet" id="EQUIP_PART_NAME_GOOD_HELMET"/>
+		<item nameType="3" description="1" text="Broken Armor" id="EQUIP_PART_NAME_BROKEN_ARMOR"/>
+		<item nameType="3" description="1" text="Normal Armor" id="EQUIP_PART_NAME_NORMAL_ARMOR"/>
+		<item nameType="3" description="1" text="Godd Armor" id="EQUIP_PART_NAME_GOOD_ARMOR"/>
+		<item nameType="3" description="1" text="Broken Gloves" id="EQUIP_PART_NAME_BROKEN_GLOVES"/>
+		<item nameType="3" description="1" text="Normal Gloves" id="EQUIP_PART_NAME_NORMAL_GLOVES"/>
+		<item nameType="3" description="1" text="Good Gloves" id="EQUIP_PART_NAME_GOOD_GLOVES"/>
+		<item nameType="3" description="1" text="Broken Pants" id="EQUIP_PART_NAME_BROKEN_PANTS"/>
+		<item nameType="3" description="1" text="Normal Pants" id="EQUIP_PART_NAME_NORMAL_PANTS"/>
+		<item nameType="3" description="1" text="Good Pants" id="EQUIP_PART_NAME_GOOD_PANTS"/>
+		<item nameType="3" description="1" text="Broken Boots" id="EQUIP_PART_NAME_BROKEN_BOOTS"/>
+		<item nameType="3" description="1" text="Normal Boots" id="EQUIP_PART_NAME_NORMAL_BOOTS"/>
+		<item nameType="3" description="1" text="Good Boots" id="EQUIP_PART_NAME_GOOD_BOOTS"/>
+		<item nameType="2" description="1" text="Armor Set T1" id="EQUIP_NAME_ARMOR_SET_T1"/>
+		<item nameType="2" description="1" text="Armor Set T2" id="EQUIP_NAME_ARMOR_SET_T2"/>
+		<item nameType="2" description="1" text="Armor Set T3" id="EQUIP_NAME_ARMOR_SET_T3"/>
+		<item nameType="0" description="1" text="STAGE" id="TIER_PROFESSION"/>
+		<item nameType="0" description="1" text="S" id="TIER_SHORT_PROFESSION"/>
+		<item nameType="0" description="1" text="START" id="GENRAL_START"/>
+		<item nameType="0" description="1" text="HELMET" id="GENRAL_EQUIP_PART_HELMET"/>
+		<item nameType="0" description="1" text="ARMOR" id="GENRAL_EQUIP_PART_ARMOR"/>
+		<item nameType="0" description="1" text="PANTS" id="GENRAL_EQUIP_PART_PANTS"/>
+		<item nameType="0" description="1" text="GLOVES" id="GENRAL_EQUIP_PART_GLOVES"/>
+		<item nameType="0" description="1" text="GOGGLES" id="GENRAL_EQUIP_PART_GOGGLES"/>
+		<item nameType="0" description="1" text="BOOTS" id="GENRAL_EQUIP_PART_BOOTS"/>
+		<item nameType="0" description="1" text="Active Skill Select" id="SKILL_ACTIVE_SELECT"/>
+		<item nameType="0" description="1" text="Passive Skill Select" id="SKILL_PASSIVE_SELECT"/>
+		<item nameType="0" description="1" text="Active" id="SKILL_ACTIVE_TITLE"/>
+		<item nameType="0" description="1" text="Passive" id="SKILL_PASSIVE_TITLE"/>
+		<item nameType="-1" description="1" text="Factory" id="MAP_NAME_BATTLE_RES_5"/>
+		<item nameType="-1" description="1" text="Nuclear Base" id="MAP_NAME_NUCLEAR_BASE_MAIN"/>
+		<item nameType="-1" description="1" text="Japanese Village" id="MAP_NAME_JAPANESE_VILLAGE"/>
+		<item nameType="-1" description="1" text="Docks Cruise Ship" id="MAP_NAME_DOCKS_CRUISE_SHIP"/>
+		<item nameType="-1" description="1" text="Abandoned City" id="MAP_NAME_ABANDONED_CITY"/>
+		<item nameType="-1" description="1" text="Nuclear Factory" id="MAP_NAME_NUCLEAR_FACTORY"/>
+		<item nameType="-1" description="1" text="Midlle East Town" id="MAP_NAME_MIDDLE_EAST_TOWN"/>
+		<item nameType="-1" description="1" text="Shopping Mall" id="MAP_NAME_SHOPPING_MALL"/>
+		<item nameType="-1" description="1" text="Test Map" id="MAP_NAME_TEST"/>
+		<item nameType="-1" description="1" text="Port" id="MAP_NAME_NEW_DOCKS"/>
+		<item nameType="-1" description="1" text="Weather Village" id="MAP_NAME_WEATHER_VILLAGE"/>
+		<item nameType="-1" description="1" text="Dust2" id="MAP_NAME_DUST2"/>
+		<item nameType="0" description="1" text="Time Mode(3.5min)" id="GAMEPLAY_MODE_TIME_210"/>
+		<item nameType="0" description="1" text="Kill Mode(15 kill)" id="GAMEPLAY_MODE_KILLS_15"/>
+		<item nameType="0" description="1" text="Free For All（3.5min）" id="GAMEPLAY_MODE_Death_Match_TIME_210"/>
+		<item nameType="0" description="1" text="Kill Mode(30 kill)" id="GAMEPLAY_MODE_KILLS_30"/>
+		<item nameType="0" description="1" text="Explosive Grenade" id="CONSUMABLE_NAME_EXP_GRENADE"/>
+		<item nameType="0" description="1" text="Frag Grenade" id="CONSUMABLE_NAME_FRAG_GRENADE"/>
+		<item nameType="0" description="1" text="c4" id="CONSUMABLE_NAME_C4"/>
+		<item nameType="0" description="1" text="RPG1" id="GAMEPLAY_PROP_RPG_1"/>
+		<item nameType="0" description="1" text="Rank" id="BATTLE_RESULT_RANK_TITLE"/>
+		<item nameType="0" description="1" text="Player" id="BATTLE_RESULT_NAME_TITLE"/>
+		<item nameType="0" description="1" text="Kills" id="BATTLE_RESULT_KILLS_TITLE"/>
+		<item nameType="0" description="1" text="Deaths" id="BATTLE_RESULT_DEATHS_TITLE"/>
+		<item nameType="0" description="1" text="Scores" id="BATTLE_RESULT_SCORE_TITLE"/>
+		<item nameType="0" description="1" text="Level" id="BATTLE_RESULT_LEVEL_TITLE"/>
+		<item nameType="0" description="1" text="Funds" id="BATTLE_RESULT_FUND_TITLE"/>
+		<item nameType="0" description="1" text="Exp" id="BATTLE_RESULT_EXP_TITLE"/>
+		<item nameType="0" description="1" text="Rank" id="GAMEPLAY_BATTLE_RESULT_RANK_TITLE"/>
+		<item nameType="0" description="1" text="Player" id="GAMEPLAY_BATTLE_RESULT_NAME_TITLE"/>
+		<item nameType="0" description="1" text="Kills" id="GAMEPLAY_BATTLE_RESULT_KILLS_TITLE"/>
+		<item nameType="0" description="1" text="Deaths" id="GAMEPLAY_BATTLE_RESULT_DEATHS_TITLE"/>
+		<item nameType="0" description="1" text="Scores" id="GAMEPLAY_BATTLE_RESULT_SCORE_TITLE"/>
+		<item nameType="0" description="1" text="State" id="BATTLE_RESULT_STATE_TITLE"/>
+		<item nameType="0" description="1" text="Level" id="GAMEPLAY_BATTLE_RESULT_LEVEL_TITLE"/>
+		<item nameType="0" description="1" text="Offline" id="BATTLE_RESULT_STATE_OFFLINE"/>
+		<item nameType="0" description="1" text="Online" id="BATTLE_RESULT_STATE_ONLINE"/>
+		<item nameType="0" description="1" text="{0:0} Get superItem {1:1}" id="IN_BATTLE_MSG_GET_SUPER_SUPPLY"/>
+		<item nameType="0" description="1" text="Get {0:0}" id="IN_BATTLE_MSG_GET_SUPPLY"/>
+		<item nameType="0" description="1" text="SuperItem is deployed on the battlefield" id="IN_BATTLE_MSG_SUPER_DROP"/>
+		<item nameType="0" description="1" text="SuperItem deploy count down {0:0} seconds" id="IN_BATTLE_MSG_SUPER_DROP_COUNTDOWN"/>
+		<item nameType="0" description="1" text="Headshot" id="IN_BATTLE_MSG_HEAD_SHOT"/>
+		<item nameType="0" description="1" text="{0:0} kills {1:1}" id="IN_BATTLE_MSG_KILL"/>
+		<item nameType="0" description="1" text="{0:0} kills {1:1}" id="IN_BATTLE_MSG_KILL_ENEMY"/>
+		<item nameType="0" description="1" text="{0:0} kills {1:1}" id="IN_BATTLE_MSG_KILL_TEAMMATE"/>
+		<item nameType="0" description="1" text="{0:0} joined the battle" id="IN_BATTLE_MSG_KILL_JOIN_GAME_TEAMMATE"/>
+		<item nameType="0" description="1" text="{0:0} joined the battle" id="IN_BATTLE_MSG_KILL_JOIN_GAME_ENEMY"/>
+		<item nameType="0" description="1" text="{0:0} quited the battle" id="IN_BATTLE_MSG_KILL_EXIT_GAME_TEAMMATE"/>
+		<item nameType="0" description="1" text="{0:0} quited the battle" id="IN_BATTLE_MSG_EXIT_GAME_ENEMY"/>
+		<item nameType="6" description="1" text="You have {0:0} multi kill" id="IN_BATTLE_MSG_EXIT_MULTI_KILL"/>
+		<item nameType="6" description="1" text="First Blood" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_1"/>
+		<item nameType="6" description="1" text="Double Kill " id="IN_BATTLE_MSG_EXIT_MULTI_KILL_2"/>
+		<item nameType="6" description="1" text="Triple Kill" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_3"/>
+		<item nameType="6" description="1" text="Ultra Kill" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_4"/>
+		<item nameType="6" description="1" text="Rampage!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_5"/>
+		<item nameType="6" description="1" text="Unstoppable!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_6"/>
+		<item nameType="6" description="1" text="Whiched Sick!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_7"/>
+		<item nameType="6" description="1" text="Mega Kill!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_8"/>
+		<item nameType="6" description="1" text="God Like!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_9"/>
+		<item nameType="6" description="1" text="Ownage!" id="IN_BATTLE_MSG_EXIT_MULTI_KILL_10"/>
+		<item nameType="0" description="1" text="killed you with &lt;b&gt;&lt;color=#ffbd00&gt;{0:0}&lt;/color&gt;&lt;/b&gt;" id="GAMEPLAY_DEADHINT_KILLED_INFO"/>
+		<item nameType="0" description="1" text="Cost" id="GENRAL_COST"/>
+		<item nameType="0" description="1" text="Respawn" id="GENRAL_RESPAWN"/>
+		<item nameType="0" description="1" text="Setting" id="GENRAL_SETTING"/>
+		<item nameType="0" description="1" text="Continue" id="GENRAL_CONTINUE"/>
+		<item nameType="0" description="1" text="Quit" id="GENRAL_QUIT"/>
+		<item nameType="0" description="1" text="Reset" id="GENRAL_RESET"/>
+		<item nameType="0" description="1" text="Save" id="GENRAL_SAVE"/>
+		<item nameType="0" description="1" text="Back" id="GENRAL_BACK"/>
+		<item nameType="0" description="1" text="Ammo" id="SUPPLY_NAME_AMMO"/>
+		<item nameType="0" description="1" text="Medkit" id="GENRAL_MEDKIT"/>
+		<item nameType="0" description="1" text="Scores" id="SUPPLY_NAME_SCORE"/>
+		<item nameType="0" description="1" text="Funds" id="SUPPLY_NAME_FUND"/>
+		<item nameType="0" description="1" text="Diamond" id="SUPPLY_NAME_DIAMOND"/>
+		<item nameType="0" description="1" text="Shield Recharger" id="SUPPLY_NAME_SHIELD_RECHARGER"/>
+		<item nameType="0" description="1" text="Small Ammo Supply" id="SUPPLY_NAME_AMMO_SUPPLY"/>
+		<item nameType="0" description="1" text="Fire Rate Increased" id="SKILL_SUPPLY_TITLE_TACTIC_GLOVE"/>
+		<item nameType="0" description="1" text="Gain 50% increased fire rate, 25% reduced recoil and 25% reduced reload time for 20 seconds after collecting this item., 25% reduced recoil and 25% reduced reload time for 20 seconds after collecting this item." id="SKILL_SUPPLY_DESCRIPTION_TACTIC_GLOVE"/>
+		<item nameType="0" description="1" text="Damage Increased" id="SKILL_SUPPLY_TITLE_EXPLOSIVE_AMMO"/>
+		<item nameType="0" description="1" text="Gain 100% increased attack for 20 seconds after collecting this item." id="SKILL_SUPPLY_DESCRIPTION_EXPLOSIVE_AMMO"/>
+		<item nameType="0" description="1" text="Infinite Magazine" id="SKILL_SUPPLY_TITLE_GOLD_MAGAZINE"/>
+		<item nameType="0" description="1" text="Shooting will not consume ammo for 20 seconds after collecting this item." id="SKILL_SUPPLY_DESCRIPTION_GOLD_MAGAZINE"/>
+		<item nameType="0" description="1" text="Fast HP recover" id="SKILL_SUPPLY_TITLE_NANO_ARMOR"/>
+		<item nameType="0" description="1" text="HP will recover 80% faster for 20 seconds after collecting this item." id="SKILL_SUPPLY_DESCRIPTION_NANO_ARMOR"/>
+		<item nameType="2" description="1" text="NORMAL" id="SKILL_EFFECT_QUALITY_NORMAL"/>
+		<item nameType="2" description="1" text="Headshot:" id="SKILL_TYPE_PASSIVE_HEADSHOT"/>
+		<item nameType="2" description="1" text="Hit:" id="SKILL_TYPE_PASSIVE_HIT"/>
+		<item nameType="2" description="1" text="Kill:" id="SKILL_TYPE_PASSIVE_KILL"/>
+		<item nameType="2" description="1" text="Near Death:" id="SKILL_TYPE_PASSIVE_LOW_HP"/>
+		<item nameType="2" description="1" text="Reload:" id="SKILL_TYPE_PASSIVE_RELOAD"/>
+		<item nameType="2" description="1" text="Medic Kit" id="SKILL_ITEM_NAME_MEDIC_KIT"/>
+		<item nameType="2" description="1" text="Recover all HP and Max HP immediately when pickup this item." id="SKILL_ITEM_DESCRIPTION_MEDIC_KIT"/>
+		<item nameType="2" description="1" text="Tactic Glove" id="SKILL_ITEM_NAME_TACTIC_GLOVE"/>
+		<item nameType="2" description="1" text="Gain 50% increased fire rate, 25% reduced recoil and 25% reduced reload time for 20 seconds after collecting this item., 25% reduced recoil and 25% reduced reload time for 20 seconds after collecting this item." id="SKILL_ITEM_DESCRIPTION_TACTIC_GLOVE"/>
+		<item nameType="2" description="1" text="Explosive Ammo" id="SKILL_ITEM_NAME_EXPLOSIVE_AMMO"/>
+		<item nameType="2" description="1" text="Gain 100% increased attack for 20 seconds after collecting this item." id="SKILL_ITEM_DESCRIPTION_EXPLOSIVE_AMMO"/>
+		<item nameType="2" description="1" text="Gold Magazine" id="SKILL_ITEM_NAME_GOLD_MAGAZINE"/>
+		<item nameType="2" description="1" text="Shooting will not consume ammo for 20 seconds after collecting this item." id="SKILL_ITEM_DESCRIPTION_GOLD_MAGAZINE"/>
+		<item nameType="2" description="1" text="Nanophase Armor" id="SKILL_ITEM_NAME_NANO_ARMOR"/>
+		<item nameType="2" description="1" text="HP will recover 80% faster for 20 seconds after collecting this item." id="SKILL_ITEM_DESCRIPTION_NANO_ARMOR"/>
+		<item nameType="0" description="1" text="Upgrade Failed" id="MSGBOX_TITLE_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Operation Failure" id="MSGBOX_TITLE_OPERATION_FAILURE"/>
+		<item nameType="0" description="1" text="Equip part Upgrade" id="MSGBOX_TITLE_EQUIP_PART_UPGRADE"/>
+		<item nameType="0" description="1" text="Weapon Part Upgrade" id="MSGBOX_TITLE_WEAPON_PART_UPGRADE"/>
+		<item nameType="0" description="1" text="Reconnect Failed" id="MSGBOX_TITLE_RECONNECT_FAILED"/>
+		<item nameType="0" description="1" text="Failed to connect to the Battle " id="MSGBOX_TITLE_CONNECT_BATTLE_FAILED"/>
+		<item nameType="0" description="1" text="Too Much Exceptions!!!!!" id="MSGBOX_MSG_TOO_MUCH_EXCEPTIONS"/>
+		<item nameType="0" description="1" text="Failed to connect to the Server" id="MSGBOX_TITLE_CONNECT_FAILED"/>
+		<item nameType="0" description="1" text="Upgrade Failed! Please check your Diamonds/Funds. Or it doesn't meet the Upgrading requirement." id="MSGBOX_MSG_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="The Sever response timeout!" id="MSGBOX_MSG_SEVER_RESPONSE_TIMEOUT"/>
+		<item nameType="0" description="1" text="Active skills can't be empty, please select active skills!, please select active skills!" id="MSGBOX_MSG_SKILL_ACTIVE_NONE"/>
+		<item nameType="0" description="1" text="Doesn't meet the Upgrading requirement. Upgrading Failed!" id="MSGBOX_MSG_EQUIP_PART_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Doesn't meet the Upgrading requirement. Upgrading Failed!" id="MSGBOX_MSG_WEAPON_PART_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Reconnecting Failed[-1:No Players,-3:No Rooms]==&gt;{0:0}" id="MSGBOX_MSG_RECONNECT_FAILED"/>
+		<item nameType="0" description="1" text="Reconnecting Failed" id="MSGBOX_MSG_RECONNECT_FAILED2"/>
+		<item nameType="0" description="1" text="Failed to connect to the Battle. The reason of failure：{0:0}" id="MSGBOX_MSG_CONNECT_BATTLE_FAILED"/>
+		<item nameType="0" description="1" text="The Client version protocol number does not meet the Server side. Cannot connect to the server!" id="MSGBOX_MSG_PROTOCOL_NUMBER_WRONG"/>
+		<item nameType="0" description="1" text="Login Failed" id="MSGBOX_MSG_LOGIN_FAILED"/>
+		<item nameType="0" description="1" text="Failed to connect to the Battle " id="MSGBOX_MSG_CONNECT_BATTLE_FAILED2"/>
+		<item nameType="0" description="1" text="Failed to connect to the Server" id="MSGBOX_MSG_CONNECT_HALL_FAILED"/>
+		<item nameType="0" description="1" text="Quit your last battle unexpectedly." id="MSGBOX_MSG_LAST_FIGHT_EXIT_ERROR"/>
+		<item nameType="0" description="1" text="{0:0}" id="MSGBOX_MSG_MSG"/>
+		<item nameType="0" description="1" text="Reconnect" id="MSGBOX_BTN_RECONNECT"/>
+		<item nameType="0" description="1" text="EXIT MATCH" id="MSGBOX_TITLE_EXIT_BATTLE"/>
+		<item nameType="0" description="1" text="Do you want to quit this match?" id="MSGBOX_MSG_EXIT_BATTLE"/>
+		<item nameType="0" description="1" text="OK" id="GENRAL_OK"/>
+		<item nameType="0" description="1" text="NO" id="GENRAL_CANCEL"/>
+		<item nameType="0" description="1" text="Login Failed" id="MSGBOX_TITLE_LOGIN_FAILED"/>
+		<item nameType="0" description="1" text="Reconnect Failed" id="MSGBOX_MESSAGE_RECONNECT_FAILED"/>
+		<item nameType="0" description="1" text="SHOP" id="GENRAL_SHOP"/>
+		<item nameType="0" description="1" text="HERO" id="GENRAL_HERO"/>
+		<item nameType="0" description="1" text="GUN" id="GENRAL_GUN"/>
+		<item nameType="0" description="主页面武器库" text="ARMORY" id="GENRAL_ARMORY"/>
+		<item nameType="0" description="1" text="HOME" id="GENRAL_HOME"/>
+		<item nameType="0" description="1" text="LEGION" id="GENRAL_LEGION"/>
+		<item nameType="0" description="1" text="CONFLICT" id="GENRAL_CONFLICT"/>
+		<item nameType="0" description="1" text="BATTLE" id="GENRAL_BATTLE"/>
+		<item nameType="0" description="1" text="WAR" id="GENRAL_WAR"/>
+		<item nameType="0" description="1" text="T-DEATH" id="GENRAL_TEAM_DEATH"/>
+		<item nameType="0" description="1" text="STORAGE" id="GENRAL_STORAGE"/>
+		<item nameType="0" description="1" text="TAP TO CONTINUE" id="GENRAL_TAP_TO_CONTINUE"/>
+		<item nameType="0" description="1" text="MAX" id="GENRAL_LEVEL_MAX"/>
+		<item nameType="0" description="1" text="SKILL" id="GENRAL_SKILL"/>
+		<item nameType="0" description="1" text="Trait Upgrade" id="GENRAL_TRAIT_UPGRADE"/>
+		<item nameType="0" description="1" text="HERO SELECT" id="GENRAL_HERO_SELECT"/>
+		<item nameType="0" description="1" text="MAIL" id="GENRAL_MAIL"/>
+		<item nameType="0" description="1" text="UPGRADE" id="GUN_UPGRADE_SUBMENU_UPGRADE"/>
+		<item nameType="0" description="1" text="PATTERN" id="GENRAL_PATTERN"/>
+		<item nameType="0" description="1" text="Gun TUpgrade Failed" id="MSGBOX_GUN_TIER_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Gun Part Upgrade Failed" id="MSGBOX_GUN_PART_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Gun Unlock Failed" id="MSGBOX_GUN_UNLOCK_FAILED"/>
+		<item nameType="2" description="1" text="ENGINEER" id="PROFESSION_NAME_1"/>
+		<item nameType="2" description="1" text="SNIPER" id="PROFESSION_NAME_2"/>
+		<item nameType="2" description="1" text="HEAVY" id="PROFESSION_NAME_3"/>
+		<item nameType="2" description="1" text="MEDIC" id="PROFESSION_NAME_4"/>
+		<item nameType="0" description="1" text="Profession Status change faild" id="MSGBOX_PROFESSION_STATUS_CHANGE_FAILD"/>
+		<item nameType="0" description="1" text="Profession Tupgrade faild" id="MSGBOX_PROFESSION_TIER_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="Profession unlock failed" id="MSGBOX_PROFESSION_UNLOCK_FAILED"/>
+		<item nameType="0" description="1" text="Profession Equip upgrade failed" id="MSGBOX_PROFESSION_EQUIP_UPGRADE_FAILED"/>
+		<item nameType="0" description="1" text="FUNDS" id="GENRAL_FUND"/>
+		<item nameType="0" description="1" text="DIAMOND" id="GENRAL_DIAMOND"/>
+		<item nameType="0" description="1" text="BLUE PRINT" id="GENRAL_BLUEPRINT"/>
+		<item nameType="0" description="1" text="FUNDS" id="MERCHANDISE_TYPE_FUND"/>
+		<item nameType="0" description="1" text="DIAMOND" id="MERCHANDISE_TYPE_DIAMOND"/>
+		<item nameType="0" description="1" text="BLUEPRINT" id="MERCHANDISE_TYPE_BLUEPRINT"/>
+		<item nameType="0" description="1" text="COMMON" id="BLUEPRINT_QUALITY_COMMON"/>
+		<item nameType="0" description="1" text="RARE" id="BLUEPRINT_QUALITY_RARE"/>
+		<item nameType="0" description="1" text="EPIC" id="BLUEPRINT_QUALITY_EPIC"/>
+		<item nameType="0" description="1" text="Are you sure you want to buy {0:merchandiseNumber} Funds?" id="MSGBOX_PURCHASE_CONFIRM_MESSAGE_FUND"/>
+		<item nameType="0" description="1" text="Are you sure you want to buy {0:merchandiseNumber} Diamonds?" id="MSGBOX_PURCHASE_CONFIRM_MESSAGE_DIAMOND"/>
+		<item nameType="0" description="1" text="Are you sure you want to buy {0:merchandiseNumber} {1:blueprintName} Blue Prints?\nYou have purchased {2:purchaseTimes} times，{3:purchaseLastTimes} times Remaning." id="MSGBOX_PURCHASE_CONFIRM_MESSAGE_BLUEPRINT"/>
+		<item nameType="0" description="1" text="Are you sure you want to buy {0:ChestNumber} Chest?" id="MSGBOX_PURCHASE_CONFIRM_MESSAGE_CHEST"/>
+		<item nameType="-1" description="1" text="SUBMACHINE T1" id="WEAPON_SUBMACHINE_T1"/>
+		<item nameType="-1" description="1" text="SUBMACHINE T2" id="WEAPON_SUBMACHINE_T2"/>
+		<item nameType="-1" description="1" text="SUBMACHINE T3" id="WEAPON_SUBMACHINE_T3"/>
+		<item nameType="-1" description="1" text="SUBMACHINE T4" id="WEAPON_SUBMACHINE_T4"/>
+		<item nameType="-1" description="1" text="SNIPER T1" id="WEAPON_SNIPER_T1"/>
+		<item nameType="-1" description="1" text="SNIPER T2" id="WEAPON_SNIPER_T2"/>
+		<item nameType="-1" description="1" text="SNIPER T3" id="WEAPON_SNIPER_T3"/>
+		<item nameType="-1" description="1" text="SNIPER T4" id="WEAPON_SNIPER_T4"/>
+		<item nameType="-1" description="1" text="ASSAULT RIFLE T1" id="WEAPON_ASSAULT_T1"/>
+		<item nameType="-1" description="1" text="ASSAULT RIFLE T2" id="WEAPON_ASSAULT_T2"/>
+		<item nameType="-1" description="1" text="ASSAULT RIFLE T3" id="WEAPON_ASSAULT_T3"/>
+		<item nameType="-1" description="1" text="ASSAULT RIFLE T4" id="WEAPON_ASSAULT_T4"/>
+		<item nameType="-1" description="1" text="SHOTGUN T1" id="WEAPON_SHOTGUN_T1"/>
+		<item nameType="-1" description="1" text="SHOTGUN T2" id="WEAPON_SHOTGUN_T2"/>
+		<item nameType="-1" description="1" text="SHOTGUN T3" id="WEAPON_SHOTGUN_T3"/>
+		<item nameType="-1" description="1" text="SHOTGUN T4" id="WEAPON_SHOTGUN_T4"/>
+		<item nameType="1" description="1" text="STALKER" id="PROFESSION_1"/>
+		<item nameType="1" description="1" text="ASSAULT" id="PROFESSION_2"/>
+		<item nameType="1" description="1" text="ENGINEER" id="PROFESSION_3"/>
+		<item nameType="1" description="1" text="PROFESSION4" id="PROFESSION_4"/>
+		<item nameType="1" description="1" text="STALKER T1" id="PROFESSION_1_T1"/>
+		<item nameType="1" description="1" text="STALKER T2" id="PROFESSION_1_T2"/>
+		<item nameType="1" description="1" text="STALKER T3" id="PROFESSION_1_T3"/>
+		<item nameType="1" description="1" text="STALKER T4" id="PROFESSION_1_T4"/>
+		<item nameType="1" description="1" text="ASSAULT T1" id="PROFESSION_2_T1"/>
+		<item nameType="1" description="1" text="ASSAULT T2" id="PROFESSION_2_T2"/>
+		<item nameType="1" description="1" text="ASSAULT T3" id="PROFESSION_2_T3"/>
+		<item nameType="1" description="1" text="ASSAULT T4" id="PROFESSION_2_T4"/>
+		<item nameType="1" description="1" text="ENGINEER T1" id="PROFESSION_3_T1"/>
+		<item nameType="1" description="1" text="ENGINEER T2" id="PROFESSION_3_T2"/>
+		<item nameType="1" description="1" text="ENGINEER T3" id="PROFESSION_3_T3"/>
+		<item nameType="1" description="1" text="ENGINEER T4" id="PROFESSION_3_T4"/>
+		<item nameType="1" description="1" text="PROFESSION4 T1" id="PROFESSION_4_T1"/>
+		<item nameType="1" description="1" text="PROFESSION4 T2" id="PROFESSION_4_T2"/>
+		<item nameType="1" description="1" text="PROFESSION4 T3" id="PROFESSION_4_T3"/>
+		<item nameType="1" description="1" text="PROFESSION4 T4" id="PROFESSION_4_T4"/>
+		<item nameType="0" description="1" text="Sold Out!" id="MSGBOX_SHOP_MERCHANDISE_SOLD_OUT"/>
+		<item nameType="0" description="1" text="New Blueprints will appear in " id="MSGBOX_SHOP_BLUEPRINT_REFRESH_HINT"/>
+		<item nameType="0" description="1" text="Lack of Fund" id="SHOP_PURCHASE_LACK_OF_FUND"/>
+		<item nameType="0" description="1" text="BUY FUND" id="MSGBOX_SHOP_MESSAGE_BOX_GOTO_PURCHASE_FUND"/>
+		<item nameType="0" description="1" text="Lack of Diamond" id="SHOP_PURCHASE_LACK_OF_DIAMOND"/>
+		<item nameType="0" description="1" text="BUY DIAMOND" id="MSGBOX_SHOP_MESSAGE_BOX_GOTO_PURCHASE_DIAMOND"/>
+		<item nameType="0" description="1" text="Refresh Failed" id="MSGBOX_SHOP_REFRESH_FAILED"/>
+		<item nameType="0" description="1" text="Purchase Faild" id="MSGBOX_SHOP_PURCHASE_FAILD"/>
+		<item nameType="0" description="1" text="Buy Missing Fund ?" id="MSGBOX_SHOP_PURCHASE_MISSING_FUND_WITH_DIAMOND"/>
+		<item nameType="0" description="1" text="Are you sure you want to buy this item?" id="MSGBOX_SHOP_GENERAL_TIP"/>
+		<item nameType="0" description="1" text="DO YOU WANT TO SEE SOME NEW ITEMS？" id="MSGBOX_SHOP_REFRESH_CONTENT"/>
+		<item nameType="0" description="1" text="NET ITEMS?" id="MSGBOX_SHOP_REFRESH_TITLE"/>
+		<item nameType="0" description="1" text="You can`t refresh again today." id="MSGBOX_SHOP_REFRESH_TIME_MAX"/>
+		<item nameType="0" description="1" text="{0:0}% OFF" id="SHOP_DISCOUNT"/>
+		<item nameType="0" description="1" text="BUY AGAIN" id="SHOP_BUY_AGAIN"/>
+		<item nameType="0" description="1" text="COMMON" id="SHOP_TYPE_COMMON"/>
+		<item nameType="0" description="1" text="BLACK" id="SHOP_TYPE_BLACK"/>
+		<item nameType="0" description="1" text="LOTTERY" id="SHOP_TYPE_GACHA"/>
+		<item nameType="0" description="1" text="COMPETITION" id="SHOP_TYPE_COMPETITION"/>
+		<item nameType="0" description="1" text="NEXT REFRESH:" id="SHOP_NEXT_REFRESH_TIME"/>
+		<item nameType="0" description="1" text="FREE CRATE:" id="GACHA_FREE_CRATE"/>
+		<item nameType="0" description="1" text="FREE CRATE IN:" id="GACHA_NEXT_FREE_CRATE"/>
+		<item nameType="0" description="1" text="contains {0:0} subjects" id="GACHA_CONTAINS"/>
+		<item nameType="0" description="1" text="MAY INCLUDE:" id="GACHA_MAY_INCLUDE"/>
+		<item nameType="0" description="1" text="CRATE" id="GENERAL_CRATE"/>
+		<item nameType="0" description="1" text="FREE" id="GENERAL_FREE"/>
+		<item nameType="0" description="1" text="LOTTERY" id="GENERAL_GACHA"/>
+		<item nameType="0" description="1" text="QUICK PLAY" id="GENRAL_QUICK_TIME"/>
+		<item nameType="0" description="1" text="TEAM DEATH" id="GAME_MODE_TEAM_DEATH"/>
+		<item nameType="0" description="1" text="TAKE THE MOST KILLS IN 3 MINUTES" id="GAME_MODE_TEAM_DEATH_DESC"/>
+		<item nameType="0" description="1" text="OBLITERATION" id="GAME_MODE_OBLITERATION"/>
+		<item nameType="0" description="1" text="KILL 30 ENEMIES IN 3 MINUTES" id="GAME_MODE_OBLITERATION_DESC"/>
+		<item nameType="0" description="1" text="CONFLICT" id="GAME_MODE_MELEE"/>
+		<item nameType="0" description="1" text="CAPTURE THE TARGET ZONE IN 5 MINUTES" id="GAME_MODE_MELEE_DESC"/>
+		<item nameType="0" description="1" text="LETHAL WEAPON" id="GAME_MODE_LETHAL_WEAPON"/>
+		<item nameType="0" description="1" text="SURVIVE IN 3 MINUTES" id="GAME_MODE_LETHAL_WEAPON_DESC"/>
+		<item nameType="0" description="1" text="CLASS" id="GENRAL_CLASS"/>
+		<item nameType="0" description="1" text="GUNS" id="GENRAL_GUNS"/>
+		<item nameType="0" description="1" text="GADGET" id="GENRAL_GADGET"/>
+		<item nameType="0" description="1" text="DEPLOY ON MISSION" id="GENRAL_NORMAL_SELECT_MODEL_TITLE"/>
+		<item nameType="0" description="1" text="SELECT GAME MODE AND YOUR EQUIPMENT." id="GENRAL_NORMAL_SELECT_MODEL_DESC"/>
+		<item nameType="0" description="1" text="EXPIRED" id="MATCH_KNAPSACK_EXPIRED"/>
+		<item nameType="0" description="1" text="MOST KILLS" id="BATTLE_RESULT_RANK_MOST_KILL"/>
+		<item nameType="0" description="1" text="MOST ASSIST" id="BATTLE_RESULT_RANK_MOST_ASSIST"/>
+		<item nameType="0" description="1" text="MOST COMBO" id="BATTLE_RESULT_RANK_MOST_MULTI_KILLS"/>
+		<item nameType="0" description="1" text="CONGRATULATIONS!" id="MSGBOX_BATTLE_RESULT_TITLE_CONGRATULATIONS"/>
+		<item nameType="0" description="1" text="Level UP" id="MSGBOX_PLAYER_LEVEL_UP_HINT_TITLE"/>
+		<item nameType="0" description="1" text="Congratulations!\n You level up to {0:playerLevel}" id="MSGBOX_PLAYER_LEVEL_UP_HINT_MSG"/>
+		<item nameType="0" description="1" text="CONTAINER" id="CHEST_TYPE"/>
+		<item nameType="0" description="1" text="SMUGGLING" id="CHEST_SMUGGLING"/>
+		<item nameType="0" description="1" text="NORMAL" id="CHEST_NORMAL"/>
+		<item nameType="0" description="1" text="MILITARY" id="CHEST_MILITARY"/>
+		<item nameType="0" description="1" text="CONTRABAND" id="CHEST_CONTRABAND"/>
+		<item nameType="0" description="1" text="BLUEPRINT CONTAINER" id="CHEST_BLUEPRINT"/>
+		<item nameType="0" description="1" text="RETROFIT BOX CONTAINER" id="CHEST_TRANSFORMATION"/>
+		<item nameType="0" description="1" text="ADVANCED RETROFIT BOX CONTAINER" id="CHEST_TRANSFORMATION_ADVANCED"/>
+		<item nameType="0" description="1" text="INTERMEDIATE RETROFIT BOX CONTAINER" id="CHEST_TRANSFORMATION_INTERMEDIATE"/>
+		<item nameType="0" description="1" text="BASIC RETROFIT BOX CONTAINER" id="CHEST_TRANSFORMATION_BASIC"/>
+		<item nameType="0" description="1" text="NORMAL CHEST" id="ITEM_QUALITY_NORMAL"/>
+		<item nameType="0" description="1" text="ELITE CHEST" id="ITEM_QUALITY_ELITE"/>
+		<item nameType="0" description="1" text="EPIC CHEST" id="ITEM_QUALITY_EPIC"/>
+		<item nameType="0" description="1" text="Lack Of Retrofit Box" id="MSGBOX_PROFESSION_TIER_UPGRADE_LACK_OF_RETROFIT_BOX"/>
+		<item nameType="0" description="1" text="No Available Battle Server Now" id="MSGBOX_SERVER_ERROR_NO_ACCESSIBLE_BATTLE_SERVER"/>
+		<item nameType="0" description="1" text="Repeat Send Join Battle Request" id="MSGBOX_SERVER_ERROR_REPEAT_SEND_JOIN_BATTLE_REQUEST"/>
+		<item nameType="0" description="1" text="Already In Battle" id="MSGBOX_SERVER_ERROR_ALREADY_IN_BATTLE"/>
+		<item nameType="0" description="1" text="Energy Recharge Failed" id="MSGBOX_ENERGY_RECHARGE_FAILED"/>
+		<item nameType="0" description="1" text="Energy Not Enough" id="MSGBOX_ENERGY_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="Do you want to fill up your Energy?" id="MSGBOX_ENERGY_NOT_ENOUGH_HINT"/>
+		<item nameType="0" description="1" text="Change Name Failed" id="MSGBOX_CHANGE_NAME_FAILED"/>
+		<item nameType="0" description="1" text="Energy Sync Failed" id="MSGBOX_ENERGY_SYNC_FAILED"/>
+		<item nameType="0" description="1" text="Statistics Refresh Failed" id="MSGBOX_STATISTICS_REFRESH_FAILED"/>
+		<item nameType="0" description="1" text="You have been kicked out of the game. Please confirm to leave the game." id="MSGBOX_PLAYER_BE_KICKED_OUT_REPLY"/>
+		<item nameType="0" description="1" text="You have been kicked out of the game. " id="MSGBOX_PLAYER_BE_KICKED_OUT_TITLE"/>
+		<item nameType="0" description="1" text="Kill SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_KILL"/>
+		<item nameType="0" description="1" text="FIRSTBLOOD SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_FIRSTBLOOD"/>
+		<item nameType="0" description="1" text="ASSIST SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_ASSIST"/>
+		<item nameType="0" description="1" text="REVENGE SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_REVENGE"/>
+		<item nameType="0" description="1" text="WIN SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_WIN"/>
+		<item nameType="0" description="1" text="RANK SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_RANK"/>
+		<item nameType="0" description="1" text="TOTAL SCORE" id="BATTLE_RESULT_REWARD_TOTAL_SCORE"/>
+		<item nameType="0" description="1" text="MULTIKILL SCORE" id="BATTLE_RESULT_REWARD_SCORE_OF_MULTIKILL"/>
+		<item nameType="0" description="1" text="BATTLE EXP" id="BATTLE_RESULT_REWARD_OF_EXP"/>
+		<item nameType="0" description="1" text="DIAMOND" id="BATTLE_RESULT_REWARD_OF_DIAMOND"/>
+		<item nameType="0" description="1" text="FUNDS" id="BATTLE_RESULT_REWARD_OF_FUND"/>
+		<item nameType="0" description="1" text="AVG:" id="BATTLE_RESULT_REWARD_STATISTICS_AVG"/>
+		<item nameType="0" description="1" text="KILLS" id="BATTLE_RESULT_REWARD_STATISTICS_KILLS"/>
+		<item nameType="0" description="1" text="ASSIST" id="BATTLE_RESULT_REWARD_STATISTICS_ASSIST"/>
+		<item nameType="0" description="1" text="MULTIKILL" id="BATTLE_RESULT_REWARD_STATISTICS_MULTIKILL"/>
+		<item nameType="0" description="1" text="REVENGE" id="BATTLE_RESULT_REWARD_STATISTICS_REVENGE"/>
+		<item nameType="0" description="1" text="DEATH" id="BATTLE_RESULT_REWARD_STATISTICS_DEATH"/>
+		<item nameType="0" description="1" text="BATTLE REWARDS" id="BATTLE_RESULT_REWARD_TITLE"/>
+		<item nameType="0" description="1" text="CRATE REWARD" id="BATTLE_RESULT_REWARD_CRATE_TITLE"/>
+		<item nameType="0" description="1" text="FIGHT WITH ENEMIES ALL OVER THE WORLD!!!" id="MSGBOX_HOME_MODE_TITLE_CONFLICT_DESCRIPTION"/>
+		<item nameType="0" description="1" text="CONFIRM" id="GENRAL_CONFIRM"/>
+		<item nameType="0" description="1" text="Are you sure to Unlock this PROFESSION?" id="MSGBOX_PROFESSION_UNLOCK_HINT_MSG"/>
+		<item nameType="0" description="1" text="Are you sure to Unlock this GUN?" id="MSGBOX_GUN_UNLOCK_HINT_MSG"/>
+		<item nameType="0" description="1" text="CONFIRM" id="GUN_UNLOCK_HINT_TITLE"/>
+		<item nameType="0" description="1" text="The Name is not Legal or not Empty" id="MSGBOX_CHANGE_NAME_FAILED_NOT_LEGAL"/>
+		<item nameType="0" description="1" text="Require All Part Level Up To {0:partMaxLevel}" id="MSGBOX_TOAST_GUN_TIER_UPGRADE_REQUIRE_PART_LEVEL_TO"/>
+		<item nameType="0" description="1" text="Lack Of Retrofit Box" id="TOAST_GUN_TIER_UPGRADE_LACK_OF_RETROFIT_BOX"/>
+		<item nameType="0" description="1" text="Require Player Level Up To {0:playerLevelLimit}" id="MSGBOX_TOAST_GUN_TIER_UPGRADE_REQUIRE_PLAYER_LEVEL_TO"/>
+		<item nameType="0" description="1" text="Have reached the maximum level" id="MSGBOX_TOAST_GUN_TIER_UPGRADE_MAX"/>
+		<item nameType="0" description="1" text="Have reached the maximum level" id="TOAST_GUN_PART_UPGRADE_MAX"/>
+		<item nameType="0" description="1" text="Need To Upgrade To Tier {0:tier}" id="MSGBOX_TOAST_GUN_PART_UPGRADE_REQUIRE_TIER_TO"/>
+		<item nameType="0" description="1" text="Lack of Blueprint" id="MSGBOX_TOAST_GUN_PART_UPGRADE_LACK_OF_BLUEPRINT"/>
+		<item nameType="0" description="1" text="Lack of Fund" id="TOAST_GUN_PART_UPGRADE_LACK_OF_FUND"/>
+		<item nameType="0" description="1" text="Lack of Material" id="MSGBOX_TOAST_GUN_PART_UPGRADE_LACK_OF_MATERIAL"/>
+		<item nameType="0" description="1" text="Require All Equip Level Up To {0:partMaxLevel}" id="MSGBOX_TOAST_PROFESSION_TIER_UPGRADE_REQUIRE_EQUIP_LEVEL_TO"/>
+		<item nameType="0" description="1" text="Lack Of Retrofit Box" id="TOAST_PROFESSION_TIER_UPGRADE_LACK_OF_RETROFIT_BOX"/>
+		<item nameType="0" description="1" text="Require Profession Level Up To {0:playerLevelLimit}" id="MSGBOX_TOAST_PROFESSION_TIER_UPGRADE_REQUIRE_PLAYER_LEVEL_TO"/>
+		<item nameType="0" description="1" text="Have reached the maximum level" id="TOAST_PROFESSION_TIER_UPGRADE_MAX"/>
+		<item nameType="0" description="1" text="Have reached the maximum level" id="TOAST_PROFESSION_EQUIP_UPGRADE_MAX"/>
+		<item nameType="0" description="1" text="Need To Upgrade To Tier {0:tier}" id="TOAST_PROFESSION_EQUIP_UPGRADE_REQUIRE_TIER_TO"/>
+		<item nameType="0" description="1" text="Lack of Blueprint" id="TOAST_PROFESSION_EQUIP_UPGRADE_LACK_OF_BLUEPRINT"/>
+		<item nameType="0" description="1" text="Lack of Fund" id="TOAST_PROFESSION_EQUIP_UPGRADE_LACK_OF_FUND"/>
+		<item nameType="0" description="1" text="Lose Connection With The Game Server" id="MSGBOX_MSG_GATEWAY_DISCONNECT"/>
+		<item nameType="0" description="1" text="JOIN" id="GENRAL_JOIN"/>
+		<item nameType="0" description="1" text="CREATE" id="GENRAL_CREATE"/>
+		<item nameType="0" description="1" text="SEARCH" id="GENRAL_SEARCH"/>
+		<item nameType="0" description="1" text="ON" id="GENRAL_ON"/>
+		<item nameType="0" description="1" text="OFF" id="GENRAL_OFF"/>
+		<item nameType="0" description="1" text="YOU" id="GENRAL_YOU"/>
+		<item nameType="0" description="1" text="You have already joined the Legion" id="LEGION_HAD"/>
+		<item nameType="0" description="1" text="Name length exceeds the limit" id="LEGION_NAME_MAX_LENGH"/>
+		<item nameType="0" description="1" text="No Legion Badge" id="LEGION_BADGE_NOT_FOUND"/>
+		<item nameType="0" description="1" text="Legion slogan length exceeds the limit" id="LEGION_SLOGAN_MAX_LENGH"/>
+		<item nameType="0" description="1" text="Can not find the Legion" id="LEGION_NOT_FOUND"/>
+		<item nameType="0" description="1" text="Legion member is max" id="LEGION_MEMBER_IS_MAX"/>
+		<item nameType="0" description="1" text="Not reach the amount of trophy required by the Legion" id="LEGION_AUDIT_TROPHIES_LIMIT"/>
+		<item nameType="0" description="1" text="Legion creation error" id="LEGION_APPLY_CREATE_ERROR"/>
+		<item nameType="0" description="1" text="Please enter the search content" id="LEGION_SEARCHCLANS_IS_EMPTY"/>
+		<item nameType="0" description="1" text="Please enter the search content" id="LEGION_SEARCH_EMPTY"/>
+		<item nameType="0" description="1" text="Legion creation error" id="LEGION_CREATE_ERROR"/>
+		<item nameType="0" description="1" text="Not reach the level required by the Legion " id="LEGION_LEVEL_LIMIT"/>
+		<item nameType="0" description="1" text="CREATE OR JOIN A LEGION FOR" id="LEGION_FUNCTION"/>
+		<item nameType="0" description="1" text="CHAT" id="LEGION_FUNCTION_CHAT"/>
+		<item nameType="0" description="1" text="DONATE" id="LEGION_FUNCTION_DONATE"/>
+		<item nameType="0" description="1" text="COOPERATION" id="LEGION_FUNCTION_COOPERATION"/>
+		<item nameType="0" description="1" text="LEGION NAME:" id="LEGION_TIP_INPUT_NAME"/>
+		<item nameType="0" description="1" text="SLOGAN:" id="LEGION_TIP_INPUT_SLOGAN"/>
+		<item nameType="0" description="1" text="TYPE:" id="LEGION_TIP_SELECT_TYPE"/>
+		<item nameType="0" description="1" text="REQUIRED TROPHIES:" id="LEGION_TIP_SELECT_REQUIRED_TROPHY"/>
+		<item nameType="0" description="1" text="LOCATION:" id="LEGION_TIP_SELECT_LOCATION"/>
+		<item nameType="0" description="1" text="Enter legion name" id="LEGION_TIP_ENTER_NAME"/>
+		<item nameType="0" description="1" text="Enter legion slogan" id="LEGION_TIP_ENTER_SLOGAN"/>
+		<item nameType="0" description="1" text="SEARCH CLANS:" id="LEGION_TIP_SEARCH_LEGION"/>
+		<item nameType="0" description="1" text="Enter legion name or tag" id="LEGION_TIP_ENTER_NAME_OR_TAG"/>
+		<item nameType="0" description="1" text="MEMBERS:" id="LEGION_TIP_SELECT_MEMBER_NUM"/>
+		<item nameType="0" description="1" text="ONLY LEGION I CAN JOIN:" id="LEGION_TIP_SWITCH_ONLY_CAN_JOIN"/>
+		<item nameType="0" description="1" text="BROWSE" id="LEGION_BROWSE"/>
+		<item nameType="0" description="1" text="CLAN TROPHIES" id="LEGION_TROPHY"/>
+		<item nameType="0" description="1" text="MEMBERS:{0:0}/{1:1}" id="LEGION_MEMBER_NUM"/>
+		<item nameType="0" description="1" text="REQUEST BLUEPRINTS" id="LEGION_REQUEST_BLUEPRINT"/>
+		<item nameType="0" description="1" text="INVITE" id="LEGION_INVITE"/>
+		<item nameType="0" description="1" text="LEGION INFO" id="LEGION_INFO"/>
+		<item nameType="0" description="1" text="MEMBERS" id="LEGION_MEMBER"/>
+		<item nameType="0" description="1" text="Message" id="LEGION_MESSAGE"/>
+		<item nameType="0" description="1" text="Settings" id="LEGION_INFO_SETTING"/>
+		<item nameType="0" description="1" text="Disband" id="LEGION_DISBAND"/>
+		<item nameType="0" description="1" text="Cancel" id="LEGION_DISBAND_CANCEL"/>
+		<item nameType="0" description="1" text="Legion Trophies:" id="LEGION_INFO_TROPHY"/>
+		<item nameType="0" description="1" text="Donation/week:" id="LEGION_INFO_DONATION"/>
+		<item nameType="0" description="1" text="Type:" id="LEGION_INFO_TYPE"/>
+		<item nameType="0" description="1" text="Required trophies:" id="LEGION_INFO_REQUIRE_TROPHY"/>
+		<item nameType="0" description="1" text="Location:" id="LEGION_INFO_LOCATION"/>
+		<item nameType="0" description="1" text="Legion tag:" id="LEGION_INFO_TAG"/>
+		<item nameType="0" description="1" text="LEGION SETTINGS" id="LEGION_SETTING"/>
+		<item nameType="0" description="1" text="Donated:{0:0}" id="LEGION_INFO_MEMBER_DONATION"/>
+		<item nameType="0" description="1" text="CHIEF" id="LEGION_POSITION_CHIEF"/>
+		<item nameType="0" description="1" text="DEPUTY CHIEF" id="LEGION_POSITION_DEPUTY_CHIEF"/>
+		<item nameType="0" description="1" text="ELITE" id="LEGION_POSTTION_ELITE"/>
+		<item nameType="0" description="1" text="LEAGUER" id="LEGION_POSTTION_LEAGUER"/>
+		<item nameType="0" description="1" text="{0:0} accepted {1:1} join request." id="LEGION_SYS_MSG_APPLY_AGREE"/>
+		<item nameType="0" description="1" text="{0:0} refused {1:1} join request." id="LEGION_SYS_MSG_APPLY_REFUSE"/>
+		<item nameType="0" description="1" text="Legion will be disbanded." id="LEGION_SYS_MSG_DISBAND"/>
+		<item nameType="0" description="1" text="Disband of Legion has been canceled." id="LEGION_SYS_MSG_DISBAND_CANCEL"/>
+		<item nameType="0" description="1" text="{0:0} join the legion." id="LEGION_SYS_MSG_JOIN"/>
+		<item nameType="0" description="1" text="{0:0} left the legion." id="LEGION_SYS_MSG_QUIT"/>
+		<item nameType="0" description="1" text="Legion create success." id="LEGION_SYS_MSG_CREATE"/>
+		<item nameType="0" description="1" text="Leave" id="LEGION_QUIT"/>
+		<item nameType="0" description="1" text="Open" id="LEGION_TYPE_OPEN"/>
+		<item nameType="0" description="1" text="Invite Only" id="LEGION_TYPE_INVITE_ONLY"/>
+		<item nameType="0" description="1" text="       click here to enter chat message" id="LEGION_TIP_ENTER_CHAT_MSG"/>
+		<item nameType="0" description="1" text="Closed" id="LEGION_TYPE_CLOSE"/>
+		<item nameType="0" description="1" text="Do you really want to leave the legion?" id="MSGBOX_QUIT_LEGION_CONFIRM"/>
+		<item nameType="0" description="1" text="Do you really want to disband the legion?" id="MSGOBX_DISBAND_LEGION_CONFIRM"/>
+		<item nameType="0" description="1" text="1DAY" id="CONSUMABLE_BUY_1DAY"/>
+		<item nameType="0" description="1" text="7DAY" id="CONSUMABLE_BUY_7DAY"/>
+		<item nameType="0" description="1" text="30DAY" id="CONSUMABLE_BUY_30DAY"/>
+		<item nameType="0" description="1" text="CONSUMABLE" id="SUBMENU_MERCHANDISE_CONSUMABLE"/>
+		<item nameType="0" description="1" text="BUY" id="CONSUMABLE_BUY_BUTTON"/>
+		<item nameType="0" description="1" text="Explosive Grenade: A Grenade with scattered pieces of sharp fragments after the explosion. It can splash a more deadly harm to the enemy." id="CONSUMABLE_NAME_FRAG_GRENADE_DEC"/>
+		<item nameType="0" description="1" text="C4: It can destroy everything" id="CONSUMABLE_NAME_C4_DEC"/>
+		<item nameType="0" description="1" text="Purchase Success" id="PURCHASE_CONFIRM_MESSAGE_ENERGY"/>
+		<item nameType="0" description="1" text="I can't put it here!" id="GAMEPLAY_PLAYER_USE_ACTIVESKILL_FAILED"/>
+		<item nameType="0" description="1" text="The Conflict zone will unlock in:" id="IN_BATTLE_MSG_CONFLICT_UNLOCK_ZONE"/>
+		<item nameType="0" description="1" text="Taking over the Conflict zone…" id="IN_BATTLE_MSG_CONFLICT_TAKE_OVER"/>
+		<item nameType="0" description="1" text="The Conflict zone is in contention!" id="IN_BATTLE_MSG_CONFLICT_CONTENTION"/>
+		<item nameType="0" description="1" text="Your team have occupied the Conflict zone" id="IN_BATTLE_MSG_CONFLICT_WIN"/>
+		<item nameType="0" description="1" text="Your team have lost the Conflict zone" id="IN_BATTLE_MSG_CONFLICT_LOSE"/>
+		<item nameType="0" description="1" text="OVER TIME!" id="IN_BATTLE_MSG_CONFLICT_OVER_TIME"/>
+		<item nameType="0" description="1" text="ATTACK" id="IN_BATTLE_MSG_CONFLICT_ATTACK"/>
+		<item nameType="0" description="1" text="DEFEND" id="IN_BATTLE_MSG_CONFLICT_DEFENSE"/>
+		<item nameType="0" description="1" text="Profession Supplies" id="PROFESSION_UPDATE"/>
+		<item nameType="2" description="1" text="AR" id="WEAPON_TYPE_AUTOMATIC_RIFLE_AB"/>
+		<item nameType="2" description="1" text="SMG" id="WEAPON_TYPE_SUBMACHINR_GUN_AB"/>
+		<item nameType="2" description="1" text="LMG" id="WEAPON_TYPE_MACHINR_GUN_AB"/>
+		<item nameType="2" description="1" text="SHOT" id="WEAPON_TYPE_SHOTGUN_AB"/>
+		<item nameType="2" description="1" text="MR" id="WEAPON_TYPE_SNIPER_RIFLE_AB"/>
+		<item nameType="2" description="1" text="HG" id="WEAPON_TYPE_HAND_GUN_AB"/>
+		<item nameType="2" description="1" text="Gun quality promotion!" id="GUN_RARITY_UP_HINT_TITLE"/>
+		<item nameType="2" description="1" text="Do you want to improve the quality of Gun?" id="MSGBOX_GUN_RARITY_UP_HINT_MSG"/>
+		<item nameType="0" description="1" text="Material" id="GUN_UPGRADE_MATERIAL"/>
+		<item nameType="0" description="1" text="Please upgrade the Profession Level to {0:professionTier}" id="MSGBOX_TOAST_GUN_TIER_UPGRADE_REQUIRE_PROFESSION_TIER_TO"/>
+		<item nameType="0" description="1" text="CHEST" id="GENRAL_CHEST"/>
+		<item nameType="0" description="1" text="Your Energy is max, no need to buy." id="MERCHANDISE_ENERGY_MAX"/>
+		<item nameType="0" description="1" text="Chat too frequently" id="CHAT_IS_FREQUENTLY"/>
+		<item nameType="0" description="1" text="Profession level is max" id="PROFESSION_LEVEL_MAX"/>
+		<item nameType="0" description="1" text="Unlock in LV." id="UNLOCK_LEVEL_LIMIT"/>
+		<item nameType="0" description="1" text="NEED {0:professionName} LEVEL TO {1:unlockProfessionLevel}" id="GUN_UNLOCK_PROFESSION_LEVEL_LIMIT"/>
+		<item nameType="0" description="1" text="THIS ACCESSORY IS ALREADY INSTALLED ON {0:gunName}." id="MSG_BOX_ACCESSORY_ALREADY_INSTALLED_ON"/>
+		<item nameType="0" description="1" text="ARE YOU SURE TO INSTALL TO THE NEW GUN?" id="MSG_BOX_ACCESSORY_INSTALL_REPLACE"/>
+		<item nameType="0" description="1" text="INSTALL" id="GENRAL_INSTALL"/>
+		<item nameType="0" description="1" text="UNINSTALL" id="GENRAL_UNINSTALL"/>
+		<item nameType="0" description="1" text="SELL" id="GENRAL_SELL"/>
+		<item nameType="0" description="1" text="YOU WILL GET {0:funds} FUNDS" id="SELL_FUND_REWARD"/>
+		<item nameType="0" description="1" text="DO YOU WANT TO SELL THE ACCESSORY?" id="MSG_BOX_SELL_ACCESSORY_WARNING"/>
+		<item nameType="0" description="1" text="EMPTY" id="GENRAL_EMPTY"/>
+		<item nameType="0" description="1" text="ACCESSORY" id="GENRAL_ACCESSORY"/>
+		<item nameType="0" description="1" text="Installed" id="ACCESSORY_INSTALLED"/>
+		<item nameType="0" description="1" text="Not Installed" id="ACCESSORY_NOT_INSTALLED"/>
+		<item nameType="0" description="1" text="ACCURACY" id="GENRAL_HIT"/>
+		<item nameType="0" description="1" text="DAMAGE" id="GENRAL_ATTACK"/>
+		<item nameType="0" description="1" text="CRITICAL RATE" id="GENRAL_CRIT"/>
+		<item nameType="0" description="1" text="CRITICAL DAMAGE" id="GENRAL_CRIT_DAMAGE"/>
+		<item nameType="0" description="1" text="FIRE RATE" id="GENRAL_FIRE_RATE"/>
+		<item nameType="0" description="1" text="MAGAZINE" id="GENRAL_MAGAZINE"/>
+		<item nameType="0" description="1" text="RELOAD" id="GENRAL_RELOAD"/>
+		<item nameType="0" description="1" text="HP" id="GENRAL_HP"/>
+		<item nameType="0" description="1" text="DEFENSE" id="GENRAL_DEFENSE"/>
+		<item nameType="0" description="1" text="HP RECOVER" id="GENRAL_HP_RECOVER"/>
+		<item nameType="0" description="1" text="SHIELD" id="GENRAL_SHIELD"/>
+		<item nameType="0" description="1" text="MAGAZINE" id="ACCESSORY_TYPE_MAGAZINE"/>
+		<item nameType="0" description="1" text="GRIP" id="ACCESSORY_TYPE_GRIP"/>
+		<item nameType="0" description="1" text="MUZZLE" id="ACCESSORY_TYPE_MUZZLE"/>
+		<item nameType="0" description="1" text="SIGHT" id="ACCESSORY_TYPE_SIGHT"/>
+		<item nameType="3" description="1" text="MUZZLE" id="CONSUMABLE_NAME_EXP_MUZZLE_LV1"/>
+		<item nameType="3" description="1" text="SIGHT" id="CONSUMABLE_NAME_EXP_SIGHT_LV1"/>
+		<item nameType="3" description="1" text="MAGAZINE" id="CONSUMABLE_NAME_EXP_MAGAZINE_LV1"/>
+		<item nameType="3" description="1" text="GRIP" id="CONSUMABLE_NAME_EXP_GRIP_LV1"/>
+		<item nameType="3" description="1" text="MUZZLE" id="CONSUMABLE_NAME_EXP_MUZZLE_LV2"/>
+		<item nameType="3" description="1" text="SIGHT" id="CONSUMABLE_NAME_EXP_SIGHT_LV2"/>
+		<item nameType="3" description="1" text="MAGAZINE" id="CONSUMABLE_NAME_EXP_MAGAZINE_LV2"/>
+		<item nameType="3" description="1" text="GRIP" id="CONSUMABLE_NAME_EXP_GRIP_LV2"/>
+		<item nameType="3" description="1" text="MUZZLE" id="CONSUMABLE_NAME_EXP_MUZZLE_LV3"/>
+		<item nameType="3" description="1" text="SIGHT" id="CONSUMABLE_NAME_EXP_SIGHT_LV3"/>
+		<item nameType="3" description="1" text="MAGAZINE" id="CONSUMABLE_NAME_EXP_MAGAZINE_LV3"/>
+		<item nameType="3" description="1" text="GRIP" id="CONSUMABLE_NAME_EXP_GRIP_LV3"/>
+		<item nameType="3" description="1" text="MUZZLE" id="CONSUMABLE_NAME_EXP_MUZZLE_LV4"/>
+		<item nameType="3" description="1" text="SIGHT" id="CONSUMABLE_NAME_EXP_SIGHT_LV4"/>
+		<item nameType="3" description="1" text="MAGAZINE" id="CONSUMABLE_NAME_EXP_MAGAZINE_LV4"/>
+		<item nameType="3" description="1" text="GRIP" id="CONSUMABLE_NAME_EXP_GRIP_LV4"/>
+		<item nameType="3" description="1" text="MUZZLE" id="CONSUMABLE_NAME_EXP_MUZZLE_LV5"/>
+		<item nameType="3" description="1" text="SIGHT" id="CONSUMABLE_NAME_EXP_SIGHT_LV5"/>
+		<item nameType="3" description="1" text="MAGAZINE" id="CONSUMABLE_NAME_EXP_MAGAZINE_LV5"/>
+		<item nameType="3" description="1" text="GRIP" id="CONSUMABLE_NAME_EXP_GRIP_LV5"/>
+		<item nameType="0" description="1" text="ALL" id="GERNAL_ALL"/>
+		<item nameType="0" description="1" text="CONVERT" id="GERNAL_CONVERT"/>
+		<item nameType="0" description="1" text="SELL" id="GERNAL_SELL"/>
+		<item nameType="0" description="1" text="INSTALL" id="GERNAL_INSTALL"/>
+		<item nameType="0" description="1" text="CHIP" id="GERNAL_CHIP"/>
+		<item nameType="0" description="1" text="DATA CHIP" id="GERNAL_DATA_CHIP"/>
+		<item nameType="0" description="1" text="POWER CHIP" id="GERNAL_POWER_CHIP"/>
+		<item nameType="0" description="1" text="DESTORY" id="GERNAL_DESTORY"/>
+		<item nameType="0" description="1" text="REMOVE" id="GERNAL_REMOVE"/>
+		<item nameType="3" description="1" text="Nitro" id="CHIP_NAME_GRENADE_1"/>
+		<item nameType="3" description="1" text="Sticky Grenade" id="CHIP_NAME_GRENADE_2"/>
+		<item nameType="3" description="1" text="Sulfide" id="CHIP_NAME_GRENADE_3"/>
+		<item nameType="3" description="1" text="Bloodthirsty" id="CHIP_NAME_ADRENALINE_1"/>
+		<item nameType="3" description="1" text="Counterattack" id="CHIP_NAME_ADRENALINE_2"/>
+		<item nameType="3" description="1" text="Defense" id="CHIP_NAME_ADRENALINE_3"/>
+		<item nameType="3" description="1" text="Improve the damage radius, and stun all the enemies in the blast radius., and stun all the enemies in the blast radius." id="CHIP_DESCRIPTIONE_GRENADE_1"/>
+		<item nameType="3" description="1" text="The grade could be stuck to enemies and subjects." id="CHIP_DESCRIPTION_GRENADE_2"/>
+		<item nameType="3" description="1" text="Massively improve the damage power of the grenade." id="CHIP_DESCRIPTION_GRENADE_3"/>
+		<item nameType="3" description="1" text="Transform some damage you make into HP." id="CHIP_DESCRIPTION_ADRENALINE_1"/>
+		<item nameType="3" description="1" text="Become invincible for a short time." id="CHIP_DESCRIPTION_ADRENALINE_2"/>
+		<item nameType="3" description="1" text="Reduce the damage you take." id="CHIP_DESCRIPTION_ADRENALINE_3"/>
+		<item nameType="3" description="1" text="NORMAL" id="CHIP_DESCRIPTION_NORMAL"/>
+		<item nameType="0" description="1" text="ALL KINDS OF CHIP COULD BE INSTALLED ON {0:0}" id="TOAST_CAN_INSTALL_CHIP_TYPE_ALL"/>
+		<item nameType="0" description="1" text="{0:0} COULD BE INSTALLED ON {1:1}" id="TOAST_CAN_INSTALL_CHIP_TYPE"/>
+		<item nameType="0" description="1" text="DO YOU WANT TO CONVERT THE CHIPS?\n YOU OWN:{0:0}" id="MSGBOX_CONVERT_CHIP"/>
+		<item nameType="0" description="1" text="CONVERT ALL CHIPS" id="MSGBOX_CONVERT_CHIP_ALL"/>
+		<item nameType="0" description="1" text="CONVERT {0:0} CHIPS" id="MSGBOX_CONVERT_CHIP_NUM"/>
+		<item nameType="0" description="1" text="DO YOU WANT TO SELL THE CHIPS?\n YOU OWN:{0:0}" id="MSGBOX_SELL_CHIP"/>
+		<item nameType="0" description="1" text="YOU CAN GET {0:0} &lt;quad name=icon_fund/&gt;" id="MSGBOX_SELL_CHIP_GET"/>
+		<item nameType="0" description="1" text="Extract Chip" id="MSGBOX_EXTRACT_TITLE"/>
+		<item nameType="0" description="1" text="Do you confirm to extract current chip from the slot?" id="MSGBOX_EXTRACT_CONTENT"/>
+		<item nameType="0" description="1" text="Embed Chip" id="MSGBOX_INSTALL_CHIP_TITLE"/>
+		<item nameType="0" description="1" text="Destory or remove current chip from this slot?" id="MSGBOX_INSTALL_CHIP_CONTENT"/>
+		<item nameType="0" description="1" text="You already have no chips." id="TOAST_NO_CHIP"/>
+		<item nameType="0" description="1" text="Lack of supplies." id="TOAST_SUPPLY_NOT_ENOUGH"/>
+		<item nameType="0" description="英雄升级经验值不足提示语" text="Lack of exp" id="TOAST_EXP_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="Diamond not enough." id="TOAST_DIAMOND_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="Chip not enough." id="TOAST_CHIP_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="You only can embed the data chip." id="TOAST_ONLY_CAN_INSTALL_DATA_CHIP"/>
+		<item nameType="0" description="1" text="Passive Skill" id="PASSIVE_SKILL"/>
+		<item nameType="0" description="1" text="Custom" id="GENRAL_CUSTOM"/>
+		<item nameType="0" description="1" text="The research failed.\nPlease take 1 Tuner Kit in return." id="GUN_EFFECT_FAIL"/>
+		<item nameType="0" description="1" text="The Skill level is limited by the Hero level.\nPlease upgrade your hero." id="LEVEL_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="ACHIEVE SKILLS" id="GUN_ACHIEVE_SKILLS"/>
+		<item nameType="0" description="1" text="EQUIP A SKILL" id="GUN_EQUIP_SKILL"/>
+		<item nameType="0" description="1" text="NEW SKILL" id="GUN_NEW_SKILL"/>
+		<item nameType="0" description="1" text="RESOURCE" id="GENRAL_RESOURCE"/>
+		<item nameType="0" description="1" text="&lt;quad name=icon_clock_white/&gt;CD TIME：{0:0}" id="GUN_SKILL_CD"/>
+		<item nameType="0" description="1" text="You need upgrade profession level." id="TOAST_NEED_UPGRADE_PROFESSION_LEVEL"/>
+		<item nameType="0" description="1" text="This skill has reached the maximum level." id="TOAST_SKILL_REACH_MAX_LEVEL"/>
+		<item nameType="0" description="1" text="The profession level has reached the maximumu level." id="TOAST_PROFESSION_LEVEL_MAX"/>
+		<item nameType="0" description="1" text="Preparing......" id="LOADING_PREPARE"/>
+		<item nameType="0" description="1" text="Loading UI......" id="LOADING_UI"/>
+		<item nameType="0" description="1" text="Waiting for login......" id="LOADING_WAIT_LOGIN"/>
+		<item nameType="0" description="1" text="Completing......" id="LOADING_COMPLETING"/>
+		<item nameType="0" description="1" text="Waiting for server......" id="LOADING_WAIT_RESPONSE"/>
+		<item nameType="0" description="1" text="Loading scene......" id="LOADING_SCENE"/>
+		<item nameType="0" description="1" text="Creating Camera......" id="LOADING_CAMERA"/>
+		<item nameType="0" description="1" text="Updating Resources......" id="LOADING_UPDATE_RESOURCES"/>
+		<item nameType="0" description="1" text="Preloading Resources......" id="LOADING_PRELOAD_RESOURCES"/>
+		<item nameType="0" description="1" text="Loading Player......" id="LOADING_PLAYER"/>
+		<item nameType="0" description="1" text="Wait For Others......" id="LOADING_WAIT_FOR_OTHERS"/>
+		<item nameType="2" description="1" text="Infrared Vision" id="CHIP_NAME_TACTICAL_VISOR_1"/>
+		<item nameType="2" description="1" text="Inspire" id="CHIP_NAME_TACTICAL_VISOR_2"/>
+		<item nameType="2" description="1" text="Implant 3" id="CHIP_NAME_TACTICAL_VISOR_3"/>
+		<item nameType="2" description="1" text="Release a detection wave to scan all enemy units." id="CHIP_DESCRIPTION_TACTICAL_VISOR_1"/>
+		<item nameType="2" description="1" text="All the friendly forces' CD will be reduced by 33% within 5m radius of Inspire." id="CHIP_DESCRIPTION_TACTICAL_VISOR_2"/>
+		<item nameType="2" description="1" text="Implant 3" id="CHIP_DESCRIPTION_TACTICAL_VISOR_3"/>
+		<item nameType="2" description="1" text="Barrier" id="CHIP_NAME_TURRET_1"/>
+		<item nameType="2" description="1" text="Recovery Shield" id="CHIP_NAME_TURRET_2"/>
+		<item nameType="2" description="1" text="Battle Bee" id="CHIP_NAME_TURRET_3"/>
+		<item nameType="2" description="1" text="Formation a defense barrier." id="CHIP_DESCRIPTION_TURRET_1"/>
+		<item nameType="2" description="1" text="Formation a recovery shield force field." id="CHIP_DESCRIPTION_TURRET_2"/>
+		<item nameType="2" description="1" text="Deploying an UAV to track the engineer." id="CHIP_DESCRIPTION_TURRET_3"/>
+		<item nameType="0" description="1" text="UNLOCKING IN:" id="OCCUPATION_HINT_UNLOCK"/>
+		<item nameType="0" description="1" text="YOU ARE TAKING THE ZONE." id="OCCUPATION_HINT_MAIN_TAKING_ZONE"/>
+		<item nameType="0" description="1" text="WE ARE TAKING THE ZONE." id="OCCUPATION_HINT_TEAMMATE_TAKING_ZONE"/>
+		<item nameType="0" description="1" text="ENEMIES ARE TAKING THE ZONE!" id="OCCUPATION_HINT_ENEMY_TAKING_ZONE"/>
+		<item nameType="0" description="1" text="We will win the match" id="OCCUPATION_HINT_WILL_WIN_IN"/>
+		<item nameType="0" description="1" text="The enemy will win the match" id="OCCUPATION_HINT_WILL_LOSE_IN"/>
+		<item nameType="0" description="1" text="OVERTIME" id="OCCUPATION_HINT_OVERTIME"/>
+		<item nameType="0" description="1" text="DEFEND" id="OCCUPATION_HINT_NEED_DEFEND"/>
+		<item nameType="0" description="1" text="ATTACK" id="OCCUPATION_HINT_NEED_ATTACK"/>
+		<item nameType="0" description="1" text="THE ZONE IS UNDER ATTACK!" id="OCCUPATION_HINT_ZONE_UNDER_ATTACK"/>
+		<item nameType="0" description="1" text="YOUR TEAM TOOK THE ZONE!" id="OCCUPATION_HINT_TEAMMATE_TOOK_ZONE"/>
+		<item nameType="0" description="1" text="ENEMIES TOOK THE ZONE!" id="OCCUPATION_HINT_ENEMY_TOOK_ZONE"/>
+		<item nameType="0" description="1" text="YOUR TEAM GOT 90 POINTS." id="OCCUPATION_HINT_TEAMMATE_GOT_HIGH_POINT"/>
+		<item nameType="0" description="1" text="ENEMIES GOT 90 POINTS." id="OCCUPATION_HINT_ENEMY_GOT_HIGH_POINT"/>
+		<item nameType="0" description="1" text="THE ZONE IS UNLOCKING…" id="OCCUPATION_HINT_ZONE_UNLOCKING"/>
+		<item nameType="0" description="1" text="THE ZONE IS TAKING…" id="OCCUPATION_HINT_ZONE_TAKING"/>
+		<item nameType="0" description="1" text="YOUR TEAM WILL WIN" id="OCCUPATION_HINT_TEAMMATE_GOT_MATCH_POINT"/>
+		<item nameType="0" description="1" text="ENEMIES WILL WIN" id="OCCUPATION_HINT_ENEMY_GOT_MATCH_POINT"/>
+		<item nameType="0" description="1" text="OVER TIME!" id="OCCUPATION_HINT_OVERTIME_MATCH"/>
+		<item nameType="0" description="1" text="TAKING POSSESSION" id="OCCUPATION_HINT_TAKING_POSSESSION"/>
+		<item nameType="0" description="1" text="OCCUPYING" id="OCCUPATION_HINT_OCCUPYING"/>
+		<item nameType="0" description="1" text="POINT UNLOCKED!" id="OCCUPATION_HINT_UNLOCKED"/>
+		<item nameType="0" description="1" text="EnterYour Name" id="ENTER_YOUR_NAME"/>
+		<item nameType="0" description="1" text="Enter your name…" id="ENTER_YOUR_NAME_HINT"/>
+		<item nameType="0" description="1" text="Resource not enough." id="RESOURCE_NOT_ENOUGH"/>
+		<item nameType="0" description="英雄解锁提示语" text="Congratulations! Unlock{0:heroName}." id="TOAST_HERO_UNLOCK"/>
+		<item nameType="0" description="英雄晋升成功提示语" text="Congratulations! {0:profession} is prmoted to {1:rank}." id="TOAST_HERO_PROMOTE_SUCCESS"/>
+		<item nameType="0" description="英雄升级成功提示语" text="Congratulations! {0:profession} is upgraded to LV.{1:level}." id="TOAST_HERO_UPGRADE_SUCCESS"/>
+		<item nameType="0" description="枪械解锁提示语" text="Congratulations! Unlock{0:gunName}." id="TOAST_GUN_UNLOCK"/>
+		<item nameType="0" description="枪械进化成功提示语" text="Congratulations! {0:gunName} is evolved to {1:quality}." id="TOAST_GUN_RARITY_UP"/>
+		<item nameType="0" description="枪械升级成功提示语" text="Congratulations! {0:gunName} is upgraded to LV.{1:level}." id="TOAST_GUN_UPGRADE_SUCCESS"/>
+		<item nameType="0" description="枪械部件安装成功提示语" text="Congratulations! {0:gunpart} is installed successfully." id="TOAST_GUN_PART_INSTALL_SUCCESS"/>
+		<item nameType="0" description="1" text="Blueprint is not enough." id="TOAST_BLUEPRINT_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="Profession {0:professionName} Is Locked." id="TOAST_PROFESSION_IS_LOCKED"/>
+		<item nameType="0" description="1" text="Tier {0:professionTier} unlock." id="TOAST_SKILL_UNLOCK_TIER_LIMIT"/>
+		<item nameType="0" description="1" text="Illegal Cheat Code!" id="TOAST_ILLEGAL_CHEAT_CODE"/>
+		<item nameType="0" description="1" text="Fund is not enough." id="TOAST_FUND_NOT_ENOUGH"/>
+		<item nameType="0" description="1" text="Oops, the login-server is unavailable at the moment., the login-server is unavailable at the moment." id="ACCOUNT_SESSION_INVALID"/>
+		<item nameType="0" description="1" text="Payload Damage" id="BUFF_SKILL_DAMAGE"/>
+		<item nameType="0" description="1" text="Buff Duration" id="BUFF_TIME"/>
+		<item nameType="0" description="1" text="Payload Energy" id="BUFF_SKILL_ENERGY"/>
+		<item nameType="0" description="1" text="Shield Recover Delay" id="BUFF_SHIELD_CD"/>
+		<item nameType="0" description="1" text="Sidearm bullet" id="BUFF_SIDEARM_BULLET"/>
+		<item nameType="0" description="1" text="Targeted" id="BUFF_TARGET"/>
+		<item nameType="0" description="1" text="Skl Enabled" id="BUFF_CALL"/>
+		<item nameType="0" description="1" text="AMMO" id="BUFF_BAG_BULLET"/>
+		<item nameType="0" description="1" text="Damage" id="BUFF_DAMAGE"/>
+		<item nameType="0" description="1" text="Hit Rate" id="BUFF_HIT_RATE"/>
+		<item nameType="0" description="1" text="Explosive Damage Reduction" id="BUFF_RIOTSHIELD_REDUCEDAMAGE"/>
+		<item nameType="0" description="1" text="Explosion" id="BUFF_EXPLODE_DAMAGE"/>
+		<item nameType="0" description="1" text="Resource Point" id="BUFF_RESOURCES"/>
+		<item nameType="0" description="1" text="Payload Hp" id="BUFF_SUMMONED_HP"/>
+		<item nameType="0" description="1" text="Payload Max Amount" id="BUFF_SUMMONED_MAXAMOUNT"/>
+		<item nameType="0" description="1" text="Payload Duration" id="BUFF_SUMMONED_DURATION"/>
+		<item nameType="0" description="1" text="Item Droped" id="BUFF_DROP_ITEM"/>
+		<item nameType="0" description="1" text="Payload Created" id="BUFF_SUMMONED_WORK"/>
+		<item nameType="0" description="1" text="Normal Gun Material" id="GUN_NORMAL_MATERIAL"/>
+		<item nameType="0" description="1" text="Rare Gun Material" id="GUN_RAREL_MATERIAL"/>
+		<item nameType="0" description="1" text="Blueprint" id="ITEM_BLUEPRINT"/>
+		<item nameType="0" description="1" text="Implant" id="ITEM_IMPLANT"/>
+		<item nameType="0" description="物品材料" text="Material" id="ITEM_MATERIAL"/>
+		<item nameType="0" description="1" text="GOOD" id="BLUEPRINT_QUALITY_GOOD"/>
+		<item nameType="0" description="1" text="LEGEND" id="BLUEPRINT_QUALITY_LEGEND"/>
+		<item nameType="0" description="1" text="You've Destroyed {0:playerName}'s {1:summonedName} " id="SUMMONED_KILLED_BY_YOU"/>
+		<item nameType="0" description="1" text="Failed to connect to the Server, you will return to the main menu., you will return to the main menu." id="MSGBOX_RECONNECT_FAILED"/>
+		<item nameType="0" description="1" text="Reconnecting" id="MSGBOX_RECONNECTING"/>
+		<item nameType="0" description="1" text="Trying to reconnect to the Server, please wait…, please wait?" id="MSGBOX_RECONNECTING_CONTENT"/>
+		<item nameType="0" description="资源抢夺模式" text="{0:playerName} transported material" id="PLAYER_RESOURCE_RECYCLE_SUCCESS"/>
+		<item nameType="0" description="资源抢夺模式" text="{0:playerName} captured material" id="PLAYER_TAKE_RESOURCE"/>
+		<item nameType="0" description="资源抢夺模式" text="Materials arrived" id="RESOURCE_HAS_ARRIVED"/>
+		<item nameType="0" description="资源抢夺模式" text="The last materials arrived" id="RESOURCE_LAST_HAS_ARRIVED"/>
+		<item nameType="0" description="资源抢夺模式" text="Transport zones opened" id="RECYCLE_POINT_HAS_APPEARED"/>
+		<item nameType="0" description="资源抢夺模式" text="The final trasport zones opened" id="RECYCLE_POINT_LAST_HAS_APPEARED"/>
+		<item nameType="0" description="资源抢夺模式" text="Tranport zones closed" id="RECYCLE_POINT_HAS_DISAPPEARED"/>
+		<item nameType="0" description="资源抢夺模式" text="Successfully transported material x{0:number}" id="RESOURCE_SUBMIT_SUCCESS"/>
+		<item nameType="0" description="资源抢夺模式" text="Transport failed" id="RESOURCE_SUBMIT_FAILED"/>
+		<item nameType="0" description="资源抢夺模式" text="Transporting" id="RESOURCE_SUBMITTING"/>
+		<item nameType="0" description="资源抢夺模式" text="Materails are arriving in:{0:seconds}" id="RESOURCE_WILL_APPEAR_IN"/>
+		<item nameType="0" description="资源抢夺模式" text="Transport zones are opening in:{0:seconds}" id="RECYCLE_POINT_WILL_APPEAR_IN"/>
+		<item nameType="0" description="资源抢夺模式" text="Transport zones are closing in:{0:seconds}" id="RECYCLE_POINT_WILL_DISAPPEAR_IN"/>
+		<item nameType="0" description="资源抢夺模式" text="Normal Material" id="SUPPLY_NAME_RESOURCE"/>
+		<item nameType="0" description="资源抢夺模式" text="Golden Material" id="SUPPLY_NAME_RESOURCE_LARGE"/>
+		<item nameType="0" description="资源抢夺模式" text="Get the materials!" id="RESOURCE_GET_THE_RESOURCE"/>
+		<item nameType="0" description="资源抢夺模式" text="Transport the materials!" id="RESOURCE_SUBMIT_THE_RESOURCE"/>
+		<item nameType="0" description="天梯赛事" text="LEADERBOARD" id="SEASON_LEADERBOARD"/>
+		<item nameType="0" description="天梯赛事" text="TOURNAMENT" id="COMPETITION_SEASON"/>
+		<item nameType="0" description="天梯赛事" text="CHALLENGE" id="COMPETITION_CHALLENGE"/>
+		<item nameType="0" description="天梯赛事" text="DEATH MATCH" id="GAME_MODE_TIME"/>
+		<item nameType="0" description="天梯赛事" text="Take more kills to win more scores." id="GAME_MODE_TIME_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="QUICK ATTACK" id="GAME_MODE_KILL"/>
+		<item nameType="0" description="天梯赛事" text="Take 30 kills to win the game." id="GAME_MODE_KILL_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="CONQUEST" id="GAME_MODE_CONFLICT"/>
+		<item nameType="0" description="天梯赛事" text="Conquest the zones to win more scores." id="GAME_MODE_CONFLICT_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="TREASURE HUNTER" id="GAME_MODE_RESOURCE"/>
+		<item nameType="0" description="天梯赛事" text="Find and transport the materials to win more scores." id="GAME_MODE_RESOURCE_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="ATTACK AND DEFEND" id="GAME_MODE_ATTACK_DEFENSCE"/>
+		<item nameType="0" description="天梯赛事" text="Attack to conquer, or defend to guard, or defend to guard." id="GAME_MODE_ATTACK_DEFENSCE_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="QUICK PLAY" id="GAME_MODE_QUICK_PLAY"/>
+		<item nameType="0" description="天梯赛事" text="Randomly choose the match mode and arena" id="GAME_MODE_QUICK_PLAY_DESCRIPTION"/>
+		<item nameType="0" description="天梯赛事" text="CUSTOMIZE" id="GENRAL_CUSTOMIZE"/>
+		<item nameType="0" description="天梯赛事" text="METAL" id="GENRAL_METAL"/>
+		<item nameType="0" description="天梯赛事" text="DOLLAR" id="GENRAL_MONEY"/>
+		<item nameType="0" description="天梯赛事" text="INFORMATION" id="GENRAL_INFO"/>
+		<item nameType="0" description="天梯赛事" text="You Own" id="GENRAL_OWN"/>
+		<item nameType="0" description="天梯赛事" text="Get More" id="GENRAL_GETMORE"/>
+		<item nameType="3" description="天梯赛事" text="RANK 1" id="SEASON_LEVEL_NAME_1"/>
+		<item nameType="3" description="天梯赛事" text="RANK 2" id="SEASON_LEVEL_NAME_2"/>
+		<item nameType="3" description="天梯赛事" text="RANK 3" id="SEASON_LEVEL_NAME_3"/>
+		<item nameType="3" description="天梯赛事" text="RANK 4" id="SEASON_LEVEL_NAME_4"/>
+		<item nameType="3" description="天梯赛事" text="RANK 5" id="SEASON_LEVEL_NAME_5"/>
+		<item nameType="3" description="天梯赛事" text="RANK 6" id="SEASON_LEVEL_NAME_6"/>
+		<item nameType="3" description="天梯赛事" text="RANK 7" id="SEASON_LEVEL_NAME_7"/>
+		<item nameType="3" description="天梯赛事" text="RANK 8" id="SEASON_LEVEL_NAME_8"/>
+		<item nameType="3" description="天梯赛事" text="RANK 9" id="SEASON_LEVEL_NAME_9"/>
+		<item nameType="3" description="天梯赛事" text="RANK 10" id="SEASON_LEVEL_NAME_10"/>
+		<item nameType="3" description="天梯赛事" text="RANK 11" id="SEASON_LEVEL_NAME_11"/>
+		<item nameType="3" description="天梯赛事" text="LEGEND" id="SEASON_LEVEL_NAME_LEGEND"/>
+		<item nameType="0" description="天梯赛事" text="S{0:seasonNum}" id="SEASON_NUM"/>
+		<item nameType="0" description="天梯赛事" text="NOT JOINED" id="SEASON_IS_NOT_JOINED"/>
+		<item nameType="0" description="天梯赛事" text="SEASON END IN:{0:countDown}" id="SEASON_END_IN"/>
+		<item nameType="0" description="天梯赛事" text="SEASON BREAK" id="SEASON_BREAK"/>
+		<item nameType="0" description="天梯赛事" text="SEASON START IN:{0:countDown}" id="SEASON_NEXT_BEGIN_IN"/>
+		<item nameType="0" description="天梯赛事" text="NOT OPEN" id="SEASON_NOT_OPEN"/>
+		<item nameType="0" description="天梯赛事" text="NEXT IN:" id="SEASON_REWARD_NEXT_IN"/>
+		<item nameType="0" description="天梯赛事" text="GET REWARDS" id="GENRAL_GET_REWARD"/>
+		<item nameType="0" description="天梯赛事" text="FINISH BATTLES" id="SEASON_NEED_FINISH_BATTLES"/>
+		<item nameType="0" description="天梯赛事" text="NOT STARTED" id="SEASON_NOT_STARTED"/>
+		<item nameType="0" description="时间单位缩写" text="Y" id="GENRAL_TIME_YEAR_SHORT"/>
+		<item nameType="0" description="时间单位缩写" text="Mon" id="GENRAL_TIME_MONTH_SHORT"/>
+		<item nameType="0" description="时间单位缩写" text="D" id="GENRAL_TIME_DAY_SHORT"/>
+		<item nameType="0" description="时间单位缩写" text="H" id="GENRAL_TIME_HOUR_SHORT"/>
+		<item nameType="0" description="时间单位缩写" text="Min" id="GENRAL_TIME_MINUTE_SHORT"/>
+		<item nameType="0" description="时间单位缩写" text="s" id="GENRAL_TIME_SECOND_SHORT"/>
+		<item nameType="0" description="奖励领取页面使用" text="REWARD" id="GENRAL_REWARD"/>
+		<item nameType="0" description="攻防模式，战场中央消息;比赛开始后，A区解锁时显示" text="Zone A is unlocked." id="AD_CENTER_ZONE_A_UNLOCK"/>
+		<item nameType="0" description="攻防模式，战场中央消息;B区解锁时显示" text="Zone B is unlocked." id="AD_CENTER_ZONE_B_UNLOCK"/>
+		<item nameType="0" description="攻防模式，hud提示语;进攻方持续显示" text="ATTACK!" id="AD_HUD_ATTACK"/>
+		<item nameType="0" description="攻防模式，hud提示语;防守方持续显示" text="DEFENCE!" id="AD_HUD_DEFENCE"/>
+		<item nameType="0" description="攻防模式，战场中央消息;当我方为进攻方，并拿下相应区域时显示" text="Zone A is taken!" id="AD_CENTER_ZONE_A_TAKEN"/>
+		<item nameType="0" description="攻防模式，战场中央消息;当我方为进攻方，并拿下相应区域时显示" text="Zone B is taken!" id="AD_CENTER_ZONE_B_TAKEN"/>
+		<item nameType="0" description="攻防模式，战场中央消息;当我方为防守方，相应区域失守时显示" text="Zone A is lost!" id="AD_CENTER_ZONE_A_LOST"/>
+		<item nameType="0" description="攻防模式，战场中央消息;当我方为防守方，相应区域失守时显示" text="Zone B is lost!" id="AD_CENTER_ZONE_B_LOST"/>
+		<item nameType="0" description="攻防模式，战场中央消息;比赛结束时，我方为防守方守下相应区域时显示" text="Zone A is saved!" id="AD_CENTER_ZONE_A_SAVED"/>
+		<item nameType="0" description="攻防模式，战场中央消息;比赛结束时，我方为防守方守下相应区域时显示" text="Zone B is saved!" id="AD_CENTER_ZONE_B_SAVED"/>
+		<item nameType="0" description="攻防模式，战场中央消息;加时赛出现时" text="Extra 10s" id="AD_CENTER_EXTRA_TIME"/>
+		<item nameType="0" description="攻防模式，hud提示语;在加时赛出现后，始终显示，并附有进度条" text="Extra time" id="AD_HUD_EXTRA_TIME"/>
+		<item nameType="0" description="攻防模式，战场中央进度;玩家正在占领区域,并显示进度条" text="You are taking the zone." id="AD_PROGRESS_PLAYER_TAKING_ZONE"/>
+		<item nameType="0" description="攻防模式，" text="ATTACK POINT A！" id="AD_ATTACK_A"/>
+		<item nameType="0" description="攻防模式，" text="ATTACK POINT B！" id="AD_ATTACK_B"/>
+		<item nameType="0" description="攻防模式，" text="DEFENSE POINT A!" id="AD_DEFENCE_A"/>
+		<item nameType="0" description="攻防模式，" text="DEFENSE POINT B!" id="AD_DEFENCE_B"/>
+		<item nameType="0" description="攻防模式，" text="POINT TAKING!" id="AD_POINT_TAKING"/>
+		<item nameType="0" description="攻防模式，" text="POINT UNDER ATTACK!" id="AD_POINT_UNDER_ATTACK"/>
+		<item nameType="0" description="匹配页面显示" text="Searching for battles" id="MATCHING_SEARCHING"/>
+		<item nameType="0" description="匹配页面显示" text="CANCEL" id="MATCHING_CANCEL"/>
+		<item nameType="0" description="取消匹配页面显示" text="CANCEL?" id="MATCHING_CONFIRM_TITLE"/>
+		<item nameType="0" description="取消匹配页面显示" text="Are you sure to cancel searching?" id="MATCHING_CONFIRM_CONTENT"/>
+		<item nameType="0" description="子弹掉落" text="Ammo" id="SUPPLY_NAME_EXPLOSIVE_AMMO"/>
+		<item nameType="0" description="赛季模式禁止退出比赛" text="Sorry, you can not quit the battle in Tournament., you can not quit the battle in Tournament." id="TOURNAMENT_NOTE_FORBIDDEN_LEAVING"/>
+		<item nameType="0" description="开火未命中，提示" text="MISS" id="FIRE_MISS"/>
+		<item nameType="0" description="开火免疫，提示" text="RESIST" id="FIRE_RESIST"/>
+		<item nameType="0" description="拖屏灵敏度" text="Sensitivity:" id="SCREEN_DRAG_SENSITIVITY"/>
+		<item nameType="0" description="屏幕边缘自动旋转灵敏度" text="Scroll Speed:" id="SCREEN_AUTO_ROT_SENSITIVITY"/>
+		<item nameType="0" description="纳米机器人入口按钮文本" text="Rig Suit" id="GENRAL_RIG_SUIT"/>
+		<item nameType="0" description="职业晋升标题" text="RANK" id="PROFESSION_PROMOTE_RANK"/>
+		<item nameType="0" description="晋升" text="PROMOTE" id="PROFESSION_PROMOTE"/>
+		<item nameType="0" description="徽章" text="BADGE" id="GENRAL_BADGE"/>
+		<item nameType="0" description="资源获取途径" text="GET MORE FROM HERE：" id="RESOURCE_APPROACH_HINT_TITLE"/>
+		<item nameType="0" description="招募" text="RECRUIT" id="GENRAL_RECRUIT"/>
+		<item nameType="0" description="未获取" text="NOT OWNED" id="GENRAL_NOT_OWNED"/>
+		<item nameType="0" description="枪械品质" text="QUALITY" id="GENRAL_QUALITY"/>
+		<item nameType="0" description="枪械品质" text="Worn" id="GUN_QUALITY_1"/>
+		<item nameType="0" description="枪械品质" text="Standard" id="GUN_QUALITY_2"/>
+		<item nameType="0" description="枪械品质" text="Specialized" id="GUN_QUALITY_3"/>
+		<item nameType="0" description="枪械品质" text="Superior" id="GUN_QUALITY_4"/>
+		<item nameType="0" description="枪械品质" text="High-end" id="GUN_QUALITY_5"/>
+		<item nameType="0" description="进化" text="EVOLVE" id="GUN_PROMOTE"/>
+		<item nameType="0" description="火力值，枪械专用" text="FIREARMS" id="GUN_FIREARMS"/>
+		<item nameType="0" description="枪械品质提升时的相关说明描述" text="The quality of the gun will be evolved.\nThe firearms of the gun will be highly improved.\nThe gun will gain a new pattern." id="GUN_EVOLVE_DESCRIPTION"/>
+		<item nameType="0" description="枪械品质提升时，图纸不足的提示语" text="Lack of Blue Print." id="GUN_EVOLVE_LACK_OF_BLUEPRINT"/>
+		<item nameType="0" description="英雄晋升时的相关说明描述" text="After promotion, the power of the hero will be highly improved., the power of the hero will be highly improved." id="HERO_PROMOTE_DESCRIPTION"/>
+		<item nameType="0" description="英雄升级时，补给品不足提示语" text="Lack of supplies" id="HERO_UPGRADE_LACK_OF_SUPPLIES"/>
+		<item nameType="0" description="英雄晋升时，徽章不足的提示语" text="Lack of Badge" id="HERO_PROMOTE_LACK_OF_BADGE_NOTE"/>
+		<item nameType="0" description="枪械部件未安装提示" text="Empty" id="GUN_PART_EMPTY"/>
+		<item nameType="0" description="枪械部件已安装提示" text="Installed" id="GUN_PART_INSTALLED"/>
+		<item nameType="0" description="枪械升级受到英雄等级限制的多语言提示语" text="The gun level is limited by the hero level." id="GUN_UPGRADE_LEVEL_LIMIT_NOTE"/>
+		<item nameType="0" description="枪械升级时材料不足的提示语" text="Lack of material" id="GUN_UPGRADE_LACK_OF_MATERIAL_NOTE"/>
+		<item nameType="0" description="枪械部件材料安装时不足提示语" text="Lack of {0:materialName}" id="GUN_PART_INSTALL_LACK_OF_MATERIAL"/>
+		<item nameType="0" description="英雄的军衔" text="Chicken" id="HERO_ASSAULT_RANK_01"/>
+		<item nameType="0" description="英雄的军衔" text="Raven" id="HERO_ASSAULT_RANK_02"/>
+		<item nameType="0" description="英雄的军衔" text="Swan" id="HERO_ASSAULT_RANK_03"/>
+		<item nameType="0" description="英雄的军衔" text="Eagle" id="HERO_ASSAULT_RANK_04"/>
+		<item nameType="0" description="英雄的军衔" text="Hawk" id="HERO_ASSAULT_RANK_05"/>
+		<item nameType="0" description="英雄的军衔" text="Bee" id="HERO_ENGINEER_RANK_01"/>
+		<item nameType="0" description="英雄的军衔" text="Spider" id="HERO_ENGINEER_RANK_02"/>
+		<item nameType="0" description="英雄的军衔" text="Mantis" id="HERO_ENGINEER_RANK_03"/>
+		<item nameType="0" description="英雄的军衔" text="Centipede" id="HERO_ENGINEER_RANK_04"/>
+		<item nameType="0" description="英雄的军衔" text="Scorpion" id="HERO_ENGINEER_RANK_05"/>
+		<item nameType="0" description="英雄的军衔" text="Piranha" id="HERO_SUPPORT_RANK_01"/>
+		<item nameType="0" description="英雄的军衔" text="Octopus" id="HERO_SUPPORT_RANK_02"/>
+		<item nameType="0" description="英雄的军衔" text="Dolphin" id="HERO_SUPPORT_RANK_03"/>
+		<item nameType="0" description="英雄的军衔" text="Shark" id="HERO_SUPPORT_RANK_04"/>
+		<item nameType="0" description="英雄的军衔" text="Orca" id="HERO_SUPPORT_RANK_05"/>
+		<item nameType="0" description="英雄的军衔" text="Doberman" id="HERO_SCOUT_RANK_01"/>
+		<item nameType="0" description="英雄的军衔" text="Fox" id="HERO_SCOUT_RANK_02"/>
+		<item nameType="0" description="英雄的军衔" text="Wolf" id="HERO_SCOUT_RANK_03"/>
+		<item nameType="0" description="英雄的军衔" text="Puma" id="HERO_SCOUT_RANK_04"/>
+		<item nameType="0" description="英雄的军衔" text="Bear" id="HERO_SCOUT_RANK_05"/>
+		<item nameType="0" description="护盾恢复速度属性的文本" text="SHIELD RECOVER SPEED" id="GENRAL_SHIELD_RECOVER_SPEED"/>
+		<item nameType="0" description="VIP" text="VIP" id="GENRAL_VIP"/>
+		<item nameType="0" description="战场中UI提示" text="Reload!" id="HINT_RELOAD"/>
+		<item nameType="0" description="战场中UI提示" text="Out of range!" id="HINT_OUT_OF_RANGE"/>
+		<item nameType="0" description="战场中UI提示" text="Low ammo, find a Ammo pack!" id="HINT_LOW_AMMO"/>
+		<item nameType="0" description="战场中UI提示" text="Low Hp, find a medic kit!" id="HINT_LOW_HP"/>
+		<item nameType="0" description="战场中UI提示" text="Release to fire!" id="HINT_RELEASE_TO_FIRE"/>
+		<item nameType="0" description="1" text="ZONE IS NOT TAKEN" id="OCCUPATION_HINT_NONE_TOOK_ZONE"/>
+		<item nameType="0" description="击杀模式" text="Kill Enemy!" id="KILL_MODE_STATE_KILL"/>
+		<item nameType="0" description="击杀模式" text="Teammate will accomplish Kills!" id="KILL_MODE_TEAMMATE_WILL_WIN"/>
+		<item nameType="0" description="击杀模式" text="Enemy will accomplish Kills!" id="KILL_MODE_ENEMY_WILL_WIN"/>
+		<item nameType="0" description="时间模式" text="Battle will end in :{0:seconds}" id="TIME_MODE_WILL_END_HINT"/>
+		<item nameType="0" description="时间模式" text="Kill Enemy!" id="TIME_MODE_STATE_KILL"/>
+		<item nameType="0" description="资源模式" text="READY!" id="RESOURCE_READY_TO_TAKE"/>
+		<item nameType="0" description="错误信息弹窗标题" text="Error Message" id="ERROR_MESSAGE_TITLE"/>
+		<item nameType="0" description="赛季结算上赛季等级" text="IN THE LAST SEASON, YOU ARE TIERED IN:" id="SEASON_RESULT_LAST_SEASON_RANK"/>
+		<item nameType="0" description="赛季结算下赛季从X等级开始" text="IN NEXT SEASON,YOU WILL START FROM:" id="SEASON_RESULT_NEXT_SEASON_LEVEL_START_FROM"/>
+		<item nameType="0" description="赛季结算货币转换" text="YOUR CURRENCY GAINED FROM LAST SEASON ARE EXCHANGED TO FUND." id="SEASON_RESULT_CURRENCY_EXCHANGE"/>
+		<item nameType="0" description="赛季结算排名单位" text="NUM" id="SEASON_RESULT_RANK_TAG_NUM"/>
+		<item nameType="0" description="传说" text="LEGEND" id="SEASON_RESULT_LAGEND"/>
+		<item nameType="0" description="赛季结算排名单位" text="TIER" id="SEASON_RESULT_RANK_TAG_RANK"/>
+		<item nameType="0" description="POWER" text="POWER" id="GENRAL_POWER"/>
+		<item nameType="0" description="POW" text="POW" id="GENRAL_POW"/>
+		<item nameType="0" description="赛季模式，下一个场次奖励的提示语" text="NEXT REWARD IN:" id="SEASON_NEXT_REWARD_TIP"/>
+		<item nameType="0" description="赛季模式，场次奖励已经领取后，再次点击领取的提示语" text="Please come back in {0:time}." id="TOAST_SEASON_BATTLE_REWARD_NEXT_TIME_TIP"/>
+		<item nameType="0" description="是" text="YES" id="GENRAL_YES"/>
+		<item nameType="0" description="否" text="NO" id="GENRAL_NO"/>
+		<item nameType="0" description="赛季场次奖励，还未完成就点击领取时的提示" text="PLEASE FINISH REQUIRED BATTLES TO GET THIS REWARD." id="TOAST_SEASON_BATTLE_REWARD_NOT_FINISHED_TIP"/>
+		<item nameType="0" description="" text="Reconnect to the game, please wait…" id="INGAME_RECONNECT_1"/>
+		<item nameType="0" description="" text="The connection to the server has been disconnected. Have you attempted to reconnect?" id="INGAME_RECONNECT_2"/>
+		<item nameType="0" description="" text="Failed to join the Match, you will return to the main menu." id="INGAME_RECONNECT_FAILED"/>
+		<item nameType="0" description="职业升级 补给品" text="SUPPLY" id="GENRAL_SUPPLY"/>
+		<item nameType="0" description="枪械改造包" text="TUNER KIT" id="GENRAL_TUNER_KIT"/>
+		<item nameType="0" description="邮箱提示文本" text="You have sent too many repeated messages. Please try again later{0:time}." id="MAILBOX_NOTICE_1"/>
+		<item nameType="0" description="邮箱提示文本" text="You sent the message too fast. Please try again later{0:time}." id="MAILBOX_NOTICE_2"/>
+		<item nameType="0" description="邮箱提示文本" text="You have sent too many messages recently. Please try again later{0:time}." id="MAILBOX_NOTICE_3"/>
+		<item nameType="0" description="邮箱提示文本" text="Your input is more than 200 characters" id="MAILBOX_NOTICE_4"/>
+		<item nameType="0" description="邮箱提示文本" text="NO MAILS" id="MAILBOX_NOTICE_5"/>
+		<item nameType="0" description="邮箱提示文本" text="CLAIM" id="MAILBOX_NOTICE_6"/>
+		<item nameType="0" description="邮箱提示文本" text="CLAIM ALL REWARDS" id="MAILBOX_NOTICE_7"/>
+		<item nameType="0" description="帐号创建弹窗" text="Create Account Error" id="ACCOUNT_CREATE_ERROR"/>
+		<item nameType="0" description="重连提示" text="Player is already in the battle" id="PLAYER_IS_BATTLING"/>
+		<item nameType="0" description="商店购买失败" text="Purchase Failure" id="SHOP_PURCHASE_FAIL"/>
+		<item nameType="0" description="通用消息框挑剔" text="Message" id="COMMON_MESSAGE_TITLE"/>
+		<item nameType="0" description="聊天信息框标签" text="WORLD CHAT" id="CHAT_TITLE_WORLD"/>
+		<item nameType="0" description="聊天信息时间提示" text="Ago" id="CHAT_TIME_NOTICE"/>
+		<item nameType="0" description="聊天信息系统信息" text="SYSTEM MESSAGE" id="CHAT_SYSTEM_MESSAGE"/>
+		<item nameType="0" description="天" text="Day" id="CHAT_TIME_DAY"/>
+		<item nameType="0" description="小时" text="Hour" id="CHAT_TIME_HOUR"/>
+		<item nameType="0" description="分钟" text="Minute" id="CHAT_TIME_MINUTE"/>
+		<item nameType="0" description="秒钟" text="Second" id="CHAT_TIME_SECOND"/>
+		<item nameType="0" description="1" text="EXIT GAME" id="MSGBOX_TITLE_EXIT_GAME"/>
+		<item nameType="0" description="1" text="Do you want to quit this GAME?" id="MSGBOX_MSG_EXIT_GAME"/>
+		<item nameType="0" description="1" text="Too Much Messages" id="TOO_MUCH_MESSAGE"/>
+		<item nameType="0" description="1" text="Sorry, the server is busy now, please try again later." id="SORRY_SERVER_BUSY_TRY_LATER"/>
+		<item nameType="0" description="系统模块锁定提示" text="Module Is Locked！" id="TOAST_SYSTEM_MODOULE_IS_LOCK"/>
+		<item nameType="0" description="锁定" text="LOCKED" id="GENRAL_LOCKED"/>
+		<item nameType="2" description="1" text="M4Carbine Rifle" id="WEAPON_NAME_M4A1"/>
+		<item nameType="2" description="1" text="NEW MP5" id="WEAPON_NAME_MP5A"/>
+		<item nameType="2" description="1" text="H&amp;K MP5" id="WEAPON_NAME_MP5"/>
+		<item nameType="2" description="1" text="M60 MachineGun" id="WEAPON_NAME_M60"/>
+		<item nameType="2" description="1" text="Steyr SSG-69" id="WEAPON_NAME_SSG69"/>
+		<item nameType="2" description="1" text="NEW M590" id="WEAPON_NAME_MOSSBERG_M590A"/>
+		<item nameType="2" description="1" text="MossBerg M590" id="WEAPON_NAME_MOSSBERG_M590"/>
+		<item nameType="2" description="1" text="Franchi SPAS 12" id="WEAPON_NAME_SPAS12"/>
+		<item nameType="2" description="1" text="New Striker" id="WEAPON_NAME_STRIKERA"/>
+		<item nameType="2" description="1" text="Striker" id="WEAPON_NAME_STRIKER"/>
+		<item nameType="2" description="1" text="New Uzi" id="WEAPON_NAME_UZIA"/>
+		<item nameType="2" description="1" text="Imi Uzi" id="WEAPON_NAME_UZI"/>
+		<item nameType="2" description="1" text="SMG9" id="WEAPON_NAME_SMG9"/>
+		<item nameType="2" description="1" text="New M870" id="WEAPON_NAME_M870A"/>
+		<item nameType="2" description="1" text="M870" id="WEAPON_NAME_M870"/>
+		<item nameType="2" description="1" text="Serbu Super-Shorty" id="WEAPON_NAME_SERBU_SUPER_SHORTY"/>
+		<item nameType="2" description="1" text="FN P90" id="WEAPON_NAME_P90"/>
+		<item nameType="2" description="1" text="M1014" id="WEAPON_NAME_M1014"/>
+		<item nameType="2" description="1" text="New AWP" id="WEAPON_NAME_AWPA"/>
+		<item nameType="2" description="1" text="AWP" id="WEAPON_NAME_AWP"/>
+		<item nameType="2" description="1" text="FN SCAR" id="WEAPON_NAME_FN_SCAR"/>
+		<item nameType="2" description="1" text="New AK47" id="WEAPON_NAME_AK47A"/>
+		<item nameType="2" description="1" text="AK47 Rifle" id="WEAPON_NAME_AK47"/>
+		<item nameType="2" description="1" text="New MP7A1" id="WEAPON_NAME_MP7A1A"/>
+		<item nameType="2" description="1" text="MP7A1" id="WEAPON_NAME_MP7A1"/>
+		<item nameType="2" description="1" text="NEW UMP" id="WEAPON_NAME_HK_UMPA"/>
+		<item nameType="2" description="1" text="UMP SubmachineGun" id="WEAPON_NAME_HK_UMP"/>
+		<item nameType="2" description="1" text="HKG36 Rifle" id="WEAPON_NAME_HK_G36"/>
+		<item nameType="2" description="0" text="New DesertEagle" id="WEAPON_NAME_DESERT_EAGLEA"/>
+		<item nameType="2" description="1" text="DesertEagle" id="WEAPON_NAME_DESERT_EAGLE"/>
+		<item nameType="2" description="1" text="Revolver" id="WEAPON_NAME_REVOLVER"/>
+		<item nameType="2" description="1" text="New M249" id="WEAPON_NAME_M249_SAWA"/>
+		<item nameType="2" description="1" text="M249 MachineGun" id="WEAPON_NAME_M249_SAW"/>
+		<item nameType="2" description="1" text="Dragunoy SVD" id="WEAPON_NAME_SVD"/>
+		<item nameType="2" description="1" text="SRS" id="WEAPON_NAME_SRS"/>
+		<item nameType="0" description="1" text="NEW WEAPON" id="UNLOCK_NEW_GUN"/>
+		<item nameType="0" description="1" text="NEW HERO" id="UNLOCK_NEW_PROFESSION"/>
+		<item nameType="0" description="1" text="NEW" id="GUN_NEW_SHORT"/>
+		<item nameType="0" description="1" text="Device info create error" id="DEVICE_INFO_CREATE_ERROR"/>
+		<item nameType="0" description="1" text="The blueprint of M4Carbine Rifle" id="SHOP_M4_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of H&amp;K MP5 SubmachineGun" id="SHOP_MP5_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of M60 MachineGun" id="SHOP_M60_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Steyr SSG-69" id="SHOP_SSG69_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of MossBerg M590" id="SHOP_M590_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Franchi SPAS 12" id="SHOP_SPAS_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Striker" id="SHOP_STRIKER_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Imi Uzi" id="SHOP_UZI_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of SMG9" id="SHOP_SMG9_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of M870" id="SHOP_M870_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Serbu Super-Shorty" id="SHOP_SERBU_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of FN P90" id="SHOP_P90_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of M1014" id="SHOP_M1014_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of AWP" id="SHOP_AWP_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of FN SCAR" id="SHOP_FN_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of AK47 Rifle" id="SHOP_AK_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of MP7A1" id="SHOP_MP7_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of UMP SubmachineGun" id="SHOP_UMP_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of HKG36 Rifle" id="SHOP_HKG36_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of DesertEagle" id="SHOP_DESERT_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Revolver" id="SHOP_REVOLVER_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of M249 MachineGun" id="SHOP_M249_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of Dragunoy SVD" id="SHOP_SVD_BLUEPRINT"/>
+		<item nameType="0" description="1" text="The blueprint of SRS" id="SHOP_SRS_BLUEPRINT"/>
+		<item nameType="0" description="1" text="RESULT FAIL" id="ERROR_RESULT_FAIL"/>
+		<item nameType="0" description="1" text="NEED UNLOCK {0:professionName}" id="NEED_UNLOCK_PROFESSION"/>
+		<item nameType="0" description="1" text="SUPPLY" id="HERO_UPGRADE_SUPPLY"/>
+		<item nameType="0" description="突击兵升星补给品" text="ASSAULT SUPPLY" id="ASSAULT_UPGRADE_SUPPLY"/>
+		<item nameType="0" description="工程兵升星补给品" text="ENGINEER SUPPLY" id="ENGINEER_UPGRADE_SUPPLY"/>
+		<item nameType="0" description="支援兵升星补给品" text="SUPPORT SUPPLY" id="SUPPORT_UPGRADE_SUPPLY"/>
+		<item nameType="0" description="侦察兵升星补给品" text="SCOUT SUPPLY" id="SCOUT_UPGRADE_SUPPLY"/>
+		<item nameType="0" description="枪械部件改造包" text="BARREL TUNER" id="GUN_PART_BARREL_TUNER"/>
+		<item nameType="0" description="枪械部件改造包" text="BODY TUNER" id="GUN_PART_BODY_TUNER"/>
+		<item nameType="0" description="枪械部件改造包" text="STOCK TUNER" id="GUN_PART_STOCK_TUNER"/>
+		<item nameType="0" description="1" text="TUNER" id="ITEM_RETROFIT_BOX"/>
+		<item nameType="0" description="枪械材料" text="BARREL MATERIAL1" id="GUN_PART_BARREL_MATERIAL1"/>
+		<item nameType="0" description="枪械材料" text="BARREL MATERIAL2" id="GUN_PART_BARREL_MATERIAL2"/>
+		<item nameType="0" description="枪械材料" text="BARREL MATERIAL3" id="GUN_PART_BARREL_MATERIAL3"/>
+		<item nameType="0" description="枪械材料" text="BARREL MATERIAL4" id="GUN_PART_BARREL_MATERIAL4"/>
+		<item nameType="0" description="枪械材料" text="BARREL MATERIAL5" id="GUN_PART_BARREL_MATERIAL5"/>
+		<item nameType="0" description="枪械材料" text="BODY MATERIAL1" id="GUN_PART_BODY_MATERIAL1"/>
+		<item nameType="0" description="枪械材料" text="BODY MATERIAL2" id="GUN_PART_BODY_MATERIAL2"/>
+		<item nameType="0" description="枪械材料" text="BODY MATERIAL3" id="GUN_PART_BODY_MATERIAL3"/>
+		<item nameType="0" description="枪械材料" text="BODY MATERIAL4" id="GUN_PART_BODY_MATERIAL4"/>
+		<item nameType="0" description="枪械材料" text="BODY MATERIAL5" id="GUN_PART_BODY_MATERIAL5"/>
+		<item nameType="0" description="枪械材料" text="STOCK MATERIAL1" id="GUN_PART_STOCK_MATERIAL1"/>
+		<item nameType="0" description="枪械材料" text="STOCK MATERIAL2" id="GUN_PART_STOCK_MATERIAL2"/>
+		<item nameType="0" description="枪械材料" text="STOCK MATERIAL3" id="GUN_PART_STOCK_MATERIAL3"/>
+		<item nameType="0" description="枪械材料" text="STOCK MATERIAL4" id="GUN_PART_STOCK_MATERIAL4"/>
+		<item nameType="0" description="枪械材料" text="STOCK MATERIAL5" id="GUN_PART_STOCK_MATERIAL5"/>
+		<item nameType="0" description="枪械材料" text="GUN MATERIAL" id="ITEM_GUN_MATERIAL"/>
+		<item nameType="0" description="核心" text="core" id="ITEM_CORE"/>
+		<item nameType="0" description="芯片" text="chip" id="ITEM_CHIP"/>
+		<item nameType="0" description="突击兵经验值" text="ASSAULT EXP" id="ITEM_EXP_ASSAULT"/>
+		<item nameType="0" description="侦察兵经验值" text="SCOUT EXP" id="ITEM_EXP_SCOUT"/>
+		<item nameType="0" description="工程兵经验值" text="ENGINEER EXP" id="ITEM_EXP_ENGINEER"/>
+		<item nameType="0" description="支援兵经验值" text="SUPPORT EXP" id="ITEM_EXP_SUPPORT"/>
+		<item nameType="0" description="经验值" text="HERO EXP" id="ITEM_EXP_ALL"/>
+		<item nameType="0" description="部件安装信息" text="PARTS INSTALLED" id="GUN_PART_INSTALLED_INFO_TITLE"/>
+		<item nameType="0" description="枪械分解声明" text="CONFIRM THE BREAKDOWN OF FIREARMS INTO:" id="GUN_DECOMPSE_GAINS_DECLARE"/>
+		<item nameType="0" description="枪械分解警告，类型唯一" text="YOU ONLY HAVE ONE WEAPON OF THIS TYPE.PLAEASE BE CAREFUL TO BREAK IT DOWN." id="GUN_DECOMPSE_WARNING_OF_TYPE_UNIQUE"/>
+		<item nameType="0" description="枪械特性等级提升庆祝语" text="Congratulations! {0:guntraitName} is upgraded to LV.{1:level}." id="TOAST_GUN_TRAIT_UPGRADE_SUCCESS"/>
+		<item nameType="0" description="枪械特性升级而枪械等级不足的按钮提示" text="Require gun LV.{0:level}" id="BUTTON_TIP_REQUIRE_GUN_LEVEL"/>
+		<item nameType="0" description="枪械特性升级而枪械等级不足的红字弹出提示" text="Please upgrade {0:gunName} to LV.{1:level}." id="TOAST_GUN_TRAIT_REQUIRE_GUN_LEVEL"/>
+		<item nameType="3" description="1" text="HUNTER" id="SKILL_WEAPON_NAME_M4CARBINE"/>
+		<item nameType="3" description="1" text="Triggers a special effect when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE"/>
+		<item nameType="3" description="1" text="Recover 185 Shield Energy in 5 seconds when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Recover 310 Shield Energy in 5 seconds when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Recover 455 Shield Energy in 5 seconds when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Recover 610 Shield Energy in 5 seconds when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Recover 780 Shield Energy in 5 seconds when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_M4CARBINE_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Shield Recover" id="SKILL_WEAPON_BUFF_M4CARBINE"/>
+		<item nameType="3" description="1" text="ORACLE" id="SKILL_WEAPON_NAME_AK47"/>
+		<item nameType="3" description="1" text="Triggers a special effect when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47"/>
+		<item nameType="3" description="1" text="Your Attack is increased by 10 when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Your Attack is increased by 17 when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Your Attack is increased by 24 when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Your Attack is increased by 33 when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Your Attack is increased by 42 when your HP is more than 80%." id="SKILL_WEAPON_DESCRIPTION_AK47_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Attack Increased" id="SKILL_WEAPON_BUFF_AK47"/>
+		<item nameType="3" description="1" text="FANGTOOTH" id="SKILL_WEAPON_NAME_G36"/>
+		<item nameType="3" description="1" text="Triggers a special effect when causing a Critical Hit." id="SKILL_WEAPON_DESCRIPTION_G36"/>
+		<item nameType="3" description="1" text="Increase your Charge Energy by 1 when causing Critical Hit to your Enemy." id="SKILL_WEAPON_DESCRIPTION_G36_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Increase your Charge Energy by 2 when causing Critical Hit to your Enemy." id="SKILL_WEAPON_DESCRIPTION_G36_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Increase your Charge Energy by 3 when causing Critical Hit to your Enemy." id="SKILL_WEAPON_DESCRIPTION_G36_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Increase your Charge Energy by 4 when causing Critical Hit to your Enemy." id="SKILL_WEAPON_DESCRIPTION_G36_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Increase your Charge Energy by 5 when causing Critical Hit to your Enemy." id="SKILL_WEAPON_DESCRIPTION_G36_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Payload Charge" id="SKILL_WEAPON_BUFF_G36"/>
+		<item nameType="3" description="1" text="DEATH" id="SKILL_WEAPON_NAME_SCAR"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_SCAR"/>
+		<item nameType="3" description="1" text="Decrease your target's Attack by 40% for 5 seconds when hitting him. This effect triggers once per 10 seconds." id="SKILL_WEAPON_DESCRIPTION_SCAR_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Decrease your target's Attack by 40% for 5 seconds when hitting him. This effect triggers once per 9.5 seconds." id="SKILL_WEAPON_DESCRIPTION_SCAR_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Decrease your target's Attack by 40% for 5 seconds when hitting him. This effect triggers once per 9 seconds." id="SKILL_WEAPON_DESCRIPTION_SCAR_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Decrease your target's Attack by 40% for 5 seconds when hitting him. This effect triggers once per 8.5 seconds." id="SKILL_WEAPON_DESCRIPTION_SCAR_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Decrease your target's Attack by 40% for 5 seconds when hitting him. This effect triggers once per 8 seconds." id="SKILL_WEAPON_DESCRIPTION_SCAR_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Attack Reduced" id="SKILL_WEAPON_BUFF_SCAR_SELF"/>
+		<item nameType="-1" description="1" text="Attack Reduced" id="SKILL_WEAPON_BUFF_SCAR_TARGET"/>
+		<item nameType="3" description="1" text="PREDATOR" id="SKILL_WEAPON_NAME_UZI"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 30% for 3 seconds when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 30% for 3.5 seconds when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 30% for 4 seconds when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 30% for 4.5 seconds when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 30% for 5 seconds when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_UZI_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Slowed" id="SKILL_WEAPON_BUFF_UZI_SELF"/>
+		<item nameType="-1" description="1" text="Slowed" id="SKILL_WEAPON_BUFF_UZI_TARGET"/>
+		<item nameType="3" description="1" text="PENETRATOR" id="SKILL_WEAPON_NAME_P90"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy's Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90"/>
+		<item nameType="3" description="1" text="Decrease your target's Energy Shield by 60 when hitting his Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Decrease your target's Energy Shield by 136 when hitting his Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Decrease your target's Energy Shield by 199 when hitting his Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Decrease your target's Energy Shield by 268 when hitting his Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Decrease your target's Energy Shield by 345 when hitting his Energy Shield." id="SKILL_WEAPON_DESCRIPTION_P90_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Shield Reduced" id="SKILL_WEAPON_BUFF_P90_SELF"/>
+		<item nameType="-1" description="1" text="Shield Reduced" id="SKILL_WEAPON_BUFF_P90_TARGET"/>
+		<item nameType="3" description="1" text="EXPERT" id="SKILL_WEAPON_NAME_MOSSBERG_M590"/>
+		<item nameType="3" description="1" text="Triggers a special effect when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590"/>
+		<item nameType="3" description="1" text="Reduce your Mine skill Cooldown by 3 seconds when killing an Enemy. Increase the max amount of Mines you can deploy by 1." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce your Mine skill Cooldown by 5 seconds when killing an Enemy. Increase the max amount of Mines you can deploy by 1." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce your Mine skill Cooldown by 6 seconds when killing an Enemy. Increase the max amount of Mines you can deploy by 1." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce your Mine skill Cooldown by 6.5 seconds when killing an Enemy. Increase the max amount of Mines you can deploy by 1." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce your Mine skill Cooldown by 7 seconds when killing an Enemy. Increase the max amount of Mines you can deploy by 1." id="SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Extra Mine" id="SKILL_WEAPON_BUFF_M590_EXTRA_MINE"/>
+		<item nameType="-1" description="1" text="Mine Cooldown" id="SKILL_WEAPON_BUFF_M590_REDUCE_CD"/>
+		<item nameType="3" description="1" text="BUTCHER" id="SKILL_WEAPON_NAME_SPAS12"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12"/>
+		<item nameType="3" description="1" text="Gain 5 extra Attack for 3 seconds when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Gain 13 extra Attack for 3 seconds when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Gain 19 extra Attack for 3 seconds when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Gain 26 extra Attack for 3 seconds when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Gain 33 extra Attack for 3 seconds when hitting a Summoned device." id="SKILL_WEAPON_DESCRIPTION_SPAS12_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Attack Increased" id="SKILL_WEAPON_BUFF_SPAS12"/>
+		<item nameType="3" description="1" text="SANCTIFIER" id="SKILL_WEAPON_NAME_M870"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870"/>
+		<item nameType="3" description="1" text="Extend your Turret's Duration by 3 seconds and recover its HP by 87 when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Extend your Turret's Duration by 3.5 seconds and recover its HP by 197 when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Extend your Turret's Duration by 4 seconds and recover its HP by 286 when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Extend your Turret's Duration by 4.5 seconds and recover its HP by 384 when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Extend your Turret's Duration by 5 seconds and recover its HP by 491 when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M870_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Turret Duration Increased" id="SKILL_WEAPON_BUFF_M870"/>
+		<item nameType="3" description="1" text="OVERLOAD" id="SKILL_WEAPON_NAME_M1014"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy with Energy Shield." id="SKILL_WEAPON_DESCRIPTION_M1014"/>
+		<item nameType="3" description="1" text="When hitting an Enemy with Energy Shield, your Turret's Attack is increased by 52 for 4 seconds. And this Enemy will have higher priority as your Turret's target." id="SKILL_WEAPON_DESCRIPTION_M1014_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="When hitting an Enemy with Energy Shield, your Turret's Attack is increased by 117 for 4 seconds. And this Enemy will have higher priority as your Turret's target." id="SKILL_WEAPON_DESCRIPTION_M1014_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="When hitting an Enemy with Energy Shield, your Turret's Attack is increased by 170 for 4 seconds. And this Enemy will have higher priority as your Turret's target." id="SKILL_WEAPON_DESCRIPTION_M1014_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="When hitting an Enemy with Energy Shield, your Turret's Attack is increased by 229 for 4 seconds. And this Enemy will have higher priority as your Turret's target." id="SKILL_WEAPON_DESCRIPTION_M1014_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="When hitting an Enemy with Energy Shield, your Turret's Attack is increased by 292 for 4 seconds. And this Enemy will have higher priority as your Turret's target." id="SKILL_WEAPON_DESCRIPTION_M1014_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Turret Attack Increased" id="SKILL_WEAPON_BUFF_M1014_SELF"/>
+		<item nameType="-1" description="1" text="Targeted" id="SKILL_WEAPON_BUFF_M1014_TARGET"/>
+		<item nameType="3" description="1" text="SUPPRESS" id="SKILL_WEAPON_NAME_M60"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting Enemy within 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60"/>
+		<item nameType="3" description="1" text="Reduce your target's Hit Rate by 50% for 3 seconds when hitting him from more than 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce your target's Hit Rate by 50% for 3.5 seconds when hitting him from more than 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce your target's Hit Rate by 50% for 4 seconds when hitting him from more than 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce your target's Hit Rate by 50% for 4.5 seconds when hitting him from more than 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce your target's Hit Rate by 50% for 5 seconds when hitting him from more than 30 meters." id="SKILL_WEAPON_DESCRIPTION_M60_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target HitRate Reduced" id="SKILL_WEAPON_BUFF_M60_SELF"/>
+		<item nameType="-1" description="1" text="HitRate Reduced" id="SKILL_WEAPON_BUFF_M60_TARGET"/>
+		<item nameType="3" description="1" text="SMASHER" id="SKILL_WEAPON_NAME_M249"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_M249"/>
+		<item nameType="3" description="1" text="Reduce the target's Defence by 14 for 2 seconds when hitting him." id="SKILL_WEAPON_DESCRIPTION_M249_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce the target's Defence by 27 for 2 seconds when hitting him." id="SKILL_WEAPON_DESCRIPTION_M249_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce the target's Defence by 34 for 2 seconds when hitting him." id="SKILL_WEAPON_DESCRIPTION_M249_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce the target's Defence by 50 for 2 seconds when hitting him." id="SKILL_WEAPON_DESCRIPTION_M249_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce the target's Defence by 60 for 2 seconds when hitting him." id="SKILL_WEAPON_DESCRIPTION_M249_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Defence Reduced" id="SKILL_WEAPON_BUFF_M249_SELF"/>
+		<item nameType="-1" description="1" text="Defence Reduced" id="SKILL_WEAPON_BUFF_M249_TARGET"/>
+		<item nameType="3" description="1" text="EAGLEEYE" id="SKILL_WEAPON_NAME_SSG69"/>
+		<item nameType="3" description="1" text="Triggers a special effect when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_SSG69"/>
+		<item nameType="3" description="1" text="Recover 1 ammo to your Magazine when Headshot your target. This effect can be triggered once per 5 seconds." id="SKILL_WEAPON_DESCRIPTION_SSG69_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Recover 1 ammo to your Magazine when Headshot your target. This effect can be triggered once per 4 seconds." id="SKILL_WEAPON_DESCRIPTION_SSG69_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Recover 1 ammo to your Magazine when Headshot your target. This effect can be triggered once per 3 seconds." id="SKILL_WEAPON_DESCRIPTION_SSG69_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Recover 2 ammo to your Magazine when Headshot your target. This effect can be triggered once per 5 seconds." id="SKILL_WEAPON_DESCRIPTION_SSG69_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Recover 2 ammo to your Magazine when Headshot your target. This effect can be triggered once per 4 seconds." id="SKILL_WEAPON_DESCRIPTION_SSG69_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Extra Bullet" id="SKILL_WEAPON_BUFF_SSG69"/>
+		<item nameType="3" description="1" text="VALKYRIE" id="SKILL_WEAPON_NAME_AWP"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy with Energy Shield." id="SKILL_WEAPON_DESCRIPTION_AWP"/>
+		<item nameType="3" description="1" text="Cause 49 Damage per second for 2 seconds to your target when hitting him with Energy Shield. This effect won't kill your target." id="SKILL_WEAPON_DESCRIPTION_AWP_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Cause 110 Damage per second for 2 seconds to your target when hitting him with Energy Shield. This effect won't kill your target." id="SKILL_WEAPON_DESCRIPTION_AWP_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Cause 161 Damage per second for 2 seconds to your target when hitting him with Energy Shield. This effect won't kill your target." id="SKILL_WEAPON_DESCRIPTION_AWP_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Cause 217 Damage per second for 2 seconds to your target when hitting him with Energy Shield. This effect won't kill your target." id="SKILL_WEAPON_DESCRIPTION_AWP_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Cause 279 Damage per second for 2 seconds to your target when hitting him with Energy Shield. This effect won't kill your target." id="SKILL_WEAPON_DESCRIPTION_AWP_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Damage Over Time" id="SKILL_WEAPON_BUFF_AWP_SELF"/>
+		<item nameType="-1" description="1" text="Damage Over Time" id="SKILL_WEAPON_BUFF_AWP_TARGET"/>
+		<item nameType="3" description="1" text="SERAPH" id="SKILL_WEAPON_NAME_SVD"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD"/>
+		<item nameType="3" description="1" text="Prevent your target from recovering Energy Shield for 2 seconds when hitting him and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Prevent your target from recovering Energy Shield for 2.5 seconds when hitting him and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Prevent your target from recovering Energy Shield for 3 seconds when hitting him and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Prevent your target from recovering Energy Shield for 3.5 seconds when hitting him and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Prevent your target from recovering Energy Shield for 4 seconds when hitting him and your Energy Shield is full." id="SKILL_WEAPON_DESCRIPTION_SVD_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Shield Recover Delayed" id="SKILL_WEAPON_BUFF_SVD_SELF"/>
+		<item nameType="-1" description="1" text="Shield Recover Delayed" id="SKILL_WEAPON_BUFF_SVD_TARGET"/>
+		<item nameType="3" description="1" text="DRAGONAURA" id="SKILL_WEAPON_NAME_SRS"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS"/>
+		<item nameType="3" description="1" text="Create an Explosion causing 87 Damage to all Enemies within 6 meters on your target when hitting him beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Create an Explosion causing 195 Damage to all Enemies within 6 meters on your target when hitting him beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Create an Explosion causing 284 Damage to all Enemies within 6 meters on your target when hitting him beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Create an Explosion causing 381 Damage to all Enemies within 6 meters on your target when hitting him beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Create an Explosion causing 487 Damage to all Enemies within 6 meters on your target when hitting him beyond 35 meters." id="SKILL_WEAPON_DESCRIPTION_SRS_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Explosion" id="SKILL_WEAPON_BUFF_SRS"/>
+		<item nameType="3" description="1" text="VENOM" id="SKILL_WEAPON_NAME_DESERT_EAGLE"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 80% for 1 seconds when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 80% for 1.4 seconds when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 80% for 1.8 seconds when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 80% for 2.2 seconds when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce your target's Move Speed by 80% for 2.5 seconds when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Slowed" id="SKILL_WEAPON_BUFF_DESERT_EAGLE_SELF"/>
+		<item nameType="-1" description="1" text="Slowed" id="SKILL_WEAPON_BUFF_DESERT_EAGLE_TARGET"/>
+		<item nameType="3" description="1" text="DUELIST" id="SKILL_WEAPON_NAME_RELVOLVER"/>
+		<item nameType="3" description="1" text="Triggers a special effect when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER"/>
+		<item nameType="3" description="1" text="Recover 47 Energy Shield when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Recover 80 Energy Shield when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Recover 116 Energy Shield when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Recover 155 Energy Shield when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Recover 199 Energy Shield when causing Headshot to your Enemy." id="SKILL_WEAPON_DESCRIPTION_RELVOLVER_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Shield Recovered" id="SKILL_WEAPON_BUFF_RELVOLVER"/>
+		<item nameType="3" description="1" text="QUICKER" id="SKILL_WEAPON_NAME_SERBU_SUPER_SHORTY"/>
+		<item nameType="3" description="1" text="Triggers a special effect when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY"/>
+		<item nameType="3" description="1" text="Recover 300 HP of your Riot Shield when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Recover 680 HP of your Riot Shield when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Recover 1000 HP of your Riot Shield when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Recover 1350 HP of your Riot Shield when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Recover 1700 HP of your Riot Shield when Reload." id="SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="RiotShield HP" id="SKILL_WEAPON_BUFF_SERBU"/>
+		<item nameType="3" description="1" text="RIPPER" id="SKILL_WEAPON_NAME_STRIKER"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_STRIKER"/>
+		<item nameType="3" description="1" text="Drop an Recharger which recovers 110 Energy Shield's HP near you when Hitting an Enemy within 12 meters.." id="SKILL_WEAPON_DESCRIPTION_STRIKER_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Drop an Recharger which recovers 187 Energy Shield's HP near you when Hitting an Enemy within 12 meters.." id="SKILL_WEAPON_DESCRIPTION_STRIKER_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Drop an Recharger which recovers 272 Energy Shield's HP near you when Hitting an Enemy within 12 meters.." id="SKILL_WEAPON_DESCRIPTION_STRIKER_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Drop an Recharger which recovers 366 Energy Shield's HP near you when Hitting an Enemy within 12 meters.." id="SKILL_WEAPON_DESCRIPTION_STRIKER_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Drop an Recharger which recovers 467 Energy Shield's HP near you when Hitting an Enemy within 12 meters.." id="SKILL_WEAPON_DESCRIPTION_STRIKER_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Drop Shield Supply" id="SKILL_WEAPON_BUFF_STRIKER_TRIGGER"/>
+		<item nameType="-1" description="1" text="Shield Recovered" id="SKILL_WEAPON_BUFF_STRIKER_ITEM"/>
+		<item nameType="3" description="1" text="ZEALOT" id="SKILL_WEAPON_NAME_MP5"/>
+		<item nameType="3" description="1" text="Triggers a special effect when causing a Critical Hit." id="SKILL_WEAPON_DESCRIPTION_MP5"/>
+		<item nameType="3" description="1" text="Reduce the Cooldown time of your Biotic Emitter by 0.5 seconds when causing a Critical Hit, this effect can be triggered every 4 seconds." id="SKILL_WEAPON_DESCRIPTION_MP5_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce the Cooldown time of your Biotic Emitter by 0.5 seconds when causing a Critical Hit, this effect can be triggered every 3.5 seconds." id="SKILL_WEAPON_DESCRIPTION_MP5_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce the Cooldown time of your Biotic Emitter by 0.5 seconds when causing a Critical Hit, this effect can be triggered every 3 seconds." id="SKILL_WEAPON_DESCRIPTION_MP5_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce the Cooldown time of your Biotic Emitter by 0.5 seconds when causing a Critical Hit, this effect can be triggered every 2.5 seconds." id="SKILL_WEAPON_DESCRIPTION_MP5_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce the Cooldown time of your Biotic Emitter by 0.5 seconds when causing a Critical Hit, this effect can be triggered every 2 seconds." id="SKILL_WEAPON_DESCRIPTION_MP5_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Emmiter Cooldown" id="SKILL_WEAPON_BUFF_MP5"/>
+		<item nameType="3" description="1" text="INSIGHT" id="SKILL_WEAPON_NAME_UMP"/>
+		<item nameType="3" description="1" text="Triggers a special effect when Hitting an Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP"/>
+		<item nameType="3" description="1" text="When hitting an Enemy, reduce your his HP by 4 and recover your HP by the same amount. This effect won't kill your Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="When hitting an Enemy, reduce your his HP by 9 and recover your HP by the same amount. This effect won't kill your Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="When hitting an Enemy, reduce your his HP by 13 and recover your HP by the same amount. This effect won't kill your Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="When hitting an Enemy, reduce your his HP by 17 and recover your HP by the same amount. This effect won't kill your Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="When hitting an Enemy, reduce your his HP by 22 and recover your HP by the same amount. This effect won't kill your Enemy." id="SKILL_WEAPON_DESCRIPTION_UMP_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Hp Recover" id="SKILL_WEAPON_BUFF_UMP_SELF"/>
+		<item nameType="-1" description="1" text="Hp Reduced" id="SKILL_WEAPON_BUFF_UMP_TARGET"/>
+		<item nameType="3" description="1" text="SCHOLAR" id="SKILL_WEAPON_NAME_SMG9"/>
+		<item nameType="3" description="1" text="Triggers a special effect when Killing an Enemy." id="SKILL_WEAPON_DESCRIPTION_SMG9"/>
+		<item nameType="3" description="1" text="Drop an Ammo Supply which recovers 30% of your max ammo Amount near you when Killing an Enemy. This effect can be triggered once every 8 seconds." id="SKILL_WEAPON_DESCRIPTION_SMG9_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Drop an Ammo Supply which recovers 30% of your max ammo Amount near you when Killing an Enemy. This effect can be triggered once every 7 seconds." id="SKILL_WEAPON_DESCRIPTION_SMG9_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Drop an Ammo Supply which recovers 30% of your max ammo Amount near you when Killing an Enemy. This effect can be triggered once every 6 seconds." id="SKILL_WEAPON_DESCRIPTION_SMG9_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Drop an Ammo Supply which recovers 30% of your max ammo Amount near you when Killing an Enemy. This effect can be triggered once every 5.5 seconds." id="SKILL_WEAPON_DESCRIPTION_SMG9_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Drop an Ammo Supply which recovers 30% of your max ammo Amount near you when Killing an Enemy. This effect can be triggered once every 5 seconds." id="SKILL_WEAPON_DESCRIPTION_SMG9_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Drop Ammo Supply" id="SKILL_WEAPON_BUFF_SMG9_TRIGGER"/>
+		<item nameType="-1" description="1" text="Ammo Increased" id="SKILL_WEAPON_BUFF_SMG9_ITEM"/>
+		<item nameType="3" description="1" text="DOMINATION" id="SKILL_WEAPON_NAME_MP7"/>
+		<item nameType="3" description="1" text="Triggers a special effect when hitting an Enemy within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7"/>
+		<item nameType="3" description="1" text="Reduce your target's Skill Energy Charge by 20% when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7_TYPE1_LV1"/>
+		<item nameType="3" description="1" text="Reduce your target's Skill Energy Charge by 25% when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7_TYPE1_LV2"/>
+		<item nameType="3" description="1" text="Reduce your target's Skill Energy Charge by 30% when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7_TYPE1_LV3"/>
+		<item nameType="3" description="1" text="Reduce your target's Skill Energy Charge by 35% when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7_TYPE1_LV4"/>
+		<item nameType="3" description="1" text="Reduce your target's Skill Energy Charge by 40% when hitting him within 12 meters." id="SKILL_WEAPON_DESCRIPTION_MP7_TYPE1_LV5"/>
+		<item nameType="-1" description="1" text="Target Payload Energy Reduced" id="SKILL_WEAPON_BUFF_MP7_SELF"/>
+		<item nameType="-1" description="1" text="Payload Energy Reduced" id="SKILL_WEAPON_BUFF_MP7_TARGET"/>
+		<item nameType="0" description="1" text="CHIP" id="GUNTRAIT_UPGRADE_MATERIAL"/>
+		<item nameType="2" description="手雷名称" text="GRENADE" id="PAYLOAD_NAME_GRENADE"/>
+		<item nameType="2" description="手雷品质1描述" text="Throw a Grenade to targeted location, it will explode upon hitting anything, and deals Explosive Damage to all Enemies within 4 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_GRENADE_PROMOTE1"/>
+		<item nameType="2" description="手雷品质2描述" text="Throw a Grenade to targeted location, it will explode upon hitting anything, and deals Explosive Damage to all Enemies within 6 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_GRENADE_PROMOTE2"/>
+		<item nameType="2" description="手雷品质3描述" text="Throw a Grenade to targeted location, it will explode upon hitting anything, and deals Explosive Damage to all Enemies within 6 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_GRENADE_PROMOTE3"/>
+		<item nameType="-1" description="手雷品质1等级1升级数值" text="MAX PERCENTAGE DAMAGE_39%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_88_+61\nMIN FIXED DAMAGE_21_+16" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE1_LV1"/>
+		<item nameType="-1" description="手雷品质1等级2升级数值" text="MAX PERCENTAGE DAMAGE_40%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_149_+62\nMIN FIXED DAMAGE_37_+19" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE1_LV2"/>
+		<item nameType="-1" description="手雷品质1等级3升级数值" text="MAX PERCENTAGE DAMAGE_41%_+1%\nMIN PERCENTAGE DAMAGE_10%_+1%\nMAX FIXED DAMAGE_211_+61\nMIN FIXED DAMAGE_56_+4" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE1_LV3"/>
+		<item nameType="-1" description="手雷品质1等级4升级数值" text="MAX PERCENTAGE DAMAGE_42%_+1%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_272_+68\nMIN FIXED DAMAGE_60_+18" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE1_LV4"/>
+		<item nameType="-1" description="手雷品质1等级5升级数值" text="MAX PERCENTAGE DAMAGE_43%_+0%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_330_+0\nMIN FIXED DAMAGE_78_+0" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE1_LV5"/>
+		<item nameType="-1" description="手雷品质1固定数值" text="EXPLOSION RADIUS(meters)_5\nCOOLDOWN TIME(seconds)_15" id="PAYLOAD_STATIC_PROP_GRENADE_PROMOTE1"/>
+		<item nameType="-1" description="手雷品质2等级1升级数值" text="MAX PERCENTAGE DAMAGE_39%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_88_+61\nMIN FIXED DAMAGE_21_+16" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE2_LV1"/>
+		<item nameType="-1" description="手雷品质2等级2升级数值" text="MAX PERCENTAGE DAMAGE_40%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_149_+62\nMIN FIXED DAMAGE_37_+19" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE2_LV2"/>
+		<item nameType="-1" description="手雷品质2等级3升级数值" text="MAX PERCENTAGE DAMAGE_41%_+1%\nMIN PERCENTAGE DAMAGE_10%_+1%\nMAX FIXED DAMAGE_211_+61\nMIN FIXED DAMAGE_56_+4" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE2_LV3"/>
+		<item nameType="-1" description="手雷品质2等级4升级数值" text="MAX PERCENTAGE DAMAGE_42%_+1%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_272_+68\nMIN FIXED DAMAGE_60_+18" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE2_LV4"/>
+		<item nameType="-1" description="手雷品质2等级5升级数值" text="MAX PERCENTAGE DAMAGE_43%_+0%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_330_+0\nMIN FIXED DAMAGE_78_+0" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE2_LV5"/>
+		<item nameType="-1" description="手雷品质2固定数值" text="EXPLOSION RADIUS(meters)_6\nCOOLDOWN TIME(seconds)_15" id="PAYLOAD_STATIC_PROP_GRENADE_PROMOTE2"/>
+		<item nameType="-1" description="手雷品质3等级1升级数值" text="MAX PERCENTAGE DAMAGE_39%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_88_+61\nMIN FIXED DAMAGE_21_+16" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE3_LV1"/>
+		<item nameType="-1" description="手雷品质3等级2升级数值" text="MAX PERCENTAGE DAMAGE_40%_+1%\nMIN PERCENTAGE DAMAGE_10%_+0%\nMAX FIXED DAMAGE_149_+62\nMIN FIXED DAMAGE_37_+19" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE3_LV2"/>
+		<item nameType="-1" description="手雷品质3等级3升级数值" text="MAX PERCENTAGE DAMAGE_41%_+1%\nMIN PERCENTAGE DAMAGE_10%_+1%\nMAX FIXED DAMAGE_211_+61\nMIN FIXED DAMAGE_56_+4" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE3_LV3"/>
+		<item nameType="-1" description="手雷品质3等级4升级数值" text="MAX PERCENTAGE DAMAGE_42%_+1%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_272_+68\nMIN FIXED DAMAGE_60_+18" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE3_LV4"/>
+		<item nameType="-1" description="手雷品质3等级5升级数值" text="MAX PERCENTAGE DAMAGE_43%_+0%\nMIN PERCENTAGE DAMAGE_11%_+0%\nMAX FIXED DAMAGE_330_+0\nMIN FIXED DAMAGE_78_+0" id="PAYLOAD_DYNAMIC_PROP_GRENADE_PROMOTE3_LV5"/>
+		<item nameType="-1" description="手雷品质3固定数值" text="EXPLOSION RADIUS(meters)_6\nCOOLDOWN TIME(seconds)_12" id="PAYLOAD_STATIC_PROP_GRENADE_PROMOTE3"/>
+		<item nameType="-1" description="手雷品质提升时的相关说明描述，品质1" text="The quality of Grenade will be evolved.\nThe explosion radius will be increased to 6 meters." id="PAYLOAD_GRENADE_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="手雷品质提升时的相关说明描述，品质2" text="The quality of Grenade will be evolved.\nThe cooldown time will be reduced to 12 seconds." id="PAYLOAD_GRENADE_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="0" description="普通技能" text="Common Skill" id="CD_SKILL"/>
+		<item nameType="0" description="充能技能" text="Ultimate Skill" id="CHARGEABLE_SKILL"/>
+		<item nameType="0" description="武器库主动技能分页栏名称" text="Payload" id="ARMORY_PAYLOAD"/>
+		<item nameType="0" description="武器库面板解锁等级提示" text="Unlock in Tournament LV.{0:level}" id="ARMORY_BOARD_UNLOCK_TIP"/>
+		<item nameType="0" description="新主动技能面板文字提示" text="New Payload" id="PAYLOAD_BOARD_NEW_TIP"/>
+		<item nameType="0" description="英雄等级不足的按钮提示" text="Require hero LV.{0:level}" id="BUTTON_TIP_REQUIRE_HERO_LEVEL"/>
+		<item nameType="0" description="主动技能升级而英雄等级不足的红字弹出提示" text="Please upgrade {0:heroName} to LV.{1:level}." id="TOAST_PAYLOAD_REQUIRE_HERO_LEVEL"/>
+		<item nameType="0" description="主动技能升级成功提示语" text="Congratulations!{0:payloadname} is upgraded to LV.{1:level}." id="PAYLOAD_UPGRADE_SUCCESS"/>
+		<item nameType="0" description="主动技能进化文本" text="EVOLVE" id="PAYLOAD_EVOLVE"/>
+		<item nameType="0" description="主动技能品质提升时，图纸不足的提示语" text="Lack of Blue Print." id="PAYLOAD_EVOLVE_LACK_OF_BLUEPRINT"/>
+		<item nameType="0" description="主动技能进化成功" text="Congratulations! {0:payloadName} is evolved to {1:quality}." id="PAYLOAD_EVOLVE_SUCCESS"/>
+		<item nameType="2" description="肾上腺素名称" text="ADRENALINE" id="PAYLOAD_NAME_ADRENALINE"/>
+		<item nameType="2" description="肾上腺素品质1描述" text="Inject your self with Adrenaline, increase your Defence in a short time. Your HP and Magazine will also be recovered to full when using Adrenaline." id="PAYLOAD_DESCRIPTION_ADRENALINE_PROMOTE1"/>
+		<item nameType="2" description="肾上腺素品质2描述" text="Inject your self with Adrenaline, increase your Defence in a short time. Your HP and Magazine will also be recovered to full when using Adrenaline." id="PAYLOAD_DESCRIPTION_ADRENALINE_PROMOTE2"/>
+		<item nameType="2" description="肾上腺素品质3描述" text="Inject your self with Adrenaline, increase your Defence and Move Speed in a short time. Your HP and Magazine will also be recovered to full when using Adrenaline." id="PAYLOAD_DESCRIPTION_ADRENALINE_PROMOTE3"/>
+		<item nameType="-1" description="肾上腺素品质1等级1升级数值" text="DEFENCE PERCENTAGE INCREASE_50%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE1_LV1"/>
+		<item nameType="-1" description="肾上腺素品质1等级2升级数值" text="DEFENCE PERCENTAGE INCREASE_60%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE1_LV2"/>
+		<item nameType="-1" description="肾上腺素品质1等级3升级数值" text="DEFENCE PERCENTAGE INCREASE_70%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE1_LV3"/>
+		<item nameType="-1" description="肾上腺素品质1等级4升级数值" text="DEFENCE PERCENTAGE INCREASE_80%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE1_LV4"/>
+		<item nameType="-1" description="肾上腺素品质1等级5升级数值" text="DEFENCE PERCENTAGE INCREASE_90%_+0%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE1_LV5"/>
+		<item nameType="-1" description="肾上腺素品质1固定数值" text="DURATION(seconds)_6" id="PAYLOAD_STATIC_PROP_ADRENALINE_PROMOTE1"/>
+		<item nameType="-1" description="肾上腺素品质2等级1升级数值" text="DEFENCE PERCENTAGE INCREASE_50%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE2_LV1"/>
+		<item nameType="-1" description="肾上腺素品质2等级2升级数值" text="DEFENCE PERCENTAGE INCREASE_60%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE2_LV2"/>
+		<item nameType="-1" description="肾上腺素品质2等级3升级数值" text="DEFENCE PERCENTAGE INCREASE_70%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE2_LV3"/>
+		<item nameType="-1" description="肾上腺素品质2等级4升级数值" text="DEFENCE PERCENTAGE INCREASE_80%_+10%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE2_LV4"/>
+		<item nameType="-1" description="肾上腺素品质2等级5升级数值" text="DEFENCE PERCENTAGE INCREASE_90%_+0%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE2_LV5"/>
+		<item nameType="-1" description="肾上腺素品质2固定数值" text="DURATION(seconds)_8" id="PAYLOAD_STATIC_PROP_ADRENALINE_PROMOTE2"/>
+		<item nameType="-1" description="肾上腺素品质3等级1升级数值" text="DEFENCE PERCENTAGE INCREASE_50%_+10%\nMOVE SPEED INCREASE_65%_+2%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE3_LV1"/>
+		<item nameType="-1" description="肾上腺素品质3等级2升级数值" text="DEFENCE PERCENTAGE INCREASE_60%_+10%\nMOVE SPEED INCREASE_67%_+2%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE3_LV2"/>
+		<item nameType="-1" description="肾上腺素品质3等级3升级数值" text="DEFENCE PERCENTAGE INCREASE_70%_+10%\nMOVE SPEED INCREASE_69%_+2%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE3_LV3"/>
+		<item nameType="-1" description="肾上腺素品质3等级4升级数值" text="DEFENCE PERCENTAGE INCREASE_80%_+10%\nMOVE SPEED INCREASE_71%_+2%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE3_LV4"/>
+		<item nameType="-1" description="肾上腺素品质3等级5升级数值" text="DEFENCE PERCENTAGE INCREASE_90%_+0%\nMOVE SPEED INCREASE_73%_+0%" id="PAYLOAD_DYNAMIC_PROP_ADRENALINE_PROMOTE3_LV5"/>
+		<item nameType="-1" description="肾上腺素品质3固定数值" text="DURATION(seconds)_8" id="PAYLOAD_STATIC_PROP_ADRENALINE_PROMOTE3"/>
+		<item nameType="-1" description="肾上腺素品质提升时的相关说明描述，品质1" text="The quality of Adrenaline will be evolved.\nIncrease the effect Duration to 8 seconds." id="PAYLOAD_ADRENALINE_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="肾上腺素品质提升时的相关说明描述，品质2" text="The quality of Adrenaline will be evolved.\nAdrenaline will also increase Move Speed." id="PAYLOAD_ADRENALINE_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="0" description="肾上腺素buff提示文本" text="Adrenaline injected" id="PAYLOAD_BUFF_ADRENALINE"/>
+		<item nameType="0" description="主动技能升级所需材料" text="CORE" id="PAYLOAD_UPGRADE_MATERIAL"/>
+		<item nameType="2" description="战术目镜名称" text="TACTICAL VISOR" id="PAYLOAD_NAME_TACTICAL_VISOR"/>
+		<item nameType="2" description="战术目镜品质1描述" text="Enable Tactical Visor, increasing your Critical Damage and mark enemies' head in a short time. The total Critical Damage increased is based on a percentage of your base Critical Damage and plus a fixed amount of Critical Damage." id="PAYLOAD_DESCRIPTION_TACTICAL_VISOR_PROMOTE1"/>
+		<item nameType="2" description="战术目镜品质2描述" text="Enable Tactical Visor, increasing your Critical Damage and mark enemies' head in a short time. The total Critical Damage increased is based on a percentage of your base Critical Damage and plus a fixed amount of Critical Damage." id="PAYLOAD_DESCRIPTION_TACTICAL_VISOR_PROMOTE2"/>
+		<item nameType="2" description="战术目镜品质3描述" text="Enable Tactical Visor, increasing your Critical Damage, Hit Rate and mark enemies' head in a short time. The total Critical Damage increased is based on a percentage of your base Critical Damage and plus a fixed amount of Critical Damage. The Hit Rate increase is based on a percentage of your base Hit Rate." id="PAYLOAD_DESCRIPTION_TACTICAL_VISOR_PROMOTE3"/>
+		<item nameType="-1" description="战术目镜品质1等级1升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_33%_+10%\nCRITICAL DAMAGE FIXED INCREASE_82_+38" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE1_LV1"/>
+		<item nameType="-1" description="战术目镜品质1等级2升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_43%_+19%\nCRITICAL DAMAGE FIXED INCREASE_120_+45" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE1_LV2"/>
+		<item nameType="-1" description="战术目镜品质1等级3升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_62%_+12%\nCRITICAL DAMAGE FIXED INCREASE_165_+37" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE1_LV3"/>
+		<item nameType="-1" description="战术目镜品质1等级4升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_74%_+20%\nCRITICAL DAMAGE FIXED INCREASE_202_+46" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE1_LV4"/>
+		<item nameType="-1" description="战术目镜品质1等级5升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_94%_+0%\nCRITICAL DAMAGE FIXED INCREASE_248_+0" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE1_LV5"/>
+		<item nameType="-1" description="战术目镜品质1固定数值" text="DURATION(seconds)_5" id="PAYLOAD_STATIC_PROP_TACTICAL_VISOR_PROMOTE1"/>
+		<item nameType="-1" description="战术目镜品质2等级1升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_33%_+10%\nCRITICAL DAMAGE FIXED INCREASE_82_+38" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE2_LV1"/>
+		<item nameType="-1" description="战术目镜品质2等级2升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_43%_+19%\nCRITICAL DAMAGE FIXED INCREASE_120_+45" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE2_LV2"/>
+		<item nameType="-1" description="战术目镜品质2等级3升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_62%_+12%\nCRITICAL DAMAGE FIXED INCREASE_165_+37" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE2_LV3"/>
+		<item nameType="-1" description="战术目镜品质2等级4升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_74%_+20%\nCRITICAL DAMAGE FIXED INCREASE_202_+46" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE2_LV4"/>
+		<item nameType="-1" description="战术目镜品质2等级5升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_94%_+0%\nCRITICAL DAMAGE FIXED INCREASE_248_+0" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE2_LV5"/>
+		<item nameType="-1" description="战术目镜品质2固定数值" text="DURATION(seconds)_10" id="PAYLOAD_STATIC_PROP_TACTICAL_VISOR_PROMOTE2"/>
+		<item nameType="-1" description="战术目镜品质3等级1升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_33%_+10%\nCRITICAL DAMAGE FIXED INCREASE_82_+38\nHIT RATE PERCENTAGE INCREASE_40%_+1%" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE3_LV1"/>
+		<item nameType="-1" description="战术目镜品质3等级2升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_43%_+19%\nCRITICAL DAMAGE FIXED INCREASE_120_+45\nHIT RATE PERCENTAGE INCREASE_41%_+2%" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE3_LV2"/>
+		<item nameType="-1" description="战术目镜品质3等级3升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_62%_+12%\nCRITICAL DAMAGE FIXED INCREASE_165_+37\nHIT RATE PERCENTAGE INCREASE_43%_+1%" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE3_LV3"/>
+		<item nameType="-1" description="战术目镜品质3等级4升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_74%_+20%\nCRITICAL DAMAGE FIXED INCREASE_202_+46\nHIT RATE PERCENTAGE INCREASE_44%_+1%" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE3_LV4"/>
+		<item nameType="-1" description="战术目镜品质3等级5升级数值" text="CRITICAL DAMAGE PERCENTAGE INCREASE_94%_+0%\nCRITICAL DAMAGE FIXED INCREASE_248_+0\nHIT RATE PERCENTAGE INCREASE_45%_+0%" id="PAYLOAD_DYNAMIC_PROP_TACTICAL_VISOR_PROMOTE3_LV5"/>
+		<item nameType="-1" description="战术目镜品质3固定数值" text="DURATION(seconds)_10" id="PAYLOAD_STATIC_PROP_TACTICAL_VISOR_PROMOTE3"/>
+		<item nameType="-1" description="战术目镜品质提升时的相关说明描述，品质1" text="The quality of Tactical Visor will be evolved.\nIncrease the effect Duration to 10 seconds." id="PAYLOAD_TACTICAL_VISOR_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="战术目镜品质提升时的相关说明描述，品质2" text="The quality of Tactical Visor will be evolved.\nTactical Visor will also increase your Hit Rate." id="PAYLOAD_TACTICAL_VISOR_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="-1" description="战术目镜buff提示文本" text="Visor Enabled" id="PAYLOAD_BUFF_TACTICAL_VISOR"/>
+		<item nameType="2" description="滚雷名称" text="SEEKER BOMB" id="PAYLOAD_NAME_SEEKERBOMB"/>
+		<item nameType="2" description="滚雷品质1描述" text="Plant a Seeker Bomb which goes to the destination automatically, it seeks Enemy around it on its way to the destination.  The Seeker Bomb explodes when it's close enough to Enemy, causing Explode damage to all Enemies within 4 meters, and reduce their Move Speed for a while. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_SEEKERBOMB_PROMOTE1"/>
+		<item nameType="2" description="滚雷品质2描述" text="Plant a Seeker Bomb which goes to the destination automatically, it seeks Enemy around it on its way to the destination.  The Seeker Bomb explodes when it's close enough to Enemy, causing Explode damage to all Enemies within 4 meters, and reduce their Move Speed for a while. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_SEEKERBOMB_PROMOTE2"/>
+		<item nameType="2" description="滚雷品质3描述" text="Plant a Seeker Bomb which goes to the destination automatically, it seeks Enemy around it on its way to the destination.  The Seeker Bomb explodes when it's close enough to Enemy, causing Explode damage to all Enemies within 4 meters, and reduce their Move Speed and Hit Rate for a while. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_SEEKERBOMB_PROMOTE3"/>
+		<item nameType="-1" description="滚雷品质1等级1升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_25_+20" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE1_LV1"/>
+		<item nameType="-1" description="滚雷品质1等级2升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_45_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE1_LV2"/>
+		<item nameType="-1" description="滚雷品质1等级3升级数值" text="PERCENTAGE DAMAGE_12%_+1%\nFIXED DAMAGE_67_+8" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE1_LV3"/>
+		<item nameType="-1" description="滚雷品质1等级4升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_75_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE1_LV4"/>
+		<item nameType="-1" description="滚雷品质1等级5升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_97_+0" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE1_LV5"/>
+		<item nameType="-1" description="滚雷品质1固定数值" text="MOVE SPEED REDUCE PERCENTAGE_50%\nDURATION(seconds)_5\nCOOLDOWN TIME(seconds)_20" id="PAYLOAD_STATIC_PROP_SEEKERBOMB_PROMOTE1"/>
+		<item nameType="-1" description="滚雷品质2等级1升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_25_+20" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE2_LV1"/>
+		<item nameType="-1" description="滚雷品质2等级2升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_45_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE2_LV2"/>
+		<item nameType="-1" description="滚雷品质2等级3升级数值" text="PERCENTAGE DAMAGE_12%_+1%\nFIXED DAMAGE_67_+8" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE2_LV3"/>
+		<item nameType="-1" description="滚雷品质2等级4升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_75_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE2_LV4"/>
+		<item nameType="-1" description="滚雷品质2等级5升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_97_+0" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE2_LV5"/>
+		<item nameType="-1" description="滚雷品质2固定数值" text="MOVE SPEED REDUCE PERCENTAGE_50%\nDURATION(seconds)_5\nCOOLDOWN TIME(seconds)_12" id="PAYLOAD_STATIC_PROP_SEEKERBOMB_PROMOTE2"/>
+		<item nameType="-1" description="滚雷品质3等级1升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_25_+20" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE3_LV1"/>
+		<item nameType="-1" description="滚雷品质3等级2升级数值" text="PERCENTAGE DAMAGE_12%_+0%\nFIXED DAMAGE_45_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE3_LV2"/>
+		<item nameType="-1" description="滚雷品质3等级3升级数值" text="PERCENTAGE DAMAGE_12%_+1%\nFIXED DAMAGE_67_+8" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE3_LV3"/>
+		<item nameType="-1" description="滚雷品质3等级4升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_75_+22" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE3_LV4"/>
+		<item nameType="-1" description="滚雷品质3等级5升级数值" text="PERCENTAGE DAMAGE_13%_+0%\nFIXED DAMAGE_97_+0" id="PAYLOAD_DYNAMIC_PROP_SEEKERBOMB_PROMOTE3_LV5"/>
+		<item nameType="-1" description="滚雷品质3固定数值" text="MOVE SPEED REDUCE PERCENTAGE_50%\nHIT RATE REDUCE PERCENTAGE_50%\nDURATION(seconds)_5\nCOOLDOWN TIME(seconds)_20" id="PAYLOAD_STATIC_PROP_SEEKERBOMB_PROMOTE3"/>
+		<item nameType="-1" description="滚雷品质提升时的相关说明描述，品质1" text="The quality of Seeker Bomb will be evolved.\nThe Cooldown Time will be reduced to 12 seconds." id="PAYLOAD_SEEKERBOMB_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="滚雷品质提升时的相关说明描述，品质2" text="The quality of Seeker Bomb will be evolved.\nEnemies affected by the explosion will also suffer reduced Hit Rate for a while." id="PAYLOAD_SEEKERBOMB_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="-1" description="滚雷减速buff描述" text="Move Speed Reduced" id="PAYLOAD_BUFF_SEEKERBOMB_REDUCE_MOVESPEED"/>
+		<item nameType="-1" description="滚雷减命中率buff描述" text="Hit Rate Reduced" id="PAYLOAD_BUFF_SEEKERBOMB_REDUCE_HITRATE"/>
+		<item nameType="2" description="地雷名称" text="MINE" id="PAYLOAD_NAME_MINE"/>
+		<item nameType="2" description="地雷品质1描述" text="Plant a Mine which explodes automatically when Enemies come nearby, causing Explode damage to all Enemies within 3 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_MINE_PROMOTE1"/>
+		<item nameType="2" description="地雷品质2描述" text="Plant a Mine which explodes automatically when Enemies come nearby, causing Explode damage to all Enemies within 3 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_MINE_PROMOTE2"/>
+		<item nameType="2" description="地雷品质3描述" text="Plant a Mine which explodes automatically when Enemies come nearby, causing Explode damage to all Enemies within 3 meters. The nearer to the explosion center, the more damage those victims will suffer. The explosion will cause Percentage damage based on target's (max Hp + max Energy Shield), and a fixed damage." id="PAYLOAD_DESCRIPTION_MINE_PROMOTE3"/>
+		<item nameType="-1" description="地雷品质1等级1升级数值" text="MAX PERCENTAGE DAMAGE_52%_+1%\nMIN PERCENTAGE DAMAGE_38%_+1%\nMAX FIXED DAMAGE_117_+85\nMIN FIXED DAMAGE_88_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE1_LV1"/>
+		<item nameType="-1" description="地雷品质1等级2升级数值" text="MAX PERCENTAGE DAMAGE_53%_+2%\nMIN PERCENTAGE DAMAGE_39%_+1%\nMAX FIXED DAMAGE_202_+76\nMIN FIXED DAMAGE_149_+62" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE1_LV2"/>
+		<item nameType="-1" description="地雷品质1等级3升级数值" text="MAX PERCENTAGE DAMAGE_55%_+1%\nMIN PERCENTAGE DAMAGE_40%_+1%\nMAX FIXED DAMAGE_278_+84\nMIN FIXED DAMAGE_211_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE1_LV3"/>
+		<item nameType="-1" description="地雷品质1等级4升级数值" text="MAX PERCENTAGE DAMAGE_56%_+2%\nMIN PERCENTAGE DAMAGE_41%_+1%\nMAX FIXED DAMAGE_362_+66\nMIN FIXED DAMAGE_272_+58" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE1_LV4"/>
+		<item nameType="-1" description="地雷品质1等级5升级数值" text="MAX PERCENTAGE DAMAGE_58%_+0%\nMIN PERCENTAGE DAMAGE_42%_+0%\nMAX FIXED DAMAGE_428_+0\nMIN FIXED DAMAGE_330_+0" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE1_LV5"/>
+		<item nameType="-1" description="地雷品质1固定数值" text="COOLDOWN TIME(seconds)_15\nMAX AMOUNT_1" id="PAYLOAD_STATIC_PROP_MINE_PROMOTE1"/>
+		<item nameType="-1" description="地雷品质2等级1升级数值" text="MAX PERCENTAGE DAMAGE_52%_+1%\nMIN PERCENTAGE DAMAGE_38%_+1%\nMAX FIXED DAMAGE_117_+85\nMIN FIXED DAMAGE_88_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE2_LV1"/>
+		<item nameType="-1" description="地雷品质2等级2升级数值" text="MAX PERCENTAGE DAMAGE_53%_+2%\nMIN PERCENTAGE DAMAGE_39%_+1%\nMAX FIXED DAMAGE_202_+76\nMIN FIXED DAMAGE_149_+62" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE2_LV2"/>
+		<item nameType="-1" description="地雷品质2等级3升级数值" text="MAX PERCENTAGE DAMAGE_55%_+1%\nMIN PERCENTAGE DAMAGE_40%_+1%\nMAX FIXED DAMAGE_278_+84\nMIN FIXED DAMAGE_211_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE2_LV3"/>
+		<item nameType="-1" description="地雷品质2等级4升级数值" text="MAX PERCENTAGE DAMAGE_56%_+2%\nMIN PERCENTAGE DAMAGE_41%_+1%\nMAX FIXED DAMAGE_362_+66\nMIN FIXED DAMAGE_272_+58" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE2_LV4"/>
+		<item nameType="-1" description="地雷品质2等级5升级数值" text="MAX PERCENTAGE DAMAGE_58%_+0%\nMIN PERCENTAGE DAMAGE_42%_+0%\nMAX FIXED DAMAGE_428_+0\nMIN FIXED DAMAGE_330_+0" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE2_LV5"/>
+		<item nameType="-1" description="地雷品质2固定数值" text="COOLDOWN TIME(seconds)_10\nMAX AMOUNT_1" id="PAYLOAD_STATIC_PROP_MINE_PROMOTE2"/>
+		<item nameType="-1" description="地雷品质3等级1升级数值" text="MAX PERCENTAGE DAMAGE_52%_+1%\nMIN PERCENTAGE DAMAGE_38%_+1%\nMAX FIXED DAMAGE_117_+85\nMIN FIXED DAMAGE_88_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE3_LV1"/>
+		<item nameType="-1" description="地雷品质3等级2升级数值" text="MAX PERCENTAGE DAMAGE_53%_+2%\nMIN PERCENTAGE DAMAGE_39%_+1%\nMAX FIXED DAMAGE_202_+76\nMIN FIXED DAMAGE_149_+62" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE3_LV2"/>
+		<item nameType="-1" description="地雷品质3等级3升级数值" text="MAX PERCENTAGE DAMAGE_55%_+1%\nMIN PERCENTAGE DAMAGE_40%_+1%\nMAX FIXED DAMAGE_278_+84\nMIN FIXED DAMAGE_211_+61" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE3_LV3"/>
+		<item nameType="-1" description="地雷品质3等级4升级数值" text="MAX PERCENTAGE DAMAGE_56%_+2%\nMIN PERCENTAGE DAMAGE_41%_+1%\nMAX FIXED DAMAGE_362_+66\nMIN FIXED DAMAGE_272_+58" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE3_LV4"/>
+		<item nameType="-1" description="地雷品质3等级5升级数值" text="MAX PERCENTAGE DAMAGE_58%_+0%\nMIN PERCENTAGE DAMAGE_42%_+0%\nMAX FIXED DAMAGE_428_+0\nMIN FIXED DAMAGE_330_+0" id="PAYLOAD_DYNAMIC_PROP_MINE_PROMOTE3_LV5"/>
+		<item nameType="-1" description="地雷品质3固定数值" text="COOLDOWN TIME(seconds)_10\nMAX AMOUNT_2" id="PAYLOAD_STATIC_PROP_MINE_PROMOTE3"/>
+		<item nameType="-1" description="地雷品质提升时的相关说明描述，品质1" text="The quality of Mine will be evolved.\nThe Cooldown Time will be reduced to 10 seconds." id="PAYLOAD_MINE_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="地雷品质提升时的相关说明描述，品质2" text="The quality of Mine will be evolved.\nThe Max Deploy amount increases to 2." id="PAYLOAD_MINE_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="2" description="炮台名称" text="TURRET" id="PAYLOAD_NAME_TURRET"/>
+		<item nameType="2" description="炮台品质1描述" text="Deploy a Turret that Attacks all Enemies within its range. The Attack of the Turret equals your hero's Primary weapon's Attack multiply a percentage figure and plus a fixed number of Attack. The HP of your Turret equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_TURRET_PROMOTE1"/>
+		<item nameType="2" description="炮台品质2描述" text="Deploy a Turret that Attacks all Enemies within its range. The Attack of the Turret equals your hero's Primary weapon's Attack multiply a percentage figure and plus a fixed number of Attack. The HP of your Turret equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_TURRET_PROMOTE2"/>
+		<item nameType="2" description="炮台品质3描述" text="Deploy a Turret that Attacks all Enemies within its range. The Attack of the Turret equals your hero's Primary weapon's Attack multiply a percentage figure and plus a fixed number of Attack. The HP of your Turret equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_TURRET_PROMOTE3"/>
+		<item nameType="-1" description="炮台品质1等级1升级数值" text="ATTACK PERCENTAGE_62%_+4%\nFIXED ATTACK_6_+6\nHP PERCENTAGE_150%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE1_LV1"/>
+		<item nameType="-1" description="炮台品质1等级2升级数值" text="ATTACK PERCENTAGE_66%_+6%\nFIXED ATTACK_12_+4\nHP PERCENTAGE_155%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE1_LV2"/>
+		<item nameType="-1" description="炮台品质1等级3升级数值" text="ATTACK PERCENTAGE_72%_+4%\nFIXED ATTACK_16_+6\nHP PERCENTAGE_159%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE1_LV3"/>
+		<item nameType="-1" description="炮台品质1等级4升级数值" text="ATTACK PERCENTAGE_76%_+6%\nFIXED ATTACK_22_+6\nHP PERCENTAGE_164%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE1_LV4"/>
+		<item nameType="-1" description="炮台品质1等级5升级数值" text="ATTACK PERCENTAGE_82%_+0%\nFIXED ATTACK_28_+0\nHP PERCENTAGE_168%_+0%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE1_LV5"/>
+		<item nameType="-1" description="炮台品质1固定数值" text="RANGE(meters)_25\nDURATION(seconds)_20\nFIRE RATE_3" id="PAYLOAD_STATIC_PROP_TURRET_PROMOTE1"/>
+		<item nameType="-1" description="炮台品质2等级1升级数值" text="ATTACK PERCENTAGE_62%_+4%\nFIXED ATTACK_6_+6\nHP PERCENTAGE_150%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE2_LV1"/>
+		<item nameType="-1" description="炮台品质2等级2升级数值" text="ATTACK PERCENTAGE_66%_+6%\nFIXED ATTACK_12_+4\nHP PERCENTAGE_155%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE2_LV2"/>
+		<item nameType="-1" description="炮台品质2等级3升级数值" text="ATTACK PERCENTAGE_72%_+4%\nFIXED ATTACK_16_+6\nHP PERCENTAGE_159%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE2_LV3"/>
+		<item nameType="-1" description="炮台品质2等级4升级数值" text="ATTACK PERCENTAGE_76%_+6%\nFIXED ATTACK_22_+6\nHP PERCENTAGE_164%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE2_LV4"/>
+		<item nameType="-1" description="炮台品质2等级5升级数值" text="ATTACK PERCENTAGE_82%_+0%\nFIXED ATTACK_28_+0\nHP PERCENTAGE_168%_+0%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE2_LV5"/>
+		<item nameType="-1" description="炮台品质2固定数值" text="RANGE(meters)_25\nDURATION(seconds)_25\nFIRE RATE_3" id="PAYLOAD_STATIC_PROP_TURRET_PROMOTE2"/>
+		<item nameType="-1" description="炮台品质3等级1升级数值" text="ATTACK PERCENTAGE_62%_+4%\nFIXED ATTACK_6_+6\nHP PERCENTAGE_150%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE3_LV1"/>
+		<item nameType="-1" description="炮台品质3等级2升级数值" text="ATTACK PERCENTAGE_66%_+6%\nFIXED ATTACK_12_+4\nHP PERCENTAGE_155%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE3_LV2"/>
+		<item nameType="-1" description="炮台品质3等级3升级数值" text="ATTACK PERCENTAGE_72%_+4%\nFIXED ATTACK_16_+6\nHP PERCENTAGE_159%_+5%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE3_LV3"/>
+		<item nameType="-1" description="炮台品质3等级4升级数值" text="ATTACK PERCENTAGE_76%_+6%\nFIXED ATTACK_22_+6\nHP PERCENTAGE_164%_+4%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE3_LV4"/>
+		<item nameType="-1" description="炮台品质3等级5升级数值" text="ATTACK PERCENTAGE_82%_+0%\nFIXED ATTACK_28_+0\nHP PERCENTAGE_168%_+0%" id="PAYLOAD_DYNAMIC_PROP_TURRET_PROMOTE3_LV5"/>
+		<item nameType="-1" description="炮台品质3固定数值" text="RANGE(meters)_32\nDURATION(seconds)_25\nFIRE RATE_3" id="PAYLOAD_STATIC_PROP_TURRET_PROMOTE3"/>
+		<item nameType="-1" description="炮台品质提升时的相关说明描述，品质1" text="The quality of Turret will be evolved.\nThe duration of the Turret will increase to 25 seconds." id="PAYLOAD_TURRET_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="炮台品质提升时的相关说明描述，品质2" text="The quality of Turret will be evolved.\nThe Range of the Turret will increase to 32 meters." id="PAYLOAD_TURRET_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="2" description="治疗仪名称" text="BIOTIC EMITTER" id="PAYLOAD_NAME_BIOTIC_EMITTER"/>
+		<item nameType="2" description="治疗仪品质1描述" text="Plant a Biotic Emitter which heals Allies nearby. The Biotic Emitter heals a certain Percentage plus a fixed figure of HP. The HP of your Biotic Emitter equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_BIOTIC_EMITTER_PROMOTE1"/>
+		<item nameType="2" description="治疗仪品质2描述" text="Plant a Biotic Emitter which heals Allies nearby. The Biotic Emitter heals a certain Percentage plus a fixed figure of HP. The HP of your Biotic Emitter equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_BIOTIC_EMITTER_PROMOTE2"/>
+		<item nameType="2" description="治疗仪品质3描述" text="Plant a Biotic Emitter which heals Allies nearby. The Biotic Emitter heals a certain Percentage plus a fixed figure of HP. The HP of your Biotic Emitter equals your hero's (HP+Shield) multiply a percentage figure." id="PAYLOAD_DESCRIPTION_BIOTIC_EMITTER_PROMOTE3"/>
+		<item nameType="-1" description="治疗仪品质1等级1升级数值" text="HP RECOVER PERCENT(per second)_16%_+1%\nHP RECOVER FIXED(per second)_19_+14\nEMITTER HP PERCENTAGE_35%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE1_LV1"/>
+		<item nameType="-1" description="治疗仪品质1等级2升级数值" text="HP RECOVER PERCENT(per second)_17%_+1%\nHP RECOVER FIXED(per second)_33_+16\nEMITTER HP PERCENTAGE_37%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE1_LV2"/>
+		<item nameType="-1" description="治疗仪品质1等级3升级数值" text="HP RECOVER PERCENT(per second)_18%_+1%\nHP RECOVER FIXED(per second)_49_+18\nEMITTER HP PERCENTAGE_38%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE1_LV3"/>
+		<item nameType="-1" description="治疗仪品质1等级4升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_67_+19\nEMITTER HP PERCENTAGE_40%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE1_LV4"/>
+		<item nameType="-1" description="治疗仪品质1等级5升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_86_+0\nEMITTER HP PERCENTAGE_41%_+0%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE1_LV5"/>
+		<item nameType="-1" description="治疗仪品质1固定数值" text="RANGE(meters)_5\nDURATION(seconds)_8\nCOOLDOWN TIME(seconds)_15" id="PAYLOAD_STATIC_PROP_BIOTIC_EMITTER_PROMOTE1"/>
+		<item nameType="-1" description="治疗仪品质2等级1升级数值" text="HP RECOVER PERCENT(per second)_16%_+1%\nHP RECOVER FIXED(per second)_19_+14\nEMITTER HP PERCENTAGE_35%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE2_LV1"/>
+		<item nameType="-1" description="治疗仪品质2等级2升级数值" text="HP RECOVER PERCENT(per second)_17%_+1%\nHP RECOVER FIXED(per second)_33_+16\nEMITTER HP PERCENTAGE_37%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE2_LV2"/>
+		<item nameType="-1" description="治疗仪品质2等级3升级数值" text="HP RECOVER PERCENT(per second)_18%_+1%\nHP RECOVER FIXED(per second)_49_+18\nEMITTER HP PERCENTAGE_38%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE2_LV3"/>
+		<item nameType="-1" description="治疗仪品质2等级4升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_67_+19\nEMITTER HP PERCENTAGE_40%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE2_LV4"/>
+		<item nameType="-1" description="治疗仪品质2等级5升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_86_+0\nEMITTER HP PERCENTAGE_41%_+0%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE2_LV5"/>
+		<item nameType="-1" description="治疗仪品质2固定数值" text="RANGE(meters)_5\nDURATION(seconds)_8\nCOOLDOWN TIME(seconds)_10" id="PAYLOAD_STATIC_PROP_BIOTIC_EMITTER_PROMOTE2"/>
+		<item nameType="-1" description="治疗仪品质3等级1升级数值" text="HP RECOVER PERCENT(per second)_16%_+1%\nHP RECOVER FIXED(per second)_19_+14\nEMITTER HP PERCENTAGE_35%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE3_LV1"/>
+		<item nameType="-1" description="治疗仪品质3等级2升级数值" text="HP RECOVER PERCENT(per second)_17%_+1%\nHP RECOVER FIXED(per second)_33_+16\nEMITTER HP PERCENTAGE_37%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE3_LV2"/>
+		<item nameType="-1" description="治疗仪品质3等级3升级数值" text="HP RECOVER PERCENT(per second)_18%_+1%\nHP RECOVER FIXED(per second)_49_+18\nEMITTER HP PERCENTAGE_38%_+2%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE3_LV3"/>
+		<item nameType="-1" description="治疗仪品质3等级4升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_67_+19\nEMITTER HP PERCENTAGE_40%_+1%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE3_LV4"/>
+		<item nameType="-1" description="治疗仪品质3等级5升级数值" text="HP RECOVER PERCENT(per second)_19%_+0%\nHP RECOVER FIXED(per second)_86_+0\nEMITTER HP PERCENTAGE_41%_+0%" id="PAYLOAD_DYNAMIC_PROP_BIOTIC_EMITTER_PROMOTE3_LV5"/>
+		<item nameType="-1" description="治疗仪品质3固定数值" text="RANGE(meters)_7\nDURATION(seconds)_8\nCOOLDOWN TIME(seconds)_10" id="PAYLOAD_STATIC_PROP_BIOTIC_EMITTER_PROMOTE3"/>
+		<item nameType="-1" description="治疗仪品质提升时的相关说明描述，品质1" text="The quality of Biotic Emitter will be evolved.\nThe Cooldown Time will be reduced to 10 seconds." id="PAYLOAD_BIOTIC_EMITTER_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="治疗仪品质提升时的相关说明描述，品质2" text="The quality of Biotic Emitter will be evolved.\nThe effect Range will increase to 7 meters." id="PAYLOAD_BIOTIC_EMITTER_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="-1" description="治疗仪buff描述" text="Hp Recovered" id="PAYLOAD_BUFF_BIOTICEMITTER"/>
+		<item nameType="2" description="防暴盾牌名称" text="RIOT SHIELD" id="PAYLOAD_NAME_RIOTSHIELD"/>
+		<item nameType="2" description="防暴盾牌品质1描述" text="Raise a Riot Shield that blocks frontal bullets. The HP of the Riot Shield is based on a certain Percentage of your Hero's (HP+Shield) plus a fixed figure." id="PAYLOAD_DESCRIPTION_RIOTSHIELD_PROMOTE1"/>
+		<item nameType="2" description="防暴盾牌品质2描述" text="Raise a Riot Shield that blocks frontal bullets. The HP of the Riot Shield is based on a certain Percentage of your Hero's (HP+Shield) plus a fixed figure." id="PAYLOAD_DESCRIPTION_RIOTSHIELD_PROMOTE2"/>
+		<item nameType="2" description="防暴盾牌品质3描述" text="Raise a Riot Shield that blocks frontal bullets and frontal Explosive damage. The HP of the Riot Shield is based on a certain Percentage of your Hero's (HP+Shield) plus a fixed figure." id="PAYLOAD_DESCRIPTION_RIOTSHIELD_PROMOTE3"/>
+		<item nameType="-1" description="防暴盾牌品质1等级1升级数值" text="HP PERCENTAGE_111%_+6%\nFIXED HP_241+182" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE1_LV1"/>
+		<item nameType="-1" description="防暴盾牌品质1等级2升级数值" text="HP PERCENTAGE_117%_+7%\nFIXED HP_423+190" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE1_LV2"/>
+		<item nameType="-1" description="防暴盾牌品质1等级3升级数值" text="HP PERCENTAGE_124%_+7%\nFIXED HP_613+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE1_LV3"/>
+		<item nameType="-1" description="防暴盾牌品质1等级4升级数值" text="HP PERCENTAGE_131%_+7%\nFIXED HP_813+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE1_LV4"/>
+		<item nameType="-1" description="防暴盾牌品质1等级5升级数值" text="HP PERCENTAGE_138%_+0%\nFIXED HP_1013+0" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE1_LV5"/>
+		<item nameType="-1" description="防暴盾牌品质1固定数值" text="FRONTAL DAMAGE REDUCTION ANGLE_200" id="PAYLOAD_STATIC_PROP_RIOTSHIELD_PROMOTE1"/>
+		<item nameType="-1" description="防暴盾牌品质2等级1升级数值" text="HP PERCENTAGE_111%_+6%\nFIXED HP_241+182" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE2_LV1"/>
+		<item nameType="-1" description="防暴盾牌品质2等级2升级数值" text="HP PERCENTAGE_117%_+7%\nFIXED HP_423+190" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE2_LV2"/>
+		<item nameType="-1" description="防暴盾牌品质2等级3升级数值" text="HP PERCENTAGE_124%_+7%\nFIXED HP_613+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE2_LV3"/>
+		<item nameType="-1" description="防暴盾牌品质2等级4升级数值" text="HP PERCENTAGE_131%_+7%\nFIXED HP_813+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE2_LV4"/>
+		<item nameType="-1" description="防暴盾牌品质2等级5升级数值" text="HP PERCENTAGE_138%_+0%\nFIXED HP_1013+0" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE2_LV5"/>
+		<item nameType="-1" description="防暴盾牌品质2固定数值" text="FRONTAL DAMAGE REDUCTION ANGLE_200" id="PAYLOAD_STATIC_PROP_RIOTSHIELD_PROMOTE2"/>
+		<item nameType="-1" description="防暴盾牌品质3等级1升级数值" text="HP PERCENTAGE_111%_+6%\nFIXED HP_241+182" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE3_LV1"/>
+		<item nameType="-1" description="防暴盾牌品质3等级2升级数值" text="HP PERCENTAGE_117%_+7%\nFIXED HP_423+190" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE3_LV2"/>
+		<item nameType="-1" description="防暴盾牌品质3等级3升级数值" text="HP PERCENTAGE_124%_+7%\nFIXED HP_613+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE3_LV3"/>
+		<item nameType="-1" description="防暴盾牌品质3等级4升级数值" text="HP PERCENTAGE_131%_+7%\nFIXED HP_813+200" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE3_LV4"/>
+		<item nameType="-1" description="防暴盾牌品质3等级5升级数值" text="HP PERCENTAGE_138%_+0%\nFIXED HP_1013+0" id="PAYLOAD_DYNAMIC_PROP_RIOTSHIELD_PROMOTE3_LV5"/>
+		<item nameType="-1" description="防暴盾牌品质3固定数值" text="FRONTAL DAMAGE REDUCTION ANGLE_200\nEXPLOSIVE DAMAGE REDUCTION_80%" id="PAYLOAD_STATIC_PROP_RIOTSHIELD_PROMOTE3"/>
+		<item nameType="-1" description="防暴盾牌品质提升时的相关说明描述，品质1" text="The quality of Riot Shield will be evolved.\nThe Hp of the Riot Shield will increase." id="PAYLOAD_RIOTSHIELD_EVOLVE_DESCRIPTION_PROMOTE1"/>
+		<item nameType="-1" description="防暴盾牌品质提升时的相关说明描述，品质2" text="The quality of Riot Shield will be evolved.\nThe Riot Shield will also reduce frontal Explosive damage." id="PAYLOAD_RIOTSHIELD_EVOLVE_DESCRIPTION_PROMOTE2"/>
+		<item nameType="-1" description="防暴盾牌buff描述" text="Defence Enhanced" id="PAYLOAD_BUFF_RIOTSHIELD"/>
+		<item nameType="0" description="1" text="SuckBlood Bullet" id="SKILL_PASSIVE_MEDIC_SUCKBLOOD"/>
+		<item nameType="0" description="1" text="You will gain 5% HP of the final damage when attacking an enemy" id="SKILL_PASSIVE_DESCRIPTION_MEDIC_SUCKBLOOD"/>
+		<item nameType="0" description="1" text="Medic Bullet" id="SKILL_PASSIVE_MEDIC_CURE"/>
+		<item nameType="0" description="1" text="Your teammate will gain 2% Hp of yoour damage when you shooting them" id="SKILL_PASSIVE_DESCRIPTION_MEDIC_CURE"/>
+		<item nameType="0" description="1" text="Parting Gift" id="SKILL_PASSIVE_ENGINEER_GRENADE"/>
+		<item nameType="0" description="1" text="You will drop a grenade when you die" id="SKILL_PASSIVE_DESCRIPTION_ENGINEER_GRENADE"/>
+		<item nameType="0" description="1" text="Double Turret" id="SKILL_PASSIVE_ENGINEER_DOUBLETURRET"/>
+		<item nameType="0" description="1" text="You can put 2 turret in a specified time" id="SKILL_PASSIVE_DESCRIPTION_ENGINEER_DOUBLETURRET"/>
+		<item nameType="0" description="1" text="One shoot, one kill" id="SKILL_PASSIVE_SNIPER_CRIT"/>
+		<item nameType="0" description="1" text="It must be crit when you aim at an enemy over 1s" id="SKILL_PASSIVE_DESCRIPTION_SNIPER_CRIT"/>
+		<item nameType="0" description="1" text=";Unlimited Reload" id="SKILL_PASSIVE_SNIPER_BULLET"/>
+		<item nameType="0" description="1" text="You will restored a bullet when you shoot the enemy head when you use the sniper" id="SKILL_PASSIVE_DESCRIPTION_SNIPER_BULLET"/>
+		<item nameType="0" description="1" text="Team Shield" id="SKILL_PASSIVE_HEAVY_TEAMSHIELD"/>
+		<item nameType="0" description="1" text="The shield can take the damage from your teammate within range 5m until the shield is broken" id="SKILL_PASSIVE_DESCRIPTION_HEAVY_SHIELD"/>
+		<item nameType="0" description="1" text="Extra Shield" id="SKILL_PASSIVE_HEAVY_EXTRASHIELD"/>
+		<item nameType="0" description="1" text="You will get an extra shield when you're dying." id="SKILL_PASSIVE_DESCRIPTION_HEAVY_EXTRASHIELD"/>
+		<item nameType="0" description="1" text="Passive Skill Unlock" id="SKILL_PASSIVE_UNLOCK_TITLE"/>
+		<item nameType="0" description="1" text="Do you want to unlock this passive skill?" id="SKILL_PASSIVE_UNLOCK_MSG"/>
+		<item nameType="0" description="1" text="Lack of {0:goodsName}, you can not unclock this passive skill" id="SKILL_PASSIVE_UNLOCK_LACK_OF"/>
+		<item nameType="0" description="1" text="You need to reach level {0:playerLevel} to unlock the passive skill" id="SKILL_PASSIVE_UNLOCK_PALYER_LEVEL"/>
+		<item nameType="0" description="外派任务" text="DISPATCH MISSION" id="COMPETITION_DISPATCH_MISSION"/>
+		<item nameType="0" description="外派任务刷新时间" text="REFRESH IN:" id="GENERAL_REFRESH_TIME"/>
+		<item nameType="0" description="外派任务地点说明" text="LOCATION" id="DISPATCH_MISSION_LOCATION"/>
+		<item nameType="0" description="外派任务地点中东" text="MIDDLE EAST" id="DISPATCH_MISSION_LOCATION_MIDDLE_EAST"/>
+		<item nameType="0" description="外派任务地点亚洲" text="ASIA" id="DISPATCH_MISSION_LOCATION_ASIA"/>
+		<item nameType="0" description="外派任务地点欧洲" text="EUROPE" id="DISPATCH_MISSION_LOCATION_EUROPE"/>
+		<item nameType="0" description="外派任务地点美洲" text="AMERICA" id="DISPATCH_MISSION_LOCATION_AMERICA"/>
+		<item nameType="0" description="外派任务说明" text="PLEASE CHOOSE A BATTLE FIELD" id="DISPATCH_MISSION_TIP"/>
+		<item nameType="0" description="外派任务进行中" text="IN PROGRESS" id="DISPATCH_MISSION_IN_PROGRESS"/>
+		<item nameType="0" description="任务领奖提示" text="GET THE REWARD" id="DISPATCH_MISSION_TIP_GET_REWARD"/>
+		<item nameType="0" description="任务完成提示" text="FINISHED" id="DISPATCH_MISSION_TIP_FINISH"/>
+		<item nameType="0" description="刷新面板title" text="REFRESH" id="DISPATCH_MISSION_REFRESH_CONFIRM_TITLE"/>
+		<item nameType="0" description="刷新面板内容" text="DO YOU WANT TO REFRESH THE MISSIONS?\nYOU WILL GET NEW MISSIONS AFTER REFRESHING." id="DISPATCH_MISSION_REFRESH_CONFIRM_CONTENT"/>
+		<item nameType="0" description="刷新次数" text="YOU CAN REFRESH FOR {0:RefreshTime} TIMES TODAY." id="DISPATCH_MISSION_REFRESH_CONFIRM_TIMES"/>
+		<item nameType="0" description="刷新按钮" text="REFRESH" id="DISPATCH_MISSION_REFRESH_BUTTON"/>
+		<item nameType="0" description="任务难度" text="DIFFICULTY" id="DISPATCH_MISSION_DIFFICULTY"/>
+		<item nameType="0" description="任务难度" text="E" id="DISPATCH_MISSION_DIFFICULTY_E"/>
+		<item nameType="0" description="任务难度" text="D" id="DISPATCH_MISSION_DIFFICULTY_D"/>
+		<item nameType="0" description="任务难度" text="C" id="DISPATCH_MISSION_DIFFICULTY_C"/>
+		<item nameType="0" description="任务难度" text="B" id="DISPATCH_MISSION_DIFFICULTY_B"/>
+		<item nameType="0" description="任务难度" text="A" id="DISPATCH_MISSION_DIFFICULTY_A"/>
+		<item nameType="0" description="VIP任务" text="VIP SECURITY" id="DISPATCH_MISSION_VIP"/>
+		<item nameType="0" description="暗杀任务" text="HUNTING DOWN" id="DISPATCH_MISSION_HUNT"/>
+		<item nameType="0" description="爆破任务" text="TARGET EXPLODING" id="DISPATCH_MISSION_EXPLODE"/>
+		<item nameType="0" description="运输任务" text="SUPPLIES TRANSPORTATION" id="DISPATCH_MISSION_TRANSPORT"/>
+		<item nameType="0" description="派遣时间" text="TIME:" id="DISPATCH_MISSION_TIME"/>
+		<item nameType="0" description="部署按钮" text="DEPLOY" id="DISPATCH_MISSION_DEPLOY"/>
+		<item nameType="0" description="部署按钮任务查看状态" text="CHECK" id="DISPATCH_MISSION_CHECK"/>
+		<item nameType="0" description="部署按钮奖励领取状态" text="CLAIM" id="DISPATCH_MISSION_CLAIM"/>
+		<item nameType="0" description="部署按钮返回状态" text="CLOSE" id="DISPATCH_MISSION_CLOSE"/>
+		<item nameType="0" description="队长" text="LEADER" id="DISPATCH_MISSION_LEADER"/>
+		<item nameType="0" description="队员" text="TEAMMATE" id="DISPATCH_MISSION_TEAMMATE"/>
+		<item nameType="0" description="基础条件" text="REQUIREMENT" id="DISPATCH_MISSION_REQUIREMENT"/>
+		<item nameType="0" description="加成条件" text="BONUS REQUIREMENT" id="DISPATCH_MISSION_BONUS_REQUIREMENT"/>
+		<item nameType="0" description="派遣开始按钮" text="COMMENCE" id="DISPATCH_MISSION_COMMENCE"/>
+		<item nameType="0" description="需求" text="REQUIREMENT" id="DISPATCH_MISSION_REQUIRE"/>
+		<item nameType="0" description="选择按钮" text="SELECT" id="DISPATCH_MISSION_SELECT"/>
+		<item nameType="0" description="取消按钮" text="CANCEL" id="DISPATCH_MISSION_CANCEL"/>
+		<item nameType="0" description="加速按钮" text="SPEED UP" id="DISPATCH_MISSION_SPEED_UP"/>
+		<item nameType="0" description="取消面板title" text="CANCEL" id="DISPATCH_MISSION_CANCEL_CONFIRM_TITLE"/>
+		<item nameType="0" description="取消面板内容" text="ARE YOU SURE TO CANCEL THE DISPATCH MISSION?\nYOU CAN ONLY GET HALF OF THE PRICE YOU PAID IF YOU CANCEL THE MISSION." id="DISPATCH_MISSION_CANCEL_CONFIRM_CONTENT"/>
+		<item nameType="0" description="取消面板确认" text="CONFIRM" id="DISPATCH_MISSION_CANCEL_CONFIRM"/>
+		<item nameType="0" description="加速面板title" text="SPEED UP" id="DISPATCH_MISSION_SPEED_UP_TITLE"/>
+		<item nameType="0" description="加速面板内容" text="PLEASE SET THE TIME YOU WANT TO SPEED UP." id="DISPATCH_MISSION_SPEED_UP_CONTENT"/>
+		<item nameType="0" description="加速面板剩余时间" text="REMAINING TIME" id="DISPATCH_MISSION_REMAINING_TIME"/>
+		<item nameType="0" description="奖励面板宝石奖励" text="YOU WILL GET &lt;color=#e7c037&gt;{0:diamondNumber}&lt;/color&gt; DIAMONDS." id="DISPATCH_MISSION_REWARD_DIAMOND"/>
+		<item nameType="0" description="奖励面板额外宝石奖励" text="YOU WILL GET &lt;color=#e7c037&gt;{0:diamondNumber} (+{1:bonusDiamondNumber} BONUS)&lt;/color&gt; DIAMONDS." id="DISPATCH_MISSION_REWARD_DIAMOND_BONUS"/>
+		<item nameType="0" description="奖励面板说明" text="YOU CAN CHOOSE ONE OF THE MATERIAL BELOW AS YOUR REWARD." id="DISPATCH_MISSION_REWARD_CONTENT"/>
+		<item nameType="0" description="任务条件中的队长等级限制" text="LEADER LEVEL IS ABOVE {0:heroLevel}" id="DISPATCH_MISSION_REQUIREMENT_HERO_LEVEL"/>
+		<item nameType="0" description="任务条件中的队员等级限制" text="TEAMMATE LEVEL IS ABOVE {0:heroLevel}" id="DISPATCH_MISSION_REQUIREMENT_TEAMMATE_LEVEL"/>
+		<item nameType="0" description="任务条件中的队长职业" text="LEADER CLASS:\n{0:heroClass}" id="DISPATCH_MISSION_REQUIREMENT_LEADER_CLASS"/>
+		<item nameType="0" description="任务条件中的枪械" text="EQUIP WITH {0:gunName} ABOVE LV.{1:gunLevel}" id="DISPATCH_MISSION_REQUIREMENT_GUN"/>
+		<item nameType="0" description="额外奖励" text="BONUS" id="DISPATCH_MISSION_BONUS"/>
+		<item nameType="0" description="条件未满足红字提示" text="REQUIREMENTS ARE NOT FULFILLED" id="DISPATCH_MISSION_REQUIREMENT_NOT_FULFILLED"/>
+		<item nameType="0" description="时间卡不足红字提示" text="TIME CARD IS NOT ENOUGH" id="DISPATCH_MISSION_TIME_CARD_NOT_ENOUGH"/>
+		<item nameType="0" description="使用的时间卡超过了剩余时间红字提示" text="YOU HAVE USED ENOUGH TIME CARD" id="DISPATCH_MISSION_OVER_LEFT_TIME"/>
+		<item nameType="0" description="成功加速白字提示" text="YOU HAVE SPEED UP SUCCESSFULLY" id="DISPATCH_MISSION_SPEED_UP_SUCCESS"/>
+		<item nameType="0" description="任务未完成红字提示" text="THE MISSION IS NOT COMPLETED" id="DISPATCH_MISSION_MISSION_INCOMPLETE"/>
+		<item nameType="0" description="任务完成后状态" text="CLOSED" id="DISPATCH_MISSION_CLOSED"/>
+		<item nameType="0" description="任务完成描述" text="THE MISSION IN THIS ARENA IS COMPLETED.\nYOU CAN REFRESH FOR NEW MISSION." id="DISPATCH_MISSION_CLOSED_DESCRIPTION"/>
+		<item nameType="0" description="任务不能部署提示" text="Another mission is in progress, new mission cannot be deplayed in this area." id="DISPATCH_MISSION_ANOTHER_MISSION_IN_PROGRESS"/>
+		<item nameType="0" description="刷新没有剩余次数" text="NO REFRESH TIMES." id="DISPATCH_MISSION_REFRESH_NO_TIMES"/>
+		<item nameType="0" description="使用时间卡" text="PLEASE USE TIME CARD." id="DISPATCH_MISSION_USE_TIME_CARD"/>
+		<item nameType="0" description="1" text="Battle Information" id="BATTLEINFORMATION_BATTLEINFORMATION"/>
+		<item nameType="0" description="1" text="Level：" id="BATTLEINFORMATION_LEVEL"/>
+		<item nameType="0" description="1" text="Switch Hero" id="HEROCHANGE_SWITCHHERO"/>
+		<item nameType="0" description="1" text="Respawn" id="HEROCHANGE_RESPAWN"/>
+		<item nameType="0" description="1" text="Cost" id="HEROCHANGE_COST"/>
+		<item nameType="0" description="1" text="Curret Hero:" id="HEROCHANGE_CURRETHERO"/>
+		<item nameType="0" description="1" text="Primary Weapon" id="HEROCHANGE_PRIMARYWEAPON"/>
+		<item nameType="0" description="1" text="Secondary Weapon" id="HEROCHANGE_SECONDARYWEAPON"/>
+		<item nameType="0" description="1" text="CONFIRM" id="HEROCHANGE_CONFIRM"/>
+		<item nameType="0" description="1" text="POW:" id="HEROCHANGE_POW"/>
+		<item nameType="0" description="1" text="Daily Mission" id="DAILYMISSION_DAILYMISSION"/>
+		<item nameType="0" description="1" text="Mission Progress:" id="DAILYMISSION_MISSIONPROGRESS"/>
+		<item nameType="0" description="1" text="GO" id="DAILYMISSION_GO"/>
+		<item nameType="0" description="1" text="RECEIVE" id="DAILYMISSION_RECEIVE"/>
+		<item nameType="0" description="1" text="AlreadyReceived" id="DAILYMISSION_ALREADYRECEIVED"/>
+		<item nameType="0" description="1" text="Reset：Free" id="DAILYMISSION_RESETFREE"/>
+		<item nameType="0" description="1" text="Reset:{0:0}&lt;quad name={1:1} size=37 width=0.89/&gt;" id="DAILYMISSION_RESET"/>
+		<item nameType="0" description="1" text="(&lt;color=#bce2e7ff&gt;{0:0}&lt;/color&gt;/{1:1})" id="DAILYMISSION_1_DOING"/>
+		<item nameType="0" description="1" text="({0:0}/{1:1})" id="DAILYMISSION_1"/>
+		<item nameType="0" description="1" text="&lt;quad name={0:0} /&gt; × {1:1}" id="DAILYMISSION_2"/>
+		<item nameType="0" description="1" text="&lt;color=#4f7ea2ff&gt;Refresh at&lt;/color&gt;\n&lt;size=48&gt;8:00AM&lt;/size&gt;" id="DAILYMISSION_3"/>
+		<item nameType="0" description="1" text="Introduction About Daily Mission" id="DAILYMISSION_INTRODUCTION"/>
+		<item nameType="0" description="1" text="hahahaha" id="DAILYMISSION_INTRODUCTION2"/>
+		<item nameType="0" description="1" text="CONFIRM" id="DAILYMISSION_CONFIRM"/>
+		<item nameType="0" description="1" text="Reset the mission &lt;color=#ed6b6d&gt;for free&lt;/color&gt;\n&lt;color=#ed6b6d&gt;{0:0}&lt;/color&gt;" id="DAILYMISSION_CONFIRM2"/>
+		<item nameType="0" description="1" text="cost10&lt;quad name={0:0} /&gt; &lt;color=#ed6b6d&gt;&lt;/color&gt; to reset the mission:\n&lt;color=#ed6b6d&gt;{1:2}&lt;/color&gt;" id="DAILYMISSION_CONFIRM3"/>
+		<item nameType="0" description="1" text="Reward：" id="DAILYMISSION_REWARD"/>
+		<item nameType="0" description="1" text="DAILYMISSION_VIP_REWARD" id="DAILYMISSION_VIP_REWARD"/>
+		<item nameType="0" description="1" text="DAILYMISSION_NORMAL_REWARD" id="DAILYMISSION_NORMAL_REWARD"/>
+		<item nameType="0" description="1" text="REWARD" id="DAILYMISSION_REWARD1"/>
+		<item nameType="0" description="1" text="SELECT" id="DAILYMISSION_SELECT"/>
+		<item nameType="0" description="1" text="LOCKED" id="DAILYMISSION_LOCKED"/>
+		<item nameType="0" description="1" text="Reset Mission" id="DAILYMISSION_RESET_TITLE"/>
+		<item nameType="0" description="1" text="DAILYMISSION_BUTTON_HAVE_GET" id="DAILYMISSION_BUTTON_HAVE_GET"/>
+		<item nameType="0" description="1" text="DAILYMISSION_BUTTON_NOT_GET" id="DAILYMISSION_BUTTON_NOT_GET"/>
+		<item nameType="0" description="1" text="DAILYMISSION_BUTTON_CANNOT_GET" id="DAILYMISSION_BUTTON_CANNOT_GET"/>
+		<item nameType="0" description="1" text="活跃度" id="DAILYMISSION_ACTIVENESS_TITLE"/>
+		<item nameType="0" description="排行说明" text="DETAIL" id="LADDER_RANK_LIST_INTRODUCTION"/>
+		<item nameType="0" description="赛季开始时间" text="The season is over and there are {0:day} days in the new season" id="LADDER_START_TIME"/>
+		<item nameType="0" description="赛季结束时间" text="The season is in progress and there are {0:day} days to end" id="LADDER_END_TIME"/>
+		<item nameType="0" description="奖励发放方式" text="*Rewards are sent by mail" id="LADEER_REWARD_SEND_METHOD"/>
+		<item nameType="0" description="额外奖励名次限制" text="200 or less of the season get extra bonus:" id="LADDER_EXTRA_REWARD_RANK_LIMIT"/>
+		<item nameType="0" description="奖励结算发放中" text="*Rewards  paid" id="LADDER_REWARD_PROCESS"/>
+		<item nameType="0" description="上赛季排名" text="Ranked last season" id="LADEER_LAST_SEASON_RANK"/>
+		<item nameType="0" description="1" text="The player will get the rewards according to the final grade when the season end." id="LADDER_RANK_LIST_INTRODUCTION_CONTENT"/>
+		<item nameType="0" description="1" text="The season open time not confirm" id="LADDER_RANK_LIST_OPEN_TIME_NOT_CONFIRM"/>
+		<item nameType="0" description="排行说明" text="WIN" id="BATTLE_RESULT_WIN"/>
+		<item nameType="0" description="排行说明" text="LOSE" id="BATTLE_RESULT_LOSE"/>
+		<item nameType="0" description="排行说明" text="DRAW" id="BATTLE_RESULT_DRAW"/>
+		<item nameType="0" description="战斗结算展示" text="HIGHEST SCORE" id="BATTLE_RESULT_SCORE"/>
+		<item nameType="0" description="战斗结算展示" text="MOST KILL" id="BATTLE_RESULT_KILL"/>
+		<item nameType="0" description="战斗结算展示" text="MOST ASSIST" id="BATTLE_RESULT_ASSIST"/>
+		<item nameType="0" description="战斗结算展示" text="MOST MULTIKILL" id="BATTLE_RESULT_MULTIKILL"/>
+		<item nameType="0" description="战斗结算展示" text="MOST ATTACKTIME" id="BATTLE_RESULT_ATTACKTIME"/>
+		<item nameType="0" description="战斗结算展示" text="MOST DEFENDTIME" id="BATTLE_RESULT_DEFENDTIME"/>
+		<item nameType="0" description="战斗结算展示" text="MOST GAIN RESOURCE TIME" id="BATTLE_RESULT_ROBRESOURCE"/>
+		<item nameType="0" description="战斗结算展示" text="MOST RECOVER RESOURCE" id="BATTLE_RESULT_RECOVERRESOURCE"/>
+		<item nameType="0" description="战斗结算展示" text="MATCH RESULT" id="BATTLE_RESULT_MATCH_RESULT"/>
+		<item nameType="0" description="战斗结算展示" text="NAME" id="BATTLE_RESULT_NAME"/>
+		<item nameType="0" description="战斗结算展示" text="SCORE" id="BATTLE_RESULT_MATCH_SCORE"/>
+		<item nameType="0" description="战斗结算展示0" text="BATTLE" id="BATTLE_REWARD_TITLE"/>
+		<item nameType="0" description="战斗结算展示0" text="REWARD" id="BATTLE_REWARD_TITLE2"/>
+		<item nameType="0" description="战斗结算展示0" text="&lt;size=48&gt;lv &lt;/size&gt;{0:0}" id="BATTLE_REWARD_LEVEL"/>
+		<item nameType="0" description="战斗结算展示0" text="+{0:0}EXP" id="BATTLE_REWARD_GAINEXP"/>
+		<item nameType="0" description="战斗结算展示0" text="CAN UPDATE!" id="BATTLE_REWARD_CAN_UPDATE"/>
+		<item nameType="0" description="战斗结算展示0" text="VIEW DETAILS" id="BATTLE_REWARD_DETAILS"/>
+		<item nameType="0" description="战场教学" text="Welcome to hotfire, and now we have to learn about the basics" id="BATTLE_TUTORIAL_WELCOME"/>
+		<item nameType="0" description="战场教学" text="Click on the screen to start tutorial" id="BATTLE_TUTORIAL_CLICK_SCREEN_START"/>
+		<item nameType="0" description="战场教学" text="Drag screen to let the sight is within the marker" id="BATTLE_TUTORIAL_DRAG_SCREEN"/>
+		<item nameType="0" description="战场教学" text="Drag joystick to move to target" id="BATTLE_TUTORIAL_DRAG_JOYSTICK"/>
+		<item nameType="0" description="战场教学" text="Drag screen to aim enemy" id="BATTLE_TUTORIAL_AIM"/>
+		<item nameType="0" description="战场教学" text="Click fire button to kill enemy" id="BATTLE_TUTORIAL_CLICK_FIRE"/>
+		<item nameType="0" description="战场教学" text="Click weapon button to reload" id="BATTLE_TUTORIAL_CLICK_RELOAD"/>
+		<item nameType="0" description="战场教学" text="Kill enmy!" id="BATTLE_TUTORIAL_KILL_ENEMY"/>
+		<item nameType="0" description="战场教学" text="Slide weapon button change to another gun" id="BATTLE_TUTORIAL_SWITCH_WEAPON"/>
+		<item nameType="0" description="战场教学" text="Sprint to target" id="BATTLE_TUTORIAL_SPRINT"/>
+		<item nameType="0" description="战场教学" text="Use gun sight" id="BATTLE_TUTORIAL_USE_GUN_SIGHT"/>
+		<item nameType="0" description="战场教学" text="congratulations! Success through novice teaching!" id="BATTLE_TUTORIAL_ALL_COMPLETE"/>
+		<item nameType="0" description="战场教学" text="tutorial complete" id="BATTLE_TUTORIAL_STEP_COMPLETE"/>
+		<item nameType="0" description="战场教学" text="Kill success!" id="BATTLE_TUTORIAL_KILL_SUCCESS"/>
+	</data>
+</table>

@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>CoolFish002</Author>
+  <LastAuthor>CoolFish002</LastAuthor>
+  <Created>2015-02-10T09:55:29Z</Created>
+  <LastSaved>2017-06-21T08:45:16Z</LastSaved>
+  <Version>14.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.5603</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>14835</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="常规 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Name="常规 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s65" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s67" ss:Parent="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s68" ss:Parent="s62">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s69" ss:Parent="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="33" ss:ExpandedRowCount="11" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="156.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="156"/>
+   <Column ss:AutoFitWidth="0" ss:Width="293.25" ss:Span="2"/>
+   <Column ss:Index="7" ss:AutoFitWidth="0" ss:Width="261" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="204"/>
+   <Column ss:AutoFitWidth="0" ss:Width="195"/>
+   <Column ss:AutoFitWidth="0" ss:Width="204.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="381"/>
+   <Column ss:AutoFitWidth="0" ss:Width="246" ss:Span="1"/>
+   <Column ss:Index="15" ss:AutoFitWidth="0" ss:Width="211.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="210.75" ss:Span="1"/>
+   <Column ss:Index="18" ss:AutoFitWidth="0" ss:Width="286.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="208.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="181.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="187.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="214.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="235.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="204" ss:Span="1"/>
+   <Column ss:Index="26" ss:AutoFitWidth="0" ss:Width="207.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="171.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="186.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="224.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="187.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="251.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="249.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="243.75"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell><Data ss:Type="String">name</Data></Cell>
+    <Cell><Data ss:Type="String">weaponAnimatonType</Data></Cell>
+    <Cell><Data ss:Type="String">attachPoint</Data></Cell>
+    <Cell><Data ss:Type="String">ikDirection</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterDownPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterCenterPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimCenterUpPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadBeginPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadNormalPath</Data></Cell>
+    <Cell><Data ss:Type="String">reloadEndPath</Data></Cell>
+    <Cell><Data ss:Type="String">aimReloadPath</Data></Cell>
+    <Cell><Data ss:Type="String">normalShootPath</Data></Cell>
+    <Cell><Data ss:Type="String">normalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">normalRun</Data></Cell>
+    <Cell><Data ss:Type="String">hallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">walk</Data></Cell>
+    <Cell><Data ss:Type="String">chambering</Data></Cell>
+    <Cell><Data ss:Type="String">aimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">aimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">aimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">aimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">aimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">runBack</Data></Cell>
+    <Cell><Data ss:Type="String">runBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">runLeft</Data></Cell>
+    <Cell><Data ss:Type="String">runRight</Data></Cell>
+    <Cell><Data ss:Type="String">beginRun</Data></Cell>
+    <Cell><Data ss:Type="String">stopRun</Data></Cell>
+    <Cell><Data ss:Type="String">crossOver</Data></Cell>
+    <Cell><Data ss:Type="String">weaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">weaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">weaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">Vector3</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">描述</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">RPG</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/HKG36Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-33.511,-19.4288,128.8366)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Rocket/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Rocket/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Rocket/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/Rocket/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">M249 MachineGun</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AK47Attach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">27</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">A2_lmiUzi</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/MPSNaryAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/SMG/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">A2_M4</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/M4CarbineAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Rifle/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">A4_Sniper</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/AWPAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Sniper/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">A4_HandGun</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/DesertEagleAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="String">A3_ShotGun</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/NovaAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/WeaponFire</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">A3_HandGun</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Prefabs/Weapon/DesertEagleAttach</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">(-42.8931,-38.7867,137.8956)</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterCenter</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimCenterUp</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadBegin</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadNormal</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/ReloadEnd</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimShooting</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/NormalIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/NormalRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/HallIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/Walk</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/ShotGun/Chambering</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimPoseDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkFrontDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkLeftDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkRightDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/AimWalkBackDown</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunBack_Left</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunLeft</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/RunRight</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/BeginRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/StopRun</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/Common/CrossOver</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponIdle</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponReload</Data></Cell>
+    <Cell><Data ss:Type="String">Animation/Man/New/NewHandGun/WeaponFire</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <PageBreakZoom>100</PageBreakZoom>
+   <Selected/>
+   <LeftColumnVisible>27</LeftColumnVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>14</ActiveRow>
+     <ActiveCol>31</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet2">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Sheet3">
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Row ss:AutoFitHeight="0"/>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.51180555555555596"/>
+    <Footer x:Margin="0.51180555555555596"/>
+   </PageSetup>
+   <Unsynced/>
+   <PageBreakZoom>100</PageBreakZoom>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

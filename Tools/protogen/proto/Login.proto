@@ -1,0 +1,10 @@
+syntax = "proto3";
+package message;
+
+//client login
+message Login
+{
+    int32 deviceID = 1; // device identify
+    string username = 2;
+    string password = 3;
+}

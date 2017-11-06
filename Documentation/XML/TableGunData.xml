@@ -1,0 +1,1460 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>CoolFish002</Author>
+  <LastAuthor>Administrator</LastAuthor>
+  <Created>2006-09-16T00:00:00Z</Created>
+  <LastSaved>2017-09-11T10:53:39Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <KSOProductBuildVer dt:dt="string">2052-10.1.0.6747</KSOProductBuildVer>
+ </CustomDocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12540</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s92" ss:Name="常规 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s82" ss:Name="常规 2 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s77" ss:Name="常规 2 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s93" ss:Name="常规 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s89" ss:Name="好 2">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#008000"/>
+   <Interior ss:Color="#C6EFCE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s95">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s96">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s97">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s98">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s99">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#FF0000"/>
+  </Style>
+  <Style ss:ID="s100">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s101">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s102">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s103">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#FF0000"/>
+  </Style>
+  <Style ss:ID="s104">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s105">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s106">
+   <Alignment ss:Vertical="Center"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s108" ss:Parent="s92">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s109">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s110">
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s112">
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s113">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s114">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s116" ss:Parent="s89">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s117">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s118">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s119">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s120" ss:Parent="s92">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s121" ss:Parent="s92">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s122" ss:Parent="s92">
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s123">
+   <Interior ss:Color="#00B0F0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s124">
+   <Interior ss:Color="#CC66FF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s125">
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s126">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s127">
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s129">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#FF0000"/>
+  </Style>
+  <Style ss:ID="s130">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s132" ss:Parent="s77">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s134" ss:Parent="s93">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s135" ss:Parent="s92">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#92D050" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s136">
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s137">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s139" ss:Parent="s82">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s140" ss:Parent="s82">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s141">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s142">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#CC66FF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s143">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s144">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFD966" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s145">
+   <Interior ss:Color="#FFD966" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s146">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s147">
+   <Alignment ss:Vertical="Center"/>
+   <Interior ss:Color="#B4C6E7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s148">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s149" ss:Parent="s92">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#CC66FF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s150">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFD966" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s152">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#AEAAAA" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s154">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#BDD7EE" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s155">
+   <Interior/>
+  </Style>
+  <Style ss:ID="s156">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s157">
+   <Alignment ss:Vertical="Center"/>
+   <Interior/>
+  </Style>
+  <Style ss:ID="s158" ss:Parent="s92">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s159">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s160">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11"/>
+   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="24" ss:ExpandedRowCount="50" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
+   <Column ss:Width="27"/>
+   <Column ss:AutoFitWidth="0" ss:Width="154.5"/>
+   <Column ss:Index="4" ss:AutoFitWidth="0" ss:Width="255"/>
+   <Column ss:Width="105.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="78"/>
+   <Column ss:AutoFitWidth="0" ss:Width="72.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="55.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="78"/>
+   <Column ss:Width="103.5"/>
+   <Column ss:Width="129.75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="196.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="105.75"/>
+   <Column ss:Index="16" ss:AutoFitWidth="0" ss:Width="48"/>
+   <Column ss:AutoFitWidth="0" ss:Width="45"/>
+   <Column ss:Index="21" ss:AutoFitWidth="0" ss:Width="94.5"/>
+   <Column ss:Index="23" ss:Width="103.5"/>
+   <Column ss:Width="150"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">id</Data></Cell>
+    <Cell ss:StyleID="s95"><Data ss:Type="String">name</Data></Cell>
+    <Cell ss:StyleID="s96"><Data ss:Type="String">gunType</Data></Cell>
+    <Cell><Data ss:Type="String">initialPromote</Data></Cell>
+    <Cell><Data ss:Type="String">promoteMax</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">unlockItemID</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">unlockItemCount</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">showOrder</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">unlockProfessionLevel</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">traitGroupId</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">traitIcon</Data></Cell>
+    <Cell><Data ss:Type="String">traitName</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">traitDesc</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">energyIncreasePerHit</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">fireRate</Data></Cell>
+    <Cell ss:StyleID="s98"><Data ss:Type="String">oneShotBulletNumber</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">magazineCapacity</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">rechargeCd</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">loadBulletNumOnce</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">gunPowerRatio</Data></Cell>
+    <Cell><Data ss:Type="String">gunFirstLevel</Data></Cell>
+    <Cell><Data ss:Type="String">abilityID</Data></Cell>
+    <Cell><Data ss:Type="String">systemToAcquire</Data></Cell>
+    <Cell><Data ss:Type="String">shopImage</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s95"><Data ss:Type="String">string</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">float</Data></Cell>
+    <Cell ss:StyleID="s97"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s99"><Data ss:Type="String">float</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">int</Data></Cell>
+    <Cell><Data ss:Type="String">string</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="65.25">
+    <Cell><Data ss:Type="String">ID</Data></Cell>
+    <Cell><Data ss:Type="String">Name</Data></Cell>
+    <Cell><Data ss:Type="String">枪械类型</Data></Cell>
+    <Cell ss:StyleID="s95"><Data ss:Type="String">枪械初始Promote</Data></Cell>
+    <Cell ss:StyleID="s95"><Data ss:Type="String">枪械最大Promote</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">解锁所需图纸ID</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">解锁所需图纸数量</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">显示顺序</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">解锁条件 - 玩家等级</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">特性</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">特性图标</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">特性名字多语言</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">特性描述多语言</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">每次命中敌人，增加能量数值</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">射速</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">单发子弹数</Data></Cell>
+    <Cell><Data ss:Type="String">弹夹容量，单位：发。弹夹最大容量，决定一次最多打多少发子弹后上弹。</Data></Cell>
+    <Cell ss:StyleID="s102"><Data ss:Type="String">换弹时间，单位：秒。Cs当中步枪大概是3秒多一点。</Data></Cell>
+    <Cell ss:StyleID="s101"><Data ss:Type="String">上弹一次，上弹的子弹数量，-1表示上弹一个弹夹，其他数字表示一次上弹的真实子弹数</Data></Cell>
+    <Cell ss:StyleID="s103"><Data ss:Type="String">枪械战力系数</Data></Cell>
+    <Cell><Data ss:Type="String">初始等级</Data></Cell>
+    <Cell><Data ss:Type="String">能力ID</Data></Cell>
+    <Cell ss:StyleID="s100"><Data ss:Type="String">获取途径&#10;1 &#45;- 解锁&#10;2 &#45;- 商店购买</Data></Cell>
+    <Cell><Data ss:Type="String">商店展示图标</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">M4Carbine Rifle</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10010</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5031</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M4CARBINE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M4CARBINE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.2000000000000002</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">shop_gun_image_m4a1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">H&amp;K MP5 SubmachineGun</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10011</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">5021</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_MP5</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MP5</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.8</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">shop_gun_image_mp5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">M60 MachineGun</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10012</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5031</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9003</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M60</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M60</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.215</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.75</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s123"><Data ss:Type="String">shop_gun_image_m60</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">Steyr SSG-69</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10013</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5041</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9004</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SSG69</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SSG69</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3.12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">shop_gun_image_sleyr69</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">MossBerg M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10014</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5051</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9005</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_MOSSBERG_M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">shop_gun_image_m590</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">Franchi SPAS 12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10015</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5061</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SPAS12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SPAS12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2.5</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">shop_gun_image_spas12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s129">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">Striker</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10016</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5071</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_STRIKER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_STRIKER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s130"><Data ss:Type="String">shop_gun_image_striker</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">Imi Uzi</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10017</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5081</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9008</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_UZI</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_UZI</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s132"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s132"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s134"><Data ss:Type="String">shop_gun_image_imiuzi</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">SMG9</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10018</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">5091</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9001</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_UMP</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_UMP</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">shop_gun_image_smg9</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10019</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5111</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2.1150000000000002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s137"><Data ss:Type="String">shop_gun_image_m870</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s129">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">Serbu Super-Shorty</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10020</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5121</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9003</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SERBU_SUPER_SHORTY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SERBU_SUPER_SHORTY</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">shop_gun_image_supershorty</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">FN P90</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10021</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5131</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9004</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_P90</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_P90</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9.5</Data></Cell>
+    <Cell ss:StyleID="s139"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">50</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.4</Data></Cell>
+    <Cell ss:StyleID="s139"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">13</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s140"><Data ss:Type="String">shop_gun_image_p90</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">M1014</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10022</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">13</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5141</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9005</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M1014</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M1014</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">14</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s141"><Data ss:Type="String">shop_gun_image_m1014</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10023</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5151</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3.12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s142"><Data ss:Type="String">shop_gun_image_awp</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">FN SCAR</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10024</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5161</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9007</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SCAR</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SCAR</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.6</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">16</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">shop_126</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">AK47 Rifle</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10025</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9008</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_AK47</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_AK47</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.6</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s143"><Data ss:Type="String">shop_gun_image_ak47</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">MP7A1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10026</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">5181</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9001</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_SMG9</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SMG9</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">shop_128</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s112">
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="String">UMP SubmachineGun</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10027</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">5191</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_MP7</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MP7</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">shop_gun_image_ump</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">20</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">HKG36 Rifle</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10028</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5201</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9003</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_G36</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_G36</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.2000000000000002</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">20</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">shop_gun_image_hkg36</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">DesertEagle</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10029</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5221</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_DESERT_EAGLE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s144"><Data ss:Type="String">shop_gun_image_deserteagles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">Revolver</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10030</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">22</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5231</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_RELVOLVER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_RELVOLVER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">23</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s145"><Data ss:Type="String">shop_gun_image_revolver</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">M249 MachineGun</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10031</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5241</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9003</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M249</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M249</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.215</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">6.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.75</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">24</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s123"><Data ss:Type="String">shop_113</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">Dragunoy SVD</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10032</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">24</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5251</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SVD</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SVD</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1.5</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">25</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">shop_gun_image_svd</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">26</Data></Cell>
+    <Cell ss:StyleID="s120"><Data ss:Type="String">SRS</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10033</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5261</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_SRS</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SRS</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3.12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.7</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">26</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">shop_114</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s110"><Data ss:Type="Number">27</Data></Cell>
+    <Cell ss:StyleID="s146"><Data ss:Type="String">NEW AK47</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10025</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">16</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9008</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_AK47</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_AK47</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">6.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.4</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">17</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">shop_gun_image_ak47</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s136"><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s148"><Data ss:Type="String">NEW UZI</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10017</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9008</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_UZI</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_UZI</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s132"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1.4</Data></Cell>
+    <Cell ss:StyleID="s132"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">8</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s134"><Data ss:Type="String">shop_gun_image_imiuzi</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s124"><Data ss:Type="Number">29</Data></Cell>
+    <Cell ss:StyleID="s149"><Data ss:Type="String">NEW AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10023</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_AWP</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3.12</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2.7</Data></Cell>
+    <Cell ss:StyleID="s122"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">15</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s124"><Data ss:Type="String">shop_gun_image_awp</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s145"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s150"><Data ss:Type="String">NEW DesertEagle</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10029</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">21</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_DESERT_EAGLE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_DESERT_EAGLE</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">1.3</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.9</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">22</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s145"><Data ss:Type="String">shop_gun_image_deserteagles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s123"><Data ss:Type="Number">31</Data></Cell>
+    <Cell ss:StyleID="s158"><Data ss:Type="String">NEW M249</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10031</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">23</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9003</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M249</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M249</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.215</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s121"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">200</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">0.75</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">24</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s123"><Data ss:Type="String">shop_113</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s127"><Data ss:Type="Number">32</Data></Cell>
+    <Cell ss:StyleID="s152"><Data ss:Type="String">NEW Striker</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10016</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9006</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_STRIKER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_STRIKER</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.2</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">15</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">3.5</Data></Cell>
+    <Cell ss:StyleID="s126"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">7</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s127"><Data ss:Type="String">shop_gun_image_striker</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s136"><Data ss:Type="Number">33</Data></Cell>
+    <Cell ss:StyleID="s159"><Data ss:Type="String">NEW MP7A1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10026</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">17</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9001</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_SMG9</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_SMG9</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.26500000000000001</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.4</Data></Cell>
+    <Cell ss:StyleID="s135"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">18</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">shop_128</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s137"><Data ss:Type="Number">34</Data></Cell>
+    <Cell ss:StyleID="s160"><Data ss:Type="String">NEW M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10019</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_M870</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">2.1150000000000002</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">11</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.4</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">11</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s137"><Data ss:Type="String">shop_121</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s136"><Data ss:Type="Number">35</Data></Cell>
+    <Cell ss:StyleID="s148"><Data ss:Type="String">NEW MP5</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10011</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_MP5</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MP5</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.8</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s119"><Data ss:Type="String">shop_gun_image_mp5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s136"><Data ss:Type="Number">36</Data></Cell>
+    <Cell ss:StyleID="s148"><Data ss:Type="String">NEW UMP</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10027</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">9002</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_NAME_MP7</Data></Cell>
+    <Cell ss:StyleID="s116"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MP7</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">0.23499999999999999</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s114"><Data ss:Type="Number">1.6</Data></Cell>
+    <Cell ss:StyleID="s117"><Data ss:Type="Number">-1</Data></Cell>
+    <Cell ss:StyleID="s118"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s113"><Data ss:Type="Number">19</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s136"><Data ss:Type="String">shop_gun_image_ump</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s125"><Data ss:Type="Number">37</Data></Cell>
+    <Cell ss:StyleID="s154"><Data ss:Type="String">NEW M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s106"><Data ss:Type="Number">10014</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s147"><Data ss:Type="Number">5171</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">9005</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_NAME_MOSSBERG_M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="String">SKILL_WEAPON_DESCRIPTION_MOSSBERG_M590</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">0.8</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s105"><Data ss:Type="Number">0.5</Data></Cell>
+    <Cell ss:StyleID="s108"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s109"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s104"><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s125"><Data ss:Type="String">shop_gun_image_m590</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s156"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s156"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s156"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="3" ss:StyleID="s155"/>
+    <Cell ss:StyleID="s157"/>
+    <Cell ss:StyleID="s155"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>15</TopRowVisible>
+   <FreezePanes/>
+   <FrozenNoSplit/>
+   <SplitVertical>3</SplitVertical>
+   <LeftColumnRightPane>3</LeftColumnRightPane>
+   <ActivePane>1</ActivePane>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+    </Pane>
+    <Pane>
+     <Number>1</Number>
+     <ActiveRow>34</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+     <RangeSelection>R32C2,R34C2,R35C2</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R36C6:R38C6,R28C6:R33C6</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(R4C1:R227C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+   <Condition>
+    <Value1>AND(COUNTIF(C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+  </ConditionalFormatting>
+  <ConditionalFormatting xmlns="urn:schemas-microsoft-com:office:excel">
+   <Range>R34C6:R35C6,R4C6:R27C6</Range>
+   <Condition>
+    <Value1>AND(COUNTIF(C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+   <Condition>
+    <Value1>AND(COUNTIF(R4C1:R227C1,RC)&gt;1,NOT(ISBLANK(RC)))</Value1>
+    <Format Style='color:#9C0006;background:#FFC7CE;mso-pattern:none'/>
+   </Condition>
+  </ConditionalFormatting>
+ </Worksheet>
+</Workbook>
