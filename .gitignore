@@ -6,3 +6,4 @@ __pycache__/
 *.suo
 Tools/protogen/source/client/build
 Tools/protogen/source/client/dist
+*.spec
