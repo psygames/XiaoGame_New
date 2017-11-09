@@ -13,10 +13,14 @@ namespace RedStone
         {
             m_updater.Start();
             eventManager = new EventManager();
-            ServerManager.CreateInstance().Init();
+            NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
 
-            // connect main server
+
+            // start server
+            NetworkManager.instance.server.server.Start();
+            Debug.LogInfo("战场服务器已启动");
+            // connect to main server
             ProxyManager.instance.GetProxy<MainServerProxy>().Connenct();
         }
 

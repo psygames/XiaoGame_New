@@ -10,11 +10,19 @@ namespace Plugins.Network
         public Action<string> onClosed { get; set; }
         public Action<string, byte[]> onReceived { get; set; }
 
-        public virtual void Setup(string ip, int port) { }
+        public virtual void Setup(string ip, int port)
+        {
+            this.ip = ip;
+            this.port = port;
+        }
 
         public virtual void Start() { }
 
         public virtual void Stop() { }
+
+        public virtual string ip { get; protected set; }
+        public virtual int port { get; protected set; }
+        public virtual string address { get { return "{0}:{1}".FormatStr(ip, port); } }
 
         public ServerBase()
         {

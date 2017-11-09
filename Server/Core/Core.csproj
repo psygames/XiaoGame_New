@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-    <Folder Include="Core\Tool\" />
     <Folder Include="Framework\" />
   </ItemGroup>
 </Project>

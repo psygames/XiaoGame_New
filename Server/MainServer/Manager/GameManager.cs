@@ -13,13 +13,16 @@ namespace RedStone
         {
             eventManager = new EventManager();
             m_updater.Start();
-            ServerManager.CreateInstance().Init();
+            NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
 
-            //
-            ServerManager.instance.MB.server.Start();
+            // 
+            NetworkManager.instance.serverForBattle.server.Start();
+            Debug.LogInfo("网络监听（战场） 已启动");
+            NetworkManager.instance.serverForClient.server.Start();
+            Debug.LogInfo("网络监听（客户端） 已启动");
         }
-        
+
         private void Update()
         {
         }

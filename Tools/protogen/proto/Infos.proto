@@ -1,0 +1,20 @@
+syntax = "proto3";
+package message;
+
+// 玩家基础信息
+message PlayerInfo
+{
+    int64 uid = 1;    // 唯一ID
+    string name = 2;  // 昵称
+    int32 gold = 3;   // 金币数量
+    int32 level = 4;  // 等级
+    int32 exp = 5;    // 当前等级经验值
+}
+
+// 战场服务器基础信息
+message BattleServerInfo
+{
+    string address = 1;
+    string name = 2;
+    string state = 3;
+}

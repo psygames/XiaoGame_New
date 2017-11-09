@@ -22,3 +22,4 @@ Server/BattleServer/bin
 Tools/protogen/source/client/build
 protogen.spec
 Tools/protogen/source/client/dist
+Server/.vs/

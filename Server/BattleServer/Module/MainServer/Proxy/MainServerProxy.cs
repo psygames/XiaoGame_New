@@ -14,12 +14,14 @@ namespace RedStone
 
             network.socket.onConnected = () =>
             {
+                Debug.LogInfo("连接主服成功！");
                 Login();
             };
         }
 
         public void Connenct()
         {
+            Debug.LogInfo("开始连接主服...");
             network.socket.Connect();
         }
 

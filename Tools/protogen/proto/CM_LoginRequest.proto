@@ -1,0 +1,8 @@
+syntax = "proto3";
+package message;
+
+// 客户端 -> 主服 登录请求
+message CM_LoginRequest
+{
+    int32 deviceID = 1; // 设备ID
+}

@@ -8,12 +8,13 @@ namespace Plugins.Network
         public WebSocketSharp.WebSocket _socket = null;
         public override void Setup(string ip, int port)
         {
+            base.Setup(ip, port);
             _socket = new WebSocketSharp.WebSocket(WebSocketTool.GetAddress(ip, port) + "/default");
             _socket.OnOpen += (a, b) => { base.OnConnected(); };
             _socket.OnClose += (a, b) => { base.OnClosed(); };
             _socket.OnMessage += (a, b) => { base.OnReceived(b.RawData); };
         }
-
+        public override string address { get { return _socket.Url.AbsoluteUri; } }
         public override void Send(byte[] data)
         {
             _socket.Send(data);

@@ -16,6 +16,12 @@ public class Debug
         LogError(obj.ToString());
     }
 
+    public static void LogInfo(string str, params object[] parms)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine(str, parms);
+    }
+
     public static void Log(string str, params object[] parms)
     {
         Console.ForegroundColor = ConsoleColor.White;

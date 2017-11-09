@@ -10,10 +10,9 @@
     <ProjectReference Include="..\Plugins\Plugins.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Manager\" />
     <Folder Include="GameData\" />
     <Folder Include="Tools\" />
-    <Folder Include="Network\" />
+    <Folder Include="Protocol\" />
     <Folder Include="Module\" />
   </ItemGroup>
 </Project>
