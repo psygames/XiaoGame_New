@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using message;
+using Message;
 
 namespace RedStone
 {
@@ -27,11 +27,12 @@ namespace RedStone
 
         public void Login()
         {
-            LoginRequest msg = new LoginRequest();
-            msg.deviceUID = "Hello";
-            SendMessage<LoginRequest, LoginReply>(msg, (reply) =>
+            BMLoginRequest msg = new BMLoginRequest();
+            var serv = NetworkManager.instance.server.server as Plugins.Network.WebSocketServer;
+            msg.ListenerAddress = serv.address;
+            SendMessage<BMLoginRequest, BMLoginReply>(msg, (reply) =>
             {
-                Debug.Log(reply.name);
+                Debug.Log(reply.Name);
             });
         }
     }

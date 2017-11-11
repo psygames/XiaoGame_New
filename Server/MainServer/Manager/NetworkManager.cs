@@ -22,7 +22,7 @@ namespace RedStone
             server.Setup("0.0.0.0", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadNumFile(MyPath.RES_PROTO_NUM);
+            serializer.LoadProtoNum(typeof(Message.ProtoNum));
             serverForBattle.Init(server, serializer);
             Debug.LogInfo("初始化网络监听（战场） [{0}]", server.address);
         }
@@ -34,7 +34,7 @@ namespace RedStone
             server.Setup("0.0.0.0", 8731);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadNumFile(MyPath.RES_PROTO_NUM);
+            serializer.LoadProtoNum(typeof(Message.ProtoNum));
             serverForClient.Init(server, serializer);
             Debug.LogInfo("初始化网络监听（客户端） [{0}]", server.address);
         }

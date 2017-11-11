@@ -6,7 +6,7 @@ namespace Plugins
 {
     public interface IProtoSerializer
     {
-        object DeserializeObj(byte[] data);
-        byte[] Serialize<T>(T proto);
+        Google.Protobuf.IMessage Deserialize(byte[] data);
+        byte[] Serialize(Google.Protobuf.IMessage proto);
     }
 }

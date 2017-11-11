@@ -2,7 +2,7 @@ syntax = "proto3";
 package message;
 
 // 客户端 -> 主服 开始游戏请求
-message CM_StartGameRequest
+message CMStartGameRequest
 {
     int32 gameID = 1;
     int32 gameMode = 2;

@@ -2,7 +2,7 @@ syntax = "proto3";
 package message;
 
 // 主服 -> 战场 登录返回
-message BM_LoginReply
+message BMLoginReply
 {
     string name = 1;
 }

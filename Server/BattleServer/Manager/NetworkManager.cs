@@ -28,7 +28,7 @@ namespace RedStone
             socket.Setup("127.0.0.1", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadNumFile(MyPath.RES_PROTO_NUM);
+            serializer.LoadProtoNum(typeof(Message.ProtoNum));
             client.Init(socket, serializer);
             Debug.LogInfo("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
         }
@@ -37,11 +37,11 @@ namespace RedStone
         {
             server = new ServerNetworkManager();
             var listener = new Plugins.Network.WebSocketServer();
-            int port = NetTool.GetAvailablePort(8730);
+            int port = NetTool.GetAvailablePort(8740);
             listener.Setup("0.0.0.0", port);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadNumFile(MyPath.RES_PROTO_NUM);
+            serializer.LoadProtoNum(typeof(Message.ProtoNum));
             server.Init(listener, serializer);
             Debug.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(listener.address));
         }

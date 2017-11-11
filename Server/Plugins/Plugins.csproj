@@ -7,9 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
-    <PackageReference Include="protobuf-net" Version="2.3.2" />
     <PackageReference Include="WebSocketSharp" Version="1.0.3-rc11">
     </PackageReference>
+    <PackageReference Include="Google.Protobuf" Version="3.4.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />

@@ -3,7 +3,7 @@ import "Infos.proto"
 package message;
 
 // 主服 -> 客户端 开始游戏响应
-message CM_StartGameReply
+message CMStartGameReply
 {
     BattleServerInfo battleServer = 1;
     string sessionID = 2;

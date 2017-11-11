@@ -39,13 +39,13 @@ namespace Plugins
         }
         void OnReceived(byte[] data)
         {
-            object obj = m_serializer.DeserializeObj(data);
+            object obj = m_serializer.Deserialize(data);
             m_eventMgr.Send(obj.GetType().Name, obj);
         }
 
-        public void Send<T>(T msg)
+        public void Send<T>(T msg) 
         {
-            var data = m_serializer.Serialize(msg);
+            var data = m_serializer.Serialize(msg as Google.Protobuf.IMessage);
             m_socket.Send(data);
         }
 

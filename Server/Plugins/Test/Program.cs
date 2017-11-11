@@ -1,5 +1,6 @@
 ﻿using System;
 using MongoDB.Bson;
+using Message;
 
 namespace Plugins
 {
@@ -8,7 +9,23 @@ namespace Plugins
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            TestProtoSerializer();
+        }
 
+
+        static void TestProtoSerializer()
+        {
+            ProtoSerializer serializer = new ProtoSerializer();
+            serializer.LoadProtoNum(typeof(Message.ProtoNumTest));
+            CBLoginRequest msg = new CBLoginRequest();
+            msg.SessionID = "hello";
+            byte[] data = serializer.Serialize(msg);
+
+            var deMsg = serializer.Deserialize(data);
+        }
+
+        static void TestDB()
+        {
             DBManager.CreateInstance();
             DBManager.instance.Init("mongodb://localhost:27017", "xiao_game");
 

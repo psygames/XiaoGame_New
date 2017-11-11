@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using Core;
+using Google.Protobuf;
 
 namespace Plugins
 {
@@ -11,34 +13,32 @@ namespace Plugins
     {
         private Dictionary<string, int> m_protocolNum = new Dictionary<string, int>();
         private Dictionary<int, string> m_numProtocal = new Dictionary<int, string>();
+
         public Func<string, Type> getTypeFunc { get; set; }
 
-        public void LoadNumFile(string protoNumFile)
+        public void LoadProtoNum(Type protoNumEnumType)
         {
-            string content = FileHelper.ReadText(protoNumFile);
-            content.Replace("\r", "");
-            string[] lines = content.Split('\n');
-            for (int i = 0; i < lines.Length; i++)
+            foreach (var value in Enum.GetValues(protoNumEnumType))
             {
-                lines[i] = lines[i].Trim();
-                if (string.IsNullOrEmpty(lines[i]))
-                    continue;
-                string[] lineSplit = lines[i].Split('=');
-                string protoName = "message." + lineSplit[0].Trim();
-                int protoNum = int.Parse(lineSplit[1].Trim());
+                int protoNum = (int)value;
+                string protoName = Enum.GetName(protoNumEnumType, protoNum);
+                protoName = protoNumEnumType.GetField(protoName).CustomAttributes.First
+                        (a => a.AttributeType == typeof(Google.Protobuf.Reflection.OriginalNameAttribute))
+                            .ConstructorArguments[0].Value.ToString();
+                protoName = protoNumEnumType.Namespace + "." + protoName;
                 m_protocolNum.Add(protoName, protoNum);
                 m_numProtocal.Add(protoNum, protoName);
             }
         }
 
-        public byte[] Serialize<T>(T proto)
+        public byte[] Serialize(IMessage proto)
         {
-            byte[] data = _Serialize<T>(proto);
-            AddHeader(ref data, typeof(T));
+            byte[] data = _Serialize(proto);
+            AddHeader(ref data, proto.GetType());
             return data;
         }
 
-        public object DeserializeObj(byte[] data)
+        public IMessage Deserialize(byte[] data)
         {
             if (data.Length < 2)
             {
@@ -60,8 +60,7 @@ namespace Plugins
             }
             try
             {
-                object msg = _Deserialize(body, type);
-                return msg;
+                return _Deserialize(body, type); ;
             }
             catch (Exception e)
             {
@@ -109,15 +108,14 @@ namespace Plugins
 
         // 将消息序列化为二进制的方法
         // < param name="model">要序列化的对象< /param>
-        private byte[] _Serialize<T>(T model)
+        private byte[] _Serialize(IMessage model)
         {
             try
             {
                 //涉及格式转换，需要用到流，将二进制序列化到流中
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    //使用ProtoBuf工具的序列化方法
-                    ProtoBuf.Serializer.Serialize<T>(ms, model);
+                    model.WriteTo(ms);
                     //定义二级制数组，保存序列化后的结果
                     byte[] result = new byte[ms.Length];
                     //将流的位置设为0，起始点
@@ -138,20 +136,16 @@ namespace Plugins
         // 将收到的消息反序列化成对象
         // < returns>The serialize.< /returns>
         // < param name="msg">收到的消息.</param>
-        private object _Deserialize(byte[] msg, Type type)
+        private IMessage _Deserialize(byte[] msg, Type type)
         {
             try
             {
-                using (MemoryStream ms = new MemoryStream())
-                {
-                    //将消息写入流中
-                    ms.Write(msg, 0, msg.Length);
-                    //将流的位置归0
-                    ms.Position = 0;
-                    //使用工具反序列化对象
-                    object result = ProtoBuf.Serializer.Deserialize(type, ms);
-                    return result;
-                }
+                BindingFlags flag = BindingFlags.Static | BindingFlags.NonPublic;
+                FieldInfo field = type.GetField("_parser", flag);
+                object parser = field.GetValue(null);
+                var method = parser.GetType().GetMethod("ParseFrom", new Type[] { typeof(byte[]) });
+                var result = method.Invoke(parser, new object[] { msg });
+                return result as IMessage;
             }
             catch (Exception ex)
             {

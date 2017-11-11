@@ -14,14 +14,30 @@
     <Compile Remove="GameData\MatchData.cs" />
     <Compile Remove="GameData\PlaceStatisticsData.cs" />
     <Compile Remove="GameData\ChessData.cs" />
+    <Compile Remove="Network\AssignRoomReply.cs" />
+    <Compile Remove="Network\AssignRoomRequest.cs" />
+    <Compile Remove="Network\BattleResult.cs" />
+    <Compile Remove="Network\Enums.cs" />
+    <Compile Remove="Network\JoinRoomReply.cs" />
+    <Compile Remove="Network\JoinRoomRequest.cs" />
+    <Compile Remove="Network\LoginReply.cs" />
+    <Compile Remove="Network\LoginRequest.cs" />
+    <Compile Remove="Network\NewTurnBroadcast.cs" />
+    <Compile Remove="Network\PlaceReply.cs" />
+    <Compile Remove="Network\PlaceRequest.cs" />
+    <Compile Remove="Network\PlaceStatisticsSync.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Module\" />
     <Folder Include="Module\Client\" />
     <Folder Include="Module\BattleServer\" />
     <Folder Include="Module\Base\" />
-    <Folder Include="Network\" />
+    <Folder Include="Protocol\" />
     <Folder Include="Module\BattleServer\Proxy\" />
     <Folder Include="Module\Client\Proxy\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resource\protonum.txt" />
   </ItemGroup>
 </Project>

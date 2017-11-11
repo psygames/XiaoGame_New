@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using message;
+using Message;
 
 namespace RedStone
 {
@@ -16,14 +16,14 @@ namespace RedStone
             {
                 Debug.Log(sessionID + " connencted");
             };
-            RegisterMessage<LoginRequest>(OnPlayerLogin);
+            RegisterMessage<BMLoginRequest>(OnLogin);
         }
 
-        void OnPlayerLogin(string sessionID, LoginRequest msg)
+        void OnLogin(string sessionID, BMLoginRequest msg)
         {
-            Debug.Log(msg.deviceUID);
-            LoginReply reply = new LoginReply();
-            reply.name = "World!";
+            Debug.Log(msg.ListenerAddress);
+            BMLoginReply reply = new BMLoginReply();
+            reply.Name = msg.ListenerAddress;
             SendMessage(sessionID, reply);
         }
     }

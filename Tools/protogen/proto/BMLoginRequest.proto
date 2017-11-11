@@ -2,7 +2,7 @@ syntax = "proto3";
 package message;
 
 // 战场 -> 主服 登录请求
-message BM_LoginRequest
+message BMLoginRequest
 {
     string listenerAddress = 1;
 }

@@ -14,5 +14,9 @@
     <Folder Include="Tools\" />
     <Folder Include="Protocol\" />
     <Folder Include="Module\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resource\protonum.txt" />
   </ItemGroup>
 </Project>

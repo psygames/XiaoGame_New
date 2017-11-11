@@ -26,7 +26,7 @@ namespace Plugins
 
         void OnReceived(string sessionID, byte[] data)
         {
-            object obj = m_serializer.DeserializeObj(data);
+            object obj = m_serializer.Deserialize(data);
             m_eventMgr.Send(obj.GetType().Name, sessionID, obj);
         }
 
@@ -44,9 +44,9 @@ namespace Plugins
             });
         }
 
-        public void Send<T>(string sessionID, T msg)
+        public void Send<T>(string sessionID, T msg) 
         {
-            var data = m_serializer.Serialize(msg);
+            var data = m_serializer.Serialize(msg as Google.Protobuf.IMessage);
             m_server.Send(sessionID, data);
         }
 

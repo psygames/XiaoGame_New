@@ -1,8 +1,9 @@
 syntax = "proto3";
+import "Infos.proto"
 package message;
 
 // 主服 -> 客户端 登录响应
-message CB_LoginReply
+message  CMLoginReply
 {
-    string state = 1;
+    PlayerInfo playerInfo = 1;
 }

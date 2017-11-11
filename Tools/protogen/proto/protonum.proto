@@ -6,12 +6,12 @@ package message;
 enum ProtoNum
 {
 	Unknown = 0;
-	CM_LoginRequest = 1001;
-	CM_LoginReply = 1002;
-	CM_StartGameRequest = 1003;
-	CM_StartGameReply = 1004;
-	CB_LoginRequest = 2001;
-	CB_LoginReply = 2002;
-	BM_LoginRequest = 3001;
-	BM_LoginReply = 3002;
+	CMLoginRequest = 1001;
+	CMLoginReply = 1002;
+	CMStartGameRequest = 1003;
+	CMStartGameReply = 1004;
+	CBLoginRequest = 2001;
+	CBLoginReply = 2002;
+	BMLoginRequest = 3001;
+	BMLoginReply = 3002;
 }

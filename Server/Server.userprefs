@@ -1,11 +1,9 @@
 ﻿<Properties StartupConfiguration="{41989999-B8E6-48F2-8ABF-4616E0B2C21C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Plugins/Tool/ProtoSerializer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Plugins/Tool/NetTool.cs">
     <Files>
-      <File FileName="Plugins/Network/Imp/Websocket/WebSocketClient.cs" Line="19" Column="1" />
-      <File FileName="Plugins/Network/Imp/Websocket/WebSocketServer.cs" Line="46" Column="1" />
-      <File FileName="BattleServer/Program.cs" Line="18" Column="1" />
-      <File FileName="Plugins/Manager/ServerNetworkManager.cs" Line="29" Column="50" />
-      <File FileName="Plugins/Tool/ProtoSerializer.cs" Line="40" Column="9" />
+      <File FileName="BattleServer/Module/MainServer/Proxy/MainServerProxy.cs" Line="13" Column="27" />
+      <File FileName="BattleServer/Manager/NetworkManager.cs" Line="38" Column="49" />
+      <File FileName="Plugins/Tool/NetTool.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.BattleServer PreferredExecutionTarget="MonoDevelop.Default" />
