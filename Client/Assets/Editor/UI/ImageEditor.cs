@@ -1,6 +1,6 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     /// <summary>
     /// Editor class used to edit UI Sprites.

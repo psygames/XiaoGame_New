@@ -21,12 +21,12 @@ public class RectTransformEditor : DecoratorEditor
 			return;
 		if(types == null)
 		{
-			var assUnity = Assembly.GetAssembly (typeof(Hotfire.UI.TweenEffectAttribute));
+			var assUnity = Assembly.GetAssembly (typeof(RedStone.UI.TweenEffectAttribute));
 			List<Type> typeList = new List<Type>();
 			List<string> typeStrList = new List<string>();
 			foreach (var type in assUnity.GetTypes())
 			{
-				if (type.GetCustomAttributes (typeof(Hotfire.UI.TweenEffectAttribute), false).FirstOrDefault () != null)
+				if (type.GetCustomAttributes (typeof(RedStone.UI.TweenEffectAttribute), false).FirstOrDefault () != null)
 				{
 					typeList.Add (type);
 					typeStrList.Add (type.Name);

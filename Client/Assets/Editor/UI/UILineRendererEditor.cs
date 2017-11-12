@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
-using Hotfire.UI;
+using RedStone.UI;
 
 [CustomEditor(typeof(UILineRenderer))]
 public class UILineRendererEditor : Editor

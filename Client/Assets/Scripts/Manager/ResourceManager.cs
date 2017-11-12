@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
-using Coolfish.System;
+ 
 using UnityEngine;
 
-namespace Hotfire
+ namespace RedStone
 {
     public class AsyncResource
     {

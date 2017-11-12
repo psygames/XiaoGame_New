@@ -1,4 +1,5 @@
 Client/Library
+Client/Temp
 obj/
 bin/
 __pycache__/

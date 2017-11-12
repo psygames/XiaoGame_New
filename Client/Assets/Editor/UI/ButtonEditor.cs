@@ -1,10 +1,10 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine.UI;
 using UnityEngine;
 using System;
-using Coolfish.System;
+ 
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     [CustomEditor(typeof(Button), true)]
     [CanEditMultipleObjects]

@@ -1,24 +1,16 @@
 ﻿<Properties StartupConfiguration="{CD806563-15FB-B918-DFFC-3093DD89B3E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/TableManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plugins/CustomPlugin/Network/Imp/Websocket/WebSocketClient.cs">
     <Files>
-      <File FileName="Assets/Scripts/RedStone/System/UIHelper.cs" Line="1058" Column="5" />
-      <File FileName="Assets/Scripts/RedStone/System/DeviceID.cs" Line="212" Column="40" />
-      <File FileName="Assets/Scripts/RedStone/Tools/Logger.cs" Line="137" Column="1" />
-      <File FileName="Assets/Scripts/RedStone/System/Localization.cs" Line="576" Column="42" />
-      <File FileName="Assets/Scripts/RedStone/Tools/FileHelper.cs" Line="29" Column="21" />
-      <File FileName="Assets/Scripts/RedStone/UI/Button.cs" Line="192" Column="6" />
-      <File FileName="Assets/Scripts/RedStone/UI/ClickEventHandler.cs" Line="62" Column="7" />
-      <File FileName="Assets/Scripts/RedStone/UI/DefaultControls.cs" Line="355" Column="10" />
-      <File FileName="Assets/Scripts/RedStone/UI/ItemList.cs" Line="23" Column="37" />
-      <File FileName="Assets/Scripts/Tools/GameObjectHelper.cs" Line="217" Column="39" />
-      <File FileName="Assets/Scripts/RedStone/UI/ModuleEdit.cs" Line="30" Column="1" />
-      <File FileName="Assets/Scripts/RedStone/UI/UIEffect/GlowImage.cs" Line="83" Column="1" />
-      <File FileName="Assets/Editor/UI/ButtonEditor.cs" Line="75" Column="1" />
-      <File FileName="Assets/Editor/UI/ImageEditor.cs" Line="40" Column="5" />
-      <File FileName="Assets/Editor/UI/MenuOptions.cs" Line="106" Column="3" />
-      <File FileName="Assets/Editor/UI/RectTransformEditor.cs" Line="54" Column="1" />
-      <File FileName="Assets/Editor/UI/TextEditor.cs" Line="43" Column="10" />
-      <File FileName="Assets/Scripts/Manager/TableManager.cs" Line="153" Column="1" />
+      <File FileName="Assets/Scripts/Module/Proxy/HallProxy.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/Module/Proxy/ProxyBase.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/Manager/NetworkManager.cs" Line="4" Column="19" />
+      <File FileName="Assets/Scripts/Manager/ProxyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Manager/GameManager.cs" Line="46" Column="1" />
+      <File FileName="Assets/Scripts/Plugins/CustomPlugin/Manager/ClientNetworkManager.cs" Line="49" Column="1" />
+      <File FileName="Assets/Scripts/Plugins/CustomPlugin/Tool/ProtoSerializer.cs" Line="39" Column="1" />
+      <File FileName="Assets/Scripts/System/Protocol/ProtoNum.cs" Line="44" Column="1" />
+      <File FileName="Assets/Scripts/Plugins/CustomPlugin/Manager/ServerNetworkManager.cs" Line="49" Column="37" />
+      <File FileName="Assets/Scripts/Plugins/CustomPlugin/Network/Imp/Websocket/WebSocketClient.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -27,6 +19,8 @@
       <Breakpoint file="/Users/yinlong/Documents/github/XiaoGame_New/Client/Assets/Scripts/Game_New/Proxy/GamePlay/OPs/SC_AttackSync.cs" relfile="Assets/Scripts/Game_New/Proxy/GamePlay/OPs/SC_AttackSync.cs" line="26" column="9" />
       <Breakpoint file="/Users/yinlong/Documents/github/XiaoGame_New/Client/Assets/Scripts/Game_New/Module/UIModule/MessageBox/MessageBoxView.cs" relfile="Assets/Scripts/Game_New/Module/UIModule/MessageBox/MessageBoxView.cs" line="82" column="10" />
       <Breakpoint file="/Users/yinlong/Documents/github/XiaoGame_New/Client/Assets/Scripts/RedStone/UI/RollGroup.cs" relfile="Assets/Scripts/RedStone/UI/RollGroup.cs" line="37" column="1" />
+      <Breakpoint file="/Users/yinlong/Documents/github/XiaoGame_New/Client/Assets/Scripts/Plugins/CustomPlugin/Tool/ProtoSerializer.cs" relfile="Assets/Scripts/Plugins/CustomPlugin/Tool/ProtoSerializer.cs" line="82" column="1" />
+      <Breakpoint file="/Users/yinlong/Documents/github/XiaoGame_New/Client/Assets/Scripts/Plugins/CustomPlugin/Tool/ProtoSerializer.cs" relfile="Assets/Scripts/Plugins/CustomPlugin/Tool/ProtoSerializer.cs" line="98" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

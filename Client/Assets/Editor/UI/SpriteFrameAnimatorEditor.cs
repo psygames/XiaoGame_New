@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
-using Hotfire.UI;
+using RedStone.UI;
 
-[CustomEditor(typeof(Hotfire.UI.SpriteFrameAnimator), true)]
+[CustomEditor(typeof(RedStone.UI.SpriteFrameAnimator), true)]
 [CanEditMultipleObjects]
 public class SpriteFrameAnimatorEditor : UnityEditor.Editor
 {

@@ -6,12 +6,12 @@ using System.IO;
 using System.Reflection;
 using System.Xml;
 using Mono.Xml;
-using Coolfish.System;
+ 
 using System.Security;
 
-namespace Hotfire
+namespace RedStone
 {
-    public sealed class TableManager : Singleton<TableManager>
+    public sealed class TableManager : Core.Singleton<TableManager>
     {
 #if UNITY_EDITOR
         public static void CreateAndLoad()
@@ -34,7 +34,7 @@ namespace Hotfire
             List<string> lists = LoadTableNameListSync(TABLE_LIST_FILE_PATH, TABLE_FILETER_TYPE);
             foreach (string filename in lists)
             {
-                Type type = Type.GetType("Hotfire." + filename);
+                Type type = Type.GetType("RedStone." + filename);
                 string path = TABLE_FOLDER_PATH + filename;
                 TextAsset textAsset = ResourceManager.instance.GetResourceByPath(path) as TextAsset;
                 IDictionary dict = LoadOneTable(type, textAsset);
@@ -123,7 +123,7 @@ namespace Hotfire
                 Dictionary<string, Type> typeMap = new Dictionary<string, Type>();
                 foreach (string filename in lists)
                 {
-                    Type type = Type.GetType("Hotfire." + filename);
+                    Type type = Type.GetType("RedStone." + filename);
                     xmlPath.Add(TABLE_FOLDER_PATH + filename);
                     typeMap.Add(TABLE_FOLDER_PATH + filename, type);
                 }

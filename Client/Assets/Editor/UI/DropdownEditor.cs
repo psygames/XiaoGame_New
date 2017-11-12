@@ -1,7 +1,7 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine.UI;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     [CustomEditor(typeof(Dropdown), true)]
     [CanEditMultipleObjects]

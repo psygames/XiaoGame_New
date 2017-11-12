@@ -1,11 +1,11 @@
-using System;
+ï»¿using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using Coolfish.System;
+ 
 using System.Linq;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     // TODO REVIEW
     // Have material live under text
@@ -105,7 +105,7 @@ namespace Hotfire.UI
             if (EditorGUI.EndChangeCheck())
             {
                 text.textStyle = allStyles[selectIndex].id;
-                text.name = text.name; //TODO:Ê²Ã´¹í£¡Òª¸³ÖµÒ»±éName£¬Scene²Å»áË¢ĞÂ£¬£¿£¿£¿ 
+                text.name = text.name; //TODO:ä»€ä¹ˆé¬¼ï¼è¦èµ‹å€¼ä¸€éNameï¼ŒSceneæ‰ä¼šåˆ·æ–°ï¼Œï¼Ÿï¼Ÿï¼Ÿ 
             }
             allStyles.ReleaseToPool();
 
@@ -115,7 +115,7 @@ namespace Hotfire.UI
                 text.textStyle = Localization.instance.GetFitTextStyle(text);
                 text.name = text.name;
             }
-            //TODO: ²»Çå³ş¸Ã¹¦ÄÜ£¬ÔİÊ±ÆÁ±Î¡£
+            //TODO: ä¸æ¸…æ¥šè¯¥åŠŸèƒ½ï¼Œæš‚æ—¶å±è”½ã€‚
             /*
             if (GUILayout.Button("Fit Text Size"))
             {

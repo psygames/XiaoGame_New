@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
 	[CustomEditor(typeof(AnimateProgressBar), true)]
 	[CanEditMultipleObjects]

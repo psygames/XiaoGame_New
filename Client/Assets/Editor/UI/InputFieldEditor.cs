@@ -1,9 +1,9 @@
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEditor.AnimatedValues;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(InputField), true)]

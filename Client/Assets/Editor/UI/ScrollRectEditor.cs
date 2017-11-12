@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor.AnimatedValues;
 using UnityEditor;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     [CustomEditor(typeof(ScrollRect), true)]
     [CanEditMultipleObjects]

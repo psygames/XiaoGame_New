@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Hotfire.UI;
+using RedStone.UI;
 using UnityEditor;
 
 [CustomEditor (typeof(GlowImage))]

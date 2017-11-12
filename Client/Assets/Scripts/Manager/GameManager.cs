@@ -26,9 +26,9 @@ namespace RedStone
 		{
 			NetworkManager.instance.Init();
 			ProxyManager.instance.Init();
-			UIManager.instance.Init();
+			//UIManager.instance.Init();
 
-			ProxyManager.instance.GetProxy<HallProxy>().ConnectToGameServer(serverAddress);
+			NetworkManager.instance.main.socket.Connect();
 		}
 
 		private void OnGUI()
@@ -43,7 +43,6 @@ namespace RedStone
 
 		private void Update()
 		{
-			NetworkManager.instance.Update();
 			ProxyManager.instance.Update();
 		}
 
@@ -55,7 +54,6 @@ namespace RedStone
 
 		private void OnApplicationQuit()
 		{
-			NetworkManager.instance.CloseAll();
 		}
 	}
 }

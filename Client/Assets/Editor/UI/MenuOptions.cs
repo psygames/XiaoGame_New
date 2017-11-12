@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Hotfire.UI
+ namespace RedStone.UI
 {
     /// <summary>
     /// This script adds the UI menu options to the Unity Editor.
