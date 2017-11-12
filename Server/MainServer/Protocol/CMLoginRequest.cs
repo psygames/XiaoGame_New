@@ -23,7 +23,7 @@ namespace Message {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRDTUxvZ2luUmVxdWVzdC5wcm90bxIHbWVzc2FnZSIiCg5DTUxvZ2luUmVx",
-            "dWVzdBIQCghkZXZpY2VJRBgBIAEoBWIGcHJvdG8z"));
+            "dWVzdBIQCghkZXZpY2VJRBgBIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,15 +71,15 @@ namespace Message {
 
     /// <summary>Field number for the "deviceID" field.</summary>
     public const int DeviceIDFieldNumber = 1;
-    private int deviceID_;
+    private string deviceID_ = "";
     /// <summary>
     /// 设备ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int DeviceID {
+    public string DeviceID {
       get { return deviceID_; }
       set {
-        deviceID_ = value;
+        deviceID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -103,7 +103,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DeviceID != 0) hash ^= DeviceID.GetHashCode();
+      if (DeviceID.Length != 0) hash ^= DeviceID.GetHashCode();
       return hash;
     }
 
@@ -114,17 +114,17 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DeviceID != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(DeviceID);
+      if (DeviceID.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DeviceID);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DeviceID != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DeviceID);
+      if (DeviceID.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DeviceID);
       }
       return size;
     }
@@ -134,7 +134,7 @@ namespace Message {
       if (other == null) {
         return;
       }
-      if (other.DeviceID != 0) {
+      if (other.DeviceID.Length != 0) {
         DeviceID = other.DeviceID;
       }
     }
@@ -147,8 +147,8 @@ namespace Message {
           default:
             input.SkipLastField();
             break;
-          case 8: {
-            DeviceID = input.ReadInt32();
+          case 10: {
+            DeviceID = input.ReadString();
             break;
           }
         }

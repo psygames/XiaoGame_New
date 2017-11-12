@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{41989999-B8E6-48F2-8ABF-4616E0B2C21C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Plugins/Tool/NetTool.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BattleServer/Module/MainServer/Proxy/MainServerProxy.cs">
     <Files>
-      <File FileName="BattleServer/Module/MainServer/Proxy/MainServerProxy.cs" Line="13" Column="27" />
+      <File FileName="BattleServer/Module/MainServer/Proxy/MainServerProxy.cs" Line="40" Column="1" />
       <File FileName="BattleServer/Manager/NetworkManager.cs" Line="38" Column="49" />
       <File FileName="Plugins/Tool/NetTool.cs" Line="29" Column="1" />
     </Files>
