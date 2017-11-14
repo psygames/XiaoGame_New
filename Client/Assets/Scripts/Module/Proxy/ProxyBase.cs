@@ -20,6 +20,16 @@ namespace RedStone
         }
 
 
+        public virtual void SendMessage<T>(T msg)
+        {
+            network.Send(msg);
+        }
+
+        public virtual void SendMessage<TSend, TReply>(TSend msg, Action<TReply> action)
+        {
+            network.Send(msg, action);
+        }
+
         public virtual void OnInit()
         {
 

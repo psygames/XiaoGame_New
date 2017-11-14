@@ -5,4 +5,5 @@ package message;
 message CBLoginReply
 {
     string state = 1;
+    int32 roomID = 2;
 }

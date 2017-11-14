@@ -17,4 +17,21 @@ message BattleServerInfo
     string address = 1;
     string name = 2;
     string state = 3;
+    string sessionID = 4;
+}
+
+message BattleRoomInfo
+{
+    int32 id = 1;
+    string name = 2;
+}
+
+message BattlePlayerInfo
+{
+    int32 id = 1;     // 临时分配ID
+    string name = 2;  // 玩家昵称
+    int32 gold = 3;   // 战场内带入的金币
+    int32 level = 4;  // 当前等级
+    int32 seat = 5;   // 座位
+    bool isSelf = 6;  // 是否是自己
 }

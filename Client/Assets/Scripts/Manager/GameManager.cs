@@ -24,6 +24,7 @@ namespace RedStone
 
 		private void Init()
 		{
+            DeviceID.Instance.Init();
 			NetworkManager.instance.Init();
 			ProxyManager.instance.Init();
 			//UIManager.instance.Init();

@@ -23,13 +23,12 @@ namespace Message {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChZDTVN0YXJ0R2FtZVJlcGx5LnByb3RvEgdtZXNzYWdlGgtJbmZvcy5wcm90",
-            "byJWChBDTVN0YXJ0R2FtZVJlcGx5Ei8KDGJhdHRsZVNlcnZlchgBIAEoCzIZ",
-            "Lm1lc3NhZ2UuQmF0dGxlU2VydmVySW5mbxIRCglzZXNzaW9uSUQYAiABKAli",
-            "BnByb3RvMw=="));
+            "byJDChBDTVN0YXJ0R2FtZVJlcGx5Ei8KDGJhdHRsZVNlcnZlchgBIAEoCzIZ",
+            "Lm1lc3NhZ2UuQmF0dGxlU2VydmVySW5mb2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Message.InfosReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CMStartGameReply), global::Message.CMStartGameReply.Parser, new[]{ "BattleServer", "SessionID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CMStartGameReply), global::Message.CMStartGameReply.Parser, new[]{ "BattleServer" }, null, null, null)
           }));
     }
     #endregion
@@ -64,7 +63,6 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CMStartGameReply(CMStartGameReply other) : this() {
       BattleServer = other.battleServer_ != null ? other.BattleServer.Clone() : null;
-      sessionID_ = other.sessionID_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -83,17 +81,6 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "sessionID" field.</summary>
-    public const int SessionIDFieldNumber = 2;
-    private string sessionID_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SessionID {
-      get { return sessionID_; }
-      set {
-        sessionID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CMStartGameReply);
@@ -108,7 +95,6 @@ namespace Message {
         return true;
       }
       if (!object.Equals(BattleServer, other.BattleServer)) return false;
-      if (SessionID != other.SessionID) return false;
       return true;
     }
 
@@ -116,7 +102,6 @@ namespace Message {
     public override int GetHashCode() {
       int hash = 1;
       if (battleServer_ != null) hash ^= BattleServer.GetHashCode();
-      if (SessionID.Length != 0) hash ^= SessionID.GetHashCode();
       return hash;
     }
 
@@ -131,10 +116,6 @@ namespace Message {
         output.WriteRawTag(10);
         output.WriteMessage(BattleServer);
       }
-      if (SessionID.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(SessionID);
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -142,9 +123,6 @@ namespace Message {
       int size = 0;
       if (battleServer_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleServer);
-      }
-      if (SessionID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionID);
       }
       return size;
     }
@@ -159,9 +137,6 @@ namespace Message {
           battleServer_ = new global::Message.BattleServerInfo();
         }
         BattleServer.MergeFrom(other.BattleServer);
-      }
-      if (other.SessionID.Length != 0) {
-        SessionID = other.SessionID;
       }
     }
 
@@ -178,10 +153,6 @@ namespace Message {
               battleServer_ = new global::Message.BattleServerInfo();
             }
             input.ReadMessage(battleServer_);
-            break;
-          }
-          case 18: {
-            SessionID = input.ReadString();
             break;
           }
         }

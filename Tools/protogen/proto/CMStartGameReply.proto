@@ -6,5 +6,4 @@ package message;
 message CMStartGameReply
 {
     BattleServerInfo battleServer = 1;
-    string sessionID = 2;
 }

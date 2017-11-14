@@ -24,13 +24,14 @@ namespace Message {
           string.Concat(
             "CgtJbmZvcy5wcm90bxIHbWVzc2FnZSJRCgpQbGF5ZXJJbmZvEgsKA3VpZBgB",
             "IAEoAxIMCgRuYW1lGAIgASgJEgwKBGdvbGQYAyABKAUSDQoFbGV2ZWwYBCAB",
-            "KAUSCwoDZXhwGAUgASgFIkAKEEJhdHRsZVNlcnZlckluZm8SDwoHYWRkcmVz",
-            "cxgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBXN0YXRlGAMgASgJYgZwcm90bzM="));
+            "KAUSCwoDZXhwGAUgASgFIlMKEEJhdHRsZVNlcnZlckluZm8SDwoHYWRkcmVz",
+            "cxgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBXN0YXRlGAMgASgJEhEKCXNlc3Np",
+            "b25JRBgEIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerInfo), global::Message.PlayerInfo.Parser, new[]{ "Uid", "Name", "Gold", "Level", "Exp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State", "SessionID" }, null, null, null)
           }));
     }
     #endregion
@@ -314,6 +315,7 @@ namespace Message {
       address_ = other.address_;
       name_ = other.name_;
       state_ = other.state_;
+      sessionID_ = other.sessionID_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -354,6 +356,17 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "sessionID" field.</summary>
+    public const int SessionIDFieldNumber = 4;
+    private string sessionID_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string SessionID {
+      get { return sessionID_; }
+      set {
+        sessionID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BattleServerInfo);
@@ -370,6 +383,7 @@ namespace Message {
       if (Address != other.Address) return false;
       if (Name != other.Name) return false;
       if (State != other.State) return false;
+      if (SessionID != other.SessionID) return false;
       return true;
     }
 
@@ -379,6 +393,7 @@ namespace Message {
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (State.Length != 0) hash ^= State.GetHashCode();
+      if (SessionID.Length != 0) hash ^= SessionID.GetHashCode();
       return hash;
     }
 
@@ -401,6 +416,10 @@ namespace Message {
         output.WriteRawTag(26);
         output.WriteString(State);
       }
+      if (SessionID.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(SessionID);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -414,6 +433,9 @@ namespace Message {
       }
       if (State.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      }
+      if (SessionID.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionID);
       }
       return size;
     }
@@ -431,6 +453,9 @@ namespace Message {
       }
       if (other.State.Length != 0) {
         State = other.State;
+      }
+      if (other.SessionID.Length != 0) {
+        SessionID = other.SessionID;
       }
     }
 
@@ -452,6 +477,10 @@ namespace Message {
           }
           case 26: {
             State = input.ReadString();
+            break;
+          }
+          case 34: {
+            SessionID = input.ReadString();
             break;
           }
         }
