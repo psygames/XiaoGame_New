@@ -2,43 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Message;
 
 
 namespace RedStone
 {
     public class PlayerProxy : MCProxyBase
     {
-        public Dictionary<long, PlayerData> playerDict = new Dictionary<long, PlayerData>();
-        public Dictionary<long, long> sessionPlayerDict = new Dictionary<long, long>();
-
-        public long GetPlayerID(long sessionID)
-        {
-            return sessionPlayerDict[sessionID];
-        }
-
-        public PlayerData GetPlayer(long playerID)
-        {
-            PlayerData data;
-            if (playerDict.TryGetValue(playerID, out data))
-            {
-                return data;
-            }
-            return null;
-        }
-
-        public long GetSessionID(long playerID)
-        {
-            return sessionPlayerDict.First(a => { return a.Value == playerID; }).Key;
-        }
-
         public override void OnInit()
         {
             base.OnInit();
+            RegisterMessage<CMLoginRequest>()
+        }
+
+        public void OnPlayerLogin()
+        {
 
         }
 
         public void OnPlayerForceQuit(long pid)
         {
+        }
+
+
+        public class PlayerHandle
+        {
+            public string sessionID { get; private set; }
+            public PlayerData data = new PlayerData();
+
+            public void OnLogin(CMLoginRequest login)
+            {
+
+            }
         }
     }
 }
