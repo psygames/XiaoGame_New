@@ -30,6 +30,15 @@ namespace Plugins
             m_eventMgr.Send(obj.GetType().Name, sessionID, obj);
         }
 
+        public void RegisterNetworkAll(Action<string, object> action)
+        {
+            m_eventMgr.RegisterAll(a =>
+            {
+                object[] items = a as object[];
+                action.Invoke(items[0].ToString(), items[1]);
+            });
+        }
+
         public void RegisterNetwork<T>(Action<string, T> action)
         {
             m_eventMgr.Register(typeof(T).Name, action);
@@ -44,7 +53,7 @@ namespace Plugins
             });
         }
 
-        public void Send<T>(string sessionID, T msg) 
+        public void Send<T>(string sessionID, T msg)
         {
             var data = m_serializer.Serialize(msg as Google.Protobuf.IMessage);
             m_server.Send(sessionID, data);

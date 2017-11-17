@@ -8,7 +8,7 @@ namespace RedStone
 
 		public ProxyManager()
 		{
-            AddProxy<PlayerProxy>();
+            AddProxy<ClientProxy>();
             AddProxy<BattleServerProxy>();
         }
 

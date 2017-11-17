@@ -28,13 +28,10 @@
     <Compile Remove="Network\PlaceStatisticsSync.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Module\" />
-    <Folder Include="Module\Client\" />
     <Folder Include="Module\BattleServer\" />
     <Folder Include="Module\Base\" />
     <Folder Include="Protocol\" />
     <Folder Include="Module\BattleServer\Proxy\" />
-    <Folder Include="Module\Client\Proxy\" />
     <Folder Include="Resource\" />
   </ItemGroup>
   <ItemGroup>
