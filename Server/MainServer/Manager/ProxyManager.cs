@@ -8,8 +8,9 @@ namespace RedStone
 
 		public ProxyManager()
 		{
-            AddProxy<ClientProxy>();
+            AddProxy<UserProxy>();
             AddProxy<BattleServerProxy>();
+            AddProxy<ClientDaoProxy>();
         }
 
 		private void AddProxy<T>() where T : ProxyBase, new()

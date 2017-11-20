@@ -1,5 +1,5 @@
 ﻿using System;
-namespace RedStone
+namespace RedStone.Data
 {
 	public class DataBase
 	{

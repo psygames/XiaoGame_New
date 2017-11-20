@@ -18,6 +18,7 @@ namespace RedStone
         {
             network.socket.onConnected = () =>
             {
+                Debug.Log("Network Connect Success (Main Server).");
                 Login();
             };
         }

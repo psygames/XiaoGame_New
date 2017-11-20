@@ -2,24 +2,36 @@
 using System.Collections.Generic;
 using System.Text;
 using Message;
+using RedStone.Data;
 
 namespace RedStone
 {
 
-    public class ClientMessageHandle
+    public class UserMessageHandle
     {
         public string sessionID { get; private set; }
-        public PlayerData data = new PlayerData();
+        private UserData data { get { return ProxyManager.instance.GetProxy<UserProxy>().GetData(sessionID); } }
         private Plugins.EventManager m_eventMgr = new Plugins.EventManager();
 
-        public void Init()
+        public ClientDaoProxy dao
         {
+            get
+            {
+                return ProxyManager.instance.GetProxy<ClientDaoProxy>();
+            }
+        }
+
+        public void Init(string sessionID)
+        {
+            this.sessionID = sessionID;
             RegisterMsg<CMLoginRequest>(OnLogin);
         }
 
-        private void OnLogin(CMLoginRequest login)
+        private void OnLogin(CMLoginRequest msg)
         {
-            Debug.Log(login.DeviceID);
+            Debug.Log(msg.DeviceID);
+            var db = dao.Login(msg.DeviceID, sessionID);
+            data.SetData(sessionID, db);
         }
 
 

@@ -13,6 +13,8 @@ namespace RedStone
         {
             eventManager = new EventManager();
             m_updater.Start();
+
+            DBManager.CreateInstance().Init("mongodb://localhost:27017", "xiao_game");
             NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
 

@@ -11,9 +11,9 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="GameData\MatchData.cs" />
-    <Compile Remove="GameData\PlaceStatisticsData.cs" />
-    <Compile Remove="GameData\ChessData.cs" />
+    <Compile Remove="Module\Client\Data\MatchData.cs" />
+    <Compile Remove="Module\Client\Data\PlaceStatisticsData.cs" />
+    <Compile Remove="Module\Client\Data\ChessData.cs" />
     <Compile Remove="Network\AssignRoomReply.cs" />
     <Compile Remove="Network\AssignRoomRequest.cs" />
     <Compile Remove="Network\BattleResult.cs" />
@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Module\BattleServer\" />
-    <Folder Include="Module\Base\" />
+    <Folder Include="Module\Client\Proxy\Logic\" />
     <Folder Include="Protocol\" />
     <Folder Include="Module\BattleServer\Proxy\" />
     <Folder Include="Resource\" />
