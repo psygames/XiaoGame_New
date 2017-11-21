@@ -9,7 +9,7 @@ namespace Plugins.Network
         public override void Setup(string ip, int port)
         {
             base.Setup(ip, port);
-            _socket = new WebSocketSharp.WebSocket(WebSocketTool.GetAddress(ip, port) + "/default");
+            _socket = new WebSocketSharp.WebSocket(NetTool.GetAddress(ip, port) + "/default");
             _socket.Log.Level = WebSocketSharp.LogLevel.Error;
             _socket.WaitTime = TimeSpan.FromSeconds(1);
             _socket.OnOpen += (a, b) => { base.OnConnected(); };

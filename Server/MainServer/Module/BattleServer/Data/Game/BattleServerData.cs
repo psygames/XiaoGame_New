@@ -4,26 +4,25 @@ namespace RedStone.Data
 {
     public class BattleServerData : DataBase
     {
-        public long uid { get; private set; }
         public string name { get; private set; }
         public string sessionID { get; private set; }
-        public UserState state { get; private set; }
+        public string address { get; private set; }
+        public State state { get; private set; }
 
         public void SetSessionID(string sessionID)
         {
             this.sessionID = sessionID;
         }
 
-        public void SetState(UserState state)
+        public void SetState(State state)
         {
             this.state = state;
         }
 
-        public void SetData(string sessionID,DB.UserDB db)
+        public void SetData(string name, string address)
         {
-            this.uid = db.uid;
-            this.name = db.name;
-            this.sessionID = sessionID;
+            this.name = name;
+            this.address = address;
         }
 
         public enum State

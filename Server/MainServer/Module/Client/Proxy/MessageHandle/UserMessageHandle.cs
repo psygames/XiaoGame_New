@@ -66,6 +66,7 @@ namespace RedStone
             CMStartGameReply rep = new CMStartGameReply();
             rep.BattleServer = new BattleServerInfo();
 
+
         }
 
 

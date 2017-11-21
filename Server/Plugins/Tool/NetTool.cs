@@ -36,5 +36,33 @@ namespace Plugins
             }
             throw new Exception("没用可用的端口From {0} To {1} ".FormatStr(startPort, startPort + 100));
         }
+
+        public static string GetIP(string address)
+        {
+            int begin = address.IndexOf("://") + 3;
+            if (begin < 3) begin = 0;
+            int end = address.IndexOf(":", begin);
+            if (end <= begin)
+                return null;
+            return address.Substring(begin, end - begin);
+        }
+
+        public static int GetPort(string address)
+        {
+            int begin = address.LastIndexOf(":");
+            if (begin < 0)
+                return -1;
+            string portStr = address.Substring(begin);
+            int port = -1;
+            if (int.TryParse(portStr, out port))
+                return port;
+            return -1;
+        }
+
+        public static string GetAddress(string ip, int port)
+        {
+            return "ws://{0}:{1}".FormatStr(ip, port);
+        }
+
     }
 }
