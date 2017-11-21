@@ -23,7 +23,13 @@ namespace RedStone
         private IMongoCollection<UserDB> usrDao = null;
         private IMongoCollection<CounterDB> counterDao = null;
 
-        public UserDB Login(string deviceID, string sessionID)
+        public UserDB GetUserDB(long uid)
+        {
+            var user = usrDao.AsQueryable().FirstOrDefault(a => a.uid == uid);
+            return user;
+        }
+
+        public UserDB Login(string deviceID)
         {
             var user = usrDao.AsQueryable().FirstOrDefault(a => a.deviceID == deviceID);
             if (user == null)
@@ -41,10 +47,17 @@ namespace RedStone
             else if (!user.isOnline)
             {
                 var query = Builders<UserDB>.Filter.Where(a => a.deviceID == deviceID);
-                var update = Builders<UserDB>.Update.Set(a => a.isOnline, false);
+                var update = Builders<UserDB>.Update.Set(a => a.isOnline, true);
                 user = usrDao.FindOneAndUpdate(query, update);
             }
             return user;
+        }
+
+        public void Logout(long uid)
+        {
+            var query = Builders<UserDB>.Filter.Where(a => a.uid == uid);
+            var update = Builders<UserDB>.Update.Set(a => a.isOnline, false);
+            usrDao.UpdateOne(query, update);
         }
 
 

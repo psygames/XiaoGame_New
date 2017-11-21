@@ -14,12 +14,23 @@ namespace RedStone
         {
             base.OnInit();
             network.server.onConnected = OnClientConnected;
+            network.server.onClosed = OnClientClosed;
             network.RegisterNetworkAll(OnClientMessage);
         }
 
         private Dictionary<string, UserMessageHandle> m_clientHandles = new Dictionary<string, UserMessageHandle>();
         private Dictionary<string, UserData> m_userDatas = new Dictionary<string, UserData>();
 
+        private void OnClientClosed(string sessionID)
+        {
+            if (m_userDatas[sessionID].state != UserState.Offline)
+            {
+                m_clientHandles[sessionID].Logout();
+            }
+
+            m_clientHandles.Remove(sessionID);
+            m_userDatas.Remove(sessionID);
+        }
 
         private void OnClientConnected(string sessionID)
         {
@@ -37,11 +48,6 @@ namespace RedStone
                 m_userDatas.Add(sessionID, user);
             }
         }
-
-        private void OnClientDisconnected(string sessionID)
-        {
-        }
-
 
 
         private void OnClientMessage(string sessionID, object msg)
