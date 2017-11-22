@@ -64,5 +64,12 @@ namespace Plugins
             return "ws://{0}:{1}".FormatStr(ip, port);
         }
 
+        public static string GetLocalIPV4()
+        {
+            string hostname = Dns.GetHostName();//得到本机名      
+            IPHostEntry localhost = Dns.GetHostEntry(hostname);
+            IPAddress localaddr = localhost.AddressList[1];
+            return localaddr.ToString();
+        }
     }
 }

@@ -30,11 +30,11 @@ namespace RedStone
         public void Login()
         {
             BMLoginRequest msg = new BMLoginRequest();
-            var serv = NetworkManager.instance.server.server as Plugins.Network.WebSocketServer;
+            var serv = NetworkManager.instance.forClient.server as Plugins.Network.WebSocketServer;
             msg.ListenerAddress = serv.address;
             SendMessage<BMLoginRequest, BMLoginReply>(msg, (reply) =>
             {
-                Debug.Log(reply.Name);
+                Debug.Log($"登录主服成功, 战场名: {reply.Name}");
             });
         }
 

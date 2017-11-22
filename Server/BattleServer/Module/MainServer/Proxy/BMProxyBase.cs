@@ -3,7 +3,7 @@ namespace RedStone
 {
     public class BMProxyBase : ProxyBase
     {
-        public Plugins.ClientNetworkManager network { get { return NetworkManager.instance.client; }}
+        public Plugins.ClientNetworkManager network { get { return NetworkManager.instance.forServer; }}
 
         public void SendMessage<T>(T proto)
         {

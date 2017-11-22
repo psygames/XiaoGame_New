@@ -45,15 +45,17 @@ namespace RedStone
 
         void OnClosed(string sessionID)
         {
+            Debug.Log($"战场断链, {m_datas[sessionID].name}");
             m_datas.Remove(sessionID);
         }
 
         void OnLogin(string sessionID, BMLoginRequest msg)
         {
-            GetData(sessionID).SetData(msg.ListenerAddress, msg.ListenerAddress);
+            GetData(sessionID).SetData("Hip-Hop", msg.ListenerAddress);
             BMLoginReply reply = new BMLoginReply();
             reply.Name = GetData(sessionID).name;
             SendMessage(sessionID, reply);
+            Debug.Log($"战场登录成功, 战场名:{reply.Name}");
         }
 
 

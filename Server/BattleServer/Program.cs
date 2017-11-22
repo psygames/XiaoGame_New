@@ -6,7 +6,7 @@ namespace RedStone
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Battle Server Start...");
+            Console.Title = "Battle Server";
             GameManager.CreateInstance().Start();
             while (true)
             {

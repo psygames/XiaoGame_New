@@ -7,7 +7,7 @@ namespace RedStone
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Main Server Start Up...");
+            Console.Title = "Main Server";
             GameManager.CreateInstance().Start();
             while(true)
             {
