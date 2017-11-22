@@ -8,8 +8,9 @@ enum ProtoNum
 	Unknown = 0;
 	CMLoginRequest = 1001;
 	CMLoginReply = 1002;
-	CMStartGameRequest = 1003;
-	CMStartGameReply = 1004;
+	CMMatchRequest = 1003;
+	CMMatchReply = 1004;
+	CMMatchSuccess = 1006;
 	CBLoginRequest = 2001;
 	CBLoginReply = 2002;
 	BMLoginRequest = 3001;

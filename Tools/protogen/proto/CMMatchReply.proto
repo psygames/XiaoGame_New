@@ -1,0 +1,9 @@
+syntax = "proto3";
+package message;
+
+// 主服 -> 客户端 开始游戏响应
+message CMMatchReply
+{
+    int32 waitTime = 1;
+    int32 status = 2; // 1 -- enable , 0 -- no battle server
+}

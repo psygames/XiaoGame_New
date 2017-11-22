@@ -22,22 +22,18 @@ namespace RedStone.Data
             this.state = state;
         }
 
-        public void SetData(string sessionID,DB.UserDB db)
+        public void SetData(Message.PlayerInfo info)
         {
-            this.uid = db.uid;
-            this.name = db.name;
-            this.sessionID = sessionID;
-            this.level = db.level;
-            this.exp = db.exp;
-            this.gold = db.gold;
+            this.uid = info.Uid;
+            this.name = info.Name;
+            this.level = info.Level;
+            this.exp = info.Exp;
+            this.gold = info.Gold;
         }
     }
 
     public enum UserState
     {
-        None,
-        Hall,
-        Matching,
         Game,
         Offline,
     }

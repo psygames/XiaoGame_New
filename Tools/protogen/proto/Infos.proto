@@ -17,7 +17,7 @@ message BattleServerInfo
     string address = 1;
     string name = 2;
     string state = 3;
-    string sessionID = 4;
+    string token = 4;
 }
 
 message BattleRoomInfo

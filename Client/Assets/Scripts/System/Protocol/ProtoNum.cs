@@ -22,12 +22,12 @@ namespace Message {
     static ProtonumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSq/AQoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSrMAQoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
-            "BxIXChJDTVN0YXJ0R2FtZVJlcXVlc3QQ6wcSFQoQQ01TdGFydEdhbWVSZXBs",
-            "eRDsBxITCg5DQkxvZ2luUmVxdWVzdBDRDxIRCgxDQkxvZ2luUmVwbHkQ0g8S",
-            "EwoOQk1Mb2dpblJlcXVlc3QQuRcSEQoMQk1Mb2dpblJlcGx5ELoXYgZwcm90",
-            "bzM="));
+            "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
+            "Q01NYXRjaFN1Y2Nlc3MQ7gcSEwoOQ0JMb2dpblJlcXVlc3QQ0Q8SEQoMQ0JM",
+            "b2dpblJlcGx5ENIPEhMKDkJNTG9naW5SZXF1ZXN0ELkXEhEKDEJNTG9naW5S",
+            "ZXBseRC6F2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -44,8 +44,9 @@ namespace Message {
     [pbr::OriginalName("Unknown")] Unknown = 0,
     [pbr::OriginalName("CMLoginRequest")] CmloginRequest = 1001,
     [pbr::OriginalName("CMLoginReply")] CmloginReply = 1002,
-    [pbr::OriginalName("CMStartGameRequest")] CmstartGameRequest = 1003,
-    [pbr::OriginalName("CMStartGameReply")] CmstartGameReply = 1004,
+    [pbr::OriginalName("CMMatchRequest")] CmmatchRequest = 1003,
+    [pbr::OriginalName("CMMatchReply")] CmmatchReply = 1004,
+    [pbr::OriginalName("CMMatchSuccess")] CmmatchSuccess = 1006,
     [pbr::OriginalName("CBLoginRequest")] CbloginRequest = 2001,
     [pbr::OriginalName("CBLoginReply")] CbloginReply = 2002,
     [pbr::OriginalName("BMLoginRequest")] BmloginRequest = 3001,

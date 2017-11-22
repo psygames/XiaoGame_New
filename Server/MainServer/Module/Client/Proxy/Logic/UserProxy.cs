@@ -50,6 +50,42 @@ namespace RedStone
         }
 
 
+
+
+
+
+
+
+        // Update
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+
+            UpdateMatch();
+        }
+
+        private void UpdateMatch()
+        {
+            var matchedUsers = GetProxy<MatchPoolProxy>().GetMatched();
+            if (matchedUsers == null)
+                return;
+
+            // Match Success Create Room and Send Back
+            var server = GetProxy<BattleServerProxy>().GetBestBattleServer();
+            var room = GetProxy<BattleServerProxy>().CreateRoom(server.sessionID, matchedUsers);
+            foreach (var uid in matchedUsers)
+            {
+                GetHandle(uid).MactchSuccess(server, room);
+            }
+        }
+
+
+
+
+
+
+
+
         private void OnClientMessage(string sessionID, object msg)
         {
             UserMessageHandle handle = null;
@@ -65,5 +101,14 @@ namespace RedStone
             return m_userDatas[sessionID];
         }
 
+        public UserData GetData(long uid)
+        {
+            return m_userDatas.Values.First(a => a.uid == uid);
+        }
+
+        public UserMessageHandle GetHandle(long uid)
+        {
+            return m_clientHandles[GetData(uid).sessionID];
+        }
     }
 }

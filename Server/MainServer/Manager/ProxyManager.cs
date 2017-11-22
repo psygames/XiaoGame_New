@@ -10,7 +10,8 @@ namespace RedStone
 		{
             AddProxy<UserProxy>();
             AddProxy<BattleServerProxy>();
-            AddProxy<ClientDaoProxy>();
+            AddProxy<UserDaoProxy>();
+            AddProxy<MatchPoolProxy>();
         }
 
 		private void AddProxy<T>() where T : ProxyBase, new()

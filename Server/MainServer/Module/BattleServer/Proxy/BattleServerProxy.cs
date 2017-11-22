@@ -55,5 +55,37 @@ namespace RedStone
             reply.Name = GetData(sessionID).name;
             SendMessage(sessionID, reply);
         }
+
+
+
+
+        //TODO: BATTLE END Remove Room
+        public RoomData CreateRoom(string battleSessionID, List<long> users)
+        {
+            RoomData data = new RoomData();
+            BMCreateRommRequest req = new BMCreateRommRequest();
+
+            foreach (var uid in users)
+            {
+                var user = GetProxy<UserProxy>().GetData(uid);
+                PlayerInfo player = new PlayerInfo();
+                player.Uid = user.uid;
+                player.Exp = user.exp;
+                player.Gold = user.gold;
+                player.Level = user.level;
+                player.Name = user.name;
+                req.Users.Add(player);
+            }
+
+            SendMessage<BMCreateRommRequest, BMCreateRoomReply>(battleSessionID, req,
+            (sessionID, rep) =>
+            {
+                data.SetData(rep.RoomID, rep.Token, rep.Name);
+                GetData(sessionID).AddRoom(data);
+            });
+
+            data.SetUsers(users);
+            return data;
+        }
     }
 }

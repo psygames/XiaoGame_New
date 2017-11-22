@@ -22,12 +22,12 @@ namespace Message {
     static CBLoginReplyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDQkxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UiHQoMQ0JMb2dpblJlcGx5",
-            "Eg0KBXN0YXRlGAEgASgJYgZwcm90bzM="));
+            "ChJDQkxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UiLQoMQ0JMb2dpblJlcGx5",
+            "Eg0KBXN0YXRlGAEgASgJEg4KBnJvb21JRBgCIAEoBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginReply), global::Message.CBLoginReply.Parser, new[]{ "State" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginReply), global::Message.CBLoginReply.Parser, new[]{ "State", "RoomID" }, null, null, null)
           }));
     }
     #endregion
@@ -62,6 +62,7 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBLoginReply(CBLoginReply other) : this() {
       state_ = other.state_;
+      roomID_ = other.roomID_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -80,6 +81,17 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "roomID" field.</summary>
+    public const int RoomIDFieldNumber = 2;
+    private int roomID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int RoomID {
+      get { return roomID_; }
+      set {
+        roomID_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CBLoginReply);
@@ -94,6 +106,7 @@ namespace Message {
         return true;
       }
       if (State != other.State) return false;
+      if (RoomID != other.RoomID) return false;
       return true;
     }
 
@@ -101,6 +114,7 @@ namespace Message {
     public override int GetHashCode() {
       int hash = 1;
       if (State.Length != 0) hash ^= State.GetHashCode();
+      if (RoomID != 0) hash ^= RoomID.GetHashCode();
       return hash;
     }
 
@@ -115,6 +129,10 @@ namespace Message {
         output.WriteRawTag(10);
         output.WriteString(State);
       }
+      if (RoomID != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(RoomID);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -122,6 +140,9 @@ namespace Message {
       int size = 0;
       if (State.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
+      }
+      if (RoomID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomID);
       }
       return size;
     }
@@ -133,6 +154,9 @@ namespace Message {
       }
       if (other.State.Length != 0) {
         State = other.State;
+      }
+      if (other.RoomID != 0) {
+        RoomID = other.RoomID;
       }
     }
 
@@ -146,6 +170,10 @@ namespace Message {
             break;
           case 10: {
             State = input.ReadString();
+            break;
+          }
+          case 16: {
+            RoomID = input.ReadInt32();
             break;
           }
         }

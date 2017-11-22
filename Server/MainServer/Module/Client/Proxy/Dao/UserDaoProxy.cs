@@ -11,7 +11,7 @@ using RedStone.DB;
 
 namespace RedStone
 {
-    public class ClientDaoProxy : ProxyBase
+    public class UserDaoProxy : ProxyBase
     {
         public override void OnInit()
         {

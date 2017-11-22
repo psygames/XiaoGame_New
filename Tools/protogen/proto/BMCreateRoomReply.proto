@@ -1,0 +1,10 @@
+syntax = "proto3";
+package message;
+
+// 战场 -> 主服 登录请求
+message BMCreateRoomReply
+{
+    int32 roomID = 1;
+    string token = 2;
+    string name  = 3;
+}

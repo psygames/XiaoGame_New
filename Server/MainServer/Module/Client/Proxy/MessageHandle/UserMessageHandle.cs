@@ -12,18 +12,9 @@ namespace RedStone
         public string sessionID { get; private set; }
         private Plugins.EventManager m_eventMgr = new Plugins.EventManager();
 
-        public ClientDaoProxy dao
-        {
-            get
-            {
-                return ProxyManager.instance.GetProxy<ClientDaoProxy>();
-            }
-        }
-
-        public UserProxy userProxy
-        {
-            get { return ProxyManager.instance.GetProxy<UserProxy>(); }
-        }
+        public UserDaoProxy dao { get { return ProxyManager.instance.GetProxy<UserDaoProxy>(); } }
+        public UserProxy userProxy { get { return ProxyManager.instance.GetProxy<UserProxy>(); } }
+        public BattleServerProxy battleProxy { get { return ProxyManager.instance.GetProxy<BattleServerProxy>(); } }
         private UserData data { get { return userProxy.GetData(sessionID); } }
 
 
@@ -31,7 +22,7 @@ namespace RedStone
         {
             this.sessionID = sessionID;
             RegisterMsg<CMLoginRequest>(OnLogin);
-            RegisterMsg<CMStartGameRequest>(OnStartGame);
+            RegisterMsg<CMMatchRequest>(OnBeginMatch);
         }
 
         public void Logout()
@@ -56,20 +47,38 @@ namespace RedStone
             reply.PlayerInfo.Name = data.name;
             reply.PlayerInfo.Uid = data.uid;
             SendMessage(reply);
+
+            data.SetState(UserState.Hall);
         }
 
 
-        private void OnStartGame(CMStartGameRequest req)
+        private void OnBeginMatch(CMMatchRequest req)
         {
-            Debug.Log(req.GameID);
+            //TODO: Game Id Game Mode...
 
-            CMStartGameReply rep = new CMStartGameReply();
-            rep.BattleServer = new BattleServerInfo();
+            CMMatchReply rep = new CMMatchReply();
+            rep.WaitTime = 10;
+            if (battleProxy.GetBestBattleServer() == null)
+                rep.Status = 0;
+            else
+                rep.Status = 1;
+            SendMessage(rep);
 
-
+            data.SetState(UserState.Matching);
         }
 
+        public void MactchSuccess(BattleServerData server, RoomData room)
+        {
+            CMMatchSuccess msg = new CMMatchSuccess();
+            msg.BattleServerInfo = new BattleServerInfo();
+            msg.BattleServerInfo.Address = server.address;
+            msg.BattleServerInfo.Name = server.name;
+            msg.BattleServerInfo.State = server.state.ToString();
+            msg.BattleServerInfo.Token = room.token;
+            SendMessage(msg);
 
+            data.SetState(UserState.Game);
+        }
 
 
         private void RegisterMsg<T>(Action<T> action)
