@@ -10,7 +10,9 @@ namespace RedStone.Data
         public int level { get; private set; }
         public int exp { get; private set; }
         public int gold { get; private set; }
+        public int roomID { get; private set; }
         public UserState state { get; private set; }
+        public RoomData room { get { return ProxyManager.instance.GetProxy<RoomProxy>().GetRoom(roomID); } }
 
         public void SetSessionID(string sessionID)
         {
@@ -29,6 +31,11 @@ namespace RedStone.Data
             this.level = info.Level;
             this.exp = info.Exp;
             this.gold = info.Gold;
+        }
+
+        public void SetRoomID(int roomID)
+        {
+            this.roomID = roomID;
         }
     }
 

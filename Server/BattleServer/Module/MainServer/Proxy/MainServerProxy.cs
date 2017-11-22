@@ -17,6 +17,8 @@ namespace RedStone
                 Debug.LogInfo("连接主服成功！");
                 Login();
             };
+
+            RegisterMessage<BMCreateRommRequest>(OnCreateRoom);
         }
 
         public void Connenct()
@@ -34,6 +36,16 @@ namespace RedStone
             {
                 Debug.Log(reply.Name);
             });
+        }
+
+        void OnCreateRoom(BMCreateRommRequest req)
+        {
+            var room = GetProxy<BattleServerProxy>().MainServerRequsetCreateRoom(req.Users);
+            BMCreateRoomReply rep = new BMCreateRoomReply();
+            rep.Name = room.name;
+            rep.RoomID = room.id;
+            rep.Token = room.token;
+            SendMessage(rep);
         }
     }
 }
