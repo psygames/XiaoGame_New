@@ -2,10 +2,10 @@
 using Plugins;
 namespace RedStone
 {
-    public class ProxyBaseExt : ProxyBase
+    public class ProxyBaseServer : ProxyBase
     {
         public virtual EventManager eventManager { get { return GameManager.instance.eventManager; } }
-        public virtual ServerNetworkManager network { get { return null; } }
+        public virtual ServerNetworkManager network { get { return NetworkManager.instance.forClient; } }
 
         public void SendMessage<T>(string sessionID, T msg)
         {

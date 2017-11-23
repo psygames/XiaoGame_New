@@ -7,7 +7,7 @@ using RedStone.Data;
 
 namespace RedStone
 {
-    public class UserProxy : MBProxyBase
+    public class UserProxy : ProxyBaseServer
     {
         private Dictionary<long, UserData> m_users = new Dictionary<long, UserData>();
 
@@ -39,9 +39,16 @@ namespace RedStone
             return m_users[uid];
         }
 
+        public UserData GetUser(string sessionID)
+        {
+            return m_users.Values.First(a => a.sessionID == sessionID);
+        }
+
         public void RemoveUser(int uid)
         {
             m_users.Remove(uid);
         }
+
+
     }
 }

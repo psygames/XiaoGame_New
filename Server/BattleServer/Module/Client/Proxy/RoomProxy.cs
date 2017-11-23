@@ -7,7 +7,7 @@ using RedStone.Data;
 
 namespace RedStone
 {
-    public class RoomProxy : MBProxyBase
+    public class RoomProxy : ProxyBaseServer
     {
         private Dictionary<int, RoomData> m_rooms = new Dictionary<int, RoomData>();
 
@@ -15,7 +15,6 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-
         }
 
         int m_lastRoomID = 1;   // TODO:自增，是否要存数据库？

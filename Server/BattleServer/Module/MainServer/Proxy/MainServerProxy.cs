@@ -6,7 +6,7 @@ using Message;
 
 namespace RedStone
 {
-    public class MainServerProxy : BMProxyBase
+    public class MainServerProxy : ProxyBaseClient
     {
         public override void OnInit()
         {
