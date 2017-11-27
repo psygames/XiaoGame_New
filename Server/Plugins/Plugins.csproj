@@ -15,7 +15,6 @@
     <ProjectReference Include="..\Core\Core.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Test\" />
     <Folder Include="Manager\" />
     <Folder Include="Math\" />
   </ItemGroup>

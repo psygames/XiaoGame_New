@@ -4,5 +4,5 @@ package message;
 // 客户端 -> 主服 登录请求
 message CBLoginRequest
 {
-    string sessionID = 1;
+    string token = 1;
 }

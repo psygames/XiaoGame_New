@@ -84,9 +84,10 @@ using UnityEngine;
         /// </summary>
         /// <param name="sender">事件字符串</param>
         /// <param name="args">事件参数</param>
-        public virtual void OnEvent(string sender, params object[] args)
+        public virtual bool OnEvent(string sender, params object[] args)
         {
             Debug.LogWarning("GOT:" + sender);
+            return true;
         }
 
         /// <summary>

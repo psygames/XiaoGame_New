@@ -22,13 +22,14 @@ namespace Message {
     static BMCreateRoomReplyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChdCTUNyZWF0ZVJvb21SZXBseS5wcm90bxIHbWVzc2FnZSJAChFCTUNyZWF0",
-            "ZVJvb21SZXBseRIOCgZyb29tSUQYASABKAUSDQoFdG9rZW4YAiABKAkSDAoE",
-            "bmFtZRgDIAEoCWIGcHJvdG8z"));
+            "ChdCTUNyZWF0ZVJvb21SZXBseS5wcm90bxIHbWVzc2FnZRoLSW5mb3MucHJv",
+            "dG8iZQoRQk1DcmVhdGVSb29tUmVwbHkSDgoGcm9vbUlEGAEgASgFEi4KDHBs",
+            "YXllclRva2VucxgCIAMoCzIYLm1lc3NhZ2UuUGxheWVyVG9rZW5JbmZvEhAK",
+            "CHJvb21OYW1lGAMgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Message.InfosReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BMCreateRoomReply), global::Message.BMCreateRoomReply.Parser, new[]{ "RoomID", "Token", "Name" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BMCreateRoomReply), global::Message.BMCreateRoomReply.Parser, new[]{ "RoomID", "PlayerTokens", "RoomName" }, null, null, null)
           }));
     }
     #endregion
@@ -63,8 +64,8 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BMCreateRoomReply(BMCreateRoomReply other) : this() {
       roomID_ = other.roomID_;
-      token_ = other.token_;
-      name_ = other.name_;
+      playerTokens_ = other.playerTokens_.Clone();
+      roomName_ = other.roomName_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -83,25 +84,24 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "token" field.</summary>
-    public const int TokenFieldNumber = 2;
-    private string token_ = "";
+    /// <summary>Field number for the "playerTokens" field.</summary>
+    public const int PlayerTokensFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Message.PlayerTokenInfo> _repeated_playerTokens_codec
+        = pb::FieldCodec.ForMessage(18, global::Message.PlayerTokenInfo.Parser);
+    private readonly pbc::RepeatedField<global::Message.PlayerTokenInfo> playerTokens_ = new pbc::RepeatedField<global::Message.PlayerTokenInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Token {
-      get { return token_; }
-      set {
-        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public pbc::RepeatedField<global::Message.PlayerTokenInfo> PlayerTokens {
+      get { return playerTokens_; }
     }
 
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 3;
-    private string name_ = "";
+    /// <summary>Field number for the "roomName" field.</summary>
+    public const int RoomNameFieldNumber = 3;
+    private string roomName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
+    public string RoomName {
+      get { return roomName_; }
       set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -119,8 +119,8 @@ namespace Message {
         return true;
       }
       if (RoomID != other.RoomID) return false;
-      if (Token != other.Token) return false;
-      if (Name != other.Name) return false;
+      if(!playerTokens_.Equals(other.playerTokens_)) return false;
+      if (RoomName != other.RoomName) return false;
       return true;
     }
 
@@ -128,8 +128,8 @@ namespace Message {
     public override int GetHashCode() {
       int hash = 1;
       if (RoomID != 0) hash ^= RoomID.GetHashCode();
-      if (Token.Length != 0) hash ^= Token.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= playerTokens_.GetHashCode();
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
       return hash;
     }
 
@@ -144,13 +144,10 @@ namespace Message {
         output.WriteRawTag(8);
         output.WriteInt32(RoomID);
       }
-      if (Token.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Token);
-      }
-      if (Name.Length != 0) {
+      playerTokens_.WriteTo(output, _repeated_playerTokens_codec);
+      if (RoomName.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Name);
+        output.WriteString(RoomName);
       }
     }
 
@@ -160,11 +157,9 @@ namespace Message {
       if (RoomID != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomID);
       }
-      if (Token.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      size += playerTokens_.CalculateSize(_repeated_playerTokens_codec);
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
       }
       return size;
     }
@@ -177,11 +172,9 @@ namespace Message {
       if (other.RoomID != 0) {
         RoomID = other.RoomID;
       }
-      if (other.Token.Length != 0) {
-        Token = other.Token;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
+      playerTokens_.Add(other.playerTokens_);
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
       }
     }
 
@@ -198,11 +191,11 @@ namespace Message {
             break;
           }
           case 18: {
-            Token = input.ReadString();
+            playerTokens_.AddEntriesFrom(input, _repeated_playerTokens_codec);
             break;
           }
           case 26: {
-            Name = input.ReadString();
+            RoomName = input.ReadString();
             break;
           }
         }

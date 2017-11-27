@@ -1,10 +1,11 @@
 syntax = "proto3";
+import "Infos.proto";
 package message;
 
 // 战场 -> 主服 登录请求
 message BMCreateRoomReply
 {
     int32 roomID = 1;
-    string token = 2;
-    string name  = 3;
+    repeated PlayerTokenInfo playerTokens = 2;
+    string roomName  = 3;
 }

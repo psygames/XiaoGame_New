@@ -22,12 +22,12 @@ namespace Message {
     static CBLoginRequestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRDQkxvZ2luUmVxdWVzdC5wcm90bxIHbWVzc2FnZSIjCg5DQkxvZ2luUmVx",
-            "dWVzdBIRCglzZXNzaW9uSUQYASABKAliBnByb3RvMw=="));
+            "ChRDQkxvZ2luUmVxdWVzdC5wcm90bxIHbWVzc2FnZSIfCg5DQkxvZ2luUmVx",
+            "dWVzdBINCgV0b2tlbhgBIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginRequest), global::Message.CBLoginRequest.Parser, new[]{ "SessionID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginRequest), global::Message.CBLoginRequest.Parser, new[]{ "Token" }, null, null, null)
           }));
     }
     #endregion
@@ -61,7 +61,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBLoginRequest(CBLoginRequest other) : this() {
-      sessionID_ = other.sessionID_;
+      token_ = other.token_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -69,14 +69,14 @@ namespace Message {
       return new CBLoginRequest(this);
     }
 
-    /// <summary>Field number for the "sessionID" field.</summary>
-    public const int SessionIDFieldNumber = 1;
-    private string sessionID_ = "";
+    /// <summary>Field number for the "token" field.</summary>
+    public const int TokenFieldNumber = 1;
+    private string token_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string SessionID {
-      get { return sessionID_; }
+    public string Token {
+      get { return token_; }
       set {
-        sessionID_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -93,14 +93,14 @@ namespace Message {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SessionID != other.SessionID) return false;
+      if (Token != other.Token) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (SessionID.Length != 0) hash ^= SessionID.GetHashCode();
+      if (Token.Length != 0) hash ^= Token.GetHashCode();
       return hash;
     }
 
@@ -111,17 +111,17 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (SessionID.Length != 0) {
+      if (Token.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(SessionID);
+        output.WriteString(Token);
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (SessionID.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SessionID);
+      if (Token.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
       }
       return size;
     }
@@ -131,8 +131,8 @@ namespace Message {
       if (other == null) {
         return;
       }
-      if (other.SessionID.Length != 0) {
-        SessionID = other.SessionID;
+      if (other.Token.Length != 0) {
+        Token = other.Token;
       }
     }
 
@@ -145,7 +145,7 @@ namespace Message {
             input.SkipLastField();
             break;
           case 10: {
-            SessionID = input.ReadString();
+            Token = input.ReadString();
             break;
           }
         }

@@ -8,7 +8,6 @@ namespace RedStone
     public class BattleProxy : BattleProxyBase
     {
         public BattleServerInfo serverInfo { get { return GetProxy<HallProxy>().battleServerInfo; } }
-        private string m_serverState = "";
 
         public BattleProxy()
         {
@@ -44,11 +43,11 @@ namespace RedStone
         public void Login()
         {
             CBLoginRequest req = new CBLoginRequest();
-            req.SessionID = serverInfo.SessionID;
+            req.Token = serverInfo.Token;
             network.Send<CBLoginRequest, CBLoginReply>(req
             , (rep) =>
             {
-                m_serverState = rep.State;
+                Debug.Log("assign room id:" + rep.RoomID);
             });
         }
 

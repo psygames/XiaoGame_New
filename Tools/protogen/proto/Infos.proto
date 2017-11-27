@@ -35,3 +35,9 @@ message BattlePlayerInfo
     int32 seat = 5;   // 座位
     bool isSelf = 6;  // 是否是自己
 }
+
+message PlayerTokenInfo
+{
+  int64 uid = 1;
+  string token = 2;
+}

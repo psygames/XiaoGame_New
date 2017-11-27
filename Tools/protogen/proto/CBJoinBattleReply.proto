@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "Infos.proto"
+import "Infos.proto";
 package message;
 
 // 客户端 -> 主服 登录请求
@@ -7,5 +7,4 @@ message CBJoinBattleReply
 {
     BattleRoomInfo info = 1;
     repeated BattlePlayerInfo playerInfos = 2;
-    bool isReconnect = 3;
 }

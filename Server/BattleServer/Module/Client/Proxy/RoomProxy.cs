@@ -21,10 +21,8 @@ namespace RedStone
         public RoomData CreateRoom()
         {
             int roomID = m_lastRoomID++;
-            string token = Guid.NewGuid().ToString();
             RoomData data = new RoomData();
-            data.SetData(roomID, token, "RED STONE");
-
+            data.SetData(roomID, "RED STONE");
             m_rooms.Add(roomID, data);
             return data;
         }

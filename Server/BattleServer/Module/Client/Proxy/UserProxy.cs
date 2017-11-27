@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RedStone.Data;
+using Message;
 
 
 namespace RedStone
@@ -15,10 +16,10 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-
+            RegisterMessage<CBLoginRequest>(OnLogin);
         }
 
-        public UserData AddUser(Message.PlayerInfo playerInfo)
+        public UserData AddUser(Message.PlayerInfo playerInfo, int roomID)
         {
             if (m_users.ContainsKey(playerInfo.Uid))
             {
@@ -27,14 +28,32 @@ namespace RedStone
             else
             {
                 UserData user = new UserData();
-                user.SetData(playerInfo);
+                string token = Guid.NewGuid().ToString(); //Gen Token
+                user.SetData(playerInfo, roomID, token);
+                user.SetState(UserState.Offline);
                 m_users.Add(user.uid, user);
                 return user;
             }
             return null;
         }
 
-        public UserData GetUser(int uid)
+
+        void OnLogin(string sessionID, CBLoginRequest msg)
+        {
+            var user = m_users.Values.First(a => a.token == msg.Token);
+            if (user == null)
+            {
+                Debug.LogError($"{sessionID}'s token {msg.Token} is wrong, refuse login.");
+            }
+            else
+            {
+                user.SetSessionID(sessionID);
+                user.SetState(UserState.Login);
+            }
+        }
+
+
+        public UserData GetUser(long uid)
         {
             return m_users[uid];
         }
@@ -44,7 +63,7 @@ namespace RedStone
             return m_users.Values.First(a => a.sessionID == sessionID);
         }
 
-        public void RemoveUser(int uid)
+        public void RemoveUser(long uid)
         {
             m_users.Remove(uid);
         }

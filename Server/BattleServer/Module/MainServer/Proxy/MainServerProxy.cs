@@ -42,9 +42,16 @@ namespace RedStone
         {
             var room = GetProxy<BattleServerProxy>().MainServerRequsetCreateRoom(req.Users);
             BMCreateRoomReply rep = new BMCreateRoomReply();
-            rep.Name = room.name;
+            rep.RoomName = room.name;
             rep.RoomID = room.id;
-            rep.Token = room.token;
+            foreach (var uid in room.users)
+            {
+                var user = GetProxy<UserProxy>().GetUser(uid);
+                var ptoken = new PlayerTokenInfo();
+                ptoken.Uid = user.uid;
+                ptoken.Token = user.token;
+                rep.PlayerTokens.Add(ptoken);
+            }
             SendMessage(rep);
         }
     }

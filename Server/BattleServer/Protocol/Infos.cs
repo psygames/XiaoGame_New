@@ -29,14 +29,16 @@ namespace Message {
             "GAQgASgJIioKDkJhdHRsZVJvb21JbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUY",
             "AiABKAkiZwoQQmF0dGxlUGxheWVySW5mbxIKCgJpZBgBIAEoBRIMCgRuYW1l",
             "GAIgASgJEgwKBGdvbGQYAyABKAUSDQoFbGV2ZWwYBCABKAUSDAoEc2VhdBgF",
-            "IAEoBRIOCgZpc1NlbGYYBiABKAhiBnByb3RvMw=="));
+            "IAEoBRIOCgZpc1NlbGYYBiABKAgiLQoPUGxheWVyVG9rZW5JbmZvEgsKA3Vp",
+            "ZBgBIAEoAxINCgV0b2tlbhgCIAEoCWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerInfo), global::Message.PlayerInfo.Parser, new[]{ "Uid", "Name", "Gold", "Level", "Exp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State", "Token" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleRoomInfo), global::Message.BattleRoomInfo.Parser, new[]{ "Id", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerTokenInfo), global::Message.PlayerTokenInfo.Parser, new[]{ "Uid", "Token" }, null, null, null)
           }));
     }
     #endregion
@@ -906,6 +908,151 @@ namespace Message {
           }
           case 48: {
             IsSelf = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PlayerTokenInfo : pb::IMessage<PlayerTokenInfo> {
+    private static readonly pb::MessageParser<PlayerTokenInfo> _parser = new pb::MessageParser<PlayerTokenInfo>(() => new PlayerTokenInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerTokenInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.InfosReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerTokenInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerTokenInfo(PlayerTokenInfo other) : this() {
+      uid_ = other.uid_;
+      token_ = other.token_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerTokenInfo Clone() {
+      return new PlayerTokenInfo(this);
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 1;
+    private long uid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Uid {
+      get { return uid_; }
+      set {
+        uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "token" field.</summary>
+    public const int TokenFieldNumber = 2;
+    private string token_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Token {
+      get { return token_; }
+      set {
+        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerTokenInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerTokenInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uid != other.Uid) return false;
+      if (Token != other.Token) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uid != 0L) hash ^= Uid.GetHashCode();
+      if (Token.Length != 0) hash ^= Token.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Uid != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Uid);
+      }
+      if (Token.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Token);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uid != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Uid);
+      }
+      if (Token.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerTokenInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uid != 0L) {
+        Uid = other.Uid;
+      }
+      if (other.Token.Length != 0) {
+        Token = other.Token;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Uid = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            Token = input.ReadString();
             break;
           }
         }

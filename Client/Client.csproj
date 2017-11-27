@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1p3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -105,6 +107,7 @@
     <Compile Include="Assets\Scripts\Module\Data\Config\TutorialConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\UIConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\UIConfigExt.cs" />
+    <Compile Include="Assets\Scripts\Module\Data\Event\MessageDefine.cs" />
     <Compile Include="Assets\Scripts\Module\Data\HallData\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableAnimation1PCfg.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableAnimationCfg.cs" />
@@ -186,6 +189,7 @@
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\ProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Hall\LoadingView.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ClientNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ServerNetworkManager.cs" />
@@ -302,6 +306,7 @@
     <Compile Include="Assets\Scripts\System\Protocol\BMCreateRoomReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\BMLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\BMLoginRequest.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBJoinBattleReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBJoinBattleRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBLoginRequest.cs" />
@@ -310,8 +315,6 @@
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchSuccess.cs" />
-    <Compile Include="Assets\Scripts\System\Protocol\CMStartGameReply.cs" />
-    <Compile Include="Assets\Scripts\System\Protocol\CMStartGameRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\Infos.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\ProtoNum.cs" />
     <Compile Include="Assets\Scripts\System\Tools\BitConvert.cs" />
@@ -359,6 +362,7 @@
     <Compile Include="Assets\Scripts\System\UI\DefaultControls.cs" />
     <Compile Include="Assets\Scripts\System\UI\Dropdown.cs" />
     <Compile Include="Assets\Scripts\System\UI\EditTool.cs" />
+    <Compile Include="Assets\Scripts\System\UI\EventHandleItem.cs" />
     <Compile Include="Assets\Scripts\System\UI\FlexibleListLayoutGroup.cs" />
     <Compile Include="Assets\Scripts\System\UI\FlexibleListViewTest.cs" />
     <Compile Include="Assets\Scripts\System\UI\GetMaxWidthText.cs" />

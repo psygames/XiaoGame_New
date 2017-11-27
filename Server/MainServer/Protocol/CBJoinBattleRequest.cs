@@ -22,13 +22,12 @@ namespace Message {
     static CBJoinBattleRequestReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChlDQkpvaW5CYXR0bGVSZXF1ZXN0LnByb3RvEgdtZXNzYWdlIjEKE0NCSm9p",
-            "bkJhdHRsZVJlcXVlc3QSCwoDdWlkGAEgASgDEg0KBXRva2VuGAIgASgJYgZw",
-            "cm90bzM="));
+            "ChlDQkpvaW5CYXR0bGVSZXF1ZXN0LnByb3RvEgdtZXNzYWdlIhUKE0NCSm9p",
+            "bkJhdHRsZVJlcXVlc3RiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBJoinBattleRequest), global::Message.CBJoinBattleRequest.Parser, new[]{ "Uid", "Token" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBJoinBattleRequest), global::Message.CBJoinBattleRequest.Parser, null, null, null, null)
           }));
     }
     #endregion
@@ -62,35 +61,11 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBJoinBattleRequest(CBJoinBattleRequest other) : this() {
-      uid_ = other.uid_;
-      token_ = other.token_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBJoinBattleRequest Clone() {
       return new CBJoinBattleRequest(this);
-    }
-
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 1;
-    private long uid_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Uid {
-      get { return uid_; }
-      set {
-        uid_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "token" field.</summary>
-    public const int TokenFieldNumber = 2;
-    private string token_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Token {
-      get { return token_; }
-      set {
-        token_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -106,16 +81,12 @@ namespace Message {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
-      if (Token != other.Token) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0L) hash ^= Uid.GetHashCode();
-      if (Token.Length != 0) hash ^= Token.GetHashCode();
       return hash;
     }
 
@@ -126,25 +97,11 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Uid != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(Uid);
-      }
-      if (Token.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Token);
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Uid != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Uid);
-      }
-      if (Token.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
-      }
       return size;
     }
 
@@ -152,12 +109,6 @@ namespace Message {
     public void MergeFrom(CBJoinBattleRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.Uid != 0L) {
-        Uid = other.Uid;
-      }
-      if (other.Token.Length != 0) {
-        Token = other.Token;
       }
     }
 
@@ -169,14 +120,6 @@ namespace Message {
           default:
             input.SkipLastField();
             break;
-          case 8: {
-            Uid = input.ReadInt64();
-            break;
-          }
-          case 18: {
-            Token = input.ReadString();
-            break;
-          }
         }
       }
     }

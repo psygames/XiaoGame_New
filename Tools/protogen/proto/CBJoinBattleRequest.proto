@@ -4,6 +4,5 @@ package message;
 // 客户端 -> 主服 登录请求
 message CBJoinBattleRequest
 {
-    int64 uid = 1;
-    string token = 2;
+    
 }

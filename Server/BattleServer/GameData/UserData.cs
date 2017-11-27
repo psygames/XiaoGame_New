@@ -11,6 +11,7 @@ namespace RedStone.Data
         public int exp { get; private set; }
         public int gold { get; private set; }
         public int roomID { get; private set; }
+        public string token { get; private set; }
         public UserState state { get; private set; }
         public RoomData room { get { return ProxyManager.instance.GetProxy<RoomProxy>().GetRoom(roomID); } }
 
@@ -24,24 +25,22 @@ namespace RedStone.Data
             this.state = state;
         }
 
-        public void SetData(Message.PlayerInfo info)
+        public void SetData(Message.PlayerInfo info, int roomID, string token)
         {
             this.uid = info.Uid;
             this.name = info.Name;
             this.level = info.Level;
             this.exp = info.Exp;
             this.gold = info.Gold;
-        }
-
-        public void SetRoomID(int roomID)
-        {
             this.roomID = roomID;
+            this.token = token;
         }
     }
 
     public enum UserState
     {
-        Game,
-        Offline,
+        Offline = 0,
+        Login = 1,
+        Battle = 2,
     }
 }

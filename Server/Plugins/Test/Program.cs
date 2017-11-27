@@ -17,7 +17,7 @@ namespace Plugins
         {
             ProtoSerializer serializer = new ProtoSerializer();
             serializer.LoadProtoNum(typeof(Message.ProtoNumTest));
-            CBLoginRequest msg = new CBLoginRequest();
+            LoginRequest msg = new LoginRequest();
             msg.SessionID = "hello";
             byte[] data = serializer.Serialize(msg);
 

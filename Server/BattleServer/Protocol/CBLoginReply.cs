@@ -22,12 +22,12 @@ namespace Message {
     static CBLoginReplyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDQkxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UiLQoMQ0JMb2dpblJlcGx5",
-            "Eg0KBXN0YXRlGAEgASgJEg4KBnJvb21JRBgCIAEoBWIGcHJvdG8z"));
+            "ChJDQkxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UiHgoMQ0JMb2dpblJlcGx5",
+            "Eg4KBnJvb21JRBgBIAEoBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginReply), global::Message.CBLoginReply.Parser, new[]{ "State", "RoomID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBLoginReply), global::Message.CBLoginReply.Parser, new[]{ "RoomID" }, null, null, null)
           }));
     }
     #endregion
@@ -61,7 +61,6 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBLoginReply(CBLoginReply other) : this() {
-      state_ = other.state_;
       roomID_ = other.roomID_;
     }
 
@@ -70,19 +69,8 @@ namespace Message {
       return new CBLoginReply(this);
     }
 
-    /// <summary>Field number for the "state" field.</summary>
-    public const int StateFieldNumber = 1;
-    private string state_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string State {
-      get { return state_; }
-      set {
-        state_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "roomID" field.</summary>
-    public const int RoomIDFieldNumber = 2;
+    public const int RoomIDFieldNumber = 1;
     private int roomID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int RoomID {
@@ -105,7 +93,6 @@ namespace Message {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (State != other.State) return false;
       if (RoomID != other.RoomID) return false;
       return true;
     }
@@ -113,7 +100,6 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (State.Length != 0) hash ^= State.GetHashCode();
       if (RoomID != 0) hash ^= RoomID.GetHashCode();
       return hash;
     }
@@ -125,12 +111,8 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (State.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(State);
-      }
       if (RoomID != 0) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(8);
         output.WriteInt32(RoomID);
       }
     }
@@ -138,9 +120,6 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (State.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(State);
-      }
       if (RoomID != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomID);
       }
@@ -151,9 +130,6 @@ namespace Message {
     public void MergeFrom(CBLoginReply other) {
       if (other == null) {
         return;
-      }
-      if (other.State.Length != 0) {
-        State = other.State;
       }
       if (other.RoomID != 0) {
         RoomID = other.RoomID;
@@ -168,11 +144,7 @@ namespace Message {
           default:
             input.SkipLastField();
             break;
-          case 10: {
-            State = input.ReadString();
-            break;
-          }
-          case 16: {
+          case 8: {
             RoomID = input.ReadInt32();
             break;
           }

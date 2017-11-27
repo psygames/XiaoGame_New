@@ -25,11 +25,10 @@ namespace RedStone
 
             foreach (var info in playerInfos)
             {
-                var user = GetProxy<UserProxy>().AddUser(info);
+                var user = GetProxy<UserProxy>().AddUser(info,room.id);
                 if (user == null)
                     continue;
                 uids.Add(user.uid);
-                user.SetRoomID(room.id);
             }
 
             room.SetUsers(uids);
@@ -37,7 +36,7 @@ namespace RedStone
             return room;
         }
 
-        public void RegisterUserMsg<T>(int uid, Action<T> action)
+        public void RegisterUserMsg<T>(long uid, Action<T> action)
         {
             RegisterMessage<T>((sessionID, msg) =>
             {

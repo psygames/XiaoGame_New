@@ -4,6 +4,5 @@ package message;
 // 主服 -> 客户端 登录响应
 message CBLoginReply
 {
-    string state = 1;
-    int32 roomID = 2;
+    int32 roomID = 1;
 }

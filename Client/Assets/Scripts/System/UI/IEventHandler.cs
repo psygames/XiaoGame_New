@@ -7,6 +7,6 @@ using System.Text;
 {
     public interface IEventHandler
     {
-        void OnEvent(string sender, params object[] args);
+        bool OnEvent(string sender, params object[] args);
     }
 }

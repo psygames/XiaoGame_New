@@ -7,7 +7,7 @@ namespace RedStone
     public class HallProxy : HallProxyBase
     {
         public Data.PlayerData playerData { get; private set; }
-        public Message.BattleServerInfo battleServerInfo { get; private set; }
+        public BattleServerInfo battleServerInfo { get; private set; }
 
         public HallProxy()
         {
@@ -21,6 +21,8 @@ namespace RedStone
                 Debug.Log("Network Connect Success (Main Server).");
                 Login();
             };
+
+            network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
         }
 
         public void Login()
@@ -34,18 +36,22 @@ namespace RedStone
              });
         }
 
-        public void StartGame(int gameID, int gameMode)
+        public void BeginMatch(int gameID, int gameMode)
         {
-            CMStartGameRequest msg = new CMStartGameRequest();
+            CMMatchRequest msg = new CMMatchRequest();
             msg.GameID = gameID;
             msg.GameMode = gameMode;
             msg.GroupID = -1;
-            SendMessage<CMStartGameRequest, CMStartGameReply>(msg
+            SendMessage<CMMatchRequest, CMMatchReply>(msg
             , (rep) =>
             {
-                battleServerInfo = rep.BattleServer;
+                Debug.Log(rep.Status);
             });
         }
 
+        void OnMatchSuccess(CMMatchSuccess msg)
+        {
+            Debug.Log(msg.BattleServerInfo.Address);
+        }
     }
 }
