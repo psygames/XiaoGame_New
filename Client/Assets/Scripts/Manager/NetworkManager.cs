@@ -10,11 +10,11 @@ namespace RedStone
         /// <summary>
         /// 连接主服
         /// </summary>
-        public ClientNetworkManager battle { get; private set; }
+        public ClientNetworkMangerEx battle { get; private set; }
         /// <summary>
         /// 监听客户端
         /// </summary>
-        public ClientNetworkManager main { get; private set; }
+        public ClientNetworkMangerEx main { get; private set; }
 
         public void Init()
         {
@@ -24,21 +24,14 @@ namespace RedStone
 
         private void InitBattleServer()
         {
-            battle = new ClientNetworkManager();
-            var socket = new Plugins.Network.WebSocketClient();
-            socket.Setup("192.168.1.103", 8740);
-            var serializer = new Plugins.ProtoSerializer();
-            serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadProtoNum(typeof(Message.ProtoNum));
-            battle.Init(socket, serializer);
-            Debug.Log("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
+            battle = new ClientNetworkMangerEx();
         }
 
         private void InitMainServer()
         {
-            main = new ClientNetworkManager();
+            main = new ClientNetworkMangerEx();
             var socket = new Plugins.Network.WebSocketClient();
-            socket.Setup("127.0.0.1", 8730);
+            socket.Setup("172.20.15.34", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));
@@ -48,8 +41,43 @@ namespace RedStone
 
         public void Close()
         {
-            battle.socket.Close();
-            main.socket.Close();
+            if (battle.socket != null)
+                battle.socket.Close();
+            if (main.socket != null)
+                main.socket.Close();
+        }
+
+        public void Update()
+        {
+            battle.Update();
+            main.Update();
+        }
+
+
+        public class ClientNetworkMangerEx : ClientNetworkManager
+        {
+            protected override void OnReceived(byte[] data)
+            {
+                object obj = m_serializer.Deserialize(data);
+
+                m_msgQueue.Enqueue(obj);
+            }
+
+            private Queue<object> m_msgQueue = new Queue<object>();
+
+            public void Update()
+            {
+                HandlePoolMsg();
+            }
+
+            private void HandlePoolMsg()
+            {
+                while (m_msgQueue.Count > 0)
+                {
+                    var obj = m_msgQueue.Dequeue();
+                    m_eventMgr.Send(obj.GetType().Name, obj);
+                }
+            }
         }
     }
 }

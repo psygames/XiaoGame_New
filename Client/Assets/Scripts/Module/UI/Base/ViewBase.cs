@@ -12,11 +12,6 @@ namespace RedStone
             return ProxyManager.instance.GetProxy<T>();
         }
 
-        public void Register<T>(Action<T> callback)
-        {
-            Register(typeof(T).FullName, callback);
-        }
-
         public void Register<T>(string eventName, Action<T> callback)
         {
             EventManager.instance.Register(eventName, callback);
@@ -35,11 +30,6 @@ namespace RedStone
         public void UnRegister<T>(string eventName, Action<T> callback)
         {
             EventManager.instance.UnRegister(eventName, callback);
-        }
-
-        public void UnRegister<T>(Action<T> callback)
-        {
-            UnRegister(typeof(T).FullName, callback);
         }
 
         public virtual void OnInit()

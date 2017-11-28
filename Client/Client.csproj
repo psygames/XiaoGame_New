@@ -183,6 +183,10 @@
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableSummoned.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTechnologyLevel.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTextColor.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameFacade.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\AbstractState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\LoadingState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\LoginState.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\BattleProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\BattleProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxy.cs" />
@@ -509,6 +513,7 @@
     <None Include="Assets\Scripts\Plugins\Google.Protobuf\Google.Protobuf.xml" />
     <None Include="Assets\Scripts\Plugins\Mono.Xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

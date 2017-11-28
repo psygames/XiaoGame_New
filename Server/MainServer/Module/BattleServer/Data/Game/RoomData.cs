@@ -10,11 +10,11 @@ namespace RedStone.Data
         public string token { get; private set; }
         public List<long> users { get; private set; }
 
-        public void SetData(int id, string token, string name)
+        public void SetData(int id, IList<Message.PlayerTokenInfo> tokens, string name)
         {
             this.id = id;
-            this.token = token;
             this.name = name;
+            //TODO: SAVE TOKENS
         }
 
         public void SetUsers(List<long> users)

@@ -9,6 +9,9 @@ namespace RedStone
         public Data.PlayerData playerData { get; private set; }
         public BattleServerInfo battleServerInfo { get; private set; }
 
+
+        public bool isLogin { get; private set; }
+
         public HallProxy()
         {
             playerData = new Data.PlayerData();
@@ -32,7 +35,9 @@ namespace RedStone
             network.Send<CMLoginRequest, CMLoginReply>(req
             , (reply) =>
              {
+                 isLogin = true;
                  playerData.SetData(reply.PlayerInfo);
+                 GF.ChangeState<LoadingState>();
              });
         }
 

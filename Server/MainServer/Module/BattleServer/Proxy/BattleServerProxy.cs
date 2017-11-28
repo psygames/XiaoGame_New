@@ -82,7 +82,7 @@ namespace RedStone
             SendMessage<BMCreateRommRequest, BMCreateRoomReply>(battleSessionID, req,
             (sessionID, rep) =>
             {
-                data.SetData(rep.RoomID, rep.Token, rep.Name);
+                data.SetData(rep.RoomID, rep.PlayerTokens, rep.RoomName);
                 GetData(sessionID).AddRoom(data);
             });
 

@@ -13,6 +13,7 @@ namespace Plugins.Network
             _socket.OnOpen += (a, b) => { base.OnConnected(); };
             _socket.OnClose += (a, b) => { base.OnClosed(); };
             _socket.OnMessage += (a, b) => { base.OnReceived(b.RawData); };
+            _socket.WaitTime = new TimeSpan(5); //TODO: TimeOut Interface
         }
         public override string address { get { return _socket.Url.AbsoluteUri; } }
         public override void Send(byte[] data)

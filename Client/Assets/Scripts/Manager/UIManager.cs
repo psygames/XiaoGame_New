@@ -44,8 +44,8 @@ namespace RedStone
 
 		public void RegisteAll()
 		{
-			AddUI("Login");
-			AddUI("Gomuku");
+			AddUI("Loading");
+			//AddUI("Home");
 		}
 
 		public void AddUI(string name, string prefabPath = null)

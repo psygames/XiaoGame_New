@@ -5,9 +5,9 @@ namespace Plugins
 {
     public class ClientNetworkManager
     {
-        private EventManager m_eventMgr = null;
-        private IProtoSerializer m_serializer = null;
-        private IClient m_socket = null;
+        protected EventManager m_eventMgr = null;
+        protected IProtoSerializer m_serializer = null;
+        protected IClient m_socket = null;
 
         public IClient socket { get { return m_socket; } }
 
@@ -37,7 +37,7 @@ namespace Plugins
                 m_eventMgr.UnRegister(typeof(T).Name, action);
             });
         }
-        void OnReceived(byte[] data)
+        protected virtual void OnReceived(byte[] data)
         {
             object obj = m_serializer.Deserialize(data);
             m_eventMgr.Send(obj.GetType().Name, obj);

@@ -14,14 +14,20 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-
-            Register<LoadingState>(OnLoadingStateChanged);
+            Register<LoadingStatus>(MessageDefine.HallLoading, OnLoadingStateChanged);
         }
 
-        void OnLoadingStateChanged(LoadingState state)
+        public override void OnOpen()
         {
-            text.text = state.text;
-            m_fillValue = state.percent;
+            base.OnOpen();
+            fill.fillAmount = 0;
+            text.text = "";
+        }
+
+        void OnLoadingStateChanged(LoadingStatus status)
+        {
+            text.text = status.text;
+            m_fillValue = status.percent * 0.01f;
         }
 
         public override void OnUpdate()
@@ -30,11 +36,19 @@ namespace RedStone
             fill.fillAmount = Mathf.Lerp(fill.fillAmount, m_fillValue, Time.deltaTime * 5);
         }
 
-        public class LoadingState
+    }
+
+    public class LoadingStatus
+    {
+        public float percent = 0;
+        public string text = "";
+        public int bgType = 1;
+
+        public LoadingStatus(string text, float percent, int bgType = 1)
         {
-            public int percent = 0;
-            public string text = "";
-            public int bgType = 1;
+            this.percent = percent;
+            this.text = text;
+            this.bgType = bgType;
         }
     }
 }
