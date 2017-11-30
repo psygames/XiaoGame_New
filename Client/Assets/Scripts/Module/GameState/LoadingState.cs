@@ -9,7 +9,7 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
-            GF.Send(MessageDefine.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
         }
 
         public override void Leave()

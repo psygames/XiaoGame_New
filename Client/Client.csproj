@@ -90,11 +90,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Manager\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameFacade.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\NetworkManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ProxyManager.cs" />
     <Compile Include="Assets\Scripts\Manager\ResourceManager.cs" />
     <Compile Include="Assets\Scripts\Manager\TableManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\TaskManger.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\BattleRoomConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\CheatConfig.cs" />
@@ -107,7 +109,7 @@
     <Compile Include="Assets\Scripts\Module\Data\Config\TutorialConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\UIConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\UIConfigExt.cs" />
-    <Compile Include="Assets\Scripts\Module\Data\Event\MessageDefine.cs" />
+    <Compile Include="Assets\Scripts\Module\Data\Event\EventDef.cs" />
     <Compile Include="Assets\Scripts\Module\Data\HallData\Player\PlayerData.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableAnimation1PCfg.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableAnimationCfg.cs" />
@@ -183,7 +185,6 @@
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableSummoned.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTechnologyLevel.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTextColor.cs" />
-    <Compile Include="Assets\Scripts\Manager\GameFacade.cs" />
     <Compile Include="Assets\Scripts\Module\GameState\AbstractState.cs" />
     <Compile Include="Assets\Scripts\Module\GameState\LoadingState.cs" />
     <Compile Include="Assets\Scripts\Module\GameState\LoginState.cs" />
@@ -194,6 +195,8 @@
     <Compile Include="Assets\Scripts\Module\Proxy\ProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\LoadingView.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Hall\MessageBoxItem.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Hall\MessageBoxView.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ClientNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ServerNetworkManager.cs" />
@@ -513,7 +516,6 @@
     <None Include="Assets\Scripts\Plugins\Google.Protobuf\Google.Protobuf.xml" />
     <None Include="Assets\Scripts\Plugins\Mono.Xml" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>

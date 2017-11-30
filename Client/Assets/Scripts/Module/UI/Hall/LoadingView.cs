@@ -14,7 +14,7 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-            Register<LoadingStatus>(MessageDefine.HallLoading, OnLoadingStateChanged);
+            Register<LoadingStatus>(EventDef.HallLoading, OnLoadingStateChanged);
         }
 
         public override void OnOpen()
@@ -47,7 +47,7 @@ namespace RedStone
         public LoadingStatus(string text, float percent, int bgType = 1)
         {
             this.percent = percent;
-            this.text = text;
+            this.text = LT.GetText(text);
             this.bgType = bgType;
         }
     }

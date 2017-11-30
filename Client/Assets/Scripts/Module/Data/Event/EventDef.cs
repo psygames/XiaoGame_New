@@ -5,8 +5,9 @@ using System.Text;
 
 namespace RedStone
 {
-    public class MessageDefine
+    public class EventDef
     {
         public const string HallLoading = "HallLoading";
+        public const string MessageBox = "MessageBox";
     }
 }

@@ -1030,12 +1030,6 @@ public class UIHelper
         return new TRect((from + to) * 0.5f, new Vector2(Mathf.Abs(from.x - to.x), Mathf.Abs(from.y - to.y)));
     }
 
-
-    public static void WaitForTask(float seconds, Action callback)
-    {
-        return;
-    }
-
     public static int GetNearestColorType(Color color, float threshold = 0.1f)
     {
         int type = UIConfig.textColorNoneID;

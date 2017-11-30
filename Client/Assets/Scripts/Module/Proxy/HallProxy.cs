@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Message;
+using System;
 
 namespace RedStone
 {
@@ -11,6 +12,7 @@ namespace RedStone
 
 
         public bool isLogin { get; private set; }
+        public bool isConnected { get; private set; }
 
         public HallProxy()
         {
@@ -19,13 +21,29 @@ namespace RedStone
 
         public override void OnInit()
         {
+            isConnected = false;
+            isLogin = false;
+
             network.socket.onConnected = () =>
             {
+                isConnected = true;
                 Debug.Log("Network Connect Success (Main Server).");
                 Login();
             };
 
             network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
+        }
+
+        public void Connect(int timeOut, Action timeOutCallback)
+        {
+            network.socket.Connect();
+            Task.WaitFor(timeOut, () =>
+             {
+                 if (!isConnected)
+                 {
+                     timeOutCallback.Invoke();
+                 }
+             });
         }
 
         public void Login()

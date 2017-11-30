@@ -24,6 +24,10 @@ namespace RedStone
             ProxyManager.CreateInstance();
             EventManager.CreateInstance();
             UIManager.CreateInstance();
+            TaskManger.CreateInstance();
+
+            TableManager.CreateAndLoad();
+            Localization.CreateAndLoad();
         }
 
         private void Init()
@@ -32,6 +36,7 @@ namespace RedStone
             NetworkManager.instance.Init();
             ProxyManager.instance.Init();
             UIManager.instance.Init();
+            TaskManger.instance.Init();
         }
 
         private void OnGUI()
@@ -48,7 +53,7 @@ namespace RedStone
         {
             ProxyManager.instance.Update();
             NetworkManager.instance.Update();
-
+            TaskManger.instance.Update();
 
             if (gameState != null)
                 gameState.Update();
