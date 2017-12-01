@@ -1,0 +1,7 @@
+syntax = "proto3";
+package message;
+
+// 客户端 -> 主服 取消匹配
+message CMMatchCancel
+{
+}

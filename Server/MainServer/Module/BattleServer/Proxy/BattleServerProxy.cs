@@ -20,7 +20,7 @@ namespace RedStone
         public BattleServerData GetBestBattleServer()
         {
             // TODO: Best Battle Server , using ping or status
-            return m_datas.Values.First();
+            return m_datas.Values.FirstOrDefault();
         }
 
 

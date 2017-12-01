@@ -26,6 +26,12 @@ namespace RedStone
                 Debug.LogError($"duplicated match user : {uid}");
         }
 
+        public void Remove(long uid)
+        {
+            if (m_users.Contains(uid))
+                m_users.Remove(uid);
+        }
+
         public List<long> GetMatched()
         {
             // 3 Players for Peasants vs Landlord 

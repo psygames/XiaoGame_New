@@ -15,6 +15,7 @@ namespace RedStone
         public UserDaoProxy dao { get { return ProxyManager.instance.GetProxy<UserDaoProxy>(); } }
         public UserProxy userProxy { get { return ProxyManager.instance.GetProxy<UserProxy>(); } }
         public BattleServerProxy battleProxy { get { return ProxyManager.instance.GetProxy<BattleServerProxy>(); } }
+        public MatchPoolProxy matchProxy { get { return ProxyManager.instance.GetProxy<MatchPoolProxy>(); } }
         private UserData data { get { return userProxy.GetData(sessionID); } }
 
 
@@ -65,6 +66,14 @@ namespace RedStone
             SendMessage(rep);
 
             data.SetState(UserState.Matching);
+            matchProxy.Add(data.uid, req.GameID, req.GameMode, req.GroupID);
+        }
+
+        private void OnCancelMatch(CMMatchCancel req)
+        {
+            if (data.state == UserState.Matching)
+                data.SetState(UserState.Hall);
+            matchProxy.Remove(data.uid);
         }
 
         public void MactchSuccess(BattleServerData server, RoomData room)

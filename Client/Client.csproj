@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1p3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -194,8 +192,9 @@
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\ProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Hall\HomeView.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Hall\Items\MessageBoxItem.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\LoadingView.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\Hall\MessageBoxItem.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\MessageBoxView.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ClientNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\EventManager.cs" />
@@ -319,6 +318,7 @@
     <Compile Include="Assets\Scripts\System\Protocol\CBLoginRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMLoginRequest.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CMMatchCancel.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchSuccess.cs" />

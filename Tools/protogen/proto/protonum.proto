@@ -11,6 +11,7 @@ enum ProtoNum
 	CMMatchRequest = 1003;
 	CMMatchReply = 1004;
 	CMMatchSuccess = 1006;
+	CMMatchCancel = 1007;
 	CBLoginRequest = 2001;
 	CBLoginReply = 2002;
 	BMLoginRequest = 3001;

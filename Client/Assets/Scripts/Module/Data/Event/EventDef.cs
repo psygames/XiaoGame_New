@@ -9,5 +9,8 @@ namespace RedStone
     {
         public const string HallLoading = "HallLoading";
         public const string MessageBox = "MessageBox";
+        public const string MatchBegin = "MatchBegin";
+        public const string MatchCancel = "MatchCancel";
+        public const string MatchSuccess = "MatchSuccess";
     }
 }

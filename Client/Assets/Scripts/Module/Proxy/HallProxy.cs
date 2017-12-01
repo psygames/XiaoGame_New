@@ -69,7 +69,15 @@ namespace RedStone
             , (rep) =>
             {
                 Debug.Log(rep.Status);
+                SendEvent(EventDef.MatchBegin);
             });
+        }
+
+        public void CancelMatch()
+        {
+            CMMatchCancel msg = new CMMatchCancel();
+            SendMessage(msg);
+            SendEvent(EventDef.MatchCancel);
         }
 
         void OnMatchSuccess(CMMatchSuccess msg)

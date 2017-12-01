@@ -9,7 +9,15 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
-            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
+            Task.WaitFor(0.5f, () =>
+            {
+                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 100));
+            });
+
+            Task.WaitFor(2, () =>
+            {
+                GF.ShowView<HomeView>();
+            });
         }
 
         public override void Leave()

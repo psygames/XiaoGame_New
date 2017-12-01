@@ -48,7 +48,7 @@ namespace RedStone
         {
             AddUI("Common/Loading");
             AddUI("Common/MessageBox");
-            //AddUI("Home");
+            AddUI("Hall/Home");
         }
 
         public void AddUI(string name, string prefabPath = null)
