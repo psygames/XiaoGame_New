@@ -4,14 +4,13 @@ using Plugins;
 using Core;
 namespace RedStone
 {
-    public class GameManager : Core.Singleton<GameManager>
+    public class GameManager : Core.Singleton<GameManager>,Core.IUpdateable
     {
         private Updater m_updater = new Updater();
         public EventManager eventManager { get; private set; }
 
         public void Start()
         {
-            m_updater.Start();
             eventManager = new EventManager();
             NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
@@ -22,6 +21,11 @@ namespace RedStone
             Debug.LogInfo("战场服务器已启动");
             // connect to main server
             ProxyManager.instance.GetProxy<MainServerProxy>().Connenct();
+
+
+            m_updater.Start();
+            m_updater.Add(this);
+            m_updater.Add(ProxyManager.instance);
         }
 
         private void OnDestroy()
@@ -33,5 +37,11 @@ namespace RedStone
         {
             
         }
+
+        public void Update()
+        {
+            
+        }
+
     }
 }

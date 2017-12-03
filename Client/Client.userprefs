@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{CD806563-15FB-B918-DFFC-3093DD89B3E5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plugins/CustomPlugin/Network/Imp/Websocket/WebSocketClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/GameManager.cs">
     <Files>
       <File FileName="Assets/Scripts/Module/Proxy/HallProxy.cs" Line="21" Column="1" />
       <File FileName="Assets/Scripts/Module/Proxy/ProxyBase.cs" Line="7" Column="1" />

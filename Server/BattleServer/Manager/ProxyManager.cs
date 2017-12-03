@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace RedStone
 {
-	public class ProxyManager : Core.Singleton<ProxyManager>
+    public class ProxyManager : Core.Singleton<ProxyManager>,Core.IUpdateable
 	{
 		private Dictionary<Type, ProxyBase> m_proxys = new Dictionary<Type, ProxyBase>();
 
@@ -47,5 +47,5 @@ namespace RedStone
 				itr.Current.Value.OnUpdate();
 			}
 		}
-	}
+    }
 }

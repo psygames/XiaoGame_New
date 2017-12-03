@@ -4,7 +4,7 @@ using Plugins;
 using Core;
 namespace RedStone
 {
-    public class GameManager : Core.Singleton<GameManager>
+    public class GameManager : Core.Singleton<GameManager>, Core.IUpdateable
     {
         public EventManager eventManager { get; private set; }
         private Updater m_updater = new Updater();
@@ -12,7 +12,6 @@ namespace RedStone
         public void Start()
         {
             eventManager = new EventManager();
-            m_updater.Start();
 
             DBManager.CreateInstance().Init("mongodb://localhost:27017", "xiao_game");
             NetworkManager.CreateInstance().Init();
@@ -23,10 +22,11 @@ namespace RedStone
             Debug.LogInfo("网络监听（战场） 已启动");
             NetworkManager.instance.serverForClient.server.Start();
             Debug.LogInfo("网络监听（客户端） 已启动");
-        }
 
-        private void Update()
-        {
+
+            m_updater.Start();
+            m_updater.Add(this);
+            m_updater.Add(ProxyManager.instance);
         }
 
         private void OnDestroy()
@@ -35,6 +35,10 @@ namespace RedStone
         }
 
         private void OnApplicationQuit()
+        {
+        }
+
+        public void Update()
         {
         }
     }

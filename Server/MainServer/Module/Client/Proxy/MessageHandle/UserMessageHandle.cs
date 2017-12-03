@@ -58,15 +58,20 @@ namespace RedStone
             //TODO: Game Id Game Mode...
 
             CMMatchReply rep = new CMMatchReply();
-            rep.WaitTime = 10;
             if (battleProxy.GetBestBattleServer() == null)
-                rep.Status = 0;
+            {
+                rep.Status = 0; //failed
+                rep.WaitTime = 0;
+            }
             else
+            {
                 rep.Status = 1;
-            SendMessage(rep);
+                rep.WaitTime = 3; //TODO: WaitTime
+                data.SetState(UserState.Matching);
+                matchProxy.Add(data.uid, req.GameID, req.GameMode, req.GroupID);
+            }
 
-            data.SetState(UserState.Matching);
-            matchProxy.Add(data.uid, req.GameID, req.GameMode, req.GroupID);
+            SendMessage(rep);
         }
 
         private void OnCancelMatch(CMMatchCancel req)

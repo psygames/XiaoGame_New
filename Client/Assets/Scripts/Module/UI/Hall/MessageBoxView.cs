@@ -65,7 +65,7 @@ namespace RedStone
 
     public static class MessageBox
     {
-        public static void Show(string title, string msg, MessageBoxStyle style, Action<MessageBoxResult> callback)
+        public static void Show(string title, string msg, MessageBoxStyle style, Action<MessageBoxResult> callback = null)
         {
             EventManager.instance.Send(EventDef.MessageBox, new MessageBoxEvent(title, msg, style, callback));
         }

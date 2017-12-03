@@ -17,10 +17,18 @@ namespace Core
 
         private void Update(object obj)
         {
-            foreach (var item in m_items)
-                item.Update();
-            foreach (var item in m_items)
-                item.LateUpdate();
+            try
+            {
+                lock (m_items)
+                {
+                    foreach (var item in m_items)
+                        item.Update();
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.Message + "\n" + e.StackTrace);
+            }
         }
 
 
@@ -29,7 +37,7 @@ namespace Core
             lock (m_items)
             {
                 if (!m_items.Contains(item))
-                    Add(item);
+                    m_items.Add(item);
             }
         }
 

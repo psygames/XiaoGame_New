@@ -1,18 +1,11 @@
 ﻿<Properties StartupConfiguration="{41989999-B8E6-48F2-8ABF-4616E0B2C21C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BattleServer/GameData/UserData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Plugins/Network/Imp/Websocket/WebSocketServer.cs">
     <Files>
-      <File FileName="MainServer/Module/BattleServer/Data/Game/BattleServerData.cs" Line="1" Column="1" />
-      <File FileName="MainServer/Module/BattleServer/Proxy/BattleServerProxy.cs" Line="1" Column="1" />
-      <File FileName="Plugins/Tool/NetTool.cs" Line="62" Column="30" />
-      <File FileName="Plugins/Network/Imp/Websocket/WebSocketClient.cs" Line="12" Column="65" />
-      <File FileName="Plugins/Network/Imp/Websocket/WebSocketServer.cs" Line="20" Column="72" />
-      <File FileName="MainServer/Module/Client/Proxy/Logic/UserProxy.cs" Line="1" Column="1" />
-      <File FileName="MainServer/Module/Client/Proxy/MessageHandle/UserMessageHandle.cs" Line="24" Column="50" />
-      <File FileName="BattleServer/Module/MainServer/Proxy/MainServerProxy.cs" Line="43" Column="13" />
-      <File FileName="BattleServer/Module/Client/Proxy/RoomProxy.cs" Line="16" Column="10" />
-      <File FileName="BattleServer/GameData/UserData.cs" Line="27" Column="53" />
-      <File FileName="BattleServer/Module/Client/Proxy/BattleServerProxy.cs" Line="21" Column="1" />
-      <File FileName="BattleServer/Module/Client/Proxy/PlayerProxy.cs" Line="1" Column="14" />
+      <File FileName="MainServer/Module/Client/Proxy/Logic/UserProxy.cs" Line="69" Column="69" />
+      <File FileName="MainServer/Module/Client/Proxy/Logic/MatchPoolProxy.cs" Line="47" Column="1" />
+      <File FileName="MainServer/Module/Client/Proxy/MessageHandle/UserMessageHandle.cs" Line="37" Column="10" />
+      <File FileName="MainServer/Module/Client/Proxy/Logic/MCProxyBase.cs" Line="1" Column="1" />
+      <File FileName="Plugins/Network/Imp/Websocket/WebSocketServer.cs" Line="37" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -21,6 +14,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Plugins PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>

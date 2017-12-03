@@ -68,8 +68,14 @@ namespace RedStone
             SendMessage<CMMatchRequest, CMMatchReply>(msg
             , (rep) =>
             {
-                Debug.Log(rep.Status);
-                SendEvent(EventDef.MatchBegin);
+                if(rep.Status == 0)
+                {
+                    MessageBox.Show("匹配失败","匹配失败，没有可用的战场服务器！",MessageBoxStyle.OK);
+                }
+                else
+                {
+                    SendEvent(EventDef.MatchBegin);
+                }
             });
         }
 

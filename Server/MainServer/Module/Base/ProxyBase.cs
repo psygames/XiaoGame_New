@@ -2,7 +2,7 @@
 using Plugins;
 namespace RedStone
 {
-    public class ProxyBase
+    public class ProxyBase : Core.IUpdateable
     {
         public T GetProxy<T>() where T : ProxyBase
         {
@@ -14,5 +14,10 @@ namespace RedStone
         public virtual void OnUpdate() { }
 
         public virtual void OnDestroy() { }
+
+        public void Update()
+        {
+            OnUpdate();
+        }
     }
 }

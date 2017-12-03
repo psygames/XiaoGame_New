@@ -4,6 +4,5 @@ namespace Core
     public interface IUpdateable
     {
         void Update();
-        void LateUpdate();
     }
 }
