@@ -31,11 +31,13 @@ namespace Plugins
 
         private void RegisterNetworkOnce<T>(Action<T> action)
         {
-            RegisterNetwork<T>((t) =>
+            Action<T> _action = null;
+            _action = (t) =>
             {
                 action.Invoke(t);
-                m_eventMgr.UnRegister(typeof(T).Name, action);
-            });
+                m_eventMgr.UnRegister(typeof(T).Name, _action);
+            };
+            RegisterNetwork(_action);
         }
         void OnReceived(byte[] data)
         {
@@ -43,7 +45,7 @@ namespace Plugins
             m_eventMgr.Send(obj.GetType().Name, obj);
         }
 
-        public void Send<T>(T msg) 
+        public void Send<T>(T msg)
         {
             var data = m_serializer.Serialize(msg as Google.Protobuf.IMessage);
             m_socket.Send(data);
@@ -51,8 +53,8 @@ namespace Plugins
 
         public void Send<TSend, TReply>(TSend msg, Action<TReply> action)
         {
-            Send(msg);
             RegisterNetworkOnce(action);
+            Send(msg);
         }
     }
 }

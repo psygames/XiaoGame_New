@@ -44,13 +44,18 @@ namespace Plugins
             m_eventMgr.Register(typeof(T).Name, action);
         }
 
-        private void RegisterNetworkOnce<T>(Action<string, T> action)
+        private void RegisterNetworkOnce<T>(string sessionID, Action<string, T> action)
         {
-            RegisterNetwork<T>((sessionID, msg) =>
+            Action<string, T> _action = null;
+            _action = (_sessionID, t) =>
             {
-                action.Invoke(sessionID, msg);
-                m_eventMgr.UnRegister(typeof(T).Name, action);
-            });
+                if (_sessionID == sessionID)
+                {
+                    action.Invoke(sessionID, t);
+                    m_eventMgr.UnRegister(typeof(T).Name, _action);
+                }
+            };
+            RegisterNetwork(_action);
         }
 
         public void Send<T>(string sessionID, T msg)
@@ -61,8 +66,8 @@ namespace Plugins
 
         public void Send<TSend, TReply>(string sessionID, TSend msg, Action<string, TReply> action)
         {
+            RegisterNetworkOnce(sessionID, action);
             Send(sessionID, msg);
-            RegisterNetworkOnce(action);
         }
     }
 }
