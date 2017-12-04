@@ -18,7 +18,7 @@ namespace RedStone
                 Login();
             };
 
-            RegisterMessage<BMCreateRommRequest>(OnCreateRoom);
+            RegisterMessage<BMCreateRoomRequest>(OnCreateRoom);
         }
 
         public void Connenct()
@@ -38,7 +38,7 @@ namespace RedStone
             });
         }
 
-        void OnCreateRoom(BMCreateRommRequest req)
+        void OnCreateRoom(BMCreateRoomRequest req)
         {
             var room = GetProxy<BattleServerProxy>().MainServerRequsetCreateRoom(req.Users);
             BMCreateRoomReply rep = new BMCreateRoomReply();

@@ -21,20 +21,21 @@ namespace RedStone
 
         public UserData AddUser(Message.PlayerInfo playerInfo, int roomID)
         {
+            UserData user = null;
             if (m_users.ContainsKey(playerInfo.Uid))
             {
+                user = GetUser(playerInfo.Uid);
                 Debug.LogError($"{playerInfo.Uid} is already in Battle");
             }
             else
             {
-                UserData user = new UserData();
+                user = new UserData();
                 string token = Guid.NewGuid().ToString(); //Gen Token
                 user.SetData(playerInfo, roomID, token);
                 user.SetState(UserState.Offline);
                 m_users.Add(user.uid, user);
-                return user;
             }
-            return null;
+            return user;
         }
 
 
@@ -50,6 +51,10 @@ namespace RedStone
                 user.SetSessionID(sessionID);
                 user.SetState(UserState.Login);
             }
+
+            CBLoginReply rep = new CBLoginReply();
+            rep.RoomID = user.roomID;
+            SendMessage(sessionID, rep);
         }
 
 

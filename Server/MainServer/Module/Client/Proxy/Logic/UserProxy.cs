@@ -72,14 +72,14 @@ namespace RedStone
 
             // Match Success Create Room and Send Back
             var server = GetProxy<BattleServerProxy>().GetBestBattleServer();
-            var room = GetProxy<BattleServerProxy>().CreateRoom(server.sessionID, matchedUsers);
-            foreach (var uid in matchedUsers)
+            GetProxy<BattleServerProxy>().CreateRoom(server.sessionID, matchedUsers, (roomData) =>
             {
-                GetHandle(uid).MactchSuccess(server, room);
-            }
+                foreach (var uid in matchedUsers)
+                {
+                    GetHandle(uid).MactchSuccess(server, roomData);
+                }
+            });
         }
-
-
 
 
 

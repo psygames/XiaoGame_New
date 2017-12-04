@@ -62,10 +62,10 @@ namespace RedStone
 
 
         //TODO: BATTLE END Remove Room
-        public RoomData CreateRoom(string battleSessionID, List<long> users)
+        public void CreateRoom(string battleSessionID, List<long> users,Action<RoomData> createdCallback)
         {
             RoomData data = new RoomData();
-            BMCreateRommRequest req = new BMCreateRommRequest();
+            BMCreateRoomRequest req = new BMCreateRoomRequest();
 
             foreach (var uid in users)
             {
@@ -79,15 +79,25 @@ namespace RedStone
                 req.Users.Add(player);
             }
 
-            SendMessage<BMCreateRommRequest, BMCreateRoomReply>(battleSessionID, req,
+            SendMessage<BMCreateRoomRequest, BMCreateRoomReply>(battleSessionID, req,
             (sessionID, rep) =>
             {
                 data.SetData(rep.RoomID, rep.PlayerTokens, rep.RoomName);
+                data.SetUsers(users);
                 GetData(sessionID).AddRoom(data);
+                createdCallback.Invoke(data);
             });
+        }
 
-            data.SetUsers(users);
-            return data;
+        public RoomData GetUserRoom(long uid)
+        {
+            foreach(var sv in m_datas)
+            {
+                var room = sv.Value.rooms.FirstOrDefault(a => a.users.Contains(uid));
+                if (room != null)
+                    return room;
+            }
+            return null;
         }
     }
 }

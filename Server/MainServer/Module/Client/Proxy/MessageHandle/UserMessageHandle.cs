@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Message;
 using RedStone.Data;
+using System.Linq;
 
 namespace RedStone
 {
@@ -63,6 +64,11 @@ namespace RedStone
                 rep.Status = 0; //failed
                 rep.WaitTime = 0;
             }
+            else if (battleProxy.GetUserRoom(data.uid) != null)
+            {
+                rep.Status = -1; // already in battle room
+                rep.WaitTime = 0;
+            }
             else
             {
                 rep.Status = 1;
@@ -88,9 +94,8 @@ namespace RedStone
             msg.BattleServerInfo.Address = server.address;
             msg.BattleServerInfo.Name = server.name;
             msg.BattleServerInfo.State = server.state.ToString();
-            msg.BattleServerInfo.Token = room.token;
+            msg.BattleServerInfo.Token = room.userTokens.First(a => a.Uid == data.uid).Token;
             SendMessage(msg);
-
             data.SetState(UserState.Game);
         }
 

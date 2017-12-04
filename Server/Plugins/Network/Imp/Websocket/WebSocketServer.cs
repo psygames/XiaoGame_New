@@ -9,7 +9,7 @@ namespace Plugins.Network
     {
         const string defaultServicePath = "/default";
         public WebSocketSharp.Server.WebSocketServer _server = null;
-        public override string address { get { return "ws://{0}{1}:{2}".FormatStr(_server.Address, defaultServicePath, _server.Port); } }
+        public override string address { get { return "ws://{0}:{1}{2}".FormatStr(_server.Address, _server.Port, defaultServicePath); } }
         private WebSocketServiceHost host
         {
             get { return _server.WebSocketServices[defaultServicePath]; }
