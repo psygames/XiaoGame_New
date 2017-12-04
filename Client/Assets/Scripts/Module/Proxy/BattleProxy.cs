@@ -15,24 +15,36 @@ namespace RedStone
 
         public override void OnInit()
         {
+
+        }
+
+        private void InitSocket()
+        {
+            //Init
+            string ip = NetTool.GetIP(serverInfo.Address);
+            int port = NetTool.GetPort(serverInfo.Address);
+            var socket = new Plugins.Network.WebSocketClient();
+            socket.Setup(ip, port);
+            var serializer = new ProtoSerializer();
+            serializer.getTypeFunc = (name) => { return System.Type.GetType(name); };
+            serializer.LoadProtoNum(typeof(ProtoNum));
+            network.Init(socket, serializer);
+
+            Debug.Log("Init Network (Battle) [{0}]".FormatStr(serverInfo.Address));
+
             network.socket.onConnected = () =>
             {
-                Login();
+                Login(); // 连接成功后，LOGIN
             };
+
         }
 
         public void Connect()
         {
             if (serverInfo != null)
             {
-                string ip = NetTool.GetIP(serverInfo.Address);
-                int port = NetTool.GetPort(serverInfo.Address);
-                network.socket.Setup(ip, port);
+                InitSocket();
                 network.socket.Connect();
-                network.socket.onConnected = () =>
-                {
-                    Login(); // 连接成功后，LOGIN
-                };
             }
             else
             {

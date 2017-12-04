@@ -8,3 +8,4 @@ __pycache__/
 Tools/protogen/source/client/build
 Tools/protogen/source/client/dist
 *.spec
+Tools/protogen/source/.idea/

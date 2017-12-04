@@ -68,13 +68,18 @@ namespace RedStone
             SendMessage<CMMatchRequest, CMMatchReply>(msg
             , (rep) =>
             {
-                if(rep.Status == 0)
-                {
-                    MessageBox.Show("匹配失败","匹配失败，没有可用的战场服务器！",MessageBoxStyle.OK);
-                }
-                else
+                if (rep.Status == 1)
                 {
                     SendEvent(EventDef.MatchBegin);
+
+                }
+                else if (rep.Status == 0)
+                {
+                    MessageBox.Show("匹配失败", "匹配失败，没有可用的战场服务器！", MessageBoxStyle.OK);
+                }
+                else if (rep.Status == -1)
+                {
+                    MessageBox.Show("匹配失败", "已经在房间中！", MessageBoxStyle.OK);
                 }
             });
         }
@@ -88,7 +93,9 @@ namespace RedStone
 
         void OnMatchSuccess(CMMatchSuccess msg)
         {
-            Debug.Log(msg.BattleServerInfo.Address);
+            battleServerInfo = msg.BattleServerInfo;
+            SendEvent(EventDef.MatchSuccess);
         }
+
     }
 }

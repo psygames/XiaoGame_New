@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Plugins;
 
 namespace RedStone
 {
@@ -41,35 +42,37 @@ namespace RedStone
 
 
         // Event
+        public static EventManager eventManager { get { return GameManager.instance.eventManager; } }
 
         public static void Register<T>(string eventName, Action<T> callback)
         {
-            EventManager.instance.Register(eventName, callback);
+            eventManager.Register(eventName, callback);
         }
 
         public static void Register(string eventName, Action callback)
         {
-            EventManager.instance.Register(eventName, callback);
+            eventManager.Register(eventName, callback);
         }
 
         public static void UnRegister(string eventName, Action callback)
         {
-            EventManager.instance.UnRegister(eventName, callback);
+            eventManager.UnRegister(eventName, callback);
         }
 
         public static void UnRegister<T>(string eventName, Action<T> callback)
         {
-            EventManager.instance.UnRegister(eventName, callback);
+            eventManager.UnRegister(eventName, callback);
         }
 
         public static void Send<T>(string eventName, T msg)
         {
-            EventManager.instance.Send(eventName, msg);
+            eventManager.Send(eventName, msg);
         }
 
         public static void Send(string eventName)
         {
-            EventManager.instance.Send(eventName);
+            eventManager.Send(eventName);
         }
+
     }
 }

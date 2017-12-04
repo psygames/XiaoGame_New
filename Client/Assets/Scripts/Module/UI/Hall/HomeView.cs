@@ -18,6 +18,7 @@ namespace RedStone
 
             Register(EventDef.MatchBegin, OnMatchBegin);
             Register(EventDef.MatchCancel, OnMatchCancel);
+            Register(EventDef.MatchSuccess, OnMatchSuccess);
         }
 
         public override void OnOpen()
@@ -36,6 +37,23 @@ namespace RedStone
         {
             m_isMatching = false;
             RefreshUI();
+        }
+
+        void OnMatchSuccess()
+        {
+            m_isMatching = false;
+            RefreshUI();
+            //TODO: Match Success Effect
+            Debug.Log("Match Success!!!");
+            JoinBatttle();
+        }
+
+        void JoinBatttle()
+        {
+            Task.WaitFor(1, () =>
+            {
+                GF.GetProxy<BattleProxy>().Connect();
+            });
         }
 
         private void RefreshUI()

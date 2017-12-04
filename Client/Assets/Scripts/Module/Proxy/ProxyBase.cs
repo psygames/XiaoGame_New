@@ -16,7 +16,7 @@ namespace RedStone
 
         public void SendEvent(string eventName, object obj = null)
         {
-            EventManager.instance.Send(eventName, obj);
+            GF.Send(eventName, obj);
         }
 
 

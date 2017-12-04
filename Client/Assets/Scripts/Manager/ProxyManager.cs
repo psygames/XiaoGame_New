@@ -9,6 +9,7 @@ namespace RedStone
 		public ProxyManager()
 		{
 			AddProxy<HallProxy>();
+            AddProxy<BattleProxy>();
 		}
 
 		private void AddProxy<T>() where T : ProxyBase, new()

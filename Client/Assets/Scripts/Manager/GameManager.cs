@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Plugins;
 namespace RedStone
 {
     public class GameManager : Core.SingletonBehaviour<GameManager>
     {
+        private EventManager m_eventMgr = new EventManager();
+        public EventManager eventManager { get { return m_eventMgr; } }
+
         protected override void Awake()
         {
             base.Awake();
 
             CreateInstance();
-
             Init();
         }
 
@@ -20,9 +23,9 @@ namespace RedStone
 
         private void CreateInstance()
         {
+            m_eventMgr = new EventManager();
             NetworkManager.CreateInstance();
             ProxyManager.CreateInstance();
-            EventManager.CreateInstance();
             UIManager.CreateInstance();
             TaskManger.CreateInstance();
 
@@ -62,7 +65,7 @@ namespace RedStone
         private void OnDestroy()
         {
             ProxyManager.instance.Destroy();
-            EventManager.instance.ClearAll();
+            eventManager.ClearAll();
         }
 
         private void OnApplicationQuit()

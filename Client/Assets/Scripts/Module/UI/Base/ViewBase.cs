@@ -14,22 +14,22 @@ namespace RedStone
 
         public void Register<T>(string eventName, Action<T> callback)
         {
-            EventManager.instance.Register(eventName, callback);
+            GF.Register(eventName, callback);
         }
 
         public void Register(string eventName, Action callback)
         {
-            EventManager.instance.Register(eventName, callback);
+            GF.Register(eventName, callback);
         }
 
         public void UnRegister(string eventName, Action callback)
         {
-            EventManager.instance.UnRegister(eventName, callback);
+            GF.UnRegister(eventName, callback);
         }
 
         public void UnRegister<T>(string eventName, Action<T> callback)
         {
-            EventManager.instance.UnRegister(eventName, callback);
+            GF.UnRegister(eventName, callback);
         }
 
         public virtual void OnInit()

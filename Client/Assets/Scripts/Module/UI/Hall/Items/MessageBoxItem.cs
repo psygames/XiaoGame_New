@@ -97,7 +97,9 @@ namespace RedStone
         public void Hide()
         {
             m_isShowing = false;
-            uTweenScale.Begin(boxTrans.gameObject, this.gameObject.transform.localScale, Vector3.zero, showDuration).SetOnFinished(onHide);
+            var tw = uTweenScale.Begin(boxTrans.gameObject, this.gameObject.transform.localScale, Vector3.zero, showDuration);
+            tw.SetOnFinished(onHide);
+            tw.method = EaseType.easeOutCirc;
         }
 
         public void OnHide()
@@ -109,7 +111,9 @@ namespace RedStone
         public void Show()
         {
             this.gameObject.SetActive(true);
-            uTweenScale.Begin(boxTrans.gameObject, (m_init ? Vector3.zero : this.gameObject.transform.localScale), Vector3.one, showDuration).SetOnFinished(onShow);
+            var tw = uTweenScale.Begin(boxTrans.gameObject, (m_init ? Vector3.zero : this.gameObject.transform.localScale), Vector3.one, showDuration);
+            tw.SetOnFinished(onShow);
+            tw.method = EaseType.easeOutCirc;
             m_isShowing = true;
             if (HasStyle(MessageBoxStyle.ReturnID))
                 Callback(MessageBoxResultType.ID);

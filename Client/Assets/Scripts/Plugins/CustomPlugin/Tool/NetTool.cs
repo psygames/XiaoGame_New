@@ -52,7 +52,10 @@ namespace Plugins
             int begin = address.LastIndexOf(":");
             if (begin < 0)
                 return -1;
-            string portStr = address.Substring(begin);
+            string portStr = address.Substring(begin + 1);
+            int sp = portStr.IndexOf("/");
+            if (sp != -1)
+                portStr = portStr.Substring(0, sp);
             int port = -1;
             if (int.TryParse(portStr, out port))
                 return port;

@@ -25,8 +25,15 @@ namespace RedStone
             foreach (var task in m_tasks)
             {
                 task.Update();
-                if (task.finished)
-                    task.Callback();
+                try
+                {
+                    if (task.finished)
+                        task.Callback();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e.Message + "\n" + e.StackTrace);
+                }
             }
 
             m_tasks.RemoveAll(a => a.finished);

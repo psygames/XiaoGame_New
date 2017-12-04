@@ -9,7 +9,7 @@ namespace RedStone
         {
             get
             {
-                return NetworkManager.instance.main;
+                return NetworkManager.instance.battle;
             }
         }
     }
