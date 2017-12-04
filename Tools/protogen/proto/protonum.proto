@@ -14,6 +14,10 @@ enum ProtoNum
 	CMMatchCancel = 1007;
 	CBLoginRequest = 2001;
 	CBLoginReply = 2002;
+	CBJoinBattleRequest = 2003;
+	CBJoinBattleReply = 2004;
 	BMLoginRequest = 3001;
 	BMLoginReply = 3002;
+	BMCreateRoomRequest = 3003;
+	BMCreateRoomReply = 3004;
 }

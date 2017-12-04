@@ -1,9 +1,0 @@
-syntax = "proto3";
-import "Infos.proto";
-package message;
-
-// 主服 -> 战场 创建房间请求
-message BMCreateRommRequest
-{
-    repeated PlayerInfo users = 1;
-}

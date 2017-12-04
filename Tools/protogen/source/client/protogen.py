@@ -37,6 +37,11 @@ def main():
     download_path = "download/zip.zip"
     download(url, files, download_path)
 
+    for _dir in save_dir:
+        if os.path.exists(_dir):
+            shutil.rmtree(_dir)
+        os.mkdir(_dir)
+
     f = zipfile.ZipFile(download_path, 'r')
     for file in f.namelist():
         f.extract(file, "download/")
