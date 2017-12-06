@@ -52,20 +52,26 @@ namespace RedStone
             }
         }
 
+        public int roomID { get; private set; }
         public void Login()
         {
             CBLoginRequest req = new CBLoginRequest();
             req.Token = serverInfo.Token;
-            network.Send<CBLoginRequest, CBLoginReply>(req
+            SendMessage<CBLoginRequest, CBLoginReply>(req
             , (rep) =>
             {
-                Debug.Log("assign room id:" + rep.RoomID);
+                roomID = rep.RoomID;
             });
         }
 
         public void JoinBattle()
         {
+            CBJoinBattleRequest req = new CBJoinBattleRequest();
+            SendMessage<CBJoinBattleRequest, CBJoinBattleReply>(req,
+            (rep) =>
+            {
 
+            });
         }
     }
 }
