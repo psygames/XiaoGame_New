@@ -15,6 +15,7 @@ namespace RedStone
         {
             base.OnInit();
             Register<LoadingStatus>(EventDef.HallLoading, OnLoadingStateChanged);
+            Register<LoadingStatus>(EventDef.BattleLoading, OnLoadingStateChanged);
         }
 
         public override void OnOpen()

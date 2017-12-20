@@ -19,6 +19,11 @@ namespace RedStone
             GF.Send(eventName, obj);
         }
 
+        public void SendEvent<T>(string eventName, T evtBody)
+        {
+            GF.Send(eventName, evtBody);
+        }
+
 
         public virtual void SendMessage<T>(T msg)
         {
@@ -28,6 +33,11 @@ namespace RedStone
         public virtual void SendMessage<TSend, TReply>(TSend msg, Action<TReply> action)
         {
             network.Send(msg, action);
+        }
+
+        public virtual void RegisterMessage<T>(Action<T> callback)
+        {
+            network.RegisterNetwork(callback);
         }
 
         public virtual void OnInit()

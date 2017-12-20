@@ -1,0 +1,8 @@
+syntax = "proto3";
+package message;
+
+message CMCancelReconnect
+{
+    int32 gameID = 1;
+    int32 gameMode = 2;
+}

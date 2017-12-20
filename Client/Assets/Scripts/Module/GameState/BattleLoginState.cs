@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RedStone
 {
-    public class LoginState : AbstractState
+    public class BattleLoginState : AbstractState
     {
         public override void Enter(params object[] param)
         {

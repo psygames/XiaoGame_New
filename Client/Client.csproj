@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.1.1p3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -95,6 +97,8 @@
     <Compile Include="Assets\Scripts\Manager\TableManager.cs" />
     <Compile Include="Assets\Scripts\Manager\TaskManger.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Module\Data\BattleData\Player\BattlePlayerData.cs" />
+    <Compile Include="Assets\Scripts\Module\Data\BattleData\Player\RoomData.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\BattleRoomConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\CheatConfig.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Config\ColorConfig.cs" />
@@ -183,18 +187,26 @@
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTechnologyLevel.cs" />
     <Compile Include="Assets\Scripts\Module\Data\Properties\TableTextColor.cs" />
     <Compile Include="Assets\Scripts\Module\GameState\AbstractState.cs" />
-    <Compile Include="Assets\Scripts\Module\GameState\LoadingState.cs" />
-    <Compile Include="Assets\Scripts\Module\GameState\LoginState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\BattleLoadingState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\BattleState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\HallLoadingState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\BattleLoginState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\HallState.cs" />
+    <Compile Include="Assets\Scripts\Module\GameState\HallLoginState.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\BattleProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\BattleProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\ProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Battle\BattleView.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Common\MessageBoxView.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Common\Toast.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Common\ToastItem.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Common\ToastItemStandalone.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\HomeView.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\Items\MessageBoxItem.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\LoadingView.cs" />
-    <Compile Include="Assets\Scripts\Module\UI\Hall\MessageBoxView.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ClientNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\EventManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ServerNetworkManager.cs" />
@@ -315,6 +327,13 @@
     <Compile Include="Assets\Scripts\System\Protocol\CBJoinBattleRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBLoginRequest.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBPlayCard.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBPlayCardSync.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBReady.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBReadySync.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBRoomSync.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBSendCardSync.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CMCancelReconnect.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMLoginRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CMMatchCancel.cs" />

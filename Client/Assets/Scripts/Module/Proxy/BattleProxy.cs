@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using Message;
 using Plugins;
+using RedStone.Data;
+using System.Collections.Generic;
 
 namespace RedStone
 {
@@ -9,13 +11,23 @@ namespace RedStone
     {
         public BattleServerInfo serverInfo { get { return GetProxy<HallProxy>().battleServerInfo; } }
 
+        public RoomData room { get; private set; }
+        public bool isLogin { get; private set; }
+
+        public void Reset()
+        {
+
+        }
+
         public BattleProxy()
         {
+            room = new RoomData();
+            players = new Dictionary<int, BattlePlayerData>();
         }
 
         public override void OnInit()
         {
-
+            RegisterMessage<CBReadySync>(OnReadySync);
         }
 
         private void InitSocket()
@@ -61,6 +73,11 @@ namespace RedStone
             , (rep) =>
             {
                 roomID = rep.RoomID;
+                Toast.instance.ShowNormal("登录战场服务器成功！");
+                Task.WaitFor(1f, () =>
+                {
+                    JoinBattle();//自动加入战场
+                });
             });
         }
 
@@ -70,8 +87,41 @@ namespace RedStone
             SendMessage<CBJoinBattleRequest, CBJoinBattleReply>(req,
             (rep) =>
             {
-
+                Toast.instance.ShowNormal("加入战场成功！");
+                room.SetData(rep.Info);
+                SetPlayers(rep.PlayerInfos);
             });
+        }
+
+        public void Ready()
+        {
+            CBReady req = new CBReady();
+            SendMessage(req);
+        }
+
+        public void OnReadySync(CBReadySync msg)
+        {
+            GetPlayer(msg.FromID).SetReady(true);
+            SendEvent(EventDef.PlayerReady, msg.FromID);
+        }
+
+        public BattlePlayerData GetPlayer(int id)
+        {
+            BattlePlayerData data = null;
+            players.TryGetValue(id, out data);
+            return data;
+        }
+
+        public Dictionary<int, BattlePlayerData> players { get; private set; }
+        public void SetPlayers(IList<Message.BattlePlayerInfo> playerInfos)
+        {
+            players.Clear();
+            foreach (var info in playerInfos)
+            {
+                BattlePlayerData data = new BattlePlayerData();
+                data.SetData(info);
+                players.Add(info.Id, data);
+            }
         }
     }
 }

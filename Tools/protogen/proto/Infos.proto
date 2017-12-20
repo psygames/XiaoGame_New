@@ -34,6 +34,19 @@ message BattlePlayerInfo
     int32 level = 4;  // 当前等级
     int32 seat = 5;   // 座位
     bool isSelf = 6;  // 是否是自己
+    bool joined = 7;  // 是否加入战场
+}
+
+message PlayerCardInfo
+{
+    int64 uid = 1;
+    repeated int32 cards = 2;
+}
+
+message CardInfo
+{
+    int32 id = 1;
+    int32 tableID = 2;
 }
 
 message PlayerTokenInfo

@@ -23,7 +23,7 @@ namespace RedStone
 
         private void OnClientClosed(string sessionID)
         {
-            if (m_userDatas[sessionID].state != UserState.Offline)
+            if (m_userDatas[sessionID].isOnline)
             {
                 m_clientHandles[sessionID].Logout();
             }

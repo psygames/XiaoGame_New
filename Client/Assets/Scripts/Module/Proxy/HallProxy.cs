@@ -53,9 +53,27 @@ namespace RedStone
             network.Send<CMLoginRequest, CMLoginReply>(req
             , (reply) =>
              {
-                 isLogin = true;
-                 playerData.SetData(reply.PlayerInfo);
-                 GF.ChangeState<LoadingState>();
+                 //TODO:重连Or 退出
+                 if (reply.IsInBattle)
+                 {
+                     MessageBox.Show("战斗提示", "已经在战场中，是否重连！", MessageBoxStyle.OKCancelClose, (result) =>
+                     {
+                         if (result.result == MessageBoxResultType.OK)
+                         {
+                             CancelReconnect(1, 1); //TODO:重连
+                         }
+                         else
+                         {
+                             CancelReconnect(1, 1);
+                         }
+                     });
+                 }
+                 else
+                 {
+                     isLogin = true;
+                     playerData.SetData(reply.PlayerInfo);
+                     GF.ChangeState<LoadingState>();
+                 }
              });
         }
 
@@ -79,9 +97,21 @@ namespace RedStone
                 }
                 else if (rep.Status == -1)
                 {
-                    MessageBox.Show("匹配失败", "已经在房间中！", MessageBoxStyle.OK);
+                    // 重连Or强退
+                    MessageBox.Show("匹配失败", "已经在房间中！", MessageBoxStyle.OK, (result) =>
+                    {
+                        CancelReconnect(gameID, gameMode);
+                    });
                 }
             });
+        }
+
+        public void CancelReconnect(int gameID, int gameMode)
+        {
+            CMCancelReconnect msg = new CMCancelReconnect();
+            msg.GameID = gameID;
+            msg.GameMode = gameMode;
+            SendMessage(msg);
         }
 
         public void CancelMatch()

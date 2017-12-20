@@ -5,6 +5,8 @@ namespace RedStone.Data
 {
     public class RoomData : DataBase
     {
+        public string battleServerSessionID { get; private set; }
+        public BattleServerData battleServer { get { return ProxyManager.instance.GetProxy<BattleServerProxy>().GetData(battleServerSessionID); } }
         public string name { get; private set; }
         public int id { get; private set; }
         public IList<long> users { get; private set; }
@@ -15,8 +17,9 @@ namespace RedStone.Data
             users = new List<long>();
         }
 
-        public void SetData(int id, IList<Message.PlayerTokenInfo> tokens, string name)
+        public void SetData(string battleServerSessionID, int id, IList<Message.PlayerTokenInfo> tokens, string name)
         {
+            this.battleServerSessionID = battleServerSessionID;
             this.id = id;
             this.name = name;
             userTokens = tokens;
@@ -25,6 +28,11 @@ namespace RedStone.Data
         public void SetUsers(List<long> users)
         {
             this.users = users;
+        }
+
+        public void RemoveUser(long uid)
+        {
+            users.Remove(uid);
         }
     }
 }

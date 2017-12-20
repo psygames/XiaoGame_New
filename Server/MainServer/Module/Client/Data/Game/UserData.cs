@@ -11,6 +11,7 @@ namespace RedStone.Data
         public int exp { get; private set; }
         public int gold { get; private set; }
         public UserState state { get; private set; }
+        public bool isOnline { get; private set; }
 
         public void SetSessionID(string sessionID)
         {
@@ -20,6 +21,16 @@ namespace RedStone.Data
         public void SetState(UserState state)
         {
             this.state = state;
+        }
+
+        public void Logout()
+        {
+            isOnline = false;
+        }
+
+        public void Login()
+        {
+            isOnline = true;
         }
 
         public void SetData(string sessionID,DB.UserDB db)
@@ -35,10 +46,10 @@ namespace RedStone.Data
 
     public enum UserState
     {
-        None,
-        Hall,
-        Matching,
-        Game,
-        Offline,
+        None = 0,
+        Hall = 1,
+        Matching = 2,
+        Game = 3,
+        GameEnd = 4,
     }
 }

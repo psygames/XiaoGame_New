@@ -1,0 +1,8 @@
+syntax = "proto3";
+package message;
+
+message CBSendCardSync
+{
+    int32 targetID = 1;
+    int32 cardID = 2;  
+}

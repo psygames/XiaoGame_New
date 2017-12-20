@@ -6,18 +6,33 @@ package message;
 enum ProtoNum
 {
 	Unknown = 0;
+
+	//Client -> Main
 	CMLoginRequest = 1001;
 	CMLoginReply = 1002;
 	CMMatchRequest = 1003;
 	CMMatchReply = 1004;
 	CMMatchSuccess = 1006;
 	CMMatchCancel = 1007;
+	CMCancelReconnect = 1009;
+
+	//Client -> Battle
 	CBLoginRequest = 2001;
 	CBLoginReply = 2002;
 	CBJoinBattleRequest = 2003;
 	CBJoinBattleReply = 2004;
+	CBReady = 2005;
+	CBReadySync = 2006;
+	CBRoomSync = 2008;
+	CBCardInfoSync = 2010;
+	CBPlayCard = 2011;
+	CBPlayCardSync = 2012;
+	CBSendCardSync = 2014;
+
+	//Battle -> Main
 	BMLoginRequest = 3001;
 	BMLoginReply = 3002;
 	BMCreateRoomRequest = 3003;
 	BMCreateRoomReply = 3004;
+
 }

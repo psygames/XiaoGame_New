@@ -25,11 +25,12 @@ namespace RedStone
             this.sessionID = sessionID;
             RegisterMsg<CMLoginRequest>(OnLogin);
             RegisterMsg<CMMatchRequest>(OnBeginMatch);
+            RegisterMsg<CMCancelReconnect>(OnCancelReconnect);
         }
 
         public void Logout()
         {
-            data.SetState(UserState.Offline);
+            data.Logout();
             dao.Logout(data.uid);
             Debug.Log($"{data.uid} logout");
         }
@@ -38,6 +39,7 @@ namespace RedStone
         {
             var db = dao.Login(msg.DeviceID);
             data.SetData(sessionID, db);
+            data.Login();
 
             Debug.Log($"{data.uid} login");
 
@@ -48,9 +50,26 @@ namespace RedStone
             reply.PlayerInfo.Level = data.level;
             reply.PlayerInfo.Name = data.name;
             reply.PlayerInfo.Uid = data.uid;
+            reply.IsInBattle = false;
+
+
+            var room = battleProxy.GetUserRoom(data.uid);
+            if (room != null)
+            {
+                reply.IsInBattle = true;
+                reply.BattleServerInfo = new BattleServerInfo();
+                reply.BattleServerInfo.Address = room.battleServer.address;
+                reply.BattleServerInfo.Name = room.battleServer.name;
+                reply.BattleServerInfo.Token = room.userTokens.First(a=>a.Uid == data.uid).Token;
+                reply.BattleServerInfo.State = room.battleServer.state.ToString();
+            }
+
             SendMessage(reply);
 
-            data.SetState(UserState.Hall);
+            if(reply.IsInBattle)
+                data.SetState(UserState.Game);
+            else
+                data.SetState(UserState.Hall);
         }
 
 
@@ -62,11 +81,6 @@ namespace RedStone
             if (battleProxy.GetBestBattleServer() == null)
             {
                 rep.Status = 0; //failed
-                rep.WaitTime = 0;
-            }
-            else if (battleProxy.GetUserRoom(data.uid) != null)
-            {
-                rep.Status = -1; // already in battle room
                 rep.WaitTime = 0;
             }
             else
@@ -86,6 +100,18 @@ namespace RedStone
                 data.SetState(UserState.Hall);
             matchProxy.Remove(data.uid);
         }
+
+
+        private void OnCancelReconnect(CMCancelReconnect msg)
+        {
+            var room = battleProxy.GetUserRoom(data.uid);
+            if (room != null)
+                room.RemoveUser(data.uid);
+
+            if (data.state == UserState.Game)
+                data.SetState(UserState.Hall);
+        }
+
 
         public void MactchSuccess(BattleServerData server, RoomData room)
         {

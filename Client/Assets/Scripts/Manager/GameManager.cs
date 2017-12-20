@@ -18,7 +18,7 @@ namespace RedStone
 
         private void Start()
         {
-            ChangeGameState<LoginState>();
+            ChangeGameState<HallLoginState>();
         }
 
         private void CreateInstance()

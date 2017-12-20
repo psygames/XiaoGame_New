@@ -38,17 +38,28 @@ namespace RedStone
                 Object obj = Resources.Load(MyPath.RES_UI + kv.Value);
                 GameObject go = Object.Instantiate(obj) as GameObject;
                 ViewBase _base = go.GetComponent<ViewBase>();
-                m_views.Add(_base.GetType().ToString(), _base);
-                go.transform.SetParent(uiRoot, false);
-                go.SetActive(false);
+                if (_base == null)
+                {
+                    Debug.LogError(kv.Value + " Get ViewBase is NULL");
+                }
+                else
+                {
+                    m_views.Add(_base.GetType().ToString(), _base);
+                    go.transform.SetParent(uiRoot, false);
+                    go.SetActive(false);
+                }
             }
         }
 
         public void RegisteAll()
         {
+            AddUI("Hall/Home");
+
+            AddUI("Battle/Battle");
+
             AddUI("Common/Loading");
             AddUI("Common/MessageBox");
-            AddUI("Hall/Home");
+            AddUI("Common/Toast");
         }
 
         public void AddUI(string name, string prefabPath = null)

@@ -27,17 +27,21 @@ namespace Message {
             "KAUSCwoDZXhwGAUgASgFIk8KEEJhdHRsZVNlcnZlckluZm8SDwoHYWRkcmVz",
             "cxgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBXN0YXRlGAMgASgJEg0KBXRva2Vu",
             "GAQgASgJIioKDkJhdHRsZVJvb21JbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUY",
-            "AiABKAkiZwoQQmF0dGxlUGxheWVySW5mbxIKCgJpZBgBIAEoBRIMCgRuYW1l",
+            "AiABKAkidwoQQmF0dGxlUGxheWVySW5mbxIKCgJpZBgBIAEoBRIMCgRuYW1l",
             "GAIgASgJEgwKBGdvbGQYAyABKAUSDQoFbGV2ZWwYBCABKAUSDAoEc2VhdBgF",
-            "IAEoBRIOCgZpc1NlbGYYBiABKAgiLQoPUGxheWVyVG9rZW5JbmZvEgsKA3Vp",
-            "ZBgBIAEoAxINCgV0b2tlbhgCIAEoCWIGcHJvdG8z"));
+            "IAEoBRIOCgZpc1NlbGYYBiABKAgSDgoGam9pbmVkGAcgASgIIiwKDlBsYXll",
+            "ckNhcmRJbmZvEgsKA3VpZBgBIAEoAxINCgVjYXJkcxgCIAMoBSInCghDYXJk",
+            "SW5mbxIKCgJpZBgBIAEoBRIPCgd0YWJsZUlEGAIgASgFIi0KD1BsYXllclRv",
+            "a2VuSW5mbxILCgN1aWQYASABKAMSDQoFdG9rZW4YAiABKAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerInfo), global::Message.PlayerInfo.Parser, new[]{ "Uid", "Name", "Gold", "Level", "Exp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State", "Token" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleRoomInfo), global::Message.BattleRoomInfo.Parser, new[]{ "Id", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf", "Joined" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerCardInfo), global::Message.PlayerCardInfo.Parser, new[]{ "Uid", "Cards" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CardInfo), global::Message.CardInfo.Parser, new[]{ "Id", "TableID" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerTokenInfo), global::Message.PlayerTokenInfo.Parser, new[]{ "Uid", "Token" }, null, null, null)
           }));
     }
@@ -671,6 +675,7 @@ namespace Message {
       level_ = other.level_;
       seat_ = other.seat_;
       isSelf_ = other.isSelf_;
+      joined_ = other.joined_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -762,6 +767,20 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "joined" field.</summary>
+    public const int JoinedFieldNumber = 7;
+    private bool joined_;
+    /// <summary>
+    /// 是否加入战场
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Joined {
+      get { return joined_; }
+      set {
+        joined_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as BattlePlayerInfo);
@@ -781,6 +800,7 @@ namespace Message {
       if (Level != other.Level) return false;
       if (Seat != other.Seat) return false;
       if (IsSelf != other.IsSelf) return false;
+      if (Joined != other.Joined) return false;
       return true;
     }
 
@@ -793,6 +813,7 @@ namespace Message {
       if (Level != 0) hash ^= Level.GetHashCode();
       if (Seat != 0) hash ^= Seat.GetHashCode();
       if (IsSelf != false) hash ^= IsSelf.GetHashCode();
+      if (Joined != false) hash ^= Joined.GetHashCode();
       return hash;
     }
 
@@ -827,6 +848,10 @@ namespace Message {
         output.WriteRawTag(48);
         output.WriteBool(IsSelf);
       }
+      if (Joined != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(Joined);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -848,6 +873,9 @@ namespace Message {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Seat);
       }
       if (IsSelf != false) {
+        size += 1 + 1;
+      }
+      if (Joined != false) {
         size += 1 + 1;
       }
       return size;
@@ -875,6 +903,9 @@ namespace Message {
       }
       if (other.IsSelf != false) {
         IsSelf = other.IsSelf;
+      }
+      if (other.Joined != false) {
+        Joined = other.Joined;
       }
     }
 
@@ -910,6 +941,293 @@ namespace Message {
             IsSelf = input.ReadBool();
             break;
           }
+          case 56: {
+            Joined = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PlayerCardInfo : pb::IMessage<PlayerCardInfo> {
+    private static readonly pb::MessageParser<PlayerCardInfo> _parser = new pb::MessageParser<PlayerCardInfo>(() => new PlayerCardInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerCardInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.InfosReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerCardInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerCardInfo(PlayerCardInfo other) : this() {
+      uid_ = other.uid_;
+      cards_ = other.cards_.Clone();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerCardInfo Clone() {
+      return new PlayerCardInfo(this);
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 1;
+    private long uid_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Uid {
+      get { return uid_; }
+      set {
+        uid_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cards" field.</summary>
+    public const int CardsFieldNumber = 2;
+    private static readonly pb::FieldCodec<int> _repeated_cards_codec
+        = pb::FieldCodec.ForInt32(18);
+    private readonly pbc::RepeatedField<int> cards_ = new pbc::RepeatedField<int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<int> Cards {
+      get { return cards_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerCardInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerCardInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uid != other.Uid) return false;
+      if(!cards_.Equals(other.cards_)) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uid != 0L) hash ^= Uid.GetHashCode();
+      hash ^= cards_.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Uid != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Uid);
+      }
+      cards_.WriteTo(output, _repeated_cards_codec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uid != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Uid);
+      }
+      size += cards_.CalculateSize(_repeated_cards_codec);
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerCardInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uid != 0L) {
+        Uid = other.Uid;
+      }
+      cards_.Add(other.cards_);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Uid = input.ReadInt64();
+            break;
+          }
+          case 18:
+          case 16: {
+            cards_.AddEntriesFrom(input, _repeated_cards_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CardInfo : pb::IMessage<CardInfo> {
+    private static readonly pb::MessageParser<CardInfo> _parser = new pb::MessageParser<CardInfo>(() => new CardInfo());
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CardInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Message.InfosReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardInfo(CardInfo other) : this() {
+      id_ = other.id_;
+      tableID_ = other.tableID_;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CardInfo Clone() {
+      return new CardInfo(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "tableID" field.</summary>
+    public const int TableIDFieldNumber = 2;
+    private int tableID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TableID {
+      get { return tableID_; }
+      set {
+        tableID_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CardInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CardInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (TableID != other.TableID) return false;
+      return true;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (TableID != 0) hash ^= TableID.GetHashCode();
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (TableID != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(TableID);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (TableID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TableID);
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CardInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.TableID != 0) {
+        TableID = other.TableID;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            input.SkipLastField();
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            TableID = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -923,7 +1241,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Message.InfosReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Message.InfosReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

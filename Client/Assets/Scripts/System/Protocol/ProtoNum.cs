@@ -22,14 +22,18 @@ namespace Message {
     static ProtonumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSrEAgoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSrdAwoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
             "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
-            "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxITCg5DQkxv",
-            "Z2luUmVxdWVzdBDRDxIRCgxDQkxvZ2luUmVwbHkQ0g8SGAoTQ0JKb2luQmF0",
-            "dGxlUmVxdWVzdBDTDxIWChFDQkpvaW5CYXR0bGVSZXBseRDUDxITCg5CTUxv",
-            "Z2luUmVxdWVzdBC5FxIRCgxCTUxvZ2luUmVwbHkQuhcSGAoTQk1DcmVhdGVS",
-            "b29tUmVxdWVzdBC7FxIWChFCTUNyZWF0ZVJvb21SZXBseRC8F2IGcHJvdG8z"));
+            "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxIWChFDTUNh",
+            "bmNlbFJlY29ubmVjdBDxBxITCg5DQkxvZ2luUmVxdWVzdBDRDxIRCgxDQkxv",
+            "Z2luUmVwbHkQ0g8SGAoTQ0JKb2luQmF0dGxlUmVxdWVzdBDTDxIWChFDQkpv",
+            "aW5CYXR0bGVSZXBseRDUDxIMCgdDQlJlYWR5ENUPEhAKC0NCUmVhZHlTeW5j",
+            "ENYPEg8KCkNCUm9vbVN5bmMQ2A8SEwoOQ0JDYXJkSW5mb1N5bmMQ2g8SDwoK",
+            "Q0JQbGF5Q2FyZBDbDxITCg5DQlBsYXlDYXJkU3luYxDcDxITCg5DQlNlbmRD",
+            "YXJkU3luYxDeDxITCg5CTUxvZ2luUmVxdWVzdBC5FxIRCgxCTUxvZ2luUmVw",
+            "bHkQuhcSGAoTQk1DcmVhdGVSb29tUmVxdWVzdBC7FxIWChFCTUNyZWF0ZVJv",
+            "b21SZXBseRC8F2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -44,16 +48,33 @@ namespace Message {
   /// </summary>
   public enum ProtoNum {
     [pbr::OriginalName("Unknown")] Unknown = 0,
+    /// <summary>
+    ///Client -> Main
+    /// </summary>
     [pbr::OriginalName("CMLoginRequest")] CmloginRequest = 1001,
     [pbr::OriginalName("CMLoginReply")] CmloginReply = 1002,
     [pbr::OriginalName("CMMatchRequest")] CmmatchRequest = 1003,
     [pbr::OriginalName("CMMatchReply")] CmmatchReply = 1004,
     [pbr::OriginalName("CMMatchSuccess")] CmmatchSuccess = 1006,
     [pbr::OriginalName("CMMatchCancel")] CmmatchCancel = 1007,
+    [pbr::OriginalName("CMCancelReconnect")] CmcancelReconnect = 1009,
+    /// <summary>
+    ///Client -> Battle
+    /// </summary>
     [pbr::OriginalName("CBLoginRequest")] CbloginRequest = 2001,
     [pbr::OriginalName("CBLoginReply")] CbloginReply = 2002,
     [pbr::OriginalName("CBJoinBattleRequest")] CbjoinBattleRequest = 2003,
     [pbr::OriginalName("CBJoinBattleReply")] CbjoinBattleReply = 2004,
+    [pbr::OriginalName("CBReady")] Cbready = 2005,
+    [pbr::OriginalName("CBReadySync")] CbreadySync = 2006,
+    [pbr::OriginalName("CBRoomSync")] CbroomSync = 2008,
+    [pbr::OriginalName("CBCardInfoSync")] CbcardInfoSync = 2010,
+    [pbr::OriginalName("CBPlayCard")] CbplayCard = 2011,
+    [pbr::OriginalName("CBPlayCardSync")] CbplayCardSync = 2012,
+    [pbr::OriginalName("CBSendCardSync")] CbsendCardSync = 2014,
+    /// <summary>
+    ///Battle -> Main
+    /// </summary>
     [pbr::OriginalName("BMLoginRequest")] BmloginRequest = 3001,
     [pbr::OriginalName("BMLoginReply")] BmloginReply = 3002,
     [pbr::OriginalName("BMCreateRoomRequest")] BmcreateRoomRequest = 3003,

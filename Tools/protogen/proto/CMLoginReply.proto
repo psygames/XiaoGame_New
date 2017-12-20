@@ -6,4 +6,6 @@ package message;
 message  CMLoginReply
 {
     PlayerInfo playerInfo = 1;
+    bool isInBattle = 2;
+    BattleServerInfo battleServerInfo = 3;
 }

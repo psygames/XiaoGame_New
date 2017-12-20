@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RedStone
 {
-    public class LoadingState : AbstractState
+    public class HallLoadingState : AbstractState
     {
         public override void Enter(params object[] param)
         {

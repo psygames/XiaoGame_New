@@ -22,13 +22,15 @@ namespace Message {
     static CMLoginReplyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJDTUxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UaC0luZm9zLnByb3RvIjcK",
-            "DENNTG9naW5SZXBseRInCgpwbGF5ZXJJbmZvGAEgASgLMhMubWVzc2FnZS5Q",
-            "bGF5ZXJJbmZvYgZwcm90bzM="));
+            "ChJDTUxvZ2luUmVwbHkucHJvdG8SB21lc3NhZ2UaC0luZm9zLnByb3RvIoAB",
+            "CgxDTUxvZ2luUmVwbHkSJwoKcGxheWVySW5mbxgBIAEoCzITLm1lc3NhZ2Uu",
+            "UGxheWVySW5mbxISCgppc0luQmF0dGxlGAIgASgIEjMKEGJhdHRsZVNlcnZl",
+            "ckluZm8YAyABKAsyGS5tZXNzYWdlLkJhdHRsZVNlcnZlckluZm9iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Message.InfosReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CMLoginReply), global::Message.CMLoginReply.Parser, new[]{ "PlayerInfo" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CMLoginReply), global::Message.CMLoginReply.Parser, new[]{ "PlayerInfo", "IsInBattle", "BattleServerInfo" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +65,8 @@ namespace Message {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CMLoginReply(CMLoginReply other) : this() {
       PlayerInfo = other.playerInfo_ != null ? other.PlayerInfo.Clone() : null;
+      isInBattle_ = other.isInBattle_;
+      BattleServerInfo = other.battleServerInfo_ != null ? other.BattleServerInfo.Clone() : null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -81,6 +85,28 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "isInBattle" field.</summary>
+    public const int IsInBattleFieldNumber = 2;
+    private bool isInBattle_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsInBattle {
+      get { return isInBattle_; }
+      set {
+        isInBattle_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "battleServerInfo" field.</summary>
+    public const int BattleServerInfoFieldNumber = 3;
+    private global::Message.BattleServerInfo battleServerInfo_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Message.BattleServerInfo BattleServerInfo {
+      get { return battleServerInfo_; }
+      set {
+        battleServerInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CMLoginReply);
@@ -95,6 +121,8 @@ namespace Message {
         return true;
       }
       if (!object.Equals(PlayerInfo, other.PlayerInfo)) return false;
+      if (IsInBattle != other.IsInBattle) return false;
+      if (!object.Equals(BattleServerInfo, other.BattleServerInfo)) return false;
       return true;
     }
 
@@ -102,6 +130,8 @@ namespace Message {
     public override int GetHashCode() {
       int hash = 1;
       if (playerInfo_ != null) hash ^= PlayerInfo.GetHashCode();
+      if (IsInBattle != false) hash ^= IsInBattle.GetHashCode();
+      if (battleServerInfo_ != null) hash ^= BattleServerInfo.GetHashCode();
       return hash;
     }
 
@@ -116,6 +146,14 @@ namespace Message {
         output.WriteRawTag(10);
         output.WriteMessage(PlayerInfo);
       }
+      if (IsInBattle != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsInBattle);
+      }
+      if (battleServerInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BattleServerInfo);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,6 +161,12 @@ namespace Message {
       int size = 0;
       if (playerInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PlayerInfo);
+      }
+      if (IsInBattle != false) {
+        size += 1 + 1;
+      }
+      if (battleServerInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BattleServerInfo);
       }
       return size;
     }
@@ -137,6 +181,15 @@ namespace Message {
           playerInfo_ = new global::Message.PlayerInfo();
         }
         PlayerInfo.MergeFrom(other.PlayerInfo);
+      }
+      if (other.IsInBattle != false) {
+        IsInBattle = other.IsInBattle;
+      }
+      if (other.battleServerInfo_ != null) {
+        if (battleServerInfo_ == null) {
+          battleServerInfo_ = new global::Message.BattleServerInfo();
+        }
+        BattleServerInfo.MergeFrom(other.BattleServerInfo);
       }
     }
 
@@ -153,6 +206,17 @@ namespace Message {
               playerInfo_ = new global::Message.PlayerInfo();
             }
             input.ReadMessage(playerInfo_);
+            break;
+          }
+          case 16: {
+            IsInBattle = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (battleServerInfo_ == null) {
+              battleServerInfo_ = new global::Message.BattleServerInfo();
+            }
+            input.ReadMessage(battleServerInfo_);
             break;
           }
         }

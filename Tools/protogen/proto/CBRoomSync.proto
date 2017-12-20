@@ -1,0 +1,9 @@
+syntax = "proto3";
+package message;
+
+// 主服 -> 客户端  房间状态同步
+message CBRoomSync
+{
+    int32 state = 1;  // 1 - wait others, 2 - game, 3 - end
+    int32 whoseTurn = 2;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package message;
+
+message CBPlayCardSync
+{
+    int32 fromID = 1;
+    int32 targetID = 2;
+    int32 cardID = 3;
+}

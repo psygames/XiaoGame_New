@@ -36,6 +36,5 @@ namespace RedStone
         {
             return m_rooms[roomID];
         }
-
     }
 }
