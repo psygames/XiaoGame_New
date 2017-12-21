@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace RedStone
 {
@@ -9,15 +10,31 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
-            Task.WaitFor(0.5f, () =>
-            {
-                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 100));
-            });
+            GF.StartCoroutine(ResLoad());
+        }
 
-            Task.WaitFor(2, () =>
-            {
-                GF.ShowView<HomeView>();
-            });
+        private void OnLoadFinished()
+        {
+            GF.ChangeState<HallLoginState>();
+        }
+
+        IEnumerator ResLoad()
+        {
+            GF.ShowView<LoadingView>();
+
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 0));
+            yield return new WaitForSeconds(0.3f);
+
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 15));
+            yield return new WaitForSeconds(0.3f);
+
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 30));
+            yield return new WaitForSeconds(0.3f);
+
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 45));
+            yield return new WaitForSeconds(0.3f);
+
+            OnLoadFinished();
         }
 
         public override void Leave()

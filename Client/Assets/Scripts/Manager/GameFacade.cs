@@ -23,6 +23,10 @@ namespace RedStone
             GameManager.instance.ChangeGameState<T>();
         }
 
+        public static void StartCoroutine(System.Collections.IEnumerator enumerator)
+        {
+            GameManager.instance.StartCoroutine(enumerator);
+        }
 
 
 

@@ -9,35 +9,48 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
-            GF.ShowView<LoadingView>();
             Connect();
         }
 
         private void Connect()
         {
-            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_RESPONSE, 5));
-            GF.GetProxy<HallProxy>().Connect(3, () =>
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_RESPONSE, 50));
+            GF.GetProxy<BattleProxy>().Connect();
+            Task.WaitFor(3, () =>
             {
-                MessageBox.Show("连接失败", "连接服务器失败，是否重新连接？", MessageBoxStyle.OKClose
-                   , (result) =>
-                   {
-                       if (result.result == MessageBoxResultType.OK)
-                       {
-                           Connect();
-                       }
-                   });
+                if (!GF.GetProxy<BattleProxy>().isConnected)
+                {
+                    MessageBox.Show("连接失败", "连接战场失败，是否重新连接？", MessageBoxStyle.OKClose
+                    , (result) =>
+                    {
+                        if (result.result == MessageBoxResultType.OK)
+                        {
+                            Connect();
+                        }
+                    });
+                }
             });
         }
 
         public override void Leave()
         {
+
         }
 
         public override void Update()
         {
-            if (GF.GetProxy<HallProxy>().isConnected)
+            if (GF.GetProxy<BattleProxy>().isConnected)
             {
-                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_LOGIN, 20));
+                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_LOGIN, 70));
+            }
+
+            if (GF.GetProxy<BattleProxy>().isLogin)
+            {
+                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.GENRAL_START, 98));
+                Task.WaitFor(1f, () =>
+                {
+                    GF.ChangeState<BattleState>();
+                });
             }
         }
     }

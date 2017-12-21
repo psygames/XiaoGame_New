@@ -45,15 +45,6 @@ namespace RedStone
             RefreshUI();
             //TODO: Match Success Effect
             Debug.Log("Match Success!!!");
-            JoinBatttle();
-        }
-
-        void JoinBatttle()
-        {
-            Task.WaitFor(1, () =>
-            {
-                GF.GetProxy<BattleProxy>().Connect();
-            });
         }
 
         private void RefreshUI()

@@ -208,10 +208,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114828004365170188, guid: 49554b6b873bbfc4e9172e6997bb2d25,
-        type: 2}
-      propertyPath: m_Event
-      value: Ready
+    - target: {fileID: 1070592334706898, guid: 49554b6b873bbfc4e9172e6997bb2d25, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49554b6b873bbfc4e9172e6997bb2d25, type: 2}
@@ -311,28 +310,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &343461089 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1070592334706898, guid: 49554b6b873bbfc4e9172e6997bb2d25,
-    type: 2}
-  m_PrefabInternal: {fileID: 322735621}
 --- !u!224 &343461090 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224480920818080646, guid: 49554b6b873bbfc4e9172e6997bb2d25,
     type: 2}
   m_PrefabInternal: {fileID: 322735621}
---- !u!114 &343461091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 343461089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ac49ce2da2d9574486a56f011809b94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBottom: 0
 --- !u!1 &1331000181
 GameObject:
   m_ObjectHideFlags: 0

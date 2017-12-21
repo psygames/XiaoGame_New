@@ -34,16 +34,9 @@ namespace RedStone
             network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
         }
 
-        public void Connect(int timeOut, Action timeOutCallback)
+        public void Connect()
         {
             network.socket.Connect();
-            Task.WaitFor(timeOut, () =>
-             {
-                 if (!isConnected)
-                 {
-                     timeOutCallback.Invoke();
-                 }
-             });
         }
 
         public void Login()
@@ -56,15 +49,19 @@ namespace RedStone
                  //TODO:重连Or 退出
                  if (reply.IsInBattle)
                  {
+                     playerData.SetData(reply.PlayerInfo);
+
                      MessageBox.Show("战斗提示", "已经在战场中，是否重连！", MessageBoxStyle.OKCancelClose, (result) =>
                      {
                          if (result.result == MessageBoxResultType.OK)
                          {
                              CancelReconnect(1, 1); //TODO:重连
+                             isLogin = true;
                          }
                          else
                          {
                              CancelReconnect(1, 1);
+                             isLogin = true;
                          }
                      });
                  }
@@ -72,7 +69,6 @@ namespace RedStone
                  {
                      isLogin = true;
                      playerData.SetData(reply.PlayerInfo);
-                     GF.ChangeState<LoadingState>();
                  }
              });
         }
@@ -125,6 +121,7 @@ namespace RedStone
         {
             battleServerInfo = msg.BattleServerInfo;
             SendEvent(EventDef.MatchSuccess);
+            
         }
 
     }

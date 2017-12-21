@@ -12,13 +12,20 @@ namespace RedStone
         private Stack m_stack = new Stack();
 
         public Transform uiRoot;
+        
 
         public void Init()
         {
             uiRoot = GameObject.Find("UI Root").transform;
             RegisteAll();
+
+            //TODO:这块需要放到状态机里面，并且需要处理Prefab的卸载or重新加载，事件的注销和注册
             PreLoad();
             InitAll();
+
+            //TODO: 由于MessageBox 的特殊性质，所以MessageBox放在此处
+            PopShow<MessageBoxView>();
+            PopShow<Toast>();
         }
 
         public void InitAll()
@@ -27,8 +34,6 @@ namespace RedStone
             {
                 kv.Value.OnInit();
             }
-
-            PopShow<MessageBoxView>();
         }
 
         public void PreLoad()
@@ -38,9 +43,9 @@ namespace RedStone
                 Object obj = Resources.Load(MyPath.RES_UI + kv.Value);
                 GameObject go = Object.Instantiate(obj) as GameObject;
                 ViewBase _base = go.GetComponent<ViewBase>();
-                if (_base == null)
+                if (_base == null || m_views.ContainsKey(_base.GetType().ToString()))
                 {
-                    Debug.LogError(kv.Value + " Get ViewBase is NULL");
+                    Debug.LogError(kv.Value + " Get ViewBase is " + (_base == null ? "NULL" : "Repeated"));
                 }
                 else
                 {

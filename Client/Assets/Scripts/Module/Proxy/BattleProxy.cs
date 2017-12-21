@@ -12,11 +12,14 @@ namespace RedStone
         public BattleServerInfo serverInfo { get { return GetProxy<HallProxy>().battleServerInfo; } }
 
         public RoomData room { get; private set; }
+        public bool isConnected { get; private set; }
         public bool isLogin { get; private set; }
 
         public void Reset()
         {
-
+            room = null;
+            isConnected = false;
+            isLogin = false;
         }
 
         public BattleProxy()
@@ -46,7 +49,9 @@ namespace RedStone
 
             network.socket.onConnected = () =>
             {
-                Login(); // 连接成功后，LOGIN
+                isConnected = true;
+                Debug.Log("Network Connect Success (Battle Server).");
+                Login();
             };
 
         }

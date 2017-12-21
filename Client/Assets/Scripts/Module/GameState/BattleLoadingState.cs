@@ -9,19 +9,14 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
-            Task.WaitFor(0.5f, () =>
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 0));
+            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
+            Task.WaitFor(2f, () =>
             {
-                GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
-                Connect();
+                GF.ChangeState<BattleLoginState>();
             });
         }
 
-        private void Connect()
-        {
-            GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 70));
-
-            GF.GetProxy<BattleProxy>().Connect();
-        }
 
         public override void Leave()
         {
@@ -29,10 +24,6 @@ namespace RedStone
 
         public override void Update()
         {
-            if (GF.GetProxy<BattleProxy>().isLogin)
-            {
-                GF.ChangeState<BattleState>();
-            }
         }
     }
 }
