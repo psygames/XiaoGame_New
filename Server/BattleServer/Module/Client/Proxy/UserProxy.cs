@@ -10,7 +10,7 @@ namespace RedStone
 {
     public class UserProxy : ProxyBaseServer
     {
-        private Dictionary<long, UserData> m_users = new Dictionary<long, UserData>();
+        private Dictionary<string, UserData> m_users = new Dictionary<string, UserData>();
 
 
         public override void OnInit()
@@ -22,19 +22,11 @@ namespace RedStone
         public UserData AddUser(Message.PlayerInfo playerInfo, int roomID)
         {
             UserData user = null;
-            if (m_users.ContainsKey(playerInfo.Uid))
-            {
-                user = GetUser(playerInfo.Uid);
-                Debug.LogError($"{playerInfo.Uid} is already in Battle");
-            }
-            else
-            {
-                user = new UserData();
-                string token = Guid.NewGuid().ToString(); //Gen Token
-                user.SetData(playerInfo, roomID, token);
-                user.SetState(UserState.Offline);
-                m_users.Add(user.uid, user);
-            }
+            user = new UserData();
+            string token = Guid.NewGuid().ToString(); //Gen Token
+            user.SetData(playerInfo, roomID, token);
+            user.SetState(UserState.Offline);
+            m_users.Add(token, user);
             return user;
         }
 
@@ -58,19 +50,19 @@ namespace RedStone
         }
 
 
-        public UserData GetUser(long uid)
+        public UserData GetUser(string token)
         {
-            return m_users[uid];
+            return m_users[token];
         }
 
-        public UserData GetUser(string sessionID)
+        public UserData GetUserBySession(string sessionID)
         {
             return m_users.Values.First(a => a.sessionID == sessionID);
         }
 
-        public void RemoveUser(long uid)
+        public void RemoveUser(string token)
         {
-            m_users.Remove(uid);
+            m_users.Remove(token);
         }
 
 

@@ -7,7 +7,7 @@ namespace RedStone.Data
     {
         public string name { get; private set; }
         public int id { get; private set; }
-        public List<long> users { get; private set; }
+        public List<UserData> users { get; private set; }
 
         public void SetData(int id, string name)
         {
@@ -15,7 +15,7 @@ namespace RedStone.Data
             this.name = name;
         }
 
-        public void SetUsers(List<long> users)
+        public void SetUsers(List<UserData> users)
         {
             this.users = users;
         }

@@ -19,7 +19,7 @@ namespace RedStone
         {
             serverForBattle = new ServerNetworkManager();
             var server = new Plugins.Network.WebSocketServer();
-            server.Setup(NetTool.GetLocalIPV4(), 8731);
+            server.Setup("0.0.0.0", 8731);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));
@@ -31,7 +31,7 @@ namespace RedStone
         {
             serverForClient = new ServerNetworkManager();
             var server = new Plugins.Network.WebSocketServer();
-            server.Setup(NetTool.GetLocalIPV4(), 8730);
+            server.Setup("0.0.0.0", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));

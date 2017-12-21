@@ -19,31 +19,30 @@ namespace RedStone
 
         public RoomData MainServerRequsetCreateRoom(IList<Message.PlayerInfo> playerInfos)
         {
-
             var room = GetProxy<RoomProxy>().CreateRoom();
-            var uids = new List<long>();
+            var users = new List<UserData>();
 
             foreach (var info in playerInfos)
             {
-                var user = GetProxy<UserProxy>().AddUser(info,room.id);
+                var user = GetProxy<UserProxy>().AddUser(info, room.id);
                 if (user == null)
                     continue;
-                uids.Add(user.uid);
+                users.Add(user);
             }
 
-            room.SetUsers(uids);
+            room.SetUsers(users);
             NewPvL(room.id);
             return room;
         }
 
-        public void RegisterUserMsg<T>(long uid, Action<T> action)
+        public void RegisterUserMsg<T>(string token, Action<T> action)
         {
             RegisterMessage<T>((sessionID, msg) =>
             {
-                var user = GetProxy<UserProxy>().GetUser(sessionID);
+                var user = GetProxy<UserProxy>().GetUserBySession(sessionID);
                 if (user == null)
-                    Debug.LogError($"User Msg Handle Failed : {uid}");
-                else if (uid == user.uid)
+                    Debug.LogError($"User Msg Handle Failed : {user.name}");
+                else if (token == user.token)
                     action(msg);
             });
         }

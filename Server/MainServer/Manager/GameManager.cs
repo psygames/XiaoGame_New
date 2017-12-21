@@ -27,6 +27,8 @@ namespace RedStone
             m_updater.Start();
             m_updater.Add(this);
             m_updater.Add(ProxyManager.instance);
+
+            Time.SetUpdater(m_updater);
         }
 
         private void OnDestroy()

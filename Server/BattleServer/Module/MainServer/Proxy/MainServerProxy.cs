@@ -31,7 +31,7 @@ namespace RedStone
         {
             BMLoginRequest msg = new BMLoginRequest();
             var serv = NetworkManager.instance.forClient.server as Plugins.Network.WebSocketServer;
-            msg.ListenerAddress = serv.address;
+            msg.ListenerAddress = Plugins.NetTool.GetAddress(NetConfig.LISTENER_IP, NetConfig.LISTENER_PORT);
             SendMessage<BMLoginRequest, BMLoginReply>(msg, (reply) =>
             {
                 Debug.Log($"登录主服成功, 战场名: {reply.Name}");
@@ -44,9 +44,8 @@ namespace RedStone
             BMCreateRoomReply rep = new BMCreateRoomReply();
             rep.RoomName = room.name;
             rep.RoomID = room.id;
-            foreach (var uid in room.users)
+            foreach (var user in room.users)
             {
-                var user = GetProxy<UserProxy>().GetUser(uid);
                 var ptoken = new PlayerTokenInfo();
                 ptoken.Uid = user.uid;
                 ptoken.Token = user.token;

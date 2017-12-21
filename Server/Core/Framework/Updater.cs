@@ -10,13 +10,22 @@ namespace Core
         private Timer timer = null;
         private List<IUpdateable> m_items = new List<IUpdateable>();
 
+        private long m_startTicks = -1;
+        private long m_lastTicks = -1;
+        private long m_curTicks = -1;
+
+        public float time { get { return (m_curTicks - m_startTicks) * 0.0000001f; } }
+        public float deltaTime { get { return (m_curTicks - m_lastTicks) * 0.0000001f; } }
+
         public void Start()
         {
             timer = new Timer(new TimerCallback(Update), null, 0, interval);
+            m_curTicks = m_lastTicks = m_startTicks = DateTime.UtcNow.Ticks;
         }
 
         private void Update(object obj)
         {
+            m_curTicks = DateTime.UtcNow.Ticks;
             try
             {
                 lock (m_items)
@@ -29,6 +38,7 @@ namespace Core
             {
                 Debug.LogError(e.Message + "\n" + e.StackTrace);
             }
+            m_lastTicks = m_curTicks;
         }
 
 

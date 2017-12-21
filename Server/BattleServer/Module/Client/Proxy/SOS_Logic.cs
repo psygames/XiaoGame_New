@@ -16,12 +16,17 @@ namespace RedStone
         private int m_roomID;
         RoomData room { get { return roomProxy.GetRoom(m_roomID); } }
 
+        //最长时间一小时，超时房间自动解散
+        private const float ROOM_MAX_TIME = 60 * 60;
+
         private State m_state = State.WaitJoin;
         private List<Player> m_players = new List<Player>();
 
         public void Init(int roomID)
         {
             m_roomID = roomID;
+            roomRemainTime = ROOM_MAX_TIME;
+
             InitPlayers();
 
             // Register Msg
@@ -33,9 +38,8 @@ namespace RedStone
         {
             m_players.Clear();
             int incrID = 1;
-            foreach (var uid in room.users)
+            foreach (var user in room.users)
             {
-                var user = userProxy.GetUser(uid);
                 var player = new Player();
                 player.Init(user, incrID);
                 m_players.Add(player);
@@ -48,6 +52,17 @@ namespace RedStone
         {
             CheckAllJoined();
             CheckAllReady();
+            CheckEnd();
+        }
+
+        private float roomRemainTime = 0;
+        private void CheckEnd()
+        {
+            roomRemainTime -= Time.deltaTime;
+            if (roomRemainTime <= 0)
+                m_state = State.End;
+
+            //TODO: End Conditions
         }
 
         public void CheckAllJoined()
@@ -125,14 +140,13 @@ namespace RedStone
 
 
 
-
         private void RegisterMsg<T>(Action<Player, T> action)
         {
-            foreach (var uid in room.users)
+            foreach (var user in room.users)
             {
-                battleProxy.RegisterUserMsg<T>(uid, (msg) =>
+                battleProxy.RegisterUserMsg<T>(user.token, (msg) =>
                 {
-                    action.Invoke(m_players.First(a => a.uid == uid), msg);
+                    action.Invoke(m_players.First(a => a.user.token == user.token), msg);
                 });
             }
         }
@@ -153,12 +167,13 @@ namespace RedStone
             public int gold { get; private set; }
             public int seat { get; private set; }
             public State state { get; private set; }
-            public UserData user { get { return ProxyManager.instance.GetProxy<UserProxy>().GetUser(uid); } }
+            public UserData user { get; private set; }
 
             public void Init(UserData user, int id)
             {
                 this.uid = user.uid;
                 this.id = id;
+                this.user = user;
                 gold = user.gold;
                 state = State.None;
             }

@@ -27,6 +27,7 @@
     <Compile Remove="Network\PlaceRequest.cs" />
     <Compile Remove="Network\PlaceStatisticsSync.cs" />
     <Compile Remove="Module\BattleServer\Data\PlaceStatisticsData.cs" />
+    <Compile Remove="Tools\NetConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Module\BattleServer\" />
