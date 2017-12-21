@@ -96,6 +96,8 @@ namespace RedStone
             }
 
             SendToAll(rep);
+
+            Debug.Log(player.user.name + " joined game");
         }
 
         public void SendToAll<T>(T msg)
