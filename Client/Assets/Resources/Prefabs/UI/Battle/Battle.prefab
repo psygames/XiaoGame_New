@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac49ce2da2d9574486a56f011809b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBottom: 0
+  isBottom: 1
 --- !u!114 &114828004365170188
 MonoBehaviour:
   m_ObjectHideFlags: 1

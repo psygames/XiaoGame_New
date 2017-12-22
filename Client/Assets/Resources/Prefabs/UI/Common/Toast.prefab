@@ -74,7 +74,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBottom: 0
   template: {fileID: 150238, guid: be1186c9299bf7d43a88955129655a89, type: 2}
-  standlone: {fileID: 1282594629365294, guid: fc8a277f9c52c3e42962ebc1c3a9d8cf, type: 2}
+  standloneTemplate: {fileID: 1282594629365294, guid: fc8a277f9c52c3e42962ebc1c3a9d8cf,
+    type: 2}
   itemRoot: {fileID: 224669221694422016}
 --- !u!224 &224669221694422016
 RectTransform:

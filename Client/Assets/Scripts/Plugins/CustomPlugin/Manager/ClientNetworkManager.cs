@@ -10,6 +10,8 @@ namespace Plugins
         protected IClient m_socket = null;
 
         public IClient socket { get { return m_socket; } }
+        public Action onConnected { get; set; }
+        public Action onClosed { get; set; }
 
         public ClientNetworkManager()
         {
@@ -22,6 +24,8 @@ namespace Plugins
             m_serializer = serializer;
             m_socket = socket;
             m_socket.onReceived = OnReceived;
+            m_socket.onConnected = OnConnected;
+            m_socket.onClosed = OnClosed;
         }
 
         public void RegisterNetwork<T>(Action<T> action)
@@ -43,6 +47,18 @@ namespace Plugins
         {
             object obj = m_serializer.Deserialize(data);
             m_eventMgr.Send(obj.GetType().Name, obj);
+        }
+
+        protected virtual void OnConnected()
+        {
+            if (onConnected != null)
+                onConnected.Invoke();
+        }
+
+        protected virtual void OnClosed()
+        {
+            if (onClosed != null)
+                onClosed.Invoke();
         }
 
         public void Send<T>(T msg) 

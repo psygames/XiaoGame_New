@@ -8,7 +8,7 @@ namespace RedStone
     public class Toast : ViewBase
     {
         public GameObject template;
-        public GameObject standlone;
+        public GameObject standloneTemplate;
 
         private static Toast m_instance;
         public static Toast instance
@@ -29,7 +29,7 @@ namespace RedStone
             m_instance = this;
         }
 
-        public void Init()
+        public override void OnInit()
         {
             m_toastList.Clear();
             for (int i = 0; i < 5; i++)
@@ -41,7 +41,10 @@ namespace RedStone
                 go.SetActive(false);
             }
 
-            m_toastStandalone = standlone.GetComponent<ToastItemStandalone>();
+
+            GameObject st_go = Instantiate(standloneTemplate) as GameObject;
+            UIHelper.SetParent(itemRoot, st_go.transform);
+            m_toastStandalone = st_go.GetComponent<ToastItemStandalone>();
         }
 
 

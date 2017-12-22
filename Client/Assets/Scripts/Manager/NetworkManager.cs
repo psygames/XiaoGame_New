@@ -63,6 +63,18 @@ namespace RedStone
                 m_msgQueue.Enqueue(obj);
             }
 
+            private bool m_triggerConnected = false;
+            protected override void OnConnected()
+            {
+                m_triggerConnected = true;
+            }
+
+            private bool m_triggerClosed = false;
+            protected override void OnClosed()
+            {
+                m_triggerClosed = true;
+            }
+
             private Queue<object> m_msgQueue = new Queue<object>();
 
             public void Update()
@@ -76,6 +88,18 @@ namespace RedStone
                 {
                     var obj = m_msgQueue.Dequeue();
                     m_eventMgr.Send(obj.GetType().Name, obj);
+                }
+
+                if (m_triggerConnected)
+                {
+                    base.OnConnected();
+                    m_triggerConnected = false;
+                }
+
+                if (m_triggerClosed)
+                {
+                    base.OnClosed();
+                    m_triggerClosed = false;
                 }
             }
         }

@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e472ed2b339e64f99465f474a10e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isBottom: 0
+  isBottom: 1
   text: {fileID: 114913527266908640}
   fill: {fileID: 114486478729210670}
 --- !u!114 &114486478729210670

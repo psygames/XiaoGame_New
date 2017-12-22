@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +14,13 @@ namespace RedStone
         {
             base.OnInit();
 
+        }
+
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+
+            UpdatePvL();
         }
 
 

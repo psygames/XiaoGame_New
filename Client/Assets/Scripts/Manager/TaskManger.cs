@@ -22,8 +22,9 @@ namespace RedStone
 
         public void Update()
         {
-            foreach (var task in m_tasks)
+            for (int i = m_tasks.Count - 1; i >= 0; i--)
             {
+                var task = m_tasks[i];
                 task.Update();
                 try
                 {

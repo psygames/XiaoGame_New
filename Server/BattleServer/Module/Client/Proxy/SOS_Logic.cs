@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -136,6 +136,10 @@ namespace RedStone
                 return;
 
             player.SetState(Player.State.Ready);
+
+            CBReadySync sync = new CBReadySync();
+            sync.FromID = player.id;
+            SendToAll(sync);
         }
 
 

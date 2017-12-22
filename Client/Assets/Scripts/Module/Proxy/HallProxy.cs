@@ -24,7 +24,7 @@ namespace RedStone
             isConnected = false;
             isLogin = false;
 
-            network.socket.onConnected = () =>
+            network.onConnected = () =>
             {
                 isConnected = true;
                 Debug.Log("Network Connect Success (Main Server).");
@@ -121,7 +121,7 @@ namespace RedStone
         {
             battleServerInfo = msg.BattleServerInfo;
             SendEvent(EventDef.MatchSuccess);
-            
+            GF.ChangeState<BattleLoadingState>();
         }
 
     }

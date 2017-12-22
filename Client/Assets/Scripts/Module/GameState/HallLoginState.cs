@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,14 +36,20 @@ namespace RedStone
         {
         }
 
+
+        private bool m_lastConnected = false;
+        private bool m_lastLogin = false;
         public override void Update()
         {
-            if (GF.GetProxy<HallProxy>().isConnected)
+            if (!m_lastConnected && GF.GetProxy<HallProxy>().isConnected)
             {
                 GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_LOGIN, 70));
             }
 
-            if (GF.GetProxy<HallProxy>().isLogin)
+            m_lastConnected = GF.GetProxy<HallProxy>().isConnected;
+
+
+            if (!m_lastLogin && GF.GetProxy<HallProxy>().isLogin)
             {
                 GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.GENRAL_START, 98));
                 Task.WaitFor(1f, () =>
@@ -51,6 +57,7 @@ namespace RedStone
                     GF.ChangeState<HallState>();
                 });
             }
+            m_lastLogin = GF.GetProxy<HallProxy>().isLogin;
         }
     }
 }

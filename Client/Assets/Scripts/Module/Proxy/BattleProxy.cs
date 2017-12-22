@@ -5,7 +5,7 @@ using Plugins;
 using RedStone.Data;
 using System.Collections.Generic;
 
-namespace RedStone
+namespace RedStone 
 {
     public class BattleProxy : BattleProxyBase
     {
@@ -47,7 +47,7 @@ namespace RedStone
 
             Debug.Log("Init Network (Battle) [{0}]".FormatStr(serverInfo.Address));
 
-            network.socket.onConnected = () =>
+            network.onConnected = () =>
             {
                 isConnected = true;
                 Debug.Log("Network Connect Success (Battle Server).");
@@ -77,11 +77,12 @@ namespace RedStone
             SendMessage<CBLoginRequest, CBLoginReply>(req
             , (rep) =>
             {
+                isLogin = true;
                 roomID = rep.RoomID;
-                Toast.instance.ShowNormal("µÇÂ¼Õ½³¡·şÎñÆ÷³É¹¦£¡");
+                Toast.instance.ShowNormal("ç™»å½•æˆ˜åœºæœåŠ¡å™¨æˆåŠŸï¼"); 
                 Task.WaitFor(1f, () =>
                 {
-                    JoinBattle();//×Ô¶¯¼ÓÈëÕ½³¡
+                    JoinBattle();//è‡ªåŠ¨åŠ å…¥æˆ˜åœº
                 });
             });
         }
@@ -92,7 +93,7 @@ namespace RedStone
             SendMessage<CBJoinBattleRequest, CBJoinBattleReply>(req,
             (rep) =>
             {
-                Toast.instance.ShowNormal("¼ÓÈëÕ½³¡³É¹¦£¡");
+                Toast.instance.ShowNormal("åŠ å…¥æˆ˜åœºæˆåŠŸï¼");
                 room.SetData(rep.Info);
                 SetPlayers(rep.PlayerInfos);
             });
