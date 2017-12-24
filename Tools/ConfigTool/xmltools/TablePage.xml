@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item atlasName="string" name="string" prefab="string" id="int" title="string" path="string" prefabName="string"/>
+	</type>
+	<data>
+		<item atlasName="splash" name="Splash" prefab="UI/Prefabs/Hall/UISplash" id="1" title="Splash" path="/splash" prefabName="UISplash"/>
+		<item atlasName="hallLoading" name="HallLoading" prefab="UI/Prefabs/Hall/UIHallLoading" id="2" title="HallLoading" path="/hall_loading" prefabName="UIHallLoading"/>
+		<item atlasName="home" name="Home" prefab="UI/Prefabs/Hall/UIHallHome" id="3" title="Home" path="/home" prefabName="UIHallHome"/>
+		<item atlasName="preparation" name="Preparation" prefab="UI/Prefabs/Hall/UIPreparation" id="4" title="Preparation" path="/home/preparation" prefabName="UIPreparation"/>
+		<item atlasName="gunStorage" name="GunStorage" prefab="UI/Prefabs/Hall/UIHallGunStorage" id="5" title="GunStorage" path="/gun_storage" prefabName="UIHallGunStorage"/>
+		<item atlasName="navigation" name="GameMode" prefab="UI/Prefabs/Hall/UIHallNavigation" id="6" title="GameMode" path="/main/game_mode" prefabName="UIHallNavigation"/>
+		<item atlasName="navigation" name="BattleLoading" prefab="UI/Prefabs/Hall/UIHallNavigation" id="7" title="BattleLoading" path="/battle_loading" prefabName="UIHallNavigation"/>
+		<item atlasName="navigation" name="Battle" prefab="UI/Prefabs/Hall/UIHallNavigation" id="8" title="Battle" path="/battle" prefabName="UIHallNavigation"/>
+		<item atlasName="navigation" name="Navigation" prefab="UI/Prefabs/Hall/UIHallNavigation" id="9" title="Navigation" path="/navigation" prefabName="UIHallNavigation"/>
+		<item atlasName="gunUpgrade" name="GunUpgrade" prefab="UI/Prefabs/Hall/UIGunUpgrade" id="10" title="Upgrade" path="/gun_storage/gun_upgrade" prefabName="UIGunUpgrade"/>
+		<item atlasName="gunPassiveSkill" name="GunPassiveSkill" prefab="UI/Prefabs/Hall/UIGunPassiveSkill" id="11" title="GunPassiveSkill" path="/gun_storage/gun_upgrade/gun_passive_skill" prefabName="UIGunPassiveSkill"/>
+		<item atlasName="professionStorage" name="ProfessionStorage" prefab="UI/Prefabs/Hall/UIHallProfessionStorage" id="12" title="Profession" path="/profession_storage" prefabName="UIHallProfessionStorage"/>
+		<item atlasName="professionUpgrade" name="ProfessionUpgrade" prefab="UI/Prefabs/Hall/UIProfessionUpgrade" id="13" title="Upgrade" path="/profession_storage/profession_upgrade" prefabName="UIProfessionUpgrade"/>
+		<item atlasName="shop" name="Shop" prefab="UI/Prefabs/Hall/UIHallShop" id="14" title="Shop" path="/shop" prefabName="UIHallShop"/>
+		<item atlasName="none" name="ChangeNameDialog" prefab="UI/Prefabs/Hall/UIChangeNameDialog" id="15" title="ChangeName" path="/change_name_dialog" prefabName="UIChangeNameDialog"/>
+		<item atlasName="battleResult" name="BattleResultRank" prefab="UI/Prefabs/Hall/BattleResultRank" id="16" title="BattleResultRank" path="/battle_result_rank" prefabName="BattleResultRank"/>
+		<item atlasName="battleResult" name="BattleResultReward" prefab="UI/Prefabs/Hall/BattleResultReward" id="17" title="BattleResultReward" path="/battle_result_reward" prefabName="BattleResultReward"/>
+		<item atlasName="legion" name="LegionOutside" prefab="UI/Prefabs/Hall/LegionOutside" id="18" title="LegionOutside" path="/legion_outside" prefabName="LegionOutside"/>
+		<item atlasName="legion" name="LegionInfo" prefab="UI/Prefabs/Hall/LegionInfo" id="19" title="LegionInfo" path="/legion_info" prefabName="LegionInfo"/>
+		<item atlasName="LegionBadge" name="LegionBadgeSelect" prefab="UI/Prefabs/Hall/LegionBadgeSelect" id="20" title="LegionBadgeSelect" path="/legion_badge_select" prefabName="LegionBadgeSelect"/>
+		<item atlasName="legion" name="LegionInside" prefab="UI/Prefabs/Hall/LegionInside" id="21" title="LegionInside" path="/legion_inside" prefabName="LegionInside"/>
+		<item atlasName="legion" name="LegionSetting" prefab="UI/Prefabs/Hall/LegionSetting" id="22" title="LegionSetting" path="/legion_setting" prefabName="LegionSetting"/>
+		<item atlasName="option" name="Option" prefab="UI/Prefabs/Hall/Option" id="23" title="Option" path="/option" prefabName="Option"/>
+		<item atlasName="hallBattle" name="HallBattle" prefab="UI/Prefabs/Hall/UIHallBattle" id="24" title="HallBattle" path="/home/hall_battle" prefabName="UIHallBattle"/>
+		<item atlasName="professionChip" name="ProfessionChip" prefab="UI/Prefabs/Hall/UIProfessionChip" id="25" title="ProfessionChip" path="/profession_storage/profession_chip" prefabName="UIHallProfessionChip"/>
+		<item atlasName="professionSkill" name="ProfessionSkill" prefab="UI/Prefabs/Hall/UIProfessionSkill" id="26" title="ProfessionSkill" path="/profession_storage/profession_skill" prefabName="UIHallProfessionSkill"/>
+		<item atlasName="professionSkillInfo" name="ProfessionSkillInfo" prefab="UI/Prefabs/Hall/UIProfessionSkillInfo" id="27" title="ProfessionSkillInfo" path="/profession_storage/profession_skill/profession_skill_info" prefabName="UIHallProfessionSkillInfo"/>
+		<item atlasName="professionSkillInfo" name="ProfessionSelectImplant" prefab="UI/Prefabs/Hall/UIPreparationSelectImplant" id="28" title="ProfessionSelectImplant" path="/home/preparation/profession_select_implant" prefabName="UIPreparationSelectImplant"/>
+	</data>
+</table>

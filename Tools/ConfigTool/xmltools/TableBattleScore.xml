@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item name="string" buffGroupId="int" professionID="int" itemID="int" isPlural="int" motionType="int" target="int" score="int[]" id="int"/>
+	</type>
+	<data>
+		<item name="击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[100,100,50,50,50]" id="1"/>
+		<item name="第一滴血" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,25,25,25]" id="2"/>
+		<item name="二连杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[25,25,5,5,5]" id="3"/>
+		<item name="三连杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,10,10,10]" id="4"/>
+		<item name="四连杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[75,75,15,15,15]" id="5"/>
+		<item name="五连杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[100,100,20,20,20]" id="6"/>
+		<item name="助攻" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[75,25,25,25,25]" id="10"/>
+		<item name="复仇" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,0,0,0]" id="11"/>
+		<item name="最终击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,0,0,0,0]" id="12"/>
+		<item name="占领据点" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,250,0,0]" id="13"/>
+		<item name="防守据点成功" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,250,0,0]" id="14"/>
+		<item name="结算占领比分" buffGroupId="0" professionID="0" itemID="0" isPlural="1" motionType="0" target="0" score="[10,10,0,0,0]" id="15"/>
+		<item name="获得资源小" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,200,0]" id="16"/>
+		<item name="获得资源大" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,300,0]" id="17"/>
+		<item name="劫匪" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,50,0]" id="18"/>
+		<item name="成功回收" buffGroupId="0" professionID="0" itemID="0" isPlural="1" motionType="0" target="0" score="[0,0,0,5,0]" id="19"/>
+		<item name="组织回收" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,200,0]" id="20"/>
+		<item name="关键击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,50,50]" id="21"/>
+		<item name="关键占领" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,0,200]" id="22"/>
+		<item name="攻陷据点" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="1" score="[0,0,0,0,2000]" id="23"/>
+		<item name="关键防守" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[0,0,0,0,200]" id="24"/>
+		<item name="镇守据点" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="1" score="[0,0,0,0,2000]" id="25"/>
+		<item name="肾上腺激素击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[150,150,150,150,150]" id="26"/>
+		<item name="战术手雷命中" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,50,50,50]" id="27"/>
+		<item name="战术手雷击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[100,100,100,100,100]" id="28"/>
+		<item name="战术目镜击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[150,150,150,150,150]" id="29"/>
+		<item name="滚雷命中" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[30,30,30,30,30]" id="30"/>
+		<item name="滚雷BUFF中击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[100,100,100,100,100]" id="31"/>
+		<item name="地雷击中" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,50,50,50]" id="32"/>
+		<item name="地雷击杀" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[100,100,100,100,100]" id="33"/>
+		<item name="防护盾牌损失1%血量" buffGroupId="0" professionID="0" itemID="0" isPlural="1" motionType="0" target="0" score="[2,2,2,2,2]" id="34"/>
+		<item name="治疗仪回复" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[10,10,10,101,0]" id="35"/>
+		<item name="治疗仪回复满" buffGroupId="0" professionID="0" itemID="0" isPlural="0" motionType="0" target="0" score="[50,50,50,50,50]" id="36"/>
+	</data>
+</table>

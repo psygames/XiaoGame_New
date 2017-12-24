@@ -104,7 +104,7 @@ namespace generator
         {
             string str = "using System;\n";
             str += "using UnityEngine;\n\n";
-            str += "namespace Hotfire\n{\n";
+            str += "namespace RedStone\n{\n";
             str += "\tpublic static class ColorConfig \n\t{\n";
             return str;
         }

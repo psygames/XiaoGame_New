@@ -2,9 +2,11 @@
 using System.Timers;
 using Plugins;
 using Core;
+using System;
+
 namespace RedStone
 {
-    public class GameManager : Core.Singleton<GameManager>,Core.IUpdateable
+    public class GameManager : Core.Singleton<GameManager>, Core.IUpdateable
     {
         private Updater m_updater = new Updater();
         public EventManager eventManager { get; private set; }
@@ -12,6 +14,9 @@ namespace RedStone
         public void Start()
         {
             eventManager = new EventManager();
+            TableManager.CreateInstance();
+            TableManager.instance.getTypeFunc = (name) => { return Type.GetType(name); };
+            TableManager.instance.Init();
             NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
 
@@ -37,12 +42,12 @@ namespace RedStone
 
         private void OnApplicationQuit()
         {
-            
+
         }
 
         public void Update()
         {
-            
+
         }
 
     }

@@ -31,6 +31,7 @@ namespace RedStone
         public override void OnInit()
         {
             RegisterMessage<CBReadySync>(OnReadySync);
+            RegisterMessage<CBRoomSync>(OnRoomSync);
         }
 
         private void InitSocket()
@@ -53,6 +54,7 @@ namespace RedStone
                 Debug.Log("Network Connect Success (Battle Server).");
                 Login();
             };
+
 
         }
 
@@ -109,6 +111,11 @@ namespace RedStone
         {
             GetPlayer(msg.FromID).SetReady(true);
             SendEvent(EventDef.PlayerReady, msg.FromID);
+        }
+
+        void OnRoomSync(CBRoomSync msg)
+        {
+            
         }
 
         public BattlePlayerData GetPlayer(int id)

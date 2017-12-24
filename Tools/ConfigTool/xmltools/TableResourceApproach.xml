@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item nameId="string" name="string" approach="string" id="int"/>
+	</type>
+	<data>
+		<item nameId="GENRAL_BATTLE" name="战场" approach="QuickPlay" id="1"/>
+		<item nameId="GENRAL_SHOP" name="商店" approach="Shop" id="2"/>
+		<item nameId="GENERAL_CRATE" name="宝箱" approach="None" id="3"/>
+		<item nameId="GENRAL_LEGION" name="军团" approach="None" id="4"/>
+		<item nameId="SHOP_TYPE_GACHA" name="抽奖" approach="None" id="5"/>
+	</data>
+</table>

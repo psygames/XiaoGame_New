@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item id="int" chestType="int" tier="int" profession="int" chestID="int[]"/>
+	</type>
+	<data>
+		<item id="1" chestType="100" tier="1" profession="1" chestID="[34000]"/>
+		<item id="2" chestType="100" tier="2" profession="1" chestID="[34000]"/>
+		<item id="3" chestType="100" tier="3" profession="1" chestID="[34000]"/>
+		<item id="4" chestType="100" tier="4" profession="1" chestID="[34000]"/>
+		<item id="5" chestType="100" tier="5" profession="1" chestID="[34000]"/>
+		<item id="6" chestType="100" tier="1" profession="2" chestID="[34000]"/>
+		<item id="7" chestType="100" tier="2" profession="2" chestID="[34000]"/>
+		<item id="8" chestType="100" tier="3" profession="2" chestID="[34000]"/>
+		<item id="9" chestType="100" tier="4" profession="2" chestID="[34000]"/>
+		<item id="10" chestType="100" tier="5" profession="2" chestID="[34000]"/>
+		<item id="11" chestType="100" tier="1" profession="3" chestID="[34000]"/>
+		<item id="12" chestType="100" tier="2" profession="3" chestID="[34000]"/>
+		<item id="13" chestType="100" tier="3" profession="3" chestID="[34000]"/>
+		<item id="14" chestType="100" tier="4" profession="3" chestID="[34000]"/>
+		<item id="15" chestType="100" tier="5" profession="3" chestID="[34000]"/>
+		<item id="16" chestType="100" tier="1" profession="4" chestID="[34000]"/>
+		<item id="17" chestType="100" tier="2" profession="4" chestID="[34000]"/>
+		<item id="18" chestType="100" tier="3" profession="4" chestID="[34000]"/>
+		<item id="19" chestType="100" tier="4" profession="4" chestID="[34000]"/>
+		<item id="20" chestType="100" tier="5" profession="4" chestID="[34000]"/>
+		<item id="21" chestType="110" tier="1" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="22" chestType="110" tier="2" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="23" chestType="110" tier="3" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="24" chestType="110" tier="4" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="25" chestType="110" tier="5" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="26" chestType="110" tier="1" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="27" chestType="110" tier="2" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="28" chestType="110" tier="3" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="29" chestType="110" tier="4" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="30" chestType="110" tier="5" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="31" chestType="110" tier="1" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="32" chestType="110" tier="2" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="33" chestType="110" tier="3" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="34" chestType="110" tier="4" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="35" chestType="110" tier="5" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="36" chestType="110" tier="1" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="37" chestType="110" tier="2" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="38" chestType="110" tier="3" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="39" chestType="110" tier="4" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="40" chestType="110" tier="5" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="41" chestType="120" tier="1" profession="1" chestID="[34000]"/>
+		<item id="42" chestType="120" tier="2" profession="1" chestID="[34000]"/>
+		<item id="43" chestType="120" tier="3" profession="1" chestID="[34000]"/>
+		<item id="44" chestType="120" tier="4" profession="1" chestID="[34000]"/>
+		<item id="45" chestType="120" tier="5" profession="1" chestID="[34000]"/>
+		<item id="46" chestType="120" tier="1" profession="2" chestID="[34000]"/>
+		<item id="47" chestType="120" tier="2" profession="2" chestID="[34000]"/>
+		<item id="48" chestType="120" tier="3" profession="2" chestID="[34000]"/>
+		<item id="49" chestType="120" tier="4" profession="2" chestID="[34000]"/>
+		<item id="50" chestType="120" tier="5" profession="2" chestID="[34000]"/>
+		<item id="51" chestType="120" tier="1" profession="3" chestID="[34000]"/>
+		<item id="52" chestType="120" tier="2" profession="3" chestID="[34000]"/>
+		<item id="53" chestType="120" tier="3" profession="3" chestID="[34000]"/>
+		<item id="54" chestType="120" tier="4" profession="3" chestID="[34000]"/>
+		<item id="55" chestType="120" tier="5" profession="3" chestID="[34000]"/>
+		<item id="56" chestType="120" tier="1" profession="4" chestID="[34000]"/>
+		<item id="57" chestType="120" tier="2" profession="4" chestID="[34000]"/>
+		<item id="58" chestType="120" tier="3" profession="4" chestID="[34000]"/>
+		<item id="59" chestType="120" tier="4" profession="4" chestID="[34000]"/>
+		<item id="60" chestType="120" tier="5" profession="4" chestID="[34000]"/>
+		<item id="61" chestType="130" tier="1" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="62" chestType="130" tier="2" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="63" chestType="130" tier="3" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="64" chestType="130" tier="4" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="65" chestType="130" tier="5" profession="1" chestID="[31001,39000,34000]"/>
+		<item id="66" chestType="130" tier="1" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="67" chestType="130" tier="2" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="68" chestType="130" tier="3" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="69" chestType="130" tier="4" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="70" chestType="130" tier="5" profession="2" chestID="[31001,39000,34000]"/>
+		<item id="71" chestType="130" tier="1" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="72" chestType="130" tier="2" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="73" chestType="130" tier="3" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="74" chestType="130" tier="4" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="75" chestType="130" tier="5" profession="3" chestID="[31001,39000,34000]"/>
+		<item id="76" chestType="130" tier="1" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="77" chestType="130" tier="2" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="78" chestType="130" tier="3" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="79" chestType="130" tier="4" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="80" chestType="130" tier="5" profession="4" chestID="[31001,39000,34000]"/>
+		<item id="81" chestType="140" tier="-1" profession="-1" chestID="[37000]"/>
+	</data>
+</table>

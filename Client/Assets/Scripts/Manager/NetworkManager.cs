@@ -31,7 +31,7 @@ namespace RedStone
         {
             main = new ClientNetworkMangerEx();
             var socket = new Plugins.Network.WebSocketClient();
-            socket.Setup("172.20.15.34", 8730);
+            socket.Setup("192.168.1.102", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item path="string" prioity="int" minDistance="float" volume="float" loop="int" type="int" pitch="float" maxDistance="float" timeLength="float" id="int"/>
+	</type>
+	<data>
+		<item path="Audio/buttonClick" prioity="128" minDistance="0" volume="1" loop="2" type="1" pitch="1" maxDistance="0" timeLength="1" id="1"/>
+		<item path="Audio/buttonAim" prioity="128" minDistance="0" volume="1" loop="2" type="1" pitch="1" maxDistance="0" timeLength="1" id="2"/>
+		<item path="Audio/buttonError" prioity="128" minDistance="0" volume="1" loop="2" type="1" pitch="1" maxDistance="0" timeLength="1" id="3"/>
+		<item path="Audio/eateItem" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="4"/>
+		<item path="Audio/bodyShot" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="10" timeLength="1" id="5"/>
+		<item path="Audio/headShot" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="10" timeLength="1" id="6"/>
+		<item path="Audio/GetDiamond" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="10" timeLength="1" id="7"/>
+		<item path="Audio/GetItem" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="10" timeLength="1" id="8"/>
+		<item path="Audio/headShot" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="9"/>
+		<item path="Audio/TimeCountDown" prioity="100" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="20" timeLength="1" id="10"/>
+		<item path="Audio/GunAttack" prioity="100" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="20" timeLength="1" id="11"/>
+		<item path="Audio/m4a1_fire" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="50" timeLength="1" id="10001"/>
+		<item path="Audio/m4a1_reload_1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10002"/>
+		<item path="Audio/m4a1_reload_2" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10003"/>
+		<item path="Audio/m4a1_reload_3" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10004"/>
+		<item path="Audio/mp5_fire" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10005"/>
+		<item path="Audio/mp5_reload_1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10006"/>
+		<item path="Audio/mp5_reload_2" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10007"/>
+		<item path="Audio/mp5_reload_3" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10008"/>
+		<item path="Audio/mk10_fire" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10009"/>
+		<item path="Audio/mk10_clipin" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10010"/>
+		<item path="Audio/mk10_clipout" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10011"/>
+		<item path="Audio/mk10_slide" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10012"/>
+		<item path="Audio/m3_fire" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10013"/>
+		<item path="Audio/m3_insertshell" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10014"/>
+		<item path="Audio/m3_pump" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10015"/>
+		<item path="Audio/dead" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="12001"/>
+		<item path="Audio/jump_1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12002"/>
+		<item path="Audio/jump_2" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12003"/>
+		<item path="Audio/hurt_fire" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="20" timeLength="1" id="12004"/>
+		<item path="Audio/step_left" prioity="100" minDistance="1" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12005"/>
+		<item path="Audio/step_right" prioity="100" minDistance="1" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12006"/>
+		<item path="Audio/change_gun" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12007"/>
+		<item path="Audio/melee" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12008"/>
+		<item path="Audio/mlee_hit" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="12009"/>
+		<item path="Audio/grenadeExplosion" prioity="255" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="30" timeLength="3" id="13001"/>
+		<item path="Audio/FirstBlood" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14001"/>
+		<item path="Audio/DoubleKill" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14002"/>
+		<item path="Audio/TripleKill" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14003"/>
+		<item path="Audio/UltraKill" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14004"/>
+		<item path="Audio/Rampage" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14005"/>
+		<item path="Audio/Unstoppable" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14006"/>
+		<item path="Audio/WhickedSick" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14007"/>
+		<item path="Audio/MegaKill" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14008"/>
+		<item path="Audio/Godlike" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14009"/>
+		<item path="Audio/Ownage" prioity="128" minDistance="3" volume="1" loop="2" type="1" pitch="1" maxDistance="50" timeLength="3" id="14010"/>
+		<item path="Audio/ak47_boltpull" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10016"/>
+		<item path="Audio/ak47_clipin" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10017"/>
+		<item path="Audio/ak47_clipout" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10018"/>
+		<item path="Audio/ak47-2" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10019"/>
+		<item path="Audio/de_deploy" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10020"/>
+		<item path="Audio/de_clipin" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10021"/>
+		<item path="Audio/de_clipout" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10022"/>
+		<item path="Audio/deagle-1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10023"/>
+		<item path="Audio/ump45_boltslap" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10024"/>
+		<item path="Audio/ump45_clipin" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10025"/>
+		<item path="Audio/ump45_clipout" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10026"/>
+		<item path="Audio/ump45-1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10027"/>
+		<item path="Audio/sg552_boltpull" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10028"/>
+		<item path="Audio/sg552_clipin" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10029"/>
+		<item path="Audio/sg552_clipout" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="10" timeLength="1" id="10030"/>
+		<item path="Audio/sg552-1" prioity="128" minDistance="3" volume="1" loop="2" type="2" pitch="1" maxDistance="25" timeLength="1" id="10031"/>
+	</data>
+</table>

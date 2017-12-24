@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item name="string" fileName="string" fontBoldName="string" text="string" id="int" fontName="string" fontStyleName="string"/>
+	</type>
+	<data>
+		<item name="english" fileName="string_en" fontBoldName="FandolHei-Bold" text="English" id="1" fontName="FandolHei-Regular" fontStyleName="fontstyle_en"/>
+		<item name="chinese_simplified" fileName="string_cn" fontBoldName="FandolHei-Bold" text="简体中文" id="2" fontName="FandolHei-Regular" fontStyleName="fontstyle_cn"/>
+	</data>
+</table>

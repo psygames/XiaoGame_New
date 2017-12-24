@@ -81,7 +81,7 @@ namespace RedStone
 
         public void Show<T>()
         {
-            Debug.LogError("show view:" + typeof(T));
+            Debug.Log("show view: " + typeof(T));
             string name = typeof(T).ToString();
             if (GetView<T>().isBottom)
             {

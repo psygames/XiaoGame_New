@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "Infos.proto"
+import "Infos.proto";
 package message;
 
 // 主服 -> 客户端  卡牌同步

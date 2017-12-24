@@ -15,7 +15,7 @@ namespace generator
             {
                 string exePath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
 #if DEBUG
-                args = new string[] { "-java" };
+                args = new string[] { "-csharp" };
                 exePath = TOOLS_PATH;
 #endif
 
@@ -31,24 +31,9 @@ namespace generator
                 string xmlDir = GetPath(exePath, ini.ReadString("Generator", "XmlDir"));
                 string xmlListFile = GetPath(exePath, ini.ReadString("Generator", "XmlListFile"));
                 string csOutDir = GetPath(exePath, ini.ReadString("Generator", "CsOutDir"));
+                string csOutDir1 = GetPath(exePath, ini.ReadString("Generator", "CsOutDir1"));
+                string csOutDir2 = GetPath(exePath, ini.ReadString("Generator", "CsOutDir2"));
                 string javaOutDir = GetPath(exePath, ini.ReadString("Generator", "JavaOutDir"));
-
-                string constXmlPath = xmlDir + "/TableConst.xml";
-
-                string constCsOutDir = GetPath(exePath, ini.ReadString("Generator", "ConstCsOutDir"));
-
-                List<string> constJavaDirs = new List<string>();
-                List<string> constJavaServerName = new List<string>();
-                foreach (var key in ini.ReadSection("Generator"))
-                {
-                    if (key.StartsWith("ConstJavaOutDir"))
-                    {
-                        var dir = GetPath(exePath, ini.ReadString("Generator", key));
-                        constJavaDirs.Add(dir);
-                        constJavaServerName.Add(key.Substring("ConstJavaOutDir-".Length));
-                    }
-                }
-
                 string languageXMLPath = xmlDir + "../Languages/languages.xml";
                 string colorXMLPath = xmlDir + "/TableTextColor.xml";
                 string param = args[0];
@@ -58,9 +43,7 @@ namespace generator
                 TextColorGenerator colorGen = new TextColorGenerator();
 
                 if (param == "-java"
-                    && gen.GeneJava(xmlDir, xmlListFile, "", javaOutDir)
-                    && constGen.GeneJava(constJavaServerName.ToArray()
-                    , constJavaDirs.ToArray(), constXmlPath, "Color"))
+                    && gen.GeneJava(xmlDir, xmlListFile, "", javaOutDir))
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("succeed!!!");
@@ -70,9 +53,9 @@ namespace generator
                 }
                 else if (param == "-csharp"
                     && gen.GeneCs(xmlDir, xmlListFile, csOutDir)
-                    && constGen.GeneCs(constXmlPath, constCsOutDir)
-                    && lanGen.GeneCs(languageXMLPath, constCsOutDir)
-                    && colorGen.GeneCs(colorXMLPath, constCsOutDir))
+                    && gen.GeneCs(xmlDir, xmlListFile, csOutDir1)
+                    && gen.GeneCs(xmlDir, xmlListFile, csOutDir2)
+                    )
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("succeed!!!");

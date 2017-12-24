@@ -63,10 +63,10 @@ namespace RedStone
 
 
         #region PvL
-        private Dictionary<int, SOS_Logic> m_pvlLogics = new Dictionary<int, SOS_Logic>();
+        private Dictionary<int, SOS.SOS_Logic> m_pvlLogics = new Dictionary<int, SOS.SOS_Logic>();
         public void NewPvL(int id)
         {
-            SOS_Logic logic = new SOS_Logic();
+            SOS.SOS_Logic logic = new SOS.SOS_Logic();
             logic.Init(id);
             m_pvlLogics.Add(id, logic);
         }

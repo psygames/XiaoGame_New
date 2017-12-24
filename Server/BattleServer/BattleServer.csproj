@@ -10,12 +10,9 @@
     <ProjectReference Include="..\Plugins\Plugins.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\" />
     <Folder Include="Tools\" />
     <Folder Include="Protocol\" />
-    <Folder Include="Resource\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Resource\protonum.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Module\Base\ProxyBaseServer.cs" />

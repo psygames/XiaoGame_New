@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item energy="int" motionId="int" iconID="int" damageMax="float" workSkillId="int" triggerRadius="float" workRadius="float" stayTime="int" maxHp="int" id="int" damageMin="float" itemType="int" nameID="string" name="string" perceptionRadius="float" workTime="int"/>
+	</type>
+	<data>
+		<item energy="100" motionId="5" iconID="7" damageMax="0.95" workSkillId="10051" triggerRadius="1" workRadius="3" stayTime="5000" maxHp="200" id="1" damageMin="0.1" itemType="5" nameID="GAMEPLAY_PROP_GRENADE_1" name="屏障桩Lv1" perceptionRadius="5" workTime="10000"/>
+		<item energy="100" motionId="7" iconID="7" damageMax="0.95" workSkillId="10052" triggerRadius="1" workRadius="3" stayTime="5000" maxHp="200" id="2" damageMin="0.1" itemType="5" nameID="GAMEPLAY_PROP_GRENADE_1" name="辐射桩Lv1" perceptionRadius="5" workTime="10000"/>
+	</data>
+</table>

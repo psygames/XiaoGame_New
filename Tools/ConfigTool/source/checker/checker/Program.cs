@@ -23,8 +23,7 @@ namespace checker
                 string languageXmlDir = exePath + ini.ReadValue("Checker", "LanguageXmlDir");
                 CheckerManager mgr = new CheckerManager();
                 CheckResult result = mgr.CheckDirectory(xmlDir);
-                if (result.isSucceed
-                    && (result = mgr.CheckDirectory(languageXmlDir)).isSucceed)
+                if (result.isSucceed)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(result);

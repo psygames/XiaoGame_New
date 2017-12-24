@@ -201,7 +201,7 @@ namespace generator
         public string GetSharpHeader(string sheetname)
         {
             string str = "using System;\nusing UnityEngine;\n\n";
-            str += "namespace Hotfire\n{\n";
+            str += "namespace RedStone\n{\n";
             str += "    public class " + sheetname + "\n    {\n";
             return str;
         }

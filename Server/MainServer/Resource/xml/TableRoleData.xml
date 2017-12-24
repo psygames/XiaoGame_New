@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item name="string" descriptionId="string" nameId="string" audioPath="int" battleModelPath1P="string" imageID="int" battleModelPath3P="string" id="int" uiModelPath="string"/>
+	</type>
+	<data>
+		<item name="Alex" descriptionId="ROLE_DESCRIPTION_1" nameId="ROLE_NAME_1" audioPath="1" battleModelPath1P="Prefabs/Player/Player1P" imageID="1" battleModelPath3P="Prefabs/Player/PlayerB3" id="1" uiModelPath="Prefabs/Player/Hall/PlayerB3"/>
+		<item name="old" descriptionId="ROLE_DESCRIPTION_2" nameId="ROLE_NAME_2" audioPath="2" battleModelPath1P="Prefabs/Player/Player1P" imageID="2" battleModelPath3P="Prefabs/Player/PlayerB3" id="2" uiModelPath="Prefabs/Player/Hall/PlayerB3"/>
+		<item name="Ivan" descriptionId="ROLE_DESCRIPTION_2" nameId="ROLE_NAME_2" audioPath="1" battleModelPath1P="Prefabs/Player/Ivan_1P" imageID="1" battleModelPath3P="Prefabs/Player/PlayerB3" id="3" uiModelPath="Prefabs/Player/Hall/PlayerB3"/>
+		<item name="Alex" descriptionId="ROLE_DESCRIPTION_2" nameId="ROLE_NAME_2" audioPath="1" battleModelPath1P="Prefabs/Player/Ivan_1P" imageID="1" battleModelPath3P="Prefabs/Player/PlayerB3" id="4" uiModelPath="Prefabs/Player/Hall/PlayerB3"/>
+	</data>
+</table>

@@ -128,7 +128,7 @@ namespace generator
             string returnSpace = "\r\n";
 
             string headString = "using UnityEngine;" + returnSpace + "using System;" + returnSpace + "using System.Collections;" + returnSpace
-                + returnSpace + "namespace Hotfire" + returnSpace + "{" + returnSpace + "\tpublic class " + className
+                + returnSpace + "namespace RedStone" + returnSpace + "{" + returnSpace + "\tpublic class " + className
                 + returnSpace + "\t{" + returnSpace + "";
             string tailString = "\t}" + returnSpace + "}";
 

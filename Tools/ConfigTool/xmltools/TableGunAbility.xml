@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item name="string" magazineCapacity="int" rechargeCd="float" oneShotBulletNumber="int" energyIncreasePerHit="float" gunPowerRatio="float" fireRate="float" loadBulletNumOnce="int" id="int"/>
+	</type>
+	<data>
+		<item name="M4Carbine Rifle" magazineCapacity="30" rechargeCd="2.2" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="1" fireRate="8" loadBulletNumOnce="-1" id="1"/>
+		<item name="H&amp;K MP5 Sub" magazineCapacity="30" rechargeCd="1.8" oneShotBulletNumber="1" energyIncreasePerHit="0.235" gunPowerRatio="1" fireRate="12" loadBulletNumOnce="-1" id="2"/>
+		<item name="M60 MachineGun" magazineCapacity="100" rechargeCd="5" oneShotBulletNumber="1" energyIncreasePerHit="0.215" gunPowerRatio="0.75" fireRate="10" loadBulletNumOnce="-1" id="3"/>
+		<item name="Steyr SSG-69" magazineCapacity="5" rechargeCd="4" oneShotBulletNumber="1" energyIncreasePerHit="3.12" gunPowerRatio="1.6" fireRate="0.7" loadBulletNumOnce="-1" id="4"/>
+		<item name="MossBerg M590" magazineCapacity="9" rechargeCd="0.5" oneShotBulletNumber="8" energyIncreasePerHit="0.5" gunPowerRatio="1" fireRate="0.8" loadBulletNumOnce="1" id="5"/>
+		<item name="Franchi SPAS 12" magazineCapacity="7" rechargeCd="0.5" oneShotBulletNumber="10" energyIncreasePerHit="0.2" gunPowerRatio="1" fireRate="1.8" loadBulletNumOnce="1" id="6"/>
+		<item name="Striker" magazineCapacity="12" rechargeCd="0.6" oneShotBulletNumber="12" energyIncreasePerHit="0.2" gunPowerRatio="1" fireRate="1.6" loadBulletNumOnce="1" id="7"/>
+		<item name="Imi Uzi" magazineCapacity="30" rechargeCd="1.6" oneShotBulletNumber="1" energyIncreasePerHit="0.235" gunPowerRatio="1" fireRate="11.5" loadBulletNumOnce="-1" id="8"/>
+		<item name="SMG9" magazineCapacity="30" rechargeCd="1.6" oneShotBulletNumber="1" energyIncreasePerHit="0.5" gunPowerRatio="1" fireRate="10" loadBulletNumOnce="-1" id="9"/>
+		<item name="M870" magazineCapacity="9" rechargeCd="0.5" oneShotBulletNumber="12" energyIncreasePerHit="2.115" gunPowerRatio="1" fireRate="1" loadBulletNumOnce="1" id="11"/>
+		<item name="Serbu Super-Shorty" magazineCapacity="7" rechargeCd="0.5" oneShotBulletNumber="10" energyIncreasePerHit="0.5" gunPowerRatio="1" fireRate="0.8" loadBulletNumOnce="1" id="12"/>
+		<item name="FN P90" magazineCapacity="50" rechargeCd="2.4" oneShotBulletNumber="1" energyIncreasePerHit="0.235" gunPowerRatio="1" fireRate="9.5" loadBulletNumOnce="-1" id="13"/>
+		<item name="M1014" magazineCapacity="8" rechargeCd="0.4" oneShotBulletNumber="9" energyIncreasePerHit="0.2" gunPowerRatio="1" fireRate="2.2" loadBulletNumOnce="1" id="14"/>
+		<item name="AWP" magazineCapacity="10" rechargeCd="3" oneShotBulletNumber="1" energyIncreasePerHit="3.12" gunPowerRatio="1.6" fireRate="0.5" loadBulletNumOnce="-1" id="15"/>
+		<item name="FN SCAR" magazineCapacity="20" rechargeCd="2.6" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="1" fireRate="7" loadBulletNumOnce="-1" id="16"/>
+		<item name="AK47 Rifle" magazineCapacity="30" rechargeCd="2.6" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="1" fireRate="6.5" loadBulletNumOnce="-1" id="17"/>
+		<item name="MP7A1" magazineCapacity="30" rechargeCd="1.6" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="1" fireRate="13" loadBulletNumOnce="-1" id="18"/>
+		<item name="UMP SubmachineGun" magazineCapacity="25" rechargeCd="1.6" oneShotBulletNumber="1" energyIncreasePerHit="0.235" gunPowerRatio="1" fireRate="10" loadBulletNumOnce="-1" id="19"/>
+		<item name="HKG36 Rifle" magazineCapacity="30" rechargeCd="2.2" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="1" fireRate="7.5" loadBulletNumOnce="-1" id="20"/>
+		<item name="DesertEagle" magazineCapacity="9" rechargeCd="1.6" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="0.9" fireRate="2.8" loadBulletNumOnce="-1" id="22"/>
+		<item name="Revolver" magazineCapacity="6" rechargeCd="3" oneShotBulletNumber="1" energyIncreasePerHit="0.265" gunPowerRatio="0.9" fireRate="2.3" loadBulletNumOnce="-1" id="23"/>
+		<item name="M249 MachineGun" magazineCapacity="200" rechargeCd="6.5" oneShotBulletNumber="1" energyIncreasePerHit="0.215" gunPowerRatio="0.75" fireRate="10.8" loadBulletNumOnce="-1" id="24"/>
+		<item name="Dragunoy SVD" magazineCapacity="10" rechargeCd="3.5" oneShotBulletNumber="1" energyIncreasePerHit="1" gunPowerRatio="1.6" fireRate="1.5" loadBulletNumOnce="-1" id="25"/>
+		<item name="SRS" magazineCapacity="5" rechargeCd="3" oneShotBulletNumber="1" energyIncreasePerHit="3.12" gunPowerRatio="1.6" fireRate="0.7" loadBulletNumOnce="-1" id="26"/>
+	</data>
+</table>

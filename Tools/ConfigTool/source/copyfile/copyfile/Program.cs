@@ -25,7 +25,12 @@ namespace copyfile
                 string xmlSrcDir = exePath + ini.ReadString("CopyFile", "XmlSrcDir");
                 string xmlListFile = exePath + ini.ReadString("CopyFile", "XmlListFile");
                 string destXmlListFile = exePath + ini.ReadString("CopyFile", "DestXmlListFile");
+                string destXmlListFile1 = exePath + ini.ReadString("CopyFile", "DestXmlListFile1");
+                string destXmlListFile2 = exePath + ini.ReadString("CopyFile", "DestXmlListFile2");
+
                 string xmlDestDirClinet = exePath + ini.ReadString("CopyFile", "XmlDestDirClient");
+                string xmlDestDirClinet1 = exePath + ini.ReadString("CopyFile", "XmlDestDirClient1");
+                string xmlDestDirClinet2 = exePath + ini.ReadString("CopyFile", "XmlDestDirClient2");
 
                 List<string> xmlServerDirs = new List<string>();
                 foreach (var key in ini.ReadSection("CopyFile"))
@@ -48,11 +53,13 @@ namespace copyfile
                 Simplify sp = new Simplify();
                 Simplify spLangs = new SimplifyLanguage();
                 if (cop.copy(xmlListFile, destXmlListFile)
+                    && cop.copy(xmlListFile, destXmlListFile1)
+                    && cop.copy(xmlListFile, destXmlListFile2)
                     && sp.SimplifyStart(xmlSrcDir, xmlTmpSimplifyDir, xmlListFile)
                     && cop.CopyStart(xmlListFile, xmlTmpSimplifyDir, xmlDestDirClinet, "ForCSharp")
-                    && cop.CopyStart(xmlListFile, xmlTmpSimplifyDir, xmlServerDirs.ToArray(), "ForJava")
-                    && spLangs.SimplifyStart(languageSrcDir, xmlTmpSimplifyDir_Language)
-                    && cop.CopyStartLanguage(xmlTmpSimplifyDir_Language, languageDestDir, languageUpdateDir))
+                    && cop.CopyStart(xmlListFile, xmlTmpSimplifyDir, xmlDestDirClinet1, "ForCSharp")
+                    && cop.CopyStart(xmlListFile, xmlTmpSimplifyDir, xmlDestDirClinet2, "ForCSharp")
+                    )
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Succeed!");

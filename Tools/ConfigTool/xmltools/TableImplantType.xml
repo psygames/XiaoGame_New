@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item skillGroupID="int" implantTypeName="string" implantTypeDesc="string" id="int"/>
+	</type>
+	<data>
+		<item skillGroupID="100" implantTypeName="CHIP_NAME_GRENADE_1" implantTypeDesc="CHIP_DESCRIPTIONE_GRENADE_1" id="1"/>
+		<item skillGroupID="100" implantTypeName="CHIP_NAME_GRENADE_2" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_2" id="2"/>
+		<item skillGroupID="100" implantTypeName="CHIP_NAME_GRENADE_3" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_3" id="3"/>
+		<item skillGroupID="101" implantTypeName="CHIP_NAME_ADRENALINE_1" implantTypeDesc="CHIP_DESCRIPTION_ADRENALINE_1" id="4"/>
+		<item skillGroupID="101" implantTypeName="CHIP_NAME_ADRENALINE_2" implantTypeDesc="CHIP_DESCRIPTION_ADRENALINE_2" id="5"/>
+		<item skillGroupID="101" implantTypeName="CHIP_NAME_ADRENALINE_3" implantTypeDesc="CHIP_DESCRIPTION_ADRENALINE_3" id="6"/>
+		<item skillGroupID="103" implantTypeName="CHIP_NAME_GRENADE_1" implantTypeDesc="CHIP_DESCRIPTIONE_GRENADE_1" id="7"/>
+		<item skillGroupID="103" implantTypeName="CHIP_NAME_GRENADE_2" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_2" id="8"/>
+		<item skillGroupID="103" implantTypeName="CHIP_NAME_GRENADE_3" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_3" id="9"/>
+		<item skillGroupID="102" implantTypeName="CHIP_NAME_TACTICAL_VISOR_1" implantTypeDesc="CHIP_DESCRIPTION_TACTICAL_VISOR_1" id="10"/>
+		<item skillGroupID="102" implantTypeName="CHIP_NAME_TACTICAL_VISOR_2" implantTypeDesc="CHIP_DESCRIPTION_TACTICAL_VISOR_2" id="11"/>
+		<item skillGroupID="102" implantTypeName="CHIP_NAME_TACTICAL_VISOR_3" implantTypeDesc="CHIP_DESCRIPTION_TACTICAL_VISOR_3" id="12"/>
+		<item skillGroupID="105" implantTypeName="CHIP_NAME_GRENADE_1" implantTypeDesc="CHIP_DESCRIPTIONE_GRENADE_1" id="13"/>
+		<item skillGroupID="105" implantTypeName="CHIP_NAME_GRENADE_2" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_2" id="14"/>
+		<item skillGroupID="105" implantTypeName="CHIP_NAME_GRENADE_3" implantTypeDesc="CHIP_DESCRIPTION_GRENADE_3" id="15"/>
+		<item skillGroupID="104" implantTypeName="CHIP_NAME_TURRET_1" implantTypeDesc="CHIP_DESCRIPTION_TURRET_1" id="16"/>
+		<item skillGroupID="104" implantTypeName="CHIP_NAME_TURRET_2" implantTypeDesc="CHIP_DESCRIPTION_TURRET_2" id="17"/>
+		<item skillGroupID="104" implantTypeName="CHIP_NAME_TURRET_3" implantTypeDesc="CHIP_DESCRIPTION_TURRET_3" id="18"/>
+	</data>
+</table>
