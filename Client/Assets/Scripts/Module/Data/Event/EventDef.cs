@@ -19,7 +19,10 @@ namespace RedStone
 
         public class SOS
         {
+            public const string Joined = "SOS.Joined";
             public const string Ready = "SOS.Ready";
+            public const string RoomSync = "SOS.RoomSync";
+            public const string SendCard = "SOS.SendCard";
 
         }
     }

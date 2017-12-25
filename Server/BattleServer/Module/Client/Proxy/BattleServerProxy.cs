@@ -78,9 +78,12 @@ namespace RedStone
 
         private void UpdatePvL()
         {
-            foreach (var pvl in m_pvlLogics)
+            lock (m_pvlLogics) //Update 中 foreah 的 List 需要 Lock
             {
-                pvl.Value.Update();
+                foreach (var pvl in m_pvlLogics)
+                {
+                    pvl.Value.Update();
+                }
             }
         }
         #endregion

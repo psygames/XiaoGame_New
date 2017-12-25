@@ -188,6 +188,7 @@ namespace RedStone.SOS
             int nextSeat = m_whosTurn.seat % m_players.Count + 1;
             m_whosTurn = m_players.First(a => a.seat == nextSeat);
             RoomSync();
+            Debug.Log("Turn Next --> {0}", m_whosTurn.name);
         }
 
 
@@ -210,9 +211,11 @@ namespace RedStone.SOS
         CardMgr m_cardMgr = new CardMgr();
         public void GameBegin()
         {
+            Debug.Log("Game Start!!!");
             m_whosTurn = m_players.First(a => a.seat == 1);
             m_cardMgr.Reset();
             GameBegin_SyncCards();
+            GameBegin_SendCards();
         }
 
         public void GameBegin_SyncCards()
@@ -246,6 +249,7 @@ namespace RedStone.SOS
             CBSendCardSync msg = new CBSendCardSync();
             msg.CardID = cardID;
             msg.TargetID = targetID;
+            SendToAll(msg);
         }
 
 
@@ -253,6 +257,7 @@ namespace RedStone.SOS
         {
             Card card = m_cardMgr.TakeCard();
             m_whosTurn.AddCard(card);
+            Debug.Log("Send card {0} to {1}", m_whosTurn.name, card.name);
             SendCard(m_whosTurn.id, card.id);
         }
 
@@ -269,6 +274,7 @@ namespace RedStone.SOS
 
         public void SendToAll<T>(T msg)
         {
+            Debug.Log("Send {0} to all ", msg.GetType().Name);
             foreach (var p in m_players)
             {
                 battleProxy.SendMessage(p.user.sessionID, msg);
@@ -277,6 +283,8 @@ namespace RedStone.SOS
 
         public void SendTo<T>(int playerId, T msg)
         {
+            Debug.Log("Send {0} to {1} ", msg.GetType().Name, playerId);
+
             var p = m_players.First(a => a.id == playerId);
             battleProxy.SendMessage(p.user.sessionID, msg);
         }

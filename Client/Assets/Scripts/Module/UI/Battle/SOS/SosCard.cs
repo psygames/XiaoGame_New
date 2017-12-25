@@ -30,7 +30,7 @@ namespace RedStone
         public void OnClick()
         {
             if (onClickCallback != null)
-                onClickCallback.Invoke(m_data);
+                onClickCallback.Invoke(data);
         }
     }
 }

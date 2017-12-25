@@ -5,7 +5,7 @@ using Plugins;
 using RedStone.Data.SOS;
 using System.Collections.Generic;
 
-namespace RedStone 
+namespace RedStone
 {
     public class SosProxy : BattleProxyBase
     {
@@ -31,6 +31,8 @@ namespace RedStone
         {
             RegisterMessage<CBReadySync>(OnReadySync);
             RegisterMessage<CBRoomSync>(OnRoomSync);
+            RegisterMessage<CBSendCardSync>(OnSendCardSync);
+            RegisterMessage<CBCardInfoSync>(OnCardInfoSync);
         }
 
         private void InitSocket()
@@ -79,7 +81,7 @@ namespace RedStone
             , (rep) =>
             {
                 isLogin = true;
-                Toast.instance.ShowNormal("登录战场服务器成功！"); 
+                Toast.instance.ShowNormal("登录战场服务器成功！");
                 Task.WaitFor(1f, () =>
                 {
                     JoinBattle();//自动加入战场
@@ -93,9 +95,7 @@ namespace RedStone
             SendMessage<CBJoinBattleRequest, CBJoinBattleReply>(req,
             (rep) =>
             {
-                Toast.instance.ShowNormal("加入战场成功！");
-                room.SetData(rep.Info);
-                room.SetPlayers(rep.PlayerInfos);
+                OnJoined(rep);
             });
         }
 
@@ -105,15 +105,43 @@ namespace RedStone
             SendMessage(req);
         }
 
-        public void OnReadySync(CBReadySync msg)
+
+
+        // On Network Message
+        void OnJoined(CBJoinBattleReply msg)
         {
+            Toast.instance.ShowNormal("加入战场成功！");
+
+            room = new RoomData();
+            room.SetData(msg.Info);
+            room.SetPlayers(msg.PlayerInfos);
+
+            SendEvent(EventDef.SOS.Joined);
+        }
+
+        void OnReadySync(CBReadySync msg)
+        {
+            room.GetPlayer(msg.FromID).SetReady(true);
             SendEvent(EventDef.SOS.Ready, msg.FromID);
+        }
+
+        void OnCardInfoSync(CBCardInfoSync msg)
+        {
+            room.SetCards(msg.Cards);
         }
 
         void OnRoomSync(CBRoomSync msg)
         {
-            
+            room.RoomSync(msg);
+            SendEvent(EventDef.SOS.RoomSync);
         }
 
+        void OnSendCardSync(CBSendCardSync msg)
+        {
+            var card = room.GetCard(msg.CardID);
+            var player = room.GetPlayer(msg.TargetID);
+            player.AddCard(card);
+            SendEvent(EventDef.SOS.SendCard, msg);
+        }
     }
 }

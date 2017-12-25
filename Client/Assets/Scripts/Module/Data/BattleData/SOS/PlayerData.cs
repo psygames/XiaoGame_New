@@ -15,6 +15,8 @@ namespace RedStone.Data.SOS
         public int seat { get; private set; }
         public bool isReady { get; private set; }
 
+        private List<CardData> m_handCards = new List<CardData>();
+
         public void SetData(Message.BattlePlayerInfo info)
         {
             id = info.Id;
@@ -39,6 +41,21 @@ namespace RedStone.Data.SOS
         public void SetReady(bool isReady)
         {
             this.isReady = isReady;
+        }
+
+        public void AddCard(CardData card)
+        {
+            m_handCards.Add(card);
+        }
+
+        public void RemoveCard(CardData card)
+        {
+            m_handCards.Remove(card);
+        }
+
+        public CardData GetHandCard(int cardID)
+        {
+            return m_handCards.First(a => a.id == cardID);
         }
     }
 }
