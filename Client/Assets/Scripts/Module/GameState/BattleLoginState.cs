@@ -15,10 +15,10 @@ namespace RedStone
         private void Connect()
         {
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_RESPONSE, 50));
-            GF.GetProxy<BattleProxy>().Connect();
+            GF.GetProxy<SosProxy>().Connect();
             Task.WaitFor(3, () =>
             {
-                if (!GF.GetProxy<BattleProxy>().isConnected)
+                if (!GF.GetProxy<SosProxy>().isConnected)
                 {
                     MessageBox.Show("连接失败", "连接战场失败，是否重新连接？", MessageBoxStyle.OKClose
                     , (result) =>
@@ -42,13 +42,13 @@ namespace RedStone
         private bool m_lastLogin = false;
         public override void Update()
         {
-            if (!m_lastConnected && GF.GetProxy<BattleProxy>().isConnected)
+            if (!m_lastConnected && GF.GetProxy<SosProxy>().isConnected)
             {
                 GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_LOGIN, 70));
             }
-            m_lastConnected = GF.GetProxy<BattleProxy>().isConnected;
+            m_lastConnected = GF.GetProxy<SosProxy>().isConnected;
 
-            if (!m_lastLogin && GF.GetProxy<BattleProxy>().isLogin)
+            if (!m_lastLogin && GF.GetProxy<SosProxy>().isLogin)
             {
                 GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.GENRAL_START, 98));
                 Task.WaitFor(1f, () =>
@@ -56,7 +56,7 @@ namespace RedStone
                     GF.ChangeState<BattleState>();
                 });
             }
-            m_lastLogin = GF.GetProxy<BattleProxy>().isLogin;
+            m_lastLogin = GF.GetProxy<SosProxy>().isLogin;
         }
     }
 }

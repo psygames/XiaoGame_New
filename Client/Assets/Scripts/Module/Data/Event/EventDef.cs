@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,10 @@ namespace RedStone
 
 
 
-        // battle 
-        public const string PlayerReady = "PlayerReady";
+        public class SOS
+        {
+            public const string Ready = "SOS.Ready";
+
+        }
     }
 }

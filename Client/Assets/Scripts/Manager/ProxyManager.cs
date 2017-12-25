@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 namespace RedStone
 {
@@ -9,7 +9,7 @@ namespace RedStone
 		public ProxyManager()
 		{
 			AddProxy<HallProxy>();
-            AddProxy<BattleProxy>();
+            AddProxy<SosProxy>();
 		}
 
 		private void AddProxy<T>() where T : ProxyBase, new()

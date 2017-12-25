@@ -5,7 +5,7 @@ using RedStone.UI;
 
 namespace RedStone
 {
-    public class SosPlayer : MonoBehaviour
+    public class SosRoom : MonoBehaviour
     {
         public Transform cardRoot;
         public Text playerName;
@@ -13,19 +13,28 @@ namespace RedStone
 
         public List<SosCard> m_handCards = new List<SosCard>();
 
+        public void Init()
+        {
+            GF.Register<int>(EventDef.SOS.Ready, OnReady);
+        }
+
+        void OnReady(int id)
+        {
+
+        }
+
         public void TakeCard(int cardID)
         {
             SosCard newCard = new SosCard();
 
-            m_handCards.Add(newCard);
         }
 
         public void PlayCard(int cardID)
         {
-            m_handCards.Remove(m_handCards.First(a=>a.);
         }
 
-        public void SetReady(bool isReady)
+
+        public SosPlayer GetPlayer(int playerID)
         {
 
         }

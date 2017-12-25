@@ -2,16 +2,16 @@ using UnityEngine;
 using System.Collections;
 using Message;
 using Plugins;
-using RedStone.Data;
+using RedStone.Data.SOS;
 using System.Collections.Generic;
 
 namespace RedStone 
 {
-    public class BattleProxy : BattleProxyBase
+    public class SosProxy : BattleProxyBase
     {
         public BattleServerInfo serverInfo { get { return GetProxy<HallProxy>().battleServerInfo; } }
-
         public RoomData room { get; private set; }
+
         public bool isConnected { get; private set; }
         public bool isLogin { get; private set; }
 
@@ -22,10 +22,9 @@ namespace RedStone
             isLogin = false;
         }
 
-        public BattleProxy()
+        public SosProxy()
         {
             room = new RoomData();
-            players = new Dictionary<int, BattlePlayerData>();
         }
 
         public override void OnInit()
@@ -71,7 +70,7 @@ namespace RedStone
             }
         }
 
-        public int roomID { get; private set; }
+        public int Roomda { get; private set; }
         public void Login()
         {
             CBLoginRequest req = new CBLoginRequest();
@@ -80,7 +79,6 @@ namespace RedStone
             , (rep) =>
             {
                 isLogin = true;
-                roomID = rep.RoomID;
                 Toast.instance.ShowNormal("登录战场服务器成功！"); 
                 Task.WaitFor(1f, () =>
                 {
@@ -97,7 +95,7 @@ namespace RedStone
             {
                 Toast.instance.ShowNormal("加入战场成功！");
                 room.SetData(rep.Info);
-                SetPlayers(rep.PlayerInfos);
+                room.SetPlayers(rep.PlayerInfos);
             });
         }
 
@@ -109,8 +107,7 @@ namespace RedStone
 
         public void OnReadySync(CBReadySync msg)
         {
-            GetPlayer(msg.FromID).SetReady(true);
-            SendEvent(EventDef.PlayerReady, msg.FromID);
+            SendEvent(EventDef.SOS.Ready, msg.FromID);
         }
 
         void OnRoomSync(CBRoomSync msg)
@@ -118,23 +115,5 @@ namespace RedStone
             
         }
 
-        public BattlePlayerData GetPlayer(int id)
-        {
-            BattlePlayerData data = null;
-            players.TryGetValue(id, out data);
-            return data;
-        }
-
-        public Dictionary<int, BattlePlayerData> players { get; private set; }
-        public void SetPlayers(IList<Message.BattlePlayerInfo> playerInfos)
-        {
-            players.Clear();
-            foreach (var info in playerInfos)
-            {
-                BattlePlayerData data = new BattlePlayerData();
-                data.SetData(info);
-                players.Add(info.Id, data);
-            }
-        }
     }
 }

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace RedStone.Data
+namespace RedStone.Data.SOS
 {
-    public class BattlePlayerData
+    public class PlayerData
     {
         public int id { get; private set; }
         public string name { get; private set; }

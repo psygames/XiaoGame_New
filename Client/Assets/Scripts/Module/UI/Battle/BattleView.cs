@@ -7,17 +7,14 @@ namespace RedStone
 {
     public class BattleView : ViewBase
     {
+        public SosRoom room;
+
         public override void OnInit()
         {
             base.OnInit();
-
-            Register<int>(EventDef.PlayerReady, OnReady);
+            room.Init();
         }
 
-        private void OnReady(int id)
-        {
-            GetProxy<BattleProxy>().Ready();
-        }
 
 
         public override void OnOpen()
@@ -27,7 +24,7 @@ namespace RedStone
 
         void OnClickReady()
         {
-            GetProxy<BattleProxy>().Ready();
+            GetProxy<SosProxy>().Ready();
         }
     }
 }
