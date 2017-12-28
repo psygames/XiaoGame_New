@@ -8,6 +8,7 @@ namespace RedStone
 
 		public ProxyManager()
 		{
+            AddProxy<SpriteProxy>();
 			AddProxy<HallProxy>();
             AddProxy<SosProxy>();
 		}

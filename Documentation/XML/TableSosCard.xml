@@ -39,31 +39,35 @@
    <NumberFormat ss:Format="@"/>
   </Style>
   <Style ss:ID="s63">
-   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <NumberFormat ss:Format="@"/>
   </Style>
   <Style ss:ID="s64">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s66">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
   </Style>
   <Style ss:ID="s67">
-   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
-  </Style>
-  <Style ss:ID="s68">
-   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
-   <NumberFormat ss:Format="@"/>
-  </Style>
-  <Style ss:ID="s69">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="宋体" x:CharSet="134" ss:Color="#000000"/>
    <NumberFormat ss:Format="@"/>
   </Style>
-  <Style ss:ID="s73">
+  <Style ss:ID="s68">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  </Style>
+  <Style ss:ID="s69">
    <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
    <NumberFormat/>
   </Style>
-  <Style ss:ID="s74">
-   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
-   <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+  <Style ss:ID="s72">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial Unicode MS" x:Family="Swiss" ss:Color="#000000"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="TableSosCard">
@@ -71,135 +75,142 @@
    x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="13.5">
    <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="133.5"/>
    <Column ss:AutoFitWidth="0" ss:Width="310.5"/>
-   <Column ss:StyleID="s62" ss:Width="173.25"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="87.75"/>
+   <Column ss:Index="7" ss:Width="110.25"/>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">id</Data></Cell>
     <Cell><Data ss:Type="String">name</Data></Cell>
     <Cell><Data ss:Type="String">description</Data></Cell>
-    <Cell ss:StyleID="s68"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">star</Font></ss:Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">point</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">effect</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">image</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">type</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">star</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">point</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">effect</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">image</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">type</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell ss:StyleID="s63"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">string</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">int</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">string</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">string</Data></Cell>
-    <Cell ss:StyleID="s69"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">int</Font></ss:Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">int</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">string</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">string</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">int</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">int</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="57">
-    <Cell ss:StyleID="s63"><Data ss:Type="String">ID</Data></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">名字</Data></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">描述</Data></Cell>
-    <Cell ss:StyleID="s69"><Data ss:Type="String">星星数（同时表示该卡片数量）</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">卡牌点数</Data></Cell>
-    <Cell ss:Index="8" ss:StyleID="s74"><Data ss:Type="String">1&#45;-自己&#10;2&#45;-目标&#10;3&#45;-群体&#10;</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ID</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">名字</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">描述</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">星星数（同时表示该卡片数量）</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">卡牌点数</Data></Cell>
+    <Cell ss:Index="8" ss:StyleID="s68"><Data ss:Type="String">1&#45;-自己&#10;2&#45;-目标&#10;3&#45;-群体&#10;</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">冥王星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">可侦察任一玩家所在的航站。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">冥王星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">可侦察任一玩家所在的航站。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">侦察</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">侦察</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_pluto</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">海王星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">将所有玩家手上的航站收回，洗乱顺序，再发给每个玩家。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">海王星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">将所有玩家手上的航站收回，洗乱顺序，再发给每个玩家。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">混乱</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">混乱</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_neptune</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">3</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">3</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">天王星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">将手中的航站插入牌库，洗乱顺序，重抽一张。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">天王星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">将手中的航站插入牌库，洗乱顺序，重抽一张。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="Number">3</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">变革</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">变革</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_uranus</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">4</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">土星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">下次轮到你之前，将不受任何其他航站的功能影响。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">土星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">下次轮到你之前，将不受任何其他航站的功能影响。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">4</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">壁垒</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">壁垒</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_saturn</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">5</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">木星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">猜任一玩家航站名，被猜中玩家出局。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">木星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">猜任一玩家航站名，被猜中玩家出局。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">5</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">猜测</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">猜测</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_jupiter</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">6</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">火星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">指定任一玩家猜拳决斗。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">火星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">指定任一玩家猜拳决斗。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">6</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">决斗</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">决斗</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_mars</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">7</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">太阳航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">指定任一玩家弃掉手上的航站，重新抽取一张新航站。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">太阳航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">指定任一玩家弃掉手上的航站，重新抽取一张新航站。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">7</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">霸道</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">霸道</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_sun</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">8</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">金星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">指定任一玩家，交换手中航站。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">金星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">指定任一玩家，交换手中航站。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">交换</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">交换</Data></Cell>
+    <Cell ss:StyleID="s72"><Data ss:Type="String">sos_card_venus</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">9</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">水星航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">当你手上有太阳航站或火星航站时，必须弃置水星航站。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">水星航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">当你手上有太阳航站或火星航站时，必须弃置水星航站。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">9</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">开溜</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">开溜</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_mercury</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">10</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">月亮航站</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">自愿或被迫弃置月亮航站时，玩家立即出局。</Data></Cell>
-    <Cell ss:StyleID="s73"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">月亮航站</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">自愿或被迫弃置月亮航站时，玩家立即出局。</Data></Cell>
+    <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">10</Data></Cell>
-    <Cell ss:StyleID="s67"><Data ss:Type="String">出局</Data></Cell>
-    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">出局</Data></Cell>
+    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_moon</Font></ss:Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
   </Table>
@@ -239,8 +250,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
+     <ActiveRow>9</ActiveRow>
      <ActiveCol>6</ActiveCol>
-     <RangeSelection>R4C7:R13C7</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

@@ -16,7 +16,7 @@ namespace RedStone
         public Text effect;
         public Text state;
 
-        private List<SosCard> m_handCards = new List<SosCard>();
+        protected List<SosCard> m_handCards = new List<SosCard>();
 
         private void Awake()
         {

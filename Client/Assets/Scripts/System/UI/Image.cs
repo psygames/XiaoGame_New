@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
  namespace RedStone.UI
 {
@@ -66,7 +66,7 @@
 
         public void SetSprite(string spriteName, bool isSetNativeSize = true)
         {
-            
+            sprite = GF.GetProxy<SpriteProxy>().GetSprite(spriteName);
         }
 
         public void SetAlpha(float alpha)
