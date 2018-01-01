@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using Plugins;
 namespace RedStone
@@ -7,6 +7,8 @@ namespace RedStone
     {
         private EventManager m_eventMgr = new EventManager();
         public EventManager eventManager { get { return m_eventMgr; } }
+
+        public GameObject UIRoot;
 
         protected override void Awake()
         {

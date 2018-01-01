@@ -19,7 +19,10 @@ namespace RedStone.SOS
 
         //最长时间一小时，超时房间自动解散
         private const float ROOM_MAX_TIME = 60 * 60;
+        const float WHOS_TURN_TIME = 35f;
 
+
+        private float m_whosTurnCounter = 0;
         private State m_state = State.WaitJoin;
         private List<Player> m_players = new List<Player>();
 
@@ -33,6 +36,7 @@ namespace RedStone.SOS
             // Register Msg
             RegisterMsg<CBJoinBattleRequest>(OnJoinBattle);
             RegisterMsg<CBReady>(OnReady);
+            RegisterMsg<CBPlayCard>(OnPlayCard);
         }
 
         void InitPlayers()
@@ -64,10 +68,12 @@ namespace RedStone.SOS
             CheckAllJoined();
             CheckAllReady();
             CheckEnd();
+
+            UpdateTurnTime();
+            UpdateAI();
         }
 
         #region Check State
-
         private float roomRemainTime = 0;
         private void CheckEnd()
         {
@@ -104,6 +110,11 @@ namespace RedStone.SOS
         }
         #endregion
 
+        void UpdateTurnTime()
+        {
+            m_whosTurnCounter = Math.Max(m_whosTurnCounter - Time.deltaTime, 0);
+        }
+
         void OnJoinBattle(Player player, CBJoinBattleRequest msg)
         {
             if (m_state != State.WaitJoin)
@@ -130,9 +141,9 @@ namespace RedStone.SOS
                 rep.PlayerInfos.Add(info);
             }
 
-            SendToAll(rep);
+            SendTo(player.id, rep);
 
-            Debug.Log(player.user.name + " joined game");
+            Debug.Log("【{0}】 加入房间", player.user.name);
         }
 
         void OnReady(Player player, CBReady msg)
@@ -146,27 +157,31 @@ namespace RedStone.SOS
             sync.FromID = player.id;
             SendToAll(sync);
 
-            Debug.Log(player.user.name + " is ready");
+            Debug.Log("【{0}】 已准备", player.user.name);
         }
 
         void OnPlayCard(Player player, CBPlayCard msg)
         {
             if (m_whosTurn != player)
             {
-                Debug.LogError("{0} 出牌，但是不是他的回个，已禁止！", player.name);
+                Debug.LogError("【{0}】 出牌，但是不是他的回个，已禁止！", player.name);
                 return;
             }
+
+            m_isThisTrunPlayedCard = true;
 
             var card = GetCard(msg.CardID);
             player.RemoveCard(card);
             var target = GetPlayer(msg.TargetID);
 
-
-            Debug.Log("{0} 出牌 {1} 指向 {2}", player.name, card.name, target.name);
+            if (target != null)
+                Debug.Log("【{0}】 出牌 【{1}】 指向 【{2}】", player.name, card.name, target.name);
+            else
+                Debug.Log("【{0}】 出牌 【{1}】", player.name, card.name);
 
             CBPlayCardSync sync = new CBPlayCardSync();
             sync.FromID = player.id;
-            sync.TargetID = target.id;
+            sync.TargetID = msg.TargetID;
             sync.CardID = card.id;
             SendToAll(sync);
 
@@ -176,7 +191,25 @@ namespace RedStone.SOS
         }
 
 
-
+        public bool CheckCanDismiss()
+        {
+            if (m_state == State.End)
+                return true;
+            if (m_state == State.Started)
+            {
+                bool noPlayer = true;
+                foreach (var p in m_players)
+                {
+                    if (!p.isAI && p.user.state == UserState.Battle)
+                    {
+                        noPlayer = false;
+                        break;
+                    }
+                }
+                return noPlayer;
+            }
+            return false;
+        }
 
 
 
@@ -185,10 +218,12 @@ namespace RedStone.SOS
         private Player m_whosTurn = null;
         public void TurnNext()
         {
+            m_whosTurnCounter = WHOS_TURN_TIME;
+            m_isThisTrunPlayedCard = false;
             int nextSeat = m_whosTurn.seat % m_players.Count + 1;
             m_whosTurn = m_players.First(a => a.seat == nextSeat);
             RoomSync();
-            Debug.Log("Turn Next --> {0}", m_whosTurn.name);
+            Debug.Log("轮到下一位 --> 【{0}】", m_whosTurn.name);
         }
 
 
@@ -257,7 +292,7 @@ namespace RedStone.SOS
         {
             Card card = m_cardMgr.TakeCard();
             m_whosTurn.AddCard(card);
-            Debug.Log("Send card {0} to {1}", m_whosTurn.name, card.name);
+            Debug.Log("发牌 【{0}】 给 【{1}】", card.name, m_whosTurn.name);
             SendCard(m_whosTurn.id, card.id);
         }
 
@@ -274,18 +309,21 @@ namespace RedStone.SOS
 
         public void SendToAll<T>(T msg)
         {
-            Debug.Log("Send {0} to all ", msg.GetType().Name);
+            // Debug.Log("Send {0} to all ", msg.GetType().Name);
             foreach (var p in m_players)
             {
+                if (p.isAI || string.IsNullOrEmpty(p.user.sessionID))
+                    continue;
                 battleProxy.SendMessage(p.user.sessionID, msg);
             }
         }
 
         public void SendTo<T>(int playerId, T msg)
         {
-            Debug.Log("Send {0} to {1} ", msg.GetType().Name, playerId);
-
+            // Debug.Log("Send {0} to {1} ", msg.GetType().Name, playerId);
             var p = m_players.First(a => a.id == playerId);
+            if (p.isAI)
+                return;
             battleProxy.SendMessage(p.user.sessionID, msg);
         }
 
@@ -299,6 +337,60 @@ namespace RedStone.SOS
                     action.Invoke(m_players.First(a => a.user.token == user.token), msg);
                 });
             }
+        }
+
+
+        // AI
+        public void UpdateAI()
+        {
+            if (m_state == State.WaitJoin)
+            {
+                foreach (var p in m_players)
+                {
+                    if (p.isAI && p.state == Player.State.None)
+                        OnJoinBattle(p, null);
+                }
+            }
+            else if (m_state == State.WaitReady)
+            {
+                foreach (var p in m_players)
+                {
+                    if (p.isAI && p.state == Player.State.Joined)
+                        OnReady(p, null);
+                }
+            }
+            else if (m_state == State.Started)
+            {
+                UpdateAIPlay();
+            }
+        }
+
+        private bool m_isThisTrunPlayedCard = false;
+        void UpdateAIPlay()
+        {
+            if (m_whosTurn.isAI
+                && !m_isThisTrunPlayedCard
+                && m_whosTurnCounter <= 30
+                && m_whosTurn.handCards.Count > 0)
+            {
+                CBPlayCard msg = new CBPlayCard();
+                msg.CardID = RandPlayerCardID(m_whosTurn);
+                if (GetCard(msg.CardID).type == CardType.ForOneTarget)
+                    msg.TargetID = RandTargetID(m_whosTurn);
+                OnPlayCard(m_whosTurn, msg);
+            }
+        }
+
+
+        private int RandTargetID(Player p)
+        {
+            int index = rand.Next(m_players.Count - 1);
+            return m_players.Where(a => a != p).ToList()[index].id;
+        }
+
+        private int RandPlayerCardID(Player p)
+        {
+            return p.handCards[rand.Next(p.handCards.Count)].id;
         }
     }
 }

@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -262,17 +260,19 @@
     <Compile Include="Assets\Scripts\Module\GameState\HallLoginState.cs" />
     <Compile Include="Assets\Scripts\Module\GameState\HallState.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\BattleProxyBase.cs" />
-    <Compile Include="Assets\Scripts\Module\Proxy\SpriteProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\HallProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\ProxyBase.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\SosProxy.cs" />
+    <Compile Include="Assets\Scripts\Module\Proxy\SpriteProxy.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\BattleView.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosAimTargetLine.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosCard.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosMainPlayer.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosPlayer.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosRoom.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosTurnClock.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Common\MessageBoxView.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Common\Toast.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Common\ToastItem.cs" />
@@ -596,6 +596,7 @@
     <Compile Include="Assets\Scripts\System\UI\UIEffect\UIFlippable.cs" />
     <Compile Include="Assets\Scripts\System\UI\UIParticleScale.cs" />
     <Compile Include="Assets\Scripts\System\UI\UIRaycaster.cs" />
+    <Compile Include="Assets\Scripts\System\UI\UIRepeat.cs" />
     <Compile Include="Assets\Scripts\System\UI\UIRoot.cs" />
     <Compile Include="Assets\Scripts\System\UI\UIUtils.cs" />
     <Compile Include="Assets\Scripts\System\UI\Utilities\BezierPath.cs" />

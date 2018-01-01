@@ -33,6 +33,7 @@ namespace RedStone
             RegisterMessage<CBRoomSync>(OnRoomSync);
             RegisterMessage<CBSendCardSync>(OnSendCardSync);
             RegisterMessage<CBCardInfoSync>(OnCardInfoSync);
+            RegisterMessage<CBPlayCardSync>(OnPlayCardSync);
         }
 
         private void InitSocket()
@@ -81,7 +82,7 @@ namespace RedStone
             , (rep) =>
             {
                 isLogin = true;
-                Toast.instance.ShowNormal("登录战场服务器成功！");
+                // Toast.instance.ShowNormal("登录战场服务器成功！");
                 Task.WaitFor(1f, () =>
                 {
                     JoinBattle();//自动加入战场
@@ -105,6 +106,13 @@ namespace RedStone
             SendMessage(req);
         }
 
+        public void PlayCard(int cardId, int target = 0)
+        {
+            CBPlayCard msg = new CBPlayCard();
+            msg.CardID = cardId;
+            msg.TargetID = target;
+            SendMessage(msg);
+        }
 
 
         // On Network Message
@@ -142,6 +150,15 @@ namespace RedStone
             var player = room.GetPlayer(msg.TargetID);
             player.AddCard(card);
             SendEvent(EventDef.SOS.SendCard, msg);
+        }
+
+        void OnPlayCardSync(CBPlayCardSync msg)
+        {
+            var card = room.GetCard(msg.CardID);
+            var player = room.GetPlayer(msg.FromID);
+            player.RemoveCard(card);
+
+            SendEvent(EventDef.SOS.PlayCard, msg);
         }
     }
 }

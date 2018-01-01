@@ -52,7 +52,7 @@ namespace RedStone
             if (!m_lastLogin && GF.GetProxy<HallProxy>().isLogin)
             {
                 GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.GENRAL_START, 98));
-                Task.WaitFor(1f, () =>
+                Task.WaitFor(0.5f, () =>
                 {
                     GF.ChangeState<HallState>();
                 });

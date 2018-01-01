@@ -12,7 +12,7 @@ namespace RedStone
             GF.ShowView<LoadingView>();
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 0));
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 50));
-            Task.WaitFor(1f, () =>
+            Task.WaitFor(0.5f, () =>
             {
                 GF.ChangeState<BattleLoginState>();
             });

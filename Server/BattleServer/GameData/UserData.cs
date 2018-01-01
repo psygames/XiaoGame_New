@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 
 namespace RedStone.Data
 {
@@ -13,6 +13,7 @@ namespace RedStone.Data
         public int roomID { get; private set; }
         public string token { get; private set; }
         public UserState state { get; private set; }
+        public bool isAI { get; private set; }
         public RoomData room { get { return ProxyManager.instance.GetProxy<RoomProxy>().GetRoom(roomID); } }
 
         public void SetSessionID(string sessionID)
@@ -25,7 +26,7 @@ namespace RedStone.Data
             this.state = state;
         }
 
-        public void SetData(Message.PlayerInfo info, int roomID, string token)
+        public void SetData(Message.PlayerInfo info, int roomID, string token,bool isAI = false)
         {
             this.uid = info.Uid;
             this.name = info.Name;
@@ -34,6 +35,7 @@ namespace RedStone.Data
             this.gold = info.Gold;
             this.roomID = roomID;
             this.token = token;
+            this.isAI = isAI;
         }
     }
 

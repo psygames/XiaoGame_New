@@ -21,9 +21,10 @@ namespace RedStone
             base.OnUpdate();
 
             UpdatePvL();
+            CheckRoomDismiss();
         }
 
-
+        Random rand = new Random();
         public RoomData MainServerRequsetCreateRoom(IList<Message.PlayerInfo> playerInfos)
         {
             var room = GetProxy<RoomProxy>().CreateRoom();
@@ -31,7 +32,21 @@ namespace RedStone
 
             foreach (var info in playerInfos)
             {
-                var user = GetProxy<UserProxy>().AddUser(info, room.id);
+                var user = GetProxy<UserProxy>().AddUser(info, room.id, false);
+                if (user == null)
+                    continue;
+                users.Add(user);
+            }
+
+            while (users.Count < 4)
+            {
+                Message.PlayerInfo info = new Message.PlayerInfo();
+                info.Exp = 0;
+                info.Level = 1;
+                info.Name = TableManager.instance.GetData<TableName>(rand.Next(1, 100)).name.Trim();
+                info.Uid = -1;
+                info.Gold = 0;
+                var user = GetProxy<UserProxy>().AddUser(info, room.id, true);
                 if (user == null)
                     continue;
                 users.Add(user);
@@ -39,6 +54,7 @@ namespace RedStone
 
             room.SetUsers(users);
             NewPvL(room.id);
+            Debug.LogInfo("房间创建【{0}】", room.id);
             return room;
         }
 
@@ -57,6 +73,7 @@ namespace RedStone
         //TODO: Register Room Dismiss Event
         private void OnRoomDismiss(int roomID)
         {
+            Debug.LogInfo("房间销毁 【{0}】", roomID);
             m_pvlLogics.Remove(roomID);
             GetProxy<RoomProxy>().RemoveRoom(roomID);
         }
@@ -84,6 +101,23 @@ namespace RedStone
                 {
                     pvl.Value.Update();
                 }
+            }
+        }
+
+        private void CheckRoomDismiss()
+        {
+            List<int> needRemoveIDs = new List<int>();
+            foreach (var kv in m_pvlLogics)
+            {
+                if (kv.Value.CheckCanDismiss())
+                {
+                    needRemoveIDs.Add(kv.Key);
+                }
+            }
+
+            foreach (var key in needRemoveIDs)
+            {
+                OnRoomDismiss(key);
             }
         }
         #endregion

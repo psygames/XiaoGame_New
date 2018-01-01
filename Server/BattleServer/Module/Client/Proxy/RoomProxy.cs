@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,8 @@ namespace RedStone
     public class RoomProxy : ProxyBaseServer
     {
         private Dictionary<int, RoomData> m_rooms = new Dictionary<int, RoomData>();
+
+        public Dictionary<int,RoomData> rooms { get { return m_rooms; } }
 
 
         public override void OnInit()

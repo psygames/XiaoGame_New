@@ -24,7 +24,18 @@ namespace RedStone.Data.SOS
 
         public void RoomSync(Message.CBRoomSync sync)
         {
-            whosTurn = m_players.First(a => a.id == sync.WhoseTurn);
+            foreach (var p in m_players)
+            {
+                if (p.id == sync.WhoseTurn)
+                {
+                    whosTurn = p;
+                    p.SetTurned(true);
+                }
+                else
+                {
+                    p.SetTurned(false);
+                }
+            }
             state = (State)sync.State;
         }
 
@@ -60,6 +71,7 @@ namespace RedStone.Data.SOS
         }
 
         public PlayerData mainPlayer { get { return m_players.First(a => a.isMain); } }
+        public List<PlayerData> players { get { return m_players; } }
 
 
         public enum State

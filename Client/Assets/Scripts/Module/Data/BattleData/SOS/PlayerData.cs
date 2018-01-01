@@ -14,8 +14,10 @@ namespace RedStone.Data.SOS
         public bool isMain { get; private set; }
         public int seat { get; private set; }
         public bool isReady { get; private set; }
+        public bool isTurned { get; private set; }
 
         private List<CardData> m_handCards = new List<CardData>();
+        public List<CardData> handCards { get { return m_handCards; } }
 
         public void SetData(Message.BattlePlayerInfo info)
         {
@@ -41,6 +43,11 @@ namespace RedStone.Data.SOS
         public void SetReady(bool isReady)
         {
             this.isReady = isReady;
+        }
+
+        public void SetTurned(bool isTurned)
+        {
+            this.isTurned = isTurned; 
         }
 
         public void AddCard(CardData card)

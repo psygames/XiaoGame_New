@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,16 +16,22 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
+            network.server.onClosed = OnClosed;
             RegisterMessage<CBLoginRequest>(OnLogin);
         }
 
-        public UserData AddUser(Message.PlayerInfo playerInfo, int roomID)
+        private void OnClosed(string sessionID)
+        {
+            GetUserBySession(sessionID).SetState(UserState.Offline);
+        }
+
+        public UserData AddUser(Message.PlayerInfo playerInfo, int roomID, bool isAI)
         {
             UserData user = null;
             user = new UserData();
             string token = Guid.NewGuid().ToString(); //Gen Token
-            user.SetData(playerInfo, roomID, token);
-            user.SetState(UserState.Offline);
+            user.SetData(playerInfo, roomID, token, isAI);
+            user.SetState(isAI ? UserState.Login : UserState.Offline);
             m_users.Add(token, user);
             return user;
         }

@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1474660360536316}
+  m_RootGameObject: {fileID: 1658389776247940}
   m_IsPrefabParent: 1
---- !u!1 &1474660360536316
+--- !u!1 &1658389776247940
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4553171961776646}
-  - component: {fileID: 114909154786410552}
+  - component: {fileID: 4963083773073406}
+  - component: {fileID: 114720947218145250}
   m_Layer: 0
   m_Name: SpritePath
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4553171961776646
+--- !u!4 &4963083773073406
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1474660360536316}
+  m_GameObject: {fileID: 1658389776247940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114909154786410552
+--- !u!114 &114720947218145250
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1474660360536316}
+  m_GameObject: {fileID: 1658389776247940}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fab1cae3a5da54f45869b4bbd0218e5c, type: 3}
@@ -54,10 +54,68 @@ MonoBehaviour:
   files:
   - d20c4f79a88545344bb9840b2f4cecea.hall_bg_01.bg
   - 6cd9e53559ba2424189f275a4c31c0c5.loading_bg_01.bg
+  - b76d34150c398ce47969c66e716e7d0d.avatar_1.character
+  - 125f4767fc32d5e4fbf28ebc63d48c01.avatar_10.character
+  - f01952726efeae842afdc94f14e48dd2.avatar_101.character
+  - 9abfb4e85feadee489f1468026a72d8d.avatar_102.character
+  - eeefc34c73a03de48853e596c295cdee.avatar_103.character
+  - 6f3debc22a4ab9443b61b0e29d3d16b1.avatar_104.character
+  - 6d097779aaa9fd145b1b850089daf365.avatar_105.character
+  - 33f3f24cd28aadf41a9113ec7e26d9ef.avatar_106.character
+  - 5d1f23ebe064f1d46907df2989ed3b06.avatar_107.character
+  - 7a4abbe98ebed604eb6db9cac34ba3bd.avatar_108.character
+  - 689fd42ab0c0c304ab2a57234c1b3bbd.avatar_109.character
+  - 5bad967cd02c88f47817bfebef9a27ee.avatar_11.character
+  - 7722ad0403c38f24d8a6dcb7ba17d338.avatar_110.character
+  - 847a23ef9fdeff241ae0414392a360f6.avatar_111.character
+  - ea674d727f1f45745a1c66e7c7651c37.avatar_2.character
+  - 7cd0e4952f1456f4ca6fea64af53f2a0.avatar_3.character
+  - 455ddbce55b77d242825e36f3ad74b99.avatar_4.character
+  - 1abf6c894dd62f640801db855ae7f612.avatar_5.character
+  - d11498f9d4144ca4fad4645869c1dace.avatar_6.character
+  - 0fe5eae28769af947a2925394502b0dc.avatar_7.character
+  - f743706908578694a9c75922e24efbd8.avatar_8.character
+  - 9efc62bd38128b74386b481e374a5401.avatar_9.character
+  - 18315a49e806aef45b8917f77028f02a.classic_1.character
+  - 14c1ac2fc69ac7846bcfb0322abf0b97.classic_2.character
+  - cdedf413fe449784382361bd6eca367a.classic_3.character
+  - bbdc4e92d22223f4fb5c7f60d401184c.classic_4.character
+  - eb6308bf91171784591fb8c79d3d10e1.classic_5.character
+  - f9dd7765524c20247b1d65fd7248cda4.classic_6.character
+  - 5bc52c0b80288cc40a0444555237570c.classic_7.character
+  - fa2550567a0b8e24db0a36dce2b1e4b3.classic_8.character
+  - 00ab71305a1e63341a8e3c39a0b2b31a.user_icon_man0.character
+  - 0799383c685bd8343bbd03b1814a9176.user_icon_man1.character
+  - de40ca0adf74f7f45b52383b8f48b9fe.user_icon_man2.character
+  - e75b36654ff4a9046bc004221affb4ed.user_icon_man3.character
+  - 56a220459d65d3d48a926cb9302866e5.user_icon_woman0.character
+  - b2e837f3c7619544e905621836f23822.user_icon_woman1.character
+  - 81e6b3571754da44fabee07143d14691.user_icon_woman2.character
+  - 1ec845384008fcb46b38617f4310eb58.user_icon_woman3.character
+  - 46dce436271d9e249be099f696a04291.vtouxiang_01.character
+  - fbd9c367a94f232478058e50ef62b3f6.vtouxiang_02.character
+  - a7f3d156ece6cb645ac0c5507f246b61.vtouxiang_03.character
+  - 866394ebcda9c29409f8db90be478b43.vtouxiang_04.character
+  - bccb65aa37d18de46a88e3658f100d27.vtouxiang_05.character
+  - 9f0f15523b56913498204b452f7cbd82.vtouxiang_06.character
+  - fb12d84ec13583f4e8098b4bec3eae11.vtouxiang_07.character
+  - c0c6b186fcb57dc44bee4e2cdc44858a.vtouxiang_08.character
+  - 02addf3204aaf6c42b00ff9221b3e84b.vtouxiang_09.character
+  - 8533ba614e659f142a1a53c87963af6d.vtouxiang_10.character
+  - f1106c99ea8b69446b42241149eaf9ac.vtouxiang_11.character
+  - 0bf7d88e2d3075545a6379afa2fcca4a.vtouxiang_12.character
+  - 665c80bc69a7ceb4e8ab543ca50e4b27.vtouxiang_13.character
+  - ada300dfe4e966649b5049342861d2a2.vtouxiang_14.character
+  - 7efcda46157fbaa4ba5f0662b0f26d43.common_border_1.common
+  - 46b361f833866b64d962a94382d80a12.common_border_2.common
+  - 841a8dc1ccd433d4eb3a2edc059a36bb.common_border_3.common
+  - aae2a3cad86579a49a0bf9f1f5c50a7a.common_border_4.common
   - f731b0702f17c25478efe1a24eb1bf2f.common_button_bg.common
   - 7b1640ff65b30ae44bbcf70c4f8101a2.common_button_cancel_bg.common
   - 8ba100257c99ebc47adc360f5bf9ea48.common_close.common
+  - 0d24992fc537a3e43b94d7df48025bf3.common_desc_panel.common
   - b5b0de64f962d9e4795ab68cd1d9634a.common_panel_bg.common
+  - 35abb0bed8e98ee47ae433d7ad419d5c.common_pop_desc_panel.common
   - edebec9740fe533458cc2598945b47f5.common_white.common
   - ce3afbc62a784bc49bd8a2f36a4f0b8f.common_white_3d.common
   - dcbc57ddf460d3b4793146a65f4f7904.button_battle.hall
@@ -102,6 +160,7 @@ MonoBehaviour:
   - 942945fba63bf0849aa4d223fa13fad9.sos_card_venus_title_bg.sos
   paths:
   - Atlas/bg
+  - Atlas/character
   - Atlas/common
   - Atlas/hall
   - Atlas/sos

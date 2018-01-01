@@ -23,7 +23,7 @@ namespace RedStone
             public const string Ready = "SOS.Ready";
             public const string RoomSync = "SOS.RoomSync";
             public const string SendCard = "SOS.SendCard";
-
+            public const string PlayCard = "SOS.PlayCard";
         }
     }
 }

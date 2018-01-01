@@ -3,65 +3,116 @@ using System.Collections.Generic;
 using UnityEngine;
 using RedStone.UI;
 using RedStone.Data.SOS;
+using System;
 
 namespace RedStone
 {
-    public class SosPlayer : MonoBehaviour
+    public class SosPlayer : EventHandleItem
     {
         public PlayerData data { get; private set; }
         public Transform cardRoot;
         public SosCard cardTemplate;
+        public Transform playedCardRoot;
 
+        public Image headIcon;
+        public Image headIconBg;
         public Text playerName;
         public Text effect;
         public Text state;
+        public UIRepeat backCardRepeat;
 
-        protected List<SosCard> m_handCards = new List<SosCard>();
+        protected SosCard m_playedCard = null;
 
-        private void Awake()
+        public bool isSelected { get; private set; }
+
+        public Action<PlayerData> onClickCallback = null;
+
+        public void Reset()
         {
-            cardTemplate.gameObject.SetActive(false);
+            m_lastPlayedCardData = null;
         }
 
-        public void Init(PlayerData data)
+        public virtual void Init(PlayerData data)
         {
+            Reset();
+            m_playedCard = GameObject.Instantiate(cardTemplate).GetComponent<SosCard>();
+            UIHelper.SetParent(playedCardRoot, m_playedCard.transform);
+
             this.data = data;
+
+            playerName.text = data.name;
+            headIcon.SetSprite("user_icon_man" + UnityEngine.Random.Range(0, 4)); //TODO:Head Icon
+
             RefreshUI();
         }
 
-        void RefreshUI()
+        protected virtual void OnCardClick(CardData card)
         {
-            playerName.text = data.name;
+
+        }
+
+        protected void RefreshUI()
+        {
             state.text = data.isReady ? "Ready" : "Not Ready";
+            if (isSelected)
+                headIconBg.SetSprite("common_border_red", false);
+            else if (data.isMain)
+                headIconBg.SetSprite("common_border_blue", false);
+            else
+                headIconBg.SetSprite("common_border_white", false);
+
+            if (backCardRepeat != null)
+                backCardRepeat.repeatCount = data.handCards.Count;
+
+            RefreshPlayedCard(false);
         }
 
-        public void TakeCard(int cardID)
+        private CardData m_lastPlayedCardData = null;
+        void RefreshPlayedCard(bool ignoreTurn)
         {
-            var cardData = data.GetHandCard(cardID);
-            var card = GameObjectHelper.AddChild(cardRoot, cardTemplate);
-            card.gameObject.SetActive(true);
-            card.SetData(cardData);
-
-            //TODO: Do animation or something else
-
-            m_handCards.Add(card);
+            if (m_lastPlayedCardData != null
+                && (ignoreTurn || !data.isTurned))
+            {
+                m_playedCard.gameObject.SetActive(true);
+                m_playedCard.SetData(m_lastPlayedCardData);
+            }
+            else
+            {
+                m_playedCard.gameObject.SetActive(false);
+            }
         }
 
-        public void PlayCard(int cardID, int targetID = -1)
+        public void BeSelected(bool isSelected)
         {
-
-            Debug.LogError("{0} play card : {1} target : {2}".FormatStr(name, targetID));
+            this.isSelected = isSelected;
+            RefreshUI();
         }
 
+        public virtual void TakeCard(int cardID)
+        {
+            RefreshUI();
+        }
+
+        public virtual void PlayCard(CardData card)
+        {
+            m_lastPlayedCardData = card;
+            RefreshPlayedCard(true);
+        }
+        
         public void SetReady(bool isReady)
         {
             RefreshUI();
         }
 
-        public SosCard GetCard(int cardID)
+        public virtual void OnClick()
         {
-            return m_handCards.First(a => a.data.id == cardID);
+            if (onClickCallback != null)
+                onClickCallback.Invoke(data);
         }
 
+        public virtual void Update()
+        {
+
+        }
     }
 }

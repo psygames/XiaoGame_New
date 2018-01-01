@@ -1,4 +1,4 @@
-﻿using RedStone.Data;
+using RedStone.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,8 +14,10 @@ namespace RedStone.SOS
         public State state { get; private set; }
         public UserData user { get; private set; }
         public string name { get { return user.name; } }
+        public bool isAI { get { return user.isAI; } }
 
         private List<Card> m_handCards = new List<Card>();
+        public List<Card> handCards { get { return m_handCards; } }
 
         public void Init(UserData user, int id)
         {

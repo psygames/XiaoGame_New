@@ -26,5 +26,10 @@ namespace RedStone
         {
             GetProxy<SosProxy>().Ready();
         }
+
+        void OnClickPlayCard()
+        {
+            room.OnClickPlayCard();
+        }
     }
 }

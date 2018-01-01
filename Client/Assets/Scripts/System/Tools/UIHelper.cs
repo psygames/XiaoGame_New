@@ -1050,6 +1050,18 @@ public class UIHelper
         return type;
     }
 
+
+    public static Vector2 GetUIPosition(Transform transform)
+    {
+        return UIWorldToUIPos(transform.position);
+    }
+
+    public static Vector2 UIWorldToUIPos(Vector3 worldPos)
+    {
+        GameObject go = GameManager.instance.UIRoot;
+        Vector2 uiPos = worldPos / go.transform.localScale.x;
+        return uiPos + UIConfig.virtualScreenCenter;
+    }
 }
 
 

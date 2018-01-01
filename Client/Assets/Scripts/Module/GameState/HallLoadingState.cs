@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Linq;
 using System.Text;
@@ -23,16 +23,16 @@ namespace RedStone
             GF.ShowView<LoadingView>();
 
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 0));
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
 
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 15));
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
 
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 30));
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.1f);
 
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_UI, 45));
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.1f);
 
             OnLoadFinished();
         }
