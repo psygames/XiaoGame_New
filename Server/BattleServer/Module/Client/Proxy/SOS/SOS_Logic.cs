@@ -20,6 +20,7 @@ namespace RedStone.SOS
         //最长时间一小时，超时房间自动解散
         private const float ROOM_MAX_TIME = 60 * 60;
         const float WHOS_TURN_TIME = 35f;
+        const float END_KEEP_TIME = 20f;
 
 
         private float m_whosTurnCounter = 0;
@@ -30,6 +31,7 @@ namespace RedStone.SOS
         {
             m_roomID = roomID;
             roomRemainTime = ROOM_MAX_TIME;
+            m_endKeepCD = END_KEEP_TIME;
 
             InitPlayers();
 
@@ -65,28 +67,54 @@ namespace RedStone.SOS
 
         public void Update()
         {
+            HandlePoolMsg();
+
             CheckAllJoined();
             CheckAllReady();
             CheckEnd();
 
+            EndKeepTime();
             UpdateTurnTime();
             UpdateAI();
         }
 
         #region Check State
+
+        private float m_endKeepCD = 0;
+        private void EndKeepTime()
+        {
+            if (m_state != State.End)
+                return;
+
+            m_endKeepCD -= Time.deltaTime;
+        }
+
         private float roomRemainTime = 0;
         private void CheckEnd()
         {
-            roomRemainTime -= Time.deltaTime;
-            if (roomRemainTime <= 0)
-                m_state = State.End;
+            if (m_state != State.Started)
+                return;
 
-            //TODO: End Conditions
+            roomRemainTime -= Time.deltaTime;
+
+            if (roomRemainTime <= 0)
+            {
+                CalculateResult();
+            }
+            else if (m_cardMgr.leftCards.Count <= 0
+                 && m_players.All(a => a.state == Player.State.Out || a.handCards.Count <= 1))
+            {
+                CalculateResult();
+            }
+            else if (m_players.Count(a => a.state != Player.State.Out) <= 1)
+            {
+                CalculateResult();
+            }
         }
 
         public void CheckAllJoined()
         {
-            if (m_state != State.WaitJoin || m_state == State.WaitReady)
+            if (m_state != State.WaitJoin)
                 return;
 
             if (m_players.All(a => a.state == Player.State.Joined))
@@ -98,7 +126,7 @@ namespace RedStone.SOS
 
         public void CheckAllReady()
         {
-            if (m_state != State.WaitReady || m_state == State.Started)
+            if (m_state != State.WaitReady)
                 return;
 
             if (m_players.All(a => a.state == Player.State.Ready))
@@ -108,6 +136,30 @@ namespace RedStone.SOS
                 GameBegin();
             }
         }
+
+        public void CalculateResult()
+        {
+            Player winner = null;
+            foreach (var p in m_players)
+            {
+                if (p.state != Player.State.Out && p.handCards.Count > 0
+                    && (winner == null || p.handCards[0].point > winner.handCards[0].point))
+                {
+                    winner = p;
+                }
+            }
+            SendResult(winner);
+            m_state = State.End;
+            RoomSync();
+        }
+
+        void SendResult(Player winner)
+        {
+            CBBattleResultSync msg = new CBBattleResultSync();
+            msg.WinnerID.Add(winner.id);
+            SendToAll(msg);
+        }
+
         #endregion
 
         void UpdateTurnTime()
@@ -193,8 +245,9 @@ namespace RedStone.SOS
 
         public bool CheckCanDismiss()
         {
-            if (m_state == State.End)
+            if (m_state == State.End && m_endKeepCD <= 0)
                 return true;
+
             if (m_state == State.Started)
             {
                 bool noPlayer = true;
@@ -220,8 +273,27 @@ namespace RedStone.SOS
         {
             m_whosTurnCounter = WHOS_TURN_TIME;
             m_isThisTrunPlayedCard = false;
+
+            bool turnChanged = false;
             int nextSeat = m_whosTurn.seat % m_players.Count + 1;
-            m_whosTurn = m_players.First(a => a.seat == nextSeat);
+            for (int i = 0; i < m_players.Count; i++)
+            {
+                var turn = m_players.First(a => a.seat == nextSeat);
+                if (turn.state != Player.State.Out)
+                {
+                    m_whosTurn = turn;
+                    turnChanged = true;
+                    break;
+                }
+                nextSeat = (nextSeat + 1) % m_players.Count + 1;
+            }
+
+            if (!turnChanged)
+            {
+                Debug.LogError("Turn Not Changed --> {0}", m_whosTurn.name);
+                return;
+            }
+
             RoomSync();
             Debug.Log("轮到下一位 --> 【{0}】", m_whosTurn.name);
         }
@@ -229,6 +301,16 @@ namespace RedStone.SOS
 
         public void TurnNextAndSendCard()
         {
+            if (m_cardMgr.leftCards.Count <= 0)
+            {
+                Debug.LogInfo("没有卡牌了，等待结算。");
+                return;
+            }
+            if (m_players.Count(a => a.state != Player.State.Out) <= 1)
+            {
+                Debug.LogInfo("只剩下一个玩家，等待结算。");
+                return;
+            }
             TurnNext();
             SendCardToTurned();
         }
@@ -334,8 +416,28 @@ namespace RedStone.SOS
             {
                 battleProxy.RegisterUserMsg<T>(user.token, (msg) =>
                 {
-                    action.Invoke(m_players.First(a => a.user.token == user.token), msg);
+                    Action queAct = () =>
+                    {
+                        action.Invoke(m_players.First(a => a.user.token == user.token), msg);
+                    };
+
+                    lock (m_msgQueue)
+                    {
+                        m_msgQueue.Enqueue(queAct);
+                    }
                 });
+            }
+        }
+
+
+        private Queue<Action> m_msgQueue = new Queue<Action>();
+
+        private void HandlePoolMsg()
+        {
+            while (m_msgQueue.Count > 0)
+            {
+                var act = m_msgQueue.Dequeue();
+                act.Invoke();
             }
         }
 
@@ -370,7 +472,7 @@ namespace RedStone.SOS
         {
             if (m_whosTurn.isAI
                 && !m_isThisTrunPlayedCard
-                && m_whosTurnCounter <= 30
+                && m_whosTurnCounter <= 34
                 && m_whosTurn.handCards.Count > 0)
             {
                 CBPlayCard msg = new CBPlayCard();

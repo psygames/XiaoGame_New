@@ -266,6 +266,7 @@
     <Compile Include="Assets\Scripts\Module\Proxy\SosProxy.cs" />
     <Compile Include="Assets\Scripts\Module\Proxy\SpriteProxy.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Base\ViewBase.cs" />
+    <Compile Include="Assets\Scripts\Module\UI\Battle\BattleHint.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\BattleView.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosAimTargetLine.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Battle\SOS\SosCard.cs" />
@@ -462,6 +463,7 @@
     <Compile Include="Assets\Scripts\System\Protocol\BMCreateRoomRequest.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\BMLoginReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\BMLoginRequest.cs" />
+    <Compile Include="Assets\Scripts\System\Protocol\CBBattleResultSync.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBCardInfoSync.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBJoinBattleReply.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\CBJoinBattleRequest.cs" />

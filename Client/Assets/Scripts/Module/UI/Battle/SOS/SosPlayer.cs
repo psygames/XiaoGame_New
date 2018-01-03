@@ -71,7 +71,8 @@ namespace RedStone
         void RefreshPlayedCard(bool ignoreTurn)
         {
             if (m_lastPlayedCardData != null
-                && (ignoreTurn || !data.isTurned))
+                && (GF.GetProxy<SosProxy>().room.state == RoomData.State.End 
+                || ignoreTurn || !data.isTurned))
             {
                 m_playedCard.gameObject.SetActive(true);
                 m_playedCard.SetData(m_lastPlayedCardData);

@@ -12,6 +12,7 @@ namespace RedStone
         public Text stateText;
         public GameObject readyBtn;
         public GameObject playBtn;
+        public GameObject backBtn;
 
         public SosMainPlayer mainPlayer;
         public SosPlayer leftPlayer;
@@ -19,6 +20,7 @@ namespace RedStone
         public SosPlayer oppositePlayer;
         public SosTurnClock clock;
         public SosAimTargetLine aimTargetLine;
+        public BattleHint hint;
 
         private List<SosPlayer> m_players = new List<SosPlayer>();
         private RoomData data { get { return GF.GetProxy<SosProxy>().room; } }
@@ -27,16 +29,16 @@ namespace RedStone
 
         public void Init()
         {
-            GF.Register(EventDef.SOS.Joined, OnJoined);
-            GF.Register<int>(EventDef.SOS.Ready, OnReady);
-            GF.Register(EventDef.SOS.RoomSync, OnRoomSync);
-            GF.Register<Message.CBSendCardSync>(EventDef.SOS.SendCard, OnSendCard);
-            GF.Register<Message.CBPlayCardSync>(EventDef.SOS.PlayCard, OnPlayCard);
+            Reset();
         }
 
         public void Reset()
         {
+            m_players.Clear();
             clock.gameObject.SetActive(false);
+            backBtn.SetActive(false);
+            readyBtn.SetActive(false);
+            playBtn.SetActive(false);
         }
 
         public void InitPlayers()
@@ -68,9 +70,8 @@ namespace RedStone
         }
 
         // On Event
-        void OnJoined()
+        public void OnJoined()
         {
-            Reset();
             InitPlayers();
 
             // seats
@@ -97,12 +98,12 @@ namespace RedStone
             RefreshPlayers();
         }
 
-        void OnReady(int id)
+        public void OnReady(int id)
         {
             GetPlayer(id).SetReady(true);
         }
 
-        void OnRoomSync()
+        public void OnRoomSync()
         {
             if (data.whosTurn != null
                 && !data.whosTurn.isMain)
@@ -133,12 +134,12 @@ namespace RedStone
             }
         }
 
-        void OnSendCard(Message.CBSendCardSync msg)
+        public void OnSendCard(Message.CBSendCardSync msg)
         {
             GetPlayer(msg.TargetID).TakeCard(msg.CardID);
         }
 
-        void OnPlayCard(Message.CBPlayCardSync msg)
+        public void OnPlayCard(Message.CBPlayCardSync msg)
         {
             var from = GetPlayer(msg.FromID);
             from.PlayCard(data.GetCard(msg.CardID));
@@ -146,6 +147,12 @@ namespace RedStone
             var target = GetPlayer(msg.TargetID);
             if (target != null)
                 ShowAimTargetLine(from.playedCardRoot, target.headIcon.transform);
+        }
+
+        public void OnBattleResult(Message.CBBattleResultSync msg)
+        {
+            var player = GetPlayer(msg.WinnerID[0]).data;
+            hint.Show("恭喜 {0} 获得最终胜利！".FormatStr(player.name));
         }
 
         void ShowAimTargetLine(Transform from, Transform to)
@@ -162,18 +169,7 @@ namespace RedStone
             else
                 this.whosTurnText.text = "空";
 
-
-            if (data.state == RoomData.State.WaitReady)
-            {
-                readyBtn.SetActive(true);
-            }
-            else
-            {
-                readyBtn.SetActive(false);
-            }
-
             stateText.text = data.state.ToString();
-
             RefreshPlayers();
         }
 
@@ -188,6 +184,26 @@ namespace RedStone
             else
             {
                 playBtn.SetActive(false);
+            }
+
+
+            if (data.state == RoomData.State.WaitReady)
+            {
+                readyBtn.SetActive(true);
+            }
+            else
+            {
+                readyBtn.SetActive(false);
+            }
+
+
+            if (data.state == RoomData.State.End)
+            {
+                backBtn.SetActive(true);
+            }
+            else
+            {
+                backBtn.SetActive(false);
             }
         }
 

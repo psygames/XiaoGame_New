@@ -34,6 +34,7 @@ namespace RedStone
             RegisterMessage<CBSendCardSync>(OnSendCardSync);
             RegisterMessage<CBCardInfoSync>(OnCardInfoSync);
             RegisterMessage<CBPlayCardSync>(OnPlayCardSync);
+            RegisterMessage<CBBattleResultSync>(OnBattleResultSync);
         }
 
         private void InitSocket()
@@ -159,6 +160,11 @@ namespace RedStone
             player.RemoveCard(card);
 
             SendEvent(EventDef.SOS.PlayCard, msg);
+        }
+
+        void OnBattleResultSync(CBBattleResultSync msg)
+        {
+            SendEvent(EventDef.SOS.BattleResult, msg);
         }
     }
 }

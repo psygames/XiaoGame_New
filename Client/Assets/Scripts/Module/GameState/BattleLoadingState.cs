@@ -16,6 +16,7 @@ namespace RedStone
             {
                 GF.ChangeState<BattleLoginState>();
             });
+            UIManager.instance.Load("Battle/Battle");
         }
 
 

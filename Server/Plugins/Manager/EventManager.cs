@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,14 +20,36 @@ namespace Plugins
                 m_handlerAlls.Remove(handler.Target.GetHashCode());
         }
 
+
+        public void UnRegister(string eventName, int handleTargetHashCode)
+        {
+            if (!m_handlers.ContainsKey(eventName))
+                return;
+
+            m_handlers[eventName].Remove(handleTargetHashCode);
+            if (m_handlers[eventName].Count == 0)
+                m_handlers.Remove(eventName);
+        }
+
         public void Register(string eventName, Action handler)
         {
-            Register<object>(eventName, (obj) => { handler.Invoke(); });
+            if (!m_handlers.ContainsKey(eventName))
+                m_handlers.Add(eventName, new Dictionary<int, Action<object>>());
+
+            m_handlers[eventName].Add(handler.Target.GetHashCode(), (obj) =>
+            {
+                handler.Invoke();
+            });
         }
 
         public void UnRegister(string eventName, Action handler)
         {
-            UnRegister<object>(eventName, (obj) => { handler.Invoke(); });
+            if (!m_handlers.ContainsKey(eventName))
+                return;
+
+            m_handlers[eventName].Remove(handler.Target.GetHashCode());
+            if (m_handlers[eventName].Count == 0)
+                m_handlers.Remove(eventName);
         }
 
         public void Register<T>(string eventName, Action<T> handler)

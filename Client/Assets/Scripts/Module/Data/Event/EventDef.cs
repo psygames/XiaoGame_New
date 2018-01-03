@@ -24,6 +24,7 @@ namespace RedStone
             public const string RoomSync = "SOS.RoomSync";
             public const string SendCard = "SOS.SendCard";
             public const string PlayCard = "SOS.PlayCard";
+            public const string BattleResult = "SOS.BattleResult";
         }
     }
 }

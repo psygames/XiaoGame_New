@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,15 +7,49 @@ namespace Plugins
     public class EventManager
     {
         private Dictionary<string, Dictionary<int, Action<object>>> m_handlers = new Dictionary<string, Dictionary<int, Action<object>>>();
+        private Dictionary<int, Action<object>> m_handlerAlls = new Dictionary<int, Action<object>>();
+
+        public void RegisterAll(Action<object> handler)
+        {
+            m_handlerAlls.Add(handler.Target.GetHashCode(), handler);
+        }
+
+        public void UnRegisterAll(Action<object> handler)
+        {
+            if (m_handlerAlls.ContainsKey(handler.Target.GetHashCode()))
+                m_handlerAlls.Remove(handler.Target.GetHashCode());
+        }
+
+
+        public void UnRegister(string eventName, int handleTargetHashCode)
+        {
+            if (!m_handlers.ContainsKey(eventName))
+                return;
+
+            m_handlers[eventName].Remove(handleTargetHashCode);
+            if (m_handlers[eventName].Count == 0)
+                m_handlers.Remove(eventName);
+        }
 
         public void Register(string eventName, Action handler)
         {
-            Register<object>(eventName, (obj) => { handler.Invoke(); });
+            if (!m_handlers.ContainsKey(eventName))
+                m_handlers.Add(eventName, new Dictionary<int, Action<object>>());
+
+            m_handlers[eventName].Add(handler.Target.GetHashCode(), (obj) =>
+            {
+                handler.Invoke();
+            });
         }
 
         public void UnRegister(string eventName, Action handler)
         {
-            UnRegister<object>(eventName, (obj) => { handler.Invoke(); });
+            if (!m_handlers.ContainsKey(eventName))
+                return;
+
+            m_handlers[eventName].Remove(handler.Target.GetHashCode());
+            if (m_handlers[eventName].Count == 0)
+                m_handlers.Remove(eventName);
         }
 
         public void Register<T>(string eventName, Action<T> handler)
@@ -64,6 +98,11 @@ namespace Plugins
 
         public void Send(string eventName, params object[] param)
         {
+            foreach (var item in m_handlerAlls)
+            {
+                item.Value.Invoke(param);
+            }
+
             if (!m_handlers.ContainsKey(eventName))
                 return;
             List<int> keys = m_handlers[eventName].Keys.ToList();
@@ -75,6 +114,7 @@ namespace Plugins
 
         public void ClearAll()
         {
+            m_handlerAlls.Clear();
             m_handlers.Clear();
         }
     }
