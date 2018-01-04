@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Plugins.Network
@@ -11,7 +11,7 @@ namespace Plugins.Network
             base.Setup(ip, port);
             _socket = new WebSocketSharp.WebSocket(NetTool.GetAddress(ip, port) + "/default");
             _socket.Log.Level = WebSocketSharp.LogLevel.Error;
-            _socket.WaitTime = TimeSpan.FromSeconds(1);
+            // _socket.WaitTime = TimeSpan.FromSeconds(1);
             _socket.OnOpen += (a, b) => { base.OnConnected(); };
             _socket.OnClose += (a, b) => { base.OnClosed(); };
             _socket.OnMessage += (a, b) => { base.OnReceived(b.RawData); };

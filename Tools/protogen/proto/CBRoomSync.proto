@@ -6,4 +6,5 @@ message CBRoomSync
 {
     int32 state = 1;  // 1 - wait others, 2 - game, 3 - end
     int32 whoseTurn = 2;
+    int32 leftCardCount = 3;
 }

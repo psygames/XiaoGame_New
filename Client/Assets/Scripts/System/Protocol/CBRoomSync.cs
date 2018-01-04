@@ -22,12 +22,13 @@ namespace Message {
     static CBRoomSyncReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBDQlJvb21TeW5jLnByb3RvEgdtZXNzYWdlIi4KCkNCUm9vbVN5bmMSDQoF",
-            "c3RhdGUYASABKAUSEQoJd2hvc2VUdXJuGAIgASgFYgZwcm90bzM="));
+            "ChBDQlJvb21TeW5jLnByb3RvEgdtZXNzYWdlIkUKCkNCUm9vbVN5bmMSDQoF",
+            "c3RhdGUYASABKAUSEQoJd2hvc2VUdXJuGAIgASgFEhUKDWxlZnRDYXJkQ291",
+            "bnQYAyABKAViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBRoomSync), global::Message.CBRoomSync.Parser, new[]{ "State", "WhoseTurn" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBRoomSync), global::Message.CBRoomSync.Parser, new[]{ "State", "WhoseTurn", "LeftCardCount" }, null, null, null)
           }));
     }
     #endregion
@@ -63,6 +64,7 @@ namespace Message {
     public CBRoomSync(CBRoomSync other) : this() {
       state_ = other.state_;
       whoseTurn_ = other.whoseTurn_;
+      leftCardCount_ = other.leftCardCount_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -95,6 +97,17 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "leftCardCount" field.</summary>
+    public const int LeftCardCountFieldNumber = 3;
+    private int leftCardCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int LeftCardCount {
+      get { return leftCardCount_; }
+      set {
+        leftCardCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CBRoomSync);
@@ -110,6 +123,7 @@ namespace Message {
       }
       if (State != other.State) return false;
       if (WhoseTurn != other.WhoseTurn) return false;
+      if (LeftCardCount != other.LeftCardCount) return false;
       return true;
     }
 
@@ -118,6 +132,7 @@ namespace Message {
       int hash = 1;
       if (State != 0) hash ^= State.GetHashCode();
       if (WhoseTurn != 0) hash ^= WhoseTurn.GetHashCode();
+      if (LeftCardCount != 0) hash ^= LeftCardCount.GetHashCode();
       return hash;
     }
 
@@ -136,6 +151,10 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteInt32(WhoseTurn);
       }
+      if (LeftCardCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(LeftCardCount);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -146,6 +165,9 @@ namespace Message {
       }
       if (WhoseTurn != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(WhoseTurn);
+      }
+      if (LeftCardCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LeftCardCount);
       }
       return size;
     }
@@ -160,6 +182,9 @@ namespace Message {
       }
       if (other.WhoseTurn != 0) {
         WhoseTurn = other.WhoseTurn;
+      }
+      if (other.LeftCardCount != 0) {
+        LeftCardCount = other.LeftCardCount;
       }
     }
 
@@ -177,6 +202,10 @@ namespace Message {
           }
           case 16: {
             WhoseTurn = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            LeftCardCount = input.ReadInt32();
             break;
           }
         }

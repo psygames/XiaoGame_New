@@ -22,12 +22,13 @@ namespace Message {
     static CBBattleResultSyncReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhDQkJhdHRsZVJlc3VsdFN5bmMucHJvdG8SB21lc3NhZ2UiJgoSQ0JCYXR0",
-            "bGVSZXN1bHRTeW5jEhAKCHdpbm5lcklEGAEgAygFYgZwcm90bzM="));
+            "ChhDQkJhdHRsZVJlc3VsdFN5bmMucHJvdG8SB21lc3NhZ2UaC0luZm9zLnBy",
+            "b3RvIkoKEkNCQmF0dGxlUmVzdWx0U3luYxI0CgtyZXN1bHRJbmZvcxgBIAMo",
+            "CzIfLm1lc3NhZ2UuQmF0dGxlUmVzdWx0UGxheWVySW5mb2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Message.InfosReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBBattleResultSync), global::Message.CBBattleResultSync.Parser, new[]{ "WinnerID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBBattleResultSync), global::Message.CBBattleResultSync.Parser, new[]{ "ResultInfos" }, null, null, null)
           }));
     }
     #endregion
@@ -58,7 +59,7 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CBBattleResultSync(CBBattleResultSync other) : this() {
-      winnerID_ = other.winnerID_.Clone();
+      resultInfos_ = other.resultInfos_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -66,14 +67,14 @@ namespace Message {
       return new CBBattleResultSync(this);
     }
 
-    /// <summary>Field number for the "winnerID" field.</summary>
-    public const int WinnerIDFieldNumber = 1;
-    private static readonly pb::FieldCodec<int> _repeated_winnerID_codec
-        = pb::FieldCodec.ForInt32(10);
-    private readonly pbc::RepeatedField<int> winnerID_ = new pbc::RepeatedField<int>();
+    /// <summary>Field number for the "resultInfos" field.</summary>
+    public const int ResultInfosFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Message.BattleResultPlayerInfo> _repeated_resultInfos_codec
+        = pb::FieldCodec.ForMessage(10, global::Message.BattleResultPlayerInfo.Parser);
+    private readonly pbc::RepeatedField<global::Message.BattleResultPlayerInfo> resultInfos_ = new pbc::RepeatedField<global::Message.BattleResultPlayerInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<int> WinnerID {
-      get { return winnerID_; }
+    public pbc::RepeatedField<global::Message.BattleResultPlayerInfo> ResultInfos {
+      get { return resultInfos_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -89,14 +90,14 @@ namespace Message {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!winnerID_.Equals(other.winnerID_)) return false;
+      if(!resultInfos_.Equals(other.resultInfos_)) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= winnerID_.GetHashCode();
+      hash ^= resultInfos_.GetHashCode();
       return hash;
     }
 
@@ -107,13 +108,13 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      winnerID_.WriteTo(output, _repeated_winnerID_codec);
+      resultInfos_.WriteTo(output, _repeated_resultInfos_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += winnerID_.CalculateSize(_repeated_winnerID_codec);
+      size += resultInfos_.CalculateSize(_repeated_resultInfos_codec);
       return size;
     }
 
@@ -122,7 +123,7 @@ namespace Message {
       if (other == null) {
         return;
       }
-      winnerID_.Add(other.winnerID_);
+      resultInfos_.Add(other.resultInfos_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -133,9 +134,8 @@ namespace Message {
           default:
             input.SkipLastField();
             break;
-          case 10:
-          case 8: {
-            winnerID_.AddEntriesFrom(input, _repeated_winnerID_codec);
+          case 10: {
+            resultInfos_.AddEntriesFrom(input, _repeated_resultInfos_codec);
             break;
           }
         }

@@ -22,7 +22,7 @@ namespace Message {
     static ProtonumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSr2AwoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSq+BAoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
             "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
             "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxIWChFDTUNh",
@@ -31,9 +31,11 @@ namespace Message {
             "aW5CYXR0bGVSZXBseRDUDxIMCgdDQlJlYWR5ENUPEhAKC0NCUmVhZHlTeW5j",
             "ENYPEg8KCkNCUm9vbVN5bmMQ2A8SEwoOQ0JDYXJkSW5mb1N5bmMQ2g8SDwoK",
             "Q0JQbGF5Q2FyZBDbDxITCg5DQlBsYXlDYXJkU3luYxDcDxITCg5DQlNlbmRD",
-            "YXJkU3luYxDeDxIXChJDQkJhdHRsZVJlc3VsdFN5bmMQ4A8SEwoOQk1Mb2dp",
-            "blJlcXVlc3QQuRcSEQoMQk1Mb2dpblJlcGx5ELoXEhgKE0JNQ3JlYXRlUm9v",
-            "bVJlcXVlc3QQuxcSFgoRQk1DcmVhdGVSb29tUmVwbHkQvBdiBnByb3RvMw=="));
+            "YXJkU3luYxDeDxIXChJDQkJhdHRsZVJlc3VsdFN5bmMQ4A8SFQoQQ0JDYXJk",
+            "RWZmZWN0U3luYxDiDxIZChRDQlBsYXllckRyb3BDYXJkU3luYxDkDxIUCg9D",
+            "QlBsYXllck91dFN5bmMQ5g8SEwoOQk1Mb2dpblJlcXVlc3QQuRcSEQoMQk1M",
+            "b2dpblJlcGx5ELoXEhgKE0JNQ3JlYXRlUm9vbVJlcXVlc3QQuxcSFgoRQk1D",
+            "cmVhdGVSb29tUmVwbHkQvBdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -73,6 +75,9 @@ namespace Message {
     [pbr::OriginalName("CBPlayCardSync")] CbplayCardSync = 2012,
     [pbr::OriginalName("CBSendCardSync")] CbsendCardSync = 2014,
     [pbr::OriginalName("CBBattleResultSync")] CbbattleResultSync = 2016,
+    [pbr::OriginalName("CBCardEffectSync")] CbcardEffectSync = 2018,
+    [pbr::OriginalName("CBPlayerDropCardSync")] CbplayerDropCardSync = 2020,
+    [pbr::OriginalName("CBPlayerOutSync")] CbplayerOutSync = 2022,
     /// <summary>
     ///Battle -> Main
     /// </summary>

@@ -22,12 +22,13 @@ namespace Message {
     static CBPlayCardReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBDQlBsYXlDYXJkLnByb3RvEgdtZXNzYWdlIi4KCkNCUGxheUNhcmQSDgoG",
-            "Y2FyZElEGAEgASgFEhAKCHRhcmdldElEGAIgASgFYgZwcm90bzM="));
+            "ChBDQlBsYXlDYXJkLnByb3RvEgdtZXNzYWdlIj4KCkNCUGxheUNhcmQSDgoG",
+            "Y2FyZElEGAEgASgFEhAKCHRhcmdldElEGAIgASgFEg4KBmV4dGVuZBgDIAEo",
+            "BWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBPlayCard), global::Message.CBPlayCard.Parser, new[]{ "CardID", "TargetID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBPlayCard), global::Message.CBPlayCard.Parser, new[]{ "CardID", "TargetID", "Extend" }, null, null, null)
           }));
     }
     #endregion
@@ -60,6 +61,7 @@ namespace Message {
     public CBPlayCard(CBPlayCard other) : this() {
       cardID_ = other.cardID_;
       targetID_ = other.targetID_;
+      extend_ = other.extend_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -89,6 +91,17 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "extend" field.</summary>
+    public const int ExtendFieldNumber = 3;
+    private int extend_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Extend {
+      get { return extend_; }
+      set {
+        extend_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CBPlayCard);
@@ -104,6 +117,7 @@ namespace Message {
       }
       if (CardID != other.CardID) return false;
       if (TargetID != other.TargetID) return false;
+      if (Extend != other.Extend) return false;
       return true;
     }
 
@@ -112,6 +126,7 @@ namespace Message {
       int hash = 1;
       if (CardID != 0) hash ^= CardID.GetHashCode();
       if (TargetID != 0) hash ^= TargetID.GetHashCode();
+      if (Extend != 0) hash ^= Extend.GetHashCode();
       return hash;
     }
 
@@ -130,6 +145,10 @@ namespace Message {
         output.WriteRawTag(16);
         output.WriteInt32(TargetID);
       }
+      if (Extend != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(Extend);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -140,6 +159,9 @@ namespace Message {
       }
       if (TargetID != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetID);
+      }
+      if (Extend != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Extend);
       }
       return size;
     }
@@ -154,6 +176,9 @@ namespace Message {
       }
       if (other.TargetID != 0) {
         TargetID = other.TargetID;
+      }
+      if (other.Extend != 0) {
+        Extend = other.Extend;
       }
     }
 
@@ -171,6 +196,10 @@ namespace Message {
           }
           case 16: {
             TargetID = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            Extend = input.ReadInt32();
             break;
           }
         }

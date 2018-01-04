@@ -37,10 +37,13 @@ message BattlePlayerInfo
     bool joined = 7;  // 是否加入战场
 }
 
-message PlayerCardInfo
+message BattleResultPlayerInfo
 {
-    int64 uid = 1;
-    repeated int32 cards = 2;
+    int32 playrID = 1;
+    int32 state = 2;
+    repeated int32 cards = 3;
+    bool isWin = 4;
+    int32 rewardAmount = 5;
 }
 
 message CardInfo

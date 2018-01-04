@@ -643,18 +643,6 @@ public class UIHelper
         btn.spriteState = spriteState;
     }
 
-    //TODO:字符串拼接GC优化
-    public static string GetSpriteName(int spriteId, string suffix = "", string prefix = "")
-    {
-        string name = null;
-        TableIconSprite tableIconSprite = TableManager.instance.GetData<TableIconSprite>(spriteId);
-        if (tableIconSprite != null)
-        {
-            name = prefix + System.IO.Path.GetFileName(tableIconSprite.path) + suffix;
-        }
-        return name;
-    }
-
     public static void SetTextAuto(GameObject gameObject, object data)
     {
         var texts = ListPool<RedStone.UI.Text>.Get();

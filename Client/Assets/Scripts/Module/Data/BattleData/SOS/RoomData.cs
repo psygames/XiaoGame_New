@@ -14,6 +14,9 @@ namespace RedStone.Data.SOS
         private List<PlayerData> m_players = new List<PlayerData>();
         private List<CardData> m_cards = new List<CardData>();
         public PlayerData whosTurn { get; private set; }
+        public int leftCardCount { get; private set; }
+        private CardData m_defaultCard = new CardData();
+
 
         public void SetData(Message.BattleRoomInfo info)
         {
@@ -37,6 +40,7 @@ namespace RedStone.Data.SOS
                 }
             }
             state = (State)sync.State;
+            leftCardCount = sync.LeftCardCount;
         }
 
         public void SetCards(IList<Message.CardInfo> infos)
@@ -67,6 +71,8 @@ namespace RedStone.Data.SOS
 
         public CardData GetCard(int cardID)
         {
+            if (cardID <= 0)
+                return m_defaultCard;
             return m_cards.First(a => a.id == cardID);
         }
 

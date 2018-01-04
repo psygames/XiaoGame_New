@@ -1,0 +1,10 @@
+syntax = "proto3";
+package message;
+
+message CBCardEffectSync
+{
+    int32 fromPlayerID = 1;
+    int32 fromCardID = 2;
+    int32 targetID = 3;
+    int32 targetCardID = 4;
+}

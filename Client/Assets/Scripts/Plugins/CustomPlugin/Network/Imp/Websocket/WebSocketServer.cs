@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using WebSocketSharp;
 using WebSocketSharp.Server;
@@ -19,7 +19,6 @@ namespace Plugins.Network
             base.Setup(ip, port);
             _server = new WebSocketSharp.Server.WebSocketServer(NetTool.GetAddress(ip, port));
             _server.Log.Level = WebSocketSharp.LogLevel.Error;
-            _server.WaitTime = TimeSpan.FromSeconds(1);
             _server.AddWebSocketService(defaultServicePath, () =>
             {
                 WebSocketSession session = new WebSocketSession(SendAction);

@@ -29,10 +29,12 @@ namespace Message {
             "GAQgASgJIioKDkJhdHRsZVJvb21JbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUY",
             "AiABKAkidwoQQmF0dGxlUGxheWVySW5mbxIKCgJpZBgBIAEoBRIMCgRuYW1l",
             "GAIgASgJEgwKBGdvbGQYAyABKAUSDQoFbGV2ZWwYBCABKAUSDAoEc2VhdBgF",
-            "IAEoBRIOCgZpc1NlbGYYBiABKAgSDgoGam9pbmVkGAcgASgIIiwKDlBsYXll",
-            "ckNhcmRJbmZvEgsKA3VpZBgBIAEoAxINCgVjYXJkcxgCIAMoBSInCghDYXJk",
-            "SW5mbxIKCgJpZBgBIAEoBRIPCgd0YWJsZUlEGAIgASgFIi0KD1BsYXllclRv",
-            "a2VuSW5mbxILCgN1aWQYASABKAMSDQoFdG9rZW4YAiABKAliBnByb3RvMw=="));
+            "IAEoBRIOCgZpc1NlbGYYBiABKAgSDgoGam9pbmVkGAcgASgIImwKFkJhdHRs",
+            "ZVJlc3VsdFBsYXllckluZm8SDwoHcGxheXJJRBgBIAEoBRINCgVzdGF0ZRgC",
+            "IAEoBRINCgVjYXJkcxgDIAMoBRINCgVpc1dpbhgEIAEoCBIUCgxyZXdhcmRB",
+            "bW91bnQYBSABKAUiJwoIQ2FyZEluZm8SCgoCaWQYASABKAUSDwoHdGFibGVJ",
+            "RBgCIAEoBSItCg9QbGF5ZXJUb2tlbkluZm8SCwoDdWlkGAEgASgDEg0KBXRv",
+            "a2VuGAIgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -40,7 +42,7 @@ namespace Message {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State", "Token" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleRoomInfo), global::Message.BattleRoomInfo.Parser, new[]{ "Id", "Name" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf", "Joined" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerCardInfo), global::Message.PlayerCardInfo.Parser, new[]{ "Uid", "Cards" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleResultPlayerInfo), global::Message.BattleResultPlayerInfo.Parser, new[]{ "PlayrID", "State", "Cards", "IsWin", "RewardAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.CardInfo), global::Message.CardInfo.Parser, new[]{ "Id", "TableID" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerTokenInfo), global::Message.PlayerTokenInfo.Parser, new[]{ "Uid", "Token" }, null, null, null)
           }));
@@ -951,10 +953,10 @@ namespace Message {
 
   }
 
-  public sealed partial class PlayerCardInfo : pb::IMessage<PlayerCardInfo> {
-    private static readonly pb::MessageParser<PlayerCardInfo> _parser = new pb::MessageParser<PlayerCardInfo>(() => new PlayerCardInfo());
+  public sealed partial class BattleResultPlayerInfo : pb::IMessage<BattleResultPlayerInfo> {
+    private static readonly pb::MessageParser<BattleResultPlayerInfo> _parser = new pb::MessageParser<BattleResultPlayerInfo>(() => new BattleResultPlayerInfo());
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PlayerCardInfo> Parser { get { return _parser; } }
+    public static pb::MessageParser<BattleResultPlayerInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -967,67 +969,109 @@ namespace Message {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCardInfo() {
+    public BattleResultPlayerInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCardInfo(PlayerCardInfo other) : this() {
-      uid_ = other.uid_;
+    public BattleResultPlayerInfo(BattleResultPlayerInfo other) : this() {
+      playrID_ = other.playrID_;
+      state_ = other.state_;
       cards_ = other.cards_.Clone();
+      isWin_ = other.isWin_;
+      rewardAmount_ = other.rewardAmount_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PlayerCardInfo Clone() {
-      return new PlayerCardInfo(this);
+    public BattleResultPlayerInfo Clone() {
+      return new BattleResultPlayerInfo(this);
     }
 
-    /// <summary>Field number for the "uid" field.</summary>
-    public const int UidFieldNumber = 1;
-    private long uid_;
+    /// <summary>Field number for the "playrID" field.</summary>
+    public const int PlayrIDFieldNumber = 1;
+    private int playrID_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long Uid {
-      get { return uid_; }
+    public int PlayrID {
+      get { return playrID_; }
       set {
-        uid_ = value;
+        playrID_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 2;
+    private int state_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int State {
+      get { return state_; }
+      set {
+        state_ = value;
       }
     }
 
     /// <summary>Field number for the "cards" field.</summary>
-    public const int CardsFieldNumber = 2;
+    public const int CardsFieldNumber = 3;
     private static readonly pb::FieldCodec<int> _repeated_cards_codec
-        = pb::FieldCodec.ForInt32(18);
+        = pb::FieldCodec.ForInt32(26);
     private readonly pbc::RepeatedField<int> cards_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<int> Cards {
       get { return cards_; }
     }
 
+    /// <summary>Field number for the "isWin" field.</summary>
+    public const int IsWinFieldNumber = 4;
+    private bool isWin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PlayerCardInfo);
+    public bool IsWin {
+      get { return isWin_; }
+      set {
+        isWin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rewardAmount" field.</summary>
+    public const int RewardAmountFieldNumber = 5;
+    private int rewardAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int RewardAmount {
+      get { return rewardAmount_; }
+      set {
+        rewardAmount_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PlayerCardInfo other) {
+    public override bool Equals(object other) {
+      return Equals(other as BattleResultPlayerInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(BattleResultPlayerInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Uid != other.Uid) return false;
+      if (PlayrID != other.PlayrID) return false;
+      if (State != other.State) return false;
       if(!cards_.Equals(other.cards_)) return false;
+      if (IsWin != other.IsWin) return false;
+      if (RewardAmount != other.RewardAmount) return false;
       return true;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Uid != 0L) hash ^= Uid.GetHashCode();
+      if (PlayrID != 0) hash ^= PlayrID.GetHashCode();
+      if (State != 0) hash ^= State.GetHashCode();
       hash ^= cards_.GetHashCode();
+      if (IsWin != false) hash ^= IsWin.GetHashCode();
+      if (RewardAmount != 0) hash ^= RewardAmount.GetHashCode();
       return hash;
     }
 
@@ -1038,32 +1082,62 @@ namespace Message {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Uid != 0L) {
+      if (PlayrID != 0) {
         output.WriteRawTag(8);
-        output.WriteInt64(Uid);
+        output.WriteInt32(PlayrID);
+      }
+      if (State != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(State);
       }
       cards_.WriteTo(output, _repeated_cards_codec);
+      if (IsWin != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsWin);
+      }
+      if (RewardAmount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(RewardAmount);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Uid != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Uid);
+      if (PlayrID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PlayrID);
+      }
+      if (State != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(State);
       }
       size += cards_.CalculateSize(_repeated_cards_codec);
+      if (IsWin != false) {
+        size += 1 + 1;
+      }
+      if (RewardAmount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RewardAmount);
+      }
       return size;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PlayerCardInfo other) {
+    public void MergeFrom(BattleResultPlayerInfo other) {
       if (other == null) {
         return;
       }
-      if (other.Uid != 0L) {
-        Uid = other.Uid;
+      if (other.PlayrID != 0) {
+        PlayrID = other.PlayrID;
+      }
+      if (other.State != 0) {
+        State = other.State;
       }
       cards_.Add(other.cards_);
+      if (other.IsWin != false) {
+        IsWin = other.IsWin;
+      }
+      if (other.RewardAmount != 0) {
+        RewardAmount = other.RewardAmount;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1075,12 +1149,24 @@ namespace Message {
             input.SkipLastField();
             break;
           case 8: {
-            Uid = input.ReadInt64();
+            PlayrID = input.ReadInt32();
             break;
           }
-          case 18:
           case 16: {
+            State = input.ReadInt32();
+            break;
+          }
+          case 26:
+          case 24: {
             cards_.AddEntriesFrom(input, _repeated_cards_codec);
+            break;
+          }
+          case 32: {
+            IsWin = input.ReadBool();
+            break;
+          }
+          case 40: {
+            RewardAmount = input.ReadInt32();
             break;
           }
         }

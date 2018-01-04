@@ -10,6 +10,8 @@ namespace RedStone
     {
         public Text whosTurnText;
         public Text stateText;
+        public Text leftCountText;
+
         public GameObject readyBtn;
         public GameObject playBtn;
         public GameObject backBtn;
@@ -46,6 +48,7 @@ namespace RedStone
             m_players.Clear();
 
             mainPlayer.gameObject.SetActive(true);
+            mainPlayer.onCardSelectedCallback = OnCardSelected;
             m_players.Add(mainPlayer);
 
             if (data.players.Count == 2)
@@ -91,11 +94,18 @@ namespace RedStone
         private PlayerData m_selectedPlayer = null;
         void OnPlayerClick(PlayerData playerData)
         {
-            if (data.whosTurn != mainPlayer.data)
+            if (data.whosTurn != mainPlayer.data
+                || selectedCard.type != CardType.ForOneTarget)
                 return;
 
             m_selectedPlayer = playerData;
             RefreshPlayers();
+        }
+
+        void OnCardSelected(CardData card)
+        {
+            m_selectedPlayer = null;
+            RefreshUI();
         }
 
         public void OnReady(int id)
@@ -151,7 +161,7 @@ namespace RedStone
 
         public void OnBattleResult(Message.CBBattleResultSync msg)
         {
-            var player = GetPlayer(msg.WinnerID[0]).data;
+            var player = GetPlayer(msg.ResultInfos.First(a => a.IsWin).PlayrID).data;
             hint.Show("恭喜 {0} 获得最终胜利！".FormatStr(player.name));
         }
 
@@ -169,6 +179,7 @@ namespace RedStone
             else
                 this.whosTurnText.text = "空";
 
+            leftCountText.text = data.leftCardCount.ToString();
             stateText.text = data.state.ToString();
             RefreshPlayers();
         }

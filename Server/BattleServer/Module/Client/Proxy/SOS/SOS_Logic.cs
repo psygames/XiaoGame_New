@@ -16,6 +16,7 @@ namespace RedStone.SOS
         private int m_roomID;
         RoomData room { get { return roomProxy.GetRoom(m_roomID); } }
         Random rand = new Random();
+        CardMgr m_cardMgr = new CardMgr();
 
         //最长时间一小时，超时房间自动解散
         private const float ROOM_MAX_TIME = 60 * 60;
@@ -26,6 +27,7 @@ namespace RedStone.SOS
         private float m_whosTurnCounter = 0;
         private State m_state = State.WaitJoin;
         private List<Player> m_players = new List<Player>();
+        private List<Player> alivePlayers { get { return m_players.Where(a => a.state != Player.State.Out).ToList(); } }
 
         public void Init(int roomID)
         {
@@ -143,7 +145,7 @@ namespace RedStone.SOS
             foreach (var p in m_players)
             {
                 if (p.state != Player.State.Out && p.handCards.Count > 0
-                    && (winner == null || p.handCards[0].point > winner.handCards[0].point))
+                    && (winner == null || p.oneCard.point > winner.oneCard.point))
                 {
                     winner = p;
                 }
@@ -156,7 +158,19 @@ namespace RedStone.SOS
         void SendResult(Player winner)
         {
             CBBattleResultSync msg = new CBBattleResultSync();
-            msg.WinnerID.Add(winner.id);
+            foreach (var p in m_players)
+            {
+                BattleResultPlayerInfo info = new BattleResultPlayerInfo();
+                info.IsWin = winner == p;
+                info.PlayrID = p.id;
+                info.RewardAmount = info.IsWin ? 1 : 0;
+                info.State = (int)p.state;
+                foreach (var card in p.handCards)
+                {
+                    info.Cards.Add(card.id);
+                }
+                msg.ResultInfos.Add(info);
+            }
             SendToAll(msg);
         }
 
@@ -235,13 +249,132 @@ namespace RedStone.SOS
             sync.FromID = player.id;
             sync.TargetID = msg.TargetID;
             sync.CardID = card.id;
+            sync.Extend = msg.Extend;
             SendToAll(sync);
 
-            //TODO:中间技能过程
+            float waitFor = CardEffectLogic(player, target, card, msg.Extend);
 
-            TurnNextAndSendCard();
+            Task.WaitFor(waitFor, () =>
+            {
+                TurnNextAndSendCard();
+            });
         }
 
+        public float CardEffectLogic(Player from, Player target, Card card, int extend)
+        {
+            float waitFor = 3;
+            CBCardEffectSync msg = new CBCardEffectSync();
+            msg.FromPlayerID = from.id;
+            msg.FromCardID = card.id;
+            int cardTableID = card.tableID;
+
+            if (cardTableID == 1) // 侦察
+            {
+                msg.TargetID = target.id;
+                msg.TargetCardID = target.oneCard.id;
+                SendTo(from.id, msg);
+            }
+            else if (cardTableID == 2) //混乱
+            {
+                List<int> cardIds = new List<int>();
+                var players = alivePlayers;
+                foreach (var p in players)
+                {
+                    cardIds.Add(p.oneCard.id);
+                }
+                cardIds.OrderBy(a => Guid.NewGuid());
+
+                for (int i = 0; i < players.Count; i++)
+                {
+                    var p = players[i];
+                    msg.TargetID = p.id;
+                    msg.TargetCardID = cardIds[i];
+                    SendTo(p.id, msg);
+                }
+            }
+            else if (cardTableID == 3) // 变革
+            {
+                m_cardMgr.PutCard(from.oneCard);
+                m_cardMgr.Shuffle();
+                var newCard = m_cardMgr.TakeCard();
+                msg.TargetID = from.id;
+                msg.TargetCardID = newCard.id;
+                SendTo(from.id, msg);
+            }
+            else if (cardTableID == 4) // 壁垒
+            {
+                from.SetEffect(Player.Effect.InvincibleOneRound);
+            }
+            else if (cardTableID == 5)
+            {
+                if (extend == target.oneCard.tableID) // 猜卡牌TableID
+                {
+                    PlayerOut(target);
+                }
+                waitFor = 5;
+            }
+            else if (cardTableID == 6) // 猜拳，我日
+            {
+
+            }
+            else if (cardTableID == 7) // 霸道 太阳
+            {
+                DropCard(target);
+                if (m_cardMgr.isEmpty)
+                {
+                    PlayerOut(target);
+                }
+                else
+                {
+                    SendCard(target);
+                }
+            }
+            else if (cardTableID == 8) // 交换
+            {
+                Card tmp = from.oneCard;
+                from.RemoveCard(from.oneCard);
+                from.AddCard(target.oneCard);
+                target.RemoveCard(target.oneCard);
+                target.AddCard(tmp);
+
+                msg.TargetID = from.id;
+                msg.TargetCardID = from.oneCard.id;
+                SendTo(from.id, msg);
+
+                msg.TargetID = target.id;
+                msg.TargetCardID = target.oneCard.id;
+                SendTo(target.id, msg);
+            }
+            else if (cardTableID == 9) // 开溜（只限制出牌阶段，出牌类型，出牌后无效果）
+            {
+
+            }
+            else if (cardTableID == 10)
+            {
+                PlayerOut(from);
+            }
+
+            return waitFor;
+        }
+
+        public void PlayerOut(Player player)
+        {
+            player.SetState(Player.State.Out);
+            CBPlayerOutSync msg = new CBPlayerOutSync();
+            msg.PlayerID = player.id;
+            msg.HandCardID = player.oneCard.id;
+            SendToAll(msg);
+        }
+
+        public void DropCard(Player player)
+        {
+            CBPlayerDropCardSync msg = new CBPlayerDropCardSync();
+            Card card = player.oneCard;
+            msg.PlayerID = player.id;
+            msg.CardID = card.id;
+            player.RemoveCard(card);
+            SendToAll(msg);
+        }
 
         public bool CheckCanDismiss()
         {
@@ -294,6 +427,19 @@ namespace RedStone.SOS
                 return;
             }
 
+            // 重置State
+            foreach (var p in alivePlayers)
+            {
+                if (p == m_whosTurn)
+                    p.SetState(Player.State.Turn);
+                else
+                    p.SetState(Player.State.NotTurn);
+            }
+
+            // 重置玩家Effect
+            if (m_whosTurn.effect == Player.Effect.InvincibleOneRound)
+                m_whosTurn.SetEffect(Player.Effect.None);
+
             RoomSync();
             Debug.Log("轮到下一位 --> 【{0}】", m_whosTurn.name);
         }
@@ -306,7 +452,7 @@ namespace RedStone.SOS
                 Debug.LogInfo("没有卡牌了，等待结算。");
                 return;
             }
-            if (m_players.Count(a => a.state != Player.State.Out) <= 1)
+            if (alivePlayers.Count <= 1)
             {
                 Debug.LogInfo("只剩下一个玩家，等待结算。");
                 return;
@@ -319,13 +465,13 @@ namespace RedStone.SOS
         {
             CBRoomSync sync = new CBRoomSync();
             sync.State = (int)m_state;
+            sync.LeftCardCount = m_cardMgr.leftCards.Count;
             if (m_whosTurn != null)
                 sync.WhoseTurn = m_whosTurn.id;
             SendToAll(sync);
         }
 
         // SEND CARDS
-        CardMgr m_cardMgr = new CardMgr();
         public void GameBegin()
         {
             Debug.Log("Game Start!!!");
@@ -361,21 +507,29 @@ namespace RedStone.SOS
             TurnNextAndSendCard();//给第一个玩家发第二张牌
         }
 
-        public void SendCard(int targetID, int cardID)
+        public void SendCard(Player player)
         {
+            Card card = m_cardMgr.TakeCard();
+
+            Debug.Log("发牌 【{0}】 给 【{1}】", card.name, player.name);
+
+            player.AddCard(card);
+
             CBSendCardSync msg = new CBSendCardSync();
-            msg.CardID = cardID;
-            msg.TargetID = targetID;
-            SendToAll(msg);
+            msg.TargetID = player.id;
+
+            //除主角外，不发送卡牌ID（防作弊）
+            SendToAll(msg, new int[] { player.id });
+
+            // 发送给主角
+            msg.CardID = card.id;
+            SendTo(player.id, msg);
         }
 
 
         public void SendCardToTurned()
         {
-            Card card = m_cardMgr.TakeCard();
-            m_whosTurn.AddCard(card);
-            Debug.Log("发牌 【{0}】 给 【{1}】", card.name, m_whosTurn.name);
-            SendCard(m_whosTurn.id, card.id);
+            SendCard(m_whosTurn);
         }
 
 
@@ -389,11 +543,13 @@ namespace RedStone.SOS
             End,
         }
 
-        public void SendToAll<T>(T msg)
+        public void SendToAll<T>(T msg, int[] exceptIds = null)
         {
             // Debug.Log("Send {0} to all ", msg.GetType().Name);
             foreach (var p in m_players)
             {
+                if (exceptIds != null && exceptIds.Contains(p.id))
+                    continue;
                 if (p.isAI || string.IsNullOrEmpty(p.user.sessionID))
                     continue;
                 battleProxy.SendMessage(p.user.sessionID, msg);
@@ -486,8 +642,8 @@ namespace RedStone.SOS
 
         private int RandTargetID(Player p)
         {
-            int index = rand.Next(m_players.Count - 1);
-            return m_players.Where(a => a != p).ToList()[index].id;
+            int index = rand.Next(alivePlayers.Count - 1);
+            return alivePlayers.Where(a => a != p).ToList()[index].id;
         }
 
         private int RandPlayerCardID(Player p)

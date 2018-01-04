@@ -17,7 +17,7 @@ namespace RedStone
 
         public void Reset()
         {
-            room = null;
+            room = new RoomData();
             isConnected = false;
             isLogin = false;
         }
@@ -35,6 +35,9 @@ namespace RedStone
             RegisterMessage<CBCardInfoSync>(OnCardInfoSync);
             RegisterMessage<CBPlayCardSync>(OnPlayCardSync);
             RegisterMessage<CBBattleResultSync>(OnBattleResultSync);
+            RegisterMessage<CBCardEffectSync>(OnCardEffectSync);
+            RegisterMessage<CBPlayerDropCardSync>(OnDropCardSync);
+            RegisterMessage<CBPlayerOutSync>(OnPlayerOutSync);
         }
 
         private void InitSocket()
@@ -63,6 +66,7 @@ namespace RedStone
 
         public void Connect()
         {
+            Reset();
             if (serverInfo != null)
             {
                 InitSocket();
@@ -74,7 +78,6 @@ namespace RedStone
             }
         }
 
-        public int Roomda { get; private set; }
         public void Login()
         {
             CBLoginRequest req = new CBLoginRequest();
@@ -165,6 +168,21 @@ namespace RedStone
         void OnBattleResultSync(CBBattleResultSync msg)
         {
             SendEvent(EventDef.SOS.BattleResult, msg);
+        }
+
+        void OnCardEffectSync(CBCardEffectSync msg)
+        {
+            Debug.LogError("EFFECT=> " + msg.FromPlayerID + ": " + msg.FromCardID + " --> " + msg.TargetID + ": " + msg.TargetCardID);
+        }
+
+        void OnDropCardSync(CBPlayerDropCardSync msg)
+        {
+            Debug.LogError("DROP=> " + msg.PlayerID + ": " + msg.CardID);
+        }
+
+        void OnPlayerOutSync(CBPlayerOutSync msg)
+        {
+            Debug.LogError("OUT=> " + msg.PlayerID + ": " + msg.HandCardID);
         }
     }
 }

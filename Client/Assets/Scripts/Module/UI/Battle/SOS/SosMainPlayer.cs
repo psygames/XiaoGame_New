@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RedStone.Data.SOS;
 using UnityEngine;
+using System;
 
 namespace RedStone
 {
@@ -14,6 +15,7 @@ namespace RedStone
 
         }
         protected List<SosCard> m_handCards = new List<SosCard>();
+        public Action<CardData> onCardSelectedCallback { get; set; }
 
         public CardData selectedCard { get; private set; }
         protected override void OnCardClick(CardData card)
@@ -25,6 +27,8 @@ namespace RedStone
             {
                 selectedCard = null;
                 GetCard(card.id).BeSelected(false);
+                if (onCardSelectedCallback != null)
+                    onCardSelectedCallback.Invoke(null);
                 return;
             }
 
@@ -34,6 +38,9 @@ namespace RedStone
 
             selectedCard = card;
             GetCard(selectedCard.id).BeSelected(true);
+
+            if (onCardSelectedCallback != null)
+                onCardSelectedCallback.Invoke(selectedCard);
         }
 
         public override void TakeCard(int cardID)

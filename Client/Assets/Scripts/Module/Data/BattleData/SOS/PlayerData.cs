@@ -47,7 +47,7 @@ namespace RedStone.Data.SOS
 
         public void SetTurned(bool isTurned)
         {
-            this.isTurned = isTurned; 
+            this.isTurned = isTurned;
         }
 
         public void AddCard(CardData card)
@@ -57,7 +57,15 @@ namespace RedStone.Data.SOS
 
         public void RemoveCard(CardData card)
         {
-            m_handCards.Remove(card);
+            if (m_handCards.Contains(card))
+                m_handCards.Remove(card);
+            else
+            {
+                int index = m_handCards.QuickFindIndex(a => a.id <= 0);
+                if (index >= 0)
+                    m_handCards.RemoveAt(index);
+
+            }
         }
 
         public CardData GetHandCard(int cardID)

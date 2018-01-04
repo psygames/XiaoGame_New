@@ -15,9 +15,11 @@ namespace RedStone.SOS
         public UserData user { get; private set; }
         public string name { get { return user.name; } }
         public bool isAI { get { return user.isAI; } }
+        public Effect effect { get; private set; }
 
         private List<Card> m_handCards = new List<Card>();
         public List<Card> handCards { get { return m_handCards; } }
+        public Card oneCard { get { return m_handCards[0]; } }
 
         public void Init(UserData user, int id)
         {
@@ -40,14 +42,25 @@ namespace RedStone.SOS
             this.state = state;
         }
 
+        public void SetEffect(Effect effect)
+        {
+            this.effect = effect;
+        }
+
         public enum State
         {
             None = 0,
             Joined = 1,
             Ready = 2,
             Turn = 3,
-            Wait = 4,
+            NotTurn = 4,
             Out = 5,
+        }
+
+        public enum Effect
+        {
+            None,
+            InvincibleOneRound,
         }
 
         public void AddCard(Card card)

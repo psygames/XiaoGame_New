@@ -1,7 +1,8 @@
 syntax = "proto3";
+import "Infos.proto";
 package message;
 
 message CBBattleResultSync
 {
-    repeated int32 winnerID = 1;
+    repeated BattleResultPlayerInfo resultInfos = 1;
 }

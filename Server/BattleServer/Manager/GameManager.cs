@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Timers;
 using Plugins;
 using Core;
@@ -14,6 +14,7 @@ namespace RedStone
         public void Start()
         {
             eventManager = new EventManager();
+            TaskManger.CreateInstance().Init();
             TableManager.CreateInstance();
             TableManager.instance.getTypeFunc = (name) => { return Type.GetType(name); };
             TableManager.instance.Init();
@@ -47,7 +48,7 @@ namespace RedStone
 
         public void Update()
         {
-
+            TaskManger.instance.Update();
         }
 
     }

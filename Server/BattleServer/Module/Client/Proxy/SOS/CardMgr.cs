@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -40,6 +40,8 @@ namespace RedStone.SOS
         public List<Card> allCards { get { return m_allCards; } }
         public List<Card> leftCards { get { return m_leftCards; } }
 
+        public bool isEmpty { get { return leftCards.Count <= 0; } }
+
         public void Reset()
         {
             m_allCards.Clear();
@@ -77,6 +79,8 @@ namespace RedStone.SOS
 
         public Card TakeCard()
         {
+            if (isEmpty)
+                return null;
             var card = m_leftCards[0];
             m_leftCards.RemoveAt(0);
             return card;

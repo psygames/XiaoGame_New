@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1658389776247940}
+  m_RootGameObject: {fileID: 1753301264232520}
   m_IsPrefabParent: 1
---- !u!1 &1658389776247940
+--- !u!1 &1753301264232520
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4963083773073406}
-  - component: {fileID: 114720947218145250}
+  - component: {fileID: 4278121926648510}
+  - component: {fileID: 114696355577638952}
   m_Layer: 0
   m_Name: SpritePath
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4963083773073406
+--- !u!4 &4278121926648510
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1658389776247940}
+  m_GameObject: {fileID: 1753301264232520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114720947218145250
+--- !u!114 &114696355577638952
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1658389776247940}
+  m_GameObject: {fileID: 1753301264232520}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fab1cae3a5da54f45869b4bbd0218e5c, type: 3}
@@ -106,20 +106,23 @@ MonoBehaviour:
   - 0bf7d88e2d3075545a6379afa2fcca4a.vtouxiang_12.character
   - 665c80bc69a7ceb4e8ab543ca50e4b27.vtouxiang_13.character
   - ada300dfe4e966649b5049342861d2a2.vtouxiang_14.character
-  - 7efcda46157fbaa4ba5f0662b0f26d43.common_border_1.common
-  - 46b361f833866b64d962a94382d80a12.common_border_2.common
-  - 841a8dc1ccd433d4eb3a2edc059a36bb.common_border_3.common
-  - aae2a3cad86579a49a0bf9f1f5c50a7a.common_border_4.common
+  - 46b361f833866b64d962a94382d80a12.common_border_blue.common
+  - 841a8dc1ccd433d4eb3a2edc059a36bb.common_border_red.common
+  - 7efcda46157fbaa4ba5f0662b0f26d43.common_border_white.common
+  - aae2a3cad86579a49a0bf9f1f5c50a7a.common_border_yellow.common
   - f731b0702f17c25478efe1a24eb1bf2f.common_button_bg.common
   - 7b1640ff65b30ae44bbcf70c4f8101a2.common_button_cancel_bg.common
   - 8ba100257c99ebc47adc360f5bf9ea48.common_close.common
   - 0d24992fc537a3e43b94d7df48025bf3.common_desc_panel.common
   - b5b0de64f962d9e4795ab68cd1d9634a.common_panel_bg.common
   - 35abb0bed8e98ee47ae433d7ad419d5c.common_pop_desc_panel.common
+  - 881572cde6121c0499cea1209b893960.common_triangle_yellow_bordor.common
   - edebec9740fe533458cc2598945b47f5.common_white.common
   - ce3afbc62a784bc49bd8a2f36a4f0b8f.common_white_3d.common
+  - cc825c30ab7fbf047905bf9adcafccee.icon_countdown_clock.common
   - dcbc57ddf460d3b4793146a65f4f7904.button_battle.hall
   - fdc794d591e56eb47aa5d796f95a6c2a.matching_bg.hall
+  - 9ef613d752237934cbc1ef644341ca7a.sos_card_back.sos
   - b407a362e5f357343a95754b0e4b3a99.sos_card_decoration_line.sos
   - a02c85ef13ecc1e4896e9b6da7b3c731.sos_card_decoration_rocket.sos
   - d80bf828b45a3f940baf0ad934d0a14e.sos_card_description_bg.sos
