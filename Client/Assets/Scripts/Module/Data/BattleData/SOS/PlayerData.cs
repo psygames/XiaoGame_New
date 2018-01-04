@@ -13,8 +13,9 @@ namespace RedStone.Data.SOS
         public int gold { get; private set; }
         public bool isMain { get; private set; }
         public int seat { get; private set; }
-        public bool isReady { get; private set; }
-        public bool isTurned { get; private set; }
+        public bool isTurned { get { return state == State.Turn; } }
+        public State state { get; private set; }
+        public Effect effect { get; private set; }
 
         private List<CardData> m_handCards = new List<CardData>();
         public List<CardData> handCards { get { return m_handCards; } }
@@ -27,6 +28,7 @@ namespace RedStone.Data.SOS
             gold = info.Gold;
             isMain = info.IsSelf;
             seat = info.Seat;
+            state = info.Joined ? State.Joined : State.None;
         }
 
         public void IncrGold(int gold)
@@ -39,15 +41,28 @@ namespace RedStone.Data.SOS
             this.name = name;
         }
 
-
-        public void SetReady(bool isReady)
+        public void SetReady()
         {
-            this.isReady = isReady;
+            if (this.state == State.Out)
+                return;
+            this.state = State.Ready;
         }
 
         public void SetTurned(bool isTurned)
         {
-            this.isTurned = isTurned;
+            if (this.state == State.Out)
+                return;
+            this.state = isTurned ? State.Turn : State.NotTurn;
+        }
+
+        public void Out()
+        {
+            this.state = State.Out;
+        }
+
+        public void SetEffect(Effect effect)
+        {
+            this.effect = effect;
         }
 
         public void AddCard(CardData card)
@@ -71,6 +86,22 @@ namespace RedStone.Data.SOS
         public CardData GetHandCard(int cardID)
         {
             return m_handCards.First(a => a.id == cardID);
+        }
+
+        public enum State
+        {
+            None = 0,
+            Joined = 1,
+            Ready = 2,
+            Turn = 3,
+            NotTurn = 4,
+            Out = 5,
+        }
+
+        public enum Effect
+        {
+            None,
+            InvincibleOneRound,
         }
     }
 }

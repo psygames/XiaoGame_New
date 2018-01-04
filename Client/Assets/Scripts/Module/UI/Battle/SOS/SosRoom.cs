@@ -165,6 +165,20 @@ namespace RedStone
             hint.Show("恭喜 {0} 获得最终胜利！".FormatStr(player.name));
         }
 
+        public void OnDropCard(Message.CBPlayerDropCardSync msg)
+        {
+            var p = GetPlayer(msg.PlayerID);
+            p.DropCard(data.GetCard(msg.CardID));
+        }
+
+        public void OnPlayerOut(Message.CBPlayerOutSync msg)
+        {
+            var p = GetPlayer(msg.PlayerID);
+            p.Out(data.GetCard(msg.HandCardID));
+        }
+
+
+
         void ShowAimTargetLine(Transform from, Transform to)
         {
             aimTargetLine.Show(UIHelper.GetUIPosition(from), UIHelper.GetUIPosition(to));

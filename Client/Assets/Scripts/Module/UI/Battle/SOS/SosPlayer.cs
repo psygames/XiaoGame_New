@@ -53,7 +53,7 @@ namespace RedStone
 
         protected void RefreshUI()
         {
-            state.text = data.isReady ? "Ready" : "Not Ready";
+            state.text = data.state.ToString();
             if (isSelected)
                 headIconBg.SetSprite("common_border_red", false);
             else if (data.isMain)
@@ -92,6 +92,24 @@ namespace RedStone
         public virtual void TakeCard(int cardID)
         {
             RefreshUI();
+        }
+
+        public virtual void DropCard(CardData card)
+        {
+            //TODO: Drop Card
+            PlayCard(card);
+        }
+
+        public virtual void Out(CardData handCard)
+        {
+            DropCard(handCard);
+            PlayOutEffect();
+            RefreshUI();
+        }
+
+        void PlayOutEffect()
+        {
+            //TODO:Play Out Effect
         }
 
         public virtual void PlayCard(CardData card)

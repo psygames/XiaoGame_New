@@ -133,7 +133,7 @@ namespace RedStone
 
         void OnReadySync(CBReadySync msg)
         {
-            room.GetPlayer(msg.FromID).SetReady(true);
+            room.GetPlayer(msg.FromID).SetReady();
             SendEvent(EventDef.SOS.Ready, msg.FromID);
         }
 
@@ -173,15 +173,19 @@ namespace RedStone
         void OnCardEffectSync(CBCardEffectSync msg)
         {
             Debug.LogError("EFFECT=> " + msg.FromPlayerID + ": " + msg.FromCardID + " --> " + msg.TargetID + ": " + msg.TargetCardID);
+
         }
 
         void OnDropCardSync(CBPlayerDropCardSync msg)
         {
+            var player = room.GetPlayer(msg.PlayerID);
+            player.RemoveCard(room.GetCard(msg.CardID));
             Debug.LogError("DROP=> " + msg.PlayerID + ": " + msg.CardID);
         }
 
         void OnPlayerOutSync(CBPlayerOutSync msg)
         {
+            room.GetPlayer(msg.PlayerID).Out();
             Debug.LogError("OUT=> " + msg.PlayerID + ": " + msg.HandCardID);
         }
     }
