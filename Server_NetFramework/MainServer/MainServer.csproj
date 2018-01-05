@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22AAE836-C531-40D2-ABF8-C7AC219DC380}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MainServer</RootNamespace>
+    <AssemblyName>MainServer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.0.7\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.5.0\lib\net45\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.5.0\lib\net45\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.5.0\lib\net45\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.3.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\TableAudio.cs" />
+    <Compile Include="Config\TableConst.cs" />
+    <Compile Include="Config\TableLanguage.cs" />
+    <Compile Include="Config\TableName.cs" />
+    <Compile Include="Config\TableSosCard.cs" />
+    <Compile Include="Config\TableTextColor.cs" />
+    <Compile Include="Manager\GameManager.cs" />
+    <Compile Include="Manager\NetworkManager.cs" />
+    <Compile Include="Manager\ProxyManager.cs" />
+    <Compile Include="Module\Base\CommonDB.cs" />
+    <Compile Include="Module\Base\DataBase.cs" />
+    <Compile Include="Module\Base\ProxyBase.cs" />
+    <Compile Include="Module\Base\ProxyBaseServer.cs" />
+    <Compile Include="Module\BattleServer\Data\DB\BattleServerInfoDB.cs" />
+    <Compile Include="Module\BattleServer\Data\Game\BattleServerData.cs" />
+    <Compile Include="Module\BattleServer\Data\Game\RoomData.cs" />
+    <Compile Include="Module\BattleServer\Proxy\BattleServerProxy.cs" />
+    <Compile Include="Module\BattleServer\Proxy\MBProxyBase.cs" />
+    <Compile Include="Module\Client\Data\DB\CounterDB.cs" />
+    <Compile Include="Module\Client\Data\DB\UserDB.cs" />
+    <Compile Include="Module\Client\Data\Game\UserData.cs" />
+    <Compile Include="Module\Client\Proxy\Dao\UserDaoProxy.cs" />
+    <Compile Include="Module\Client\Proxy\Logic\MatchPoolProxy.cs" />
+    <Compile Include="Module\Client\Proxy\Logic\MCProxyBase.cs" />
+    <Compile Include="Module\Client\Proxy\Logic\UserProxy.cs" />
+    <Compile Include="Module\Client\Proxy\MessageHandle\UserMessageHandle.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\BMCreateRoomReply.cs" />
+    <Compile Include="Protocol\BMCreateRoomRequest.cs" />
+    <Compile Include="Protocol\BMLoginReply.cs" />
+    <Compile Include="Protocol\BMLoginRequest.cs" />
+    <Compile Include="Protocol\CBBattleResultSync.cs" />
+    <Compile Include="Protocol\CBCardEffectSync.cs" />
+    <Compile Include="Protocol\CBCardInfoSync.cs" />
+    <Compile Include="Protocol\CBJoinBattleReply.cs" />
+    <Compile Include="Protocol\CBJoinBattleRequest.cs" />
+    <Compile Include="Protocol\CBLoginReply.cs" />
+    <Compile Include="Protocol\CBLoginRequest.cs" />
+    <Compile Include="Protocol\CBPlayCard.cs" />
+    <Compile Include="Protocol\CBPlayCardSync.cs" />
+    <Compile Include="Protocol\CBPlayerDropCardSync.cs" />
+    <Compile Include="Protocol\CBPlayerOutSync.cs" />
+    <Compile Include="Protocol\CBReady.cs" />
+    <Compile Include="Protocol\CBReadySync.cs" />
+    <Compile Include="Protocol\CBRoomSync.cs" />
+    <Compile Include="Protocol\CBSendCardSync.cs" />
+    <Compile Include="Protocol\CMCancelReconnect.cs" />
+    <Compile Include="Protocol\CMLoginReply.cs" />
+    <Compile Include="Protocol\CMLoginRequest.cs" />
+    <Compile Include="Protocol\CMMatchCancel.cs" />
+    <Compile Include="Protocol\CMMatchReply.cs" />
+    <Compile Include="Protocol\CMMatchRequest.cs" />
+    <Compile Include="Protocol\CMMatchSuccess.cs" />
+    <Compile Include="Protocol\Infos.cs" />
+    <Compile Include="Protocol\ProtoNum.cs" />
+    <Compile Include="Tools\EventDefine.cs" />
+    <Compile Include="Tools\GUID.cs" />
+    <Compile Include="Tools\LogicHelper.cs" />
+    <Compile Include="Tools\MyPath.cs" />
+    <Compile Include="Tools\NetConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\protonum.txt" />
+    <Content Include="Resource\xmlList.txt" />
+    <Content Include="Resource\xml\TableAudio.xml" />
+    <Content Include="Resource\xml\TableConst.xml" />
+    <Content Include="Resource\xml\TableLanguage.xml" />
+    <Content Include="Resource\xml\TableName.xml" />
+    <Content Include="Resource\xml\TableSosCard.xml" />
+    <Content Include="Resource\xml\TableTextColor.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{02934897-1180-4a65-b3e5-a7b7ff267ca7}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugins\Plugins.csproj">
+      <Project>{9e8e2055-f2ba-49bf-bd99-7ce87d9b402a}</Project>
+      <Name>Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

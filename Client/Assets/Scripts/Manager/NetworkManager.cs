@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Plugins;
 using UnityEngine;
@@ -31,7 +31,7 @@ namespace RedStone
         {
             main = new ClientNetworkMangerEx();
             var socket = new Plugins.Network.WebSocketClient();
-            socket.Setup("192.168.1.102", 8730);
+            socket.Setup("47.100.28.149", 8730);
             var serializer = new Plugins.ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));

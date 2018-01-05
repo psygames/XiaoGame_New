@@ -31,12 +31,14 @@ namespace RedStone
             UIManager.CreateInstance();
             TaskManger.CreateInstance();
 
-            TableManager.CreateAndLoad();
-            Localization.CreateAndLoad();
+            TableManager.CreateInstance();
+            Localization.CreateInstance();
         }
 
         private void Init()
         {
+            TableManager.instance.Init();
+            Localization.instance.SetLanguage(2);
             DeviceID.Instance.Init();
             NetworkManager.instance.Init();
             ProxyManager.instance.Init();

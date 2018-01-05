@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -149,11 +149,11 @@ using UnityEngine;
                     continue;
                 }
 
-                var ar = CreateAsyncResource(resPath, param);
+                var ar = new AsyncResource(resPath,null,param);
+                ar.loadedAsset = Resources.Load(resPath);
                 item.Add(resPath, ar);
             }
-            GroupAsyncRes groupRes = new GroupAsyncRes(callBack, item);
-            m_asyncGroupLoadingRes.Add(groupRes);
+            callBack(item);
         }
 
         AsyncResource CreateAsyncResource(string resPath, object param, bool loadAll = false)
@@ -167,10 +167,9 @@ using UnityEngine;
 
         public void GetResourceByPathAsync(string path, Action<AsyncResource> callBack = null, System.Object param = null, bool loadAll = false)
         {
-
-            var ar = CreateAsyncResource(path, param, loadAll);
-            SingleAsyncRes groupRes = new SingleAsyncRes(callBack, ar);
-            m_asyncSingleLoadingRes.Add(groupRes);
+            var ar = new AsyncResource(path, null, param);
+            ar.loadedAsset = Resources.Load(path);
+            callBack.Invoke(ar);
         }
 
         public void Update()

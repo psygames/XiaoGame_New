@@ -23,11 +23,14 @@ namespace RedStone
         public SosTurnClock clock;
         public SosAimTargetLine aimTargetLine;
         public BattleHint hint;
+        public SosGuessPanel guessPanel;
+        public SosResultPanel resultPanel;
 
         private List<SosPlayer> m_players = new List<SosPlayer>();
         private RoomData data { get { return GF.GetProxy<SosProxy>().room; } }
         private CardData selectedCard { get { return mainPlayer.selectedCard; } }
         private SosPlayer whosTurn { get { return m_players.First(a => a.data.isTurned); } }
+        public int curGuessCardID { get; private set; }
 
         public void Init()
         {
@@ -41,6 +44,8 @@ namespace RedStone
             backBtn.SetActive(false);
             readyBtn.SetActive(false);
             playBtn.SetActive(false);
+            resultPanel.gameObject.SetActive(false);
+            guessPanel.gameObject.SetActive(false);
         }
 
         public void InitPlayers()
@@ -95,11 +100,26 @@ namespace RedStone
         void OnPlayerClick(PlayerData playerData)
         {
             if (data.whosTurn != mainPlayer.data
-                || selectedCard.type != CardType.ForOneTarget)
+                || selectedCard.type != CardType.ForOneTarget
+                || playerData.state == PlayerData.State.Out)
                 return;
 
-            m_selectedPlayer = playerData;
-            RefreshPlayers();
+            if (selectedCard.tableID == 5) // 猜测
+            {
+                curGuessCardID = -1;
+                guessPanel.Show();
+                guessPanel.onSelectedCallback = (a) =>
+                {
+                    curGuessCardID = a;
+                    m_selectedPlayer = playerData;
+                    RefreshPlayers();
+                };
+            }
+            else
+            {
+                m_selectedPlayer = playerData;
+                RefreshPlayers();
+            }
         }
 
         void OnCardSelected(CardData card)
@@ -163,8 +183,7 @@ namespace RedStone
 
         public void OnBattleResult(Message.CBBattleResultSync msg)
         {
-            var player = GetPlayer(msg.ResultInfos.First(a => a.IsWin).PlayrID).data;
-            hint.Show("恭喜 {0} 获得最终胜利！".FormatStr(player.name));
+            resultPanel.Show(msg);
         }
 
         public void OnCardEffect(Message.CBCardEffectSync msg)
@@ -325,8 +344,26 @@ namespace RedStone
                 return;
             }
 
+            //当你手上有太阳航站或火星航站时，必须弃置水星航站。
+            if (data.mainPlayer.handCards.Any(a => a.tableID == 9)
+                && data.mainPlayer.handCards.Any(a => a.tableID == 6 || a.tableID == 7)
+                && selectedCard.tableID != 9)
+            {
+                Toast.instance.Show("当你手上有太阳航站或火星航站时，必须弃置水星航站。");
+                return;
+            }
+
+            if (selectedCard.tableID == 5 && curGuessCardID <= 0)
+            {
+                Toast.instance.Show("请选择一张猜测的卡牌！");
+                guessPanel.Show();
+                return;
+            }
+
+
             GF.GetProxy<SosProxy>().PlayCard(selectedCard.id
-                , m_selectedPlayer == null ? 0 : m_selectedPlayer.id);
+                , m_selectedPlayer == null ? 0 : m_selectedPlayer.id
+                , curGuessCardID <= 0 ? 0 : curGuessCardID);
         }
     }
 }

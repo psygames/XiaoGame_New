@@ -110,11 +110,12 @@ namespace RedStone
             SendMessage(req);
         }
 
-        public void PlayCard(int cardId, int target = 0)
+        public void PlayCard(int cardId, int target = 0,int extend = 0)
         {
             CBPlayCard msg = new CBPlayCard();
             msg.CardID = cardId;
             msg.TargetID = target;
+            msg.Extend = extend;
             SendMessage(msg);
         }
 
@@ -172,8 +173,6 @@ namespace RedStone
 
         void OnCardEffectSync(CBCardEffectSync msg)
         {
-            Debug.LogError("EFFECT=> " + msg.FromPlayerID + ": " + msg.FromCardID + " --> " + msg.TargetID + ": " + msg.TargetCardID);
-
             var fromCard = room.GetCard(msg.FromCardID);
             int cardTableID = fromCard.tableID;
 
@@ -207,7 +206,7 @@ namespace RedStone
             {
 
             }
-            else if (cardTableID == 6) // 猜拳，我日
+            else if (cardTableID == 6) // 决斗
             {
 
             }

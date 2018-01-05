@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Plugins.Network
@@ -17,17 +17,17 @@ namespace Plugins.Network
         public override string address { get { return _socket.Url.AbsoluteUri; } }
         public override void Send(byte[] data)
         {
-            _socket.Send(data);
+            _socket.SendAsync(data, null);
         }
 
         public override void Connect()
         {
-            _socket.Connect();
+            _socket.ConnectAsync();
         }
 
         public override void Close()
         {
-            _socket.Close();
+            _socket.CloseAsync();
         }
 
     }

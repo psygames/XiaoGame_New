@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<table>
+	<type>
+		<item name="string" image="string" star="int" id="int" effect="string" type="int" point="int" description="string"/>
+	</type>
+	<data>
+		<item name="冥王星航站" image="sos_card_pluto" star="3" id="1" effect="侦察" type="2" point="1" description="可侦察任一玩家所在的航站。"/>
+		<item name="海王星航站" image="sos_card_neptune" star="3" id="2" effect="混乱" type="3" point="2" description="将所有玩家手上的航站收回，洗乱顺序，再发给每个玩家。"/>
+		<item name="天王星航站" image="sos_card_uranus" star="3" id="3" effect="变革" type="1" point="3" description="将手中的航站插入牌库，洗乱顺序，重抽一张。"/>
+		<item name="土星航站" image="sos_card_saturn" star="2" id="4" effect="壁垒" type="1" point="4" description="下次轮到你之前，将不受任何其他航站的功能影响。"/>
+		<item name="木星航站" image="sos_card_jupiter" star="2" id="5" effect="猜测" type="2" point="5" description="猜任一玩家航站名，被猜中玩家出局。"/>
+		<item name="火星航站" image="sos_card_mars" star="2" id="6" effect="决斗" type="2" point="6" description="指定任一玩比航站点数，对方战败，则出局。"/>
+		<item name="太阳航站" image="sos_card_sun" star="1" id="7" effect="霸道" type="2" point="7" description="指定任一玩家弃掉手上的航站，重新抽取一张新航站。"/>
+		<item name="金星航站" image="sos_card_venus" star="1" id="8" effect="交换" type="2" point="8" description="指定任一玩家，交换手中航站。"/>
+		<item name="水星航站" image="sos_card_mercury" star="1" id="9" effect="开溜" type="1" point="9" description="当你手上有太阳航站或火星航站时，必须弃置水星航站。"/>
+		<item name="月亮航站" image="sos_card_moon" star="1" id="10" effect="出局" type="1" point="10" description="自愿或被迫弃置月亮航站时，玩家立即出局。"/>
+	</data>
+</table>

@@ -143,7 +143,8 @@ namespace RedStone
             //TODO: OUT Effect
             Toast.instance.Show("{0} 出局".FormatStr(data.name));
 
-            DropCard(handCard);
+            if (handCard != null)
+                DropCard(handCard);
             PlayOutEffect();
             RefreshUI();
         }

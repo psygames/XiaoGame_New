@@ -1,0 +1,11 @@
+LoginRequest = 1001
+LoginReply = 1002
+AssignRoomRequest = 1003
+AssignRoomReply = 1004
+PlaceStatisticsSync = 1006
+PlaceRequest = 1007
+PlaceReply = 1008
+NewTurnBroadcast = 1012
+JoinRoomRequest = 2001
+JoinRoomReply = 2002
+BattleResult = 2004
