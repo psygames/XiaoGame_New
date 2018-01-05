@@ -20,7 +20,7 @@ namespace RedStone
             gameObject.SetActive(true);
             this.text.text = text;
             transform.localScale = Vector3.one;
-            uTools.uTweenScale.Begin(gameObject, Vector3.one, Vector3.up, 0.3f, 1).method = uTools.EaseType.easeInCirc;
+            uTools.uTweenScale.Begin(gameObject, Vector3.one, Vector3.up, 0.3f, 2).method = uTools.EaseType.easeInCirc;
         }
     }
 }

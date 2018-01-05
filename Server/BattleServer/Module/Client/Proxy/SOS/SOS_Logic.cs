@@ -209,7 +209,7 @@ namespace RedStone.SOS
 
             SendTo(player.id, rep);
 
-            Debug.Log("【{0}】 加入房间", player.user.name);
+            Debug.Log("{0}\t加入房间", player.user.name);
         }
 
         void OnReady(Player player, CBReady msg)
@@ -223,14 +223,14 @@ namespace RedStone.SOS
             sync.FromID = player.id;
             SendToAll(sync);
 
-            Debug.Log("【{0}】 已准备", player.user.name);
+            Debug.Log("{0}\t已准备", player.user.name);
         }
 
         void OnPlayCard(Player player, CBPlayCard msg)
         {
             if (m_whosTurn != player)
             {
-                Debug.LogError("【{0}】 出牌，但是不是他的回个，已禁止！", player.name);
+                Debug.LogError("{0}\t出牌，但是不是他的回个，已禁止！", player.name);
                 return;
             }
 
@@ -241,9 +241,9 @@ namespace RedStone.SOS
             var target = GetPlayer(msg.TargetID);
 
             if (target != null)
-                Debug.Log("【{0}】 出牌 【{1}】 指向 【{2}】", player.name, card.name, target.name);
+                Debug.Log("{0}\t出牌\t{1}\t指向\t{2}", player.name, card.table.effect, target.name);
             else
-                Debug.Log("【{0}】 出牌 【{1}】", player.name, card.name);
+                Debug.Log("{0}\t出牌\t{1}", player.name, card.table.effect);
 
             CBPlayCardSync sync = new CBPlayCardSync();
             sync.FromID = player.id;
@@ -268,6 +268,12 @@ namespace RedStone.SOS
             msg.FromCardID = card.id;
             int cardTableID = card.tableID;
 
+            if (target != null && target.effect == Player.Effect.InvincibleOneRound)
+            {
+                Debug.LogError("玩家 {0} 无敌状态，技能 {1} 无效", target.name, card.table.effect);
+                return 1;
+            }
+
             if (cardTableID == 1) // 侦察
             {
                 msg.TargetID = target.id;
@@ -282,11 +288,12 @@ namespace RedStone.SOS
                 {
                     cardIds.Add(p.oneCard.id);
                 }
-                cardIds.OrderBy(a => Guid.NewGuid());
+                cardIds = cardIds.OrderBy(a => Guid.NewGuid()).ToList();
 
                 for (int i = 0; i < players.Count; i++)
                 {
                     var p = players[i];
+                    p.ChangeCard(GetCard(cardIds[i]));
                     msg.TargetID = p.id;
                     msg.TargetCardID = cardIds[i];
                     SendTo(p.id, msg);
@@ -294,9 +301,10 @@ namespace RedStone.SOS
             }
             else if (cardTableID == 3) // 变革
             {
-                m_cardMgr.PutCard(from.oneCard);
-                m_cardMgr.Shuffle();
-                var newCard = m_cardMgr.TakeCard();
+                m_cardMgr.PutCard(from.oneCard);    // 放回
+                m_cardMgr.Shuffle();                // 洗牌
+                var newCard = m_cardMgr.TakeCard(); // 抓牌
+                from.ChangeCard(newCard);
                 msg.TargetID = from.id;
                 msg.TargetCardID = newCard.id;
                 SendTo(from.id, msg);
@@ -304,8 +312,13 @@ namespace RedStone.SOS
             else if (cardTableID == 4) // 壁垒
             {
                 from.SetEffect(Player.Effect.InvincibleOneRound);
+                foreach (var p in alivePlayers)
+                {
+                    msg.TargetID = p.id;
+                    SendTo(p.id, msg);
+                }
             }
-            else if (cardTableID == 5)
+            else if (cardTableID == 5) // 猜测
             {
                 if (extend == target.oneCard.tableID) // 猜卡牌TableID
                 {
@@ -313,14 +326,24 @@ namespace RedStone.SOS
                 }
                 waitFor = 5;
             }
-            else if (cardTableID == 6) // 猜拳，我日
+            else if (cardTableID == 6) // 决斗
             {
-
+                if (from.oneCard.point > target.oneCard.point)
+                {
+                    PlayerOut(target);
+                }
+                waitFor = 5;
             }
             else if (cardTableID == 7) // 霸道 太阳
             {
+                bool isOut = false;
+                if (target.oneCard.tableID == 10) // 弃置月亮航站，直接出局
+                {
+                    isOut = true;
+                }
                 DropCard(target);
-                if (m_cardMgr.isEmpty)
+
+                if (m_cardMgr.isEmpty || isOut)
                 {
                     PlayerOut(target);
                 }
@@ -332,10 +355,8 @@ namespace RedStone.SOS
             else if (cardTableID == 8) // 交换
             {
                 Card tmp = from.oneCard;
-                from.RemoveCard(from.oneCard);
-                from.AddCard(target.oneCard);
-                target.RemoveCard(target.oneCard);
-                target.AddCard(tmp);
+                from.ChangeCard(target.oneCard);
+                target.ChangeCard(tmp);
 
                 msg.TargetID = from.id;
                 msg.TargetCardID = from.oneCard.id;
@@ -349,10 +370,12 @@ namespace RedStone.SOS
             {
 
             }
-            else if (cardTableID == 10)
+            else if (cardTableID == 10) // 出局
             {
                 PlayerOut(from);
             }
+
+            LogStatus("出牌阶段");
 
             return waitFor;
         }
@@ -418,7 +441,7 @@ namespace RedStone.SOS
                     turnChanged = true;
                     break;
                 }
-                nextSeat = (nextSeat + 1) % m_players.Count + 1;
+                nextSeat = nextSeat % m_players.Count + 1;
             }
 
             if (!turnChanged)
@@ -441,7 +464,6 @@ namespace RedStone.SOS
                 m_whosTurn.SetEffect(Player.Effect.None);
 
             RoomSync();
-            Debug.Log("轮到下一位 --> 【{0}】", m_whosTurn.name);
         }
 
 
@@ -459,6 +481,7 @@ namespace RedStone.SOS
             }
             TurnNext();
             SendCardToTurned();
+            LogStatus("发牌阶段");
         }
 
         public void RoomSync()
@@ -471,10 +494,29 @@ namespace RedStone.SOS
             SendToAll(sync);
         }
 
+        private void LogStatus(string title)
+        {
+            Debug.LogError("-------------------  " + title + "  --------------------");
+            foreach (var p in m_players)
+            {
+                if (p.handCards.Count > 0)
+                {
+                    string cardStr = "";
+                    foreach (var card in p.handCards)
+                        cardStr += card.table.effect + "|";
+                    cardStr = cardStr.TrimEnd('|');
+                    Debug.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), cardStr.PadRight(10), p.state);
+                }
+                else
+                    Debug.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), "空".PadRight(10), p.state);
+            }
+            Debug.LogError("---------------------------------------------------");
+        }
+
         // SEND CARDS
         public void GameBegin()
         {
-            Debug.Log("Game Start!!!");
+            Debug.LogInfo("Game Start!!!");
             m_whosTurn = m_players.First(a => a.seat == 1);
             m_cardMgr.Reset();
             GameBegin_SyncCards();
@@ -511,7 +553,7 @@ namespace RedStone.SOS
         {
             Card card = m_cardMgr.TakeCard();
 
-            Debug.Log("发牌 【{0}】 给 【{1}】", card.name, player.name);
+            Debug.Log("{1}\t获得\t{0}", card.table.effect, player.name);
 
             player.AddCard(card);
 
@@ -624,11 +666,13 @@ namespace RedStone.SOS
         }
 
         private bool m_isThisTrunPlayedCard = false;
+        private float m_aiThinkTime = 15;
+
         void UpdateAIPlay()
         {
             if (m_whosTurn.isAI
                 && !m_isThisTrunPlayedCard
-                && m_whosTurnCounter <= 34
+                && m_whosTurnCounter <= WHOS_TURN_TIME - m_aiThinkTime
                 && m_whosTurn.handCards.Count > 0)
             {
                 CBPlayCard msg = new CBPlayCard();
@@ -636,6 +680,7 @@ namespace RedStone.SOS
                 if (GetCard(msg.CardID).type == CardType.ForOneTarget)
                     msg.TargetID = RandTargetID(m_whosTurn);
                 OnPlayCard(m_whosTurn, msg);
+                m_aiThinkTime = rand.Next(8, 20);
             }
         }
 
@@ -648,6 +693,8 @@ namespace RedStone.SOS
 
         private int RandPlayerCardID(Player p)
         {
+            if (p.handCards.Any(a => a.tableID == 10)) // 不出月亮
+                return p.handCards.First(a => a.tableID != 10).id;
             return p.handCards[rand.Next(p.handCards.Count)].id;
         }
     }

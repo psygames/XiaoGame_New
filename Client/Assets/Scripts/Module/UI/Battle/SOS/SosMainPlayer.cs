@@ -43,11 +43,10 @@ namespace RedStone
                 onCardSelectedCallback.Invoke(selectedCard);
         }
 
-        public override void TakeCard(int cardID)
+        public override void TakeCard(CardData cardData)
         {
-            base.TakeCard(cardID);
+            base.TakeCard(cardData);
 
-            var cardData = data.GetHandCard(cardID);
             var card = GameObjectHelper.AddChild(cardRoot, cardTemplate);
             card.gameObject.SetActive(true);
             card.SetData(cardData);
@@ -58,6 +57,10 @@ namespace RedStone
             RefreshUI();
         }
 
+        public override void DropCard(CardData card)
+        {
+            base.DropCard(card);
+        }
 
         public override void PlayCard(CardData card)
         {
@@ -70,6 +73,18 @@ namespace RedStone
                 m_handCards.Remove(sosCard);
                 DestroyImmediate(sosCard.gameObject);
             }
+        }
+
+        public override void ChangeCard(CardData card)
+        {
+            base.ChangeCard(card);
+
+            if (m_handCards.Count == 1)
+                m_handCards[0].SetData(card);
+            else
+                Debug.LogError("手牌数量不正确，不能换牌！");
+
+            RefreshUI();
         }
 
         public SosCard GetCard(int cardID)

@@ -43,7 +43,7 @@ namespace RedStone
                 Message.PlayerInfo info = new Message.PlayerInfo();
                 info.Exp = 0;
                 info.Level = 1;
-                info.Name = TableManager.instance.GetData<TableName>(rand.Next(1, 100)).name.Trim();
+                info.Name = GetRandomName();
                 info.Uid = -1;
                 info.Gold = 0;
                 var user = GetProxy<UserProxy>().AddUser(info, room.id, true);
@@ -56,6 +56,16 @@ namespace RedStone
             NewPvL(room.id);
             Debug.LogInfo("房间创建【{0}】", room.id);
             return room;
+        }
+
+        private string GetRandomName()
+        {
+            var names = TableManager.instance.GetAllData<TableName>().Values.ToList();
+            int randIndex = rand.Next(0, names.Count);
+            string name = names[randIndex].name.Trim();
+            if (name.Length > 8)
+                name = name.Substring(0, 8);
+            return name;
         }
 
         public void RegisterUserMsg<T>(string token, Action<T> action)

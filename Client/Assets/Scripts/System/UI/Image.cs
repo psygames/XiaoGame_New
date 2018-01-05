@@ -54,7 +54,7 @@ namespace RedStone.UI
             base.Awake();
 
             if (greyMat == null)
-                greyMat = Resources.Load<Material>("UIMaterial/GreyUI");
+                greyMat = Resources.Load<Material>("Materials/UI/GreyUI");
         }
         protected override void OnEnable()
         {

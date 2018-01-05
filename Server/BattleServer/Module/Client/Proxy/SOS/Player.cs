@@ -19,7 +19,7 @@ namespace RedStone.SOS
 
         private List<Card> m_handCards = new List<Card>();
         public List<Card> handCards { get { return m_handCards; } }
-        public Card oneCard { get { return m_handCards[0]; } }
+        public Card oneCard { get { return m_handCards.Count > 0 ? m_handCards[0] : null; } }
 
         public void Init(UserData user, int id)
         {
@@ -66,6 +66,16 @@ namespace RedStone.SOS
         public void AddCard(Card card)
         {
             m_handCards.Add(card);
+        }
+
+        public void ChangeCard(Card card)
+        {
+            if (m_handCards.Count != 1)
+            {
+                Debug.LogError("手牌数量不正确，不能换牌！");
+                return;
+            }
+            m_handCards[0] = card;
         }
 
         public void RemoveCard(Card card)

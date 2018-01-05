@@ -19,6 +19,7 @@ namespace RedStone.Data.SOS
 
         private List<CardData> m_handCards = new List<CardData>();
         public List<CardData> handCards { get { return m_handCards; } }
+        public CardData oneCard { get { return m_handCards[0]; } }
 
         public void SetData(Message.BattlePlayerInfo info)
         {
@@ -68,6 +69,17 @@ namespace RedStone.Data.SOS
         public void AddCard(CardData card)
         {
             m_handCards.Add(card);
+        }
+
+
+        public void ChangeCard(CardData card)
+        {
+            if (m_handCards.Count != 1)
+            {
+                UnityEngine.Debug.LogError("手牌数量不正确，不能换牌！");
+                return;
+            }
+            m_handCards[0] = card;
         }
 
         public void RemoveCard(CardData card)

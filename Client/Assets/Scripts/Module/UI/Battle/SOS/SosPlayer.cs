@@ -17,7 +17,7 @@ namespace RedStone
         public Image headIcon;
         public Image headIconBg;
         public Text playerName;
-        public Text effect;
+        public Image effect;
         public Text state;
         public UIRepeat backCardRepeat;
 
@@ -34,11 +34,16 @@ namespace RedStone
 
         public virtual void Init(PlayerData data)
         {
+            this.data = data;
+
             Reset();
             m_playedCard = GameObject.Instantiate(cardTemplate).GetComponent<SosCard>();
             UIHelper.SetParent(playedCardRoot, m_playedCard.transform);
 
-            this.data = data;
+            headIcon.enableGrey = true;
+            m_playedCard.bg.enableGrey = true;
+            m_playedCard.image.enableGrey = true;
+
 
             playerName.text = data.name;
             headIcon.SetSprite("user_icon_man" + UnityEngine.Random.Range(0, 4)); //TODO:Head Icon
@@ -64,6 +69,17 @@ namespace RedStone
             if (backCardRepeat != null)
                 backCardRepeat.repeatCount = data.handCards.Count;
 
+            if (data.state == PlayerData.State.Out)
+            {
+                headIcon.Grey = true;
+            }
+            else
+            {
+                headIcon.Grey = false;
+            }
+
+            effect.gameObject.SetActive(data.effect == PlayerData.Effect.InvincibleOneRound);
+
             RefreshPlayedCard(false);
         }
 
@@ -71,11 +87,21 @@ namespace RedStone
         void RefreshPlayedCard(bool ignoreTurn)
         {
             if (m_lastPlayedCardData != null
-                && (GF.GetProxy<SosProxy>().room.state == RoomData.State.End 
+                && (GF.GetProxy<SosProxy>().room.state == RoomData.State.End
                 || ignoreTurn || !data.isTurned))
             {
                 m_playedCard.gameObject.SetActive(true);
                 m_playedCard.SetData(m_lastPlayedCardData);
+                if (data.state == PlayerData.State.Out)
+                {
+                    m_playedCard.bg.Grey = true;
+                    m_playedCard.image.Grey = true;
+                }
+                else
+                {
+                    m_playedCard.bg.Grey = false;
+                    m_playedCard.image.Grey = false;
+                }
             }
             else
             {
@@ -89,7 +115,12 @@ namespace RedStone
             RefreshUI();
         }
 
-        public virtual void TakeCard(int cardID)
+        public virtual void TakeCard(CardData card)
+        {
+            RefreshUI();
+        }
+
+        public virtual void ChangeCard(CardData card)
         {
             RefreshUI();
         }
@@ -100,11 +131,31 @@ namespace RedStone
             PlayCard(card);
         }
 
+        public virtual void PlayCard(CardData card)
+        {
+            m_lastPlayedCardData = card;
+            RefreshUI();
+            RefreshPlayedCard(true);
+        }
+
         public virtual void Out(CardData handCard)
         {
+            //TODO: OUT Effect
+            Toast.instance.Show("{0} 出局".FormatStr(data.name));
+
             DropCard(handCard);
             PlayOutEffect();
             RefreshUI();
+        }
+
+        public void InvincibleOneRound()
+        {
+            //TODO: Effect
+        }
+
+        public void CancelInvincible()
+        {
+
         }
 
         void PlayOutEffect()
@@ -112,12 +163,6 @@ namespace RedStone
             //TODO:Play Out Effect
         }
 
-        public virtual void PlayCard(CardData card)
-        {
-            m_lastPlayedCardData = card;
-            RefreshPlayedCard(true);
-        }
-        
         public void SetReady(bool isReady)
         {
             RefreshUI();

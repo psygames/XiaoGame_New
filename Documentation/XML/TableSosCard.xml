@@ -20,7 +20,7 @@
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
   <WindowHeight>11925</WindowHeight>
-  <WindowWidth>28770</WindowWidth>
+  <WindowWidth>27960</WindowWidth>
   <WindowTopX>0</WindowTopX>
   <WindowTopY>0</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -65,7 +65,7 @@
    <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
    <NumberFormat/>
   </Style>
-  <Style ss:ID="s72">
+  <Style ss:ID="s70">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="Arial Unicode MS" x:Family="Swiss" ss:Color="#000000"/>
   </Style>
@@ -122,8 +122,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">混乱</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_neptune</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_neptune</Data></Cell>
     <Cell><Data ss:Type="Number">3</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -133,8 +132,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">3</Data></Cell>
     <Cell><Data ss:Type="Number">3</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">变革</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_uranus</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_uranus</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -144,8 +142,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">4</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">壁垒</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_saturn</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_saturn</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -155,19 +152,17 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">5</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">猜测</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_jupiter</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_jupiter</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="Number">6</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">火星航站</Data></Cell>
-    <Cell ss:StyleID="s64"><Data ss:Type="String">指定任一玩家猜拳决斗。</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">指定任一玩比航站点数，对方战败，则出局。</Data></Cell>
     <Cell ss:StyleID="s69"><Data ss:Type="Number">2</Data></Cell>
     <Cell><Data ss:Type="Number">6</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">决斗</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_mars</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_mars</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -177,8 +172,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">7</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">霸道</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_sun</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_sun</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -188,7 +182,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">交换</Data></Cell>
-    <Cell ss:StyleID="s72"><Data ss:Type="String">sos_card_venus</Data></Cell>
+    <Cell ss:StyleID="s70"><Data ss:Type="String">sos_card_venus</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -198,8 +192,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">9</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">开溜</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_mercury</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_mercury</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -209,8 +202,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">10</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">出局</Data></Cell>
-    <Cell ss:StyleID="s64"><ss:Data ss:Type="String"
-      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">sos_card_moon</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_moon</Data></Cell>
     <Cell><Data ss:Type="Number">1</Data></Cell>
    </Row>
   </Table>
@@ -250,8 +242,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>9</ActiveRow>
-     <ActiveCol>6</ActiveCol>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>2</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

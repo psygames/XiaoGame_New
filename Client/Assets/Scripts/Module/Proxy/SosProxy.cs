@@ -174,19 +174,83 @@ namespace RedStone
         {
             Debug.LogError("EFFECT=> " + msg.FromPlayerID + ": " + msg.FromCardID + " --> " + msg.TargetID + ": " + msg.TargetCardID);
 
+            var fromCard = room.GetCard(msg.FromCardID);
+            int cardTableID = fromCard.tableID;
+
+
+            if (cardTableID != 1 && msg.TargetID != room.mainPlayer.id)
+            {
+                Debug.LogError("{0}技能目标错误：{1}".FormatStr(fromCard.name, msg.TargetID));
+                return;
+            }
+
+            if (cardTableID == 1) // 侦察
+            {
+
+            }
+            else if (cardTableID == 2) //混乱
+            {
+                var p = room.GetPlayer(msg.TargetID);
+                p.ChangeCard(room.GetCard(msg.TargetCardID));
+            }
+            else if (cardTableID == 3) // 变革
+            {
+                var p = room.GetPlayer(msg.TargetID);
+                p.ChangeCard(room.GetCard(msg.TargetCardID));
+            }
+            else if (cardTableID == 4) // 壁垒
+            {
+                var p = room.GetPlayer(msg.FromPlayerID);
+                p.SetEffect(PlayerData.Effect.InvincibleOneRound);
+            }
+            else if (cardTableID == 5) // 猜卡牌TableID
+            {
+
+            }
+            else if (cardTableID == 6) // 猜拳，我日
+            {
+
+            }
+            else if (cardTableID == 7) // 霸道 太阳
+            {
+
+            }
+            else if (cardTableID == 8) // 交换
+            {
+                var p = room.GetPlayer(msg.TargetID);
+                p.ChangeCard(room.GetCard(msg.TargetCardID));
+            }
+            else if (cardTableID == 9) // 开溜（只限制出牌阶段，出牌类型，出牌后无效果）
+            {
+
+            }
+            else if (cardTableID == 10)
+            {
+
+            }
+
+            SendEvent(EventDef.SOS.CardEffect, msg);
         }
 
         void OnDropCardSync(CBPlayerDropCardSync msg)
         {
             var player = room.GetPlayer(msg.PlayerID);
-            player.RemoveCard(room.GetCard(msg.CardID));
-            Debug.LogError("DROP=> " + msg.PlayerID + ": " + msg.CardID);
+            var card = room.GetCard(msg.CardID);
+            player.RemoveCard(card);
+
+            SendEvent(EventDef.SOS.DropCard, msg);
+
+            Debug.LogError("DROP=> " + player.name + ": " + card.name);
         }
 
         void OnPlayerOutSync(CBPlayerOutSync msg)
         {
-            room.GetPlayer(msg.PlayerID).Out();
-            Debug.LogError("OUT=> " + msg.PlayerID + ": " + msg.HandCardID);
+            var player = room.GetPlayer(msg.PlayerID);
+            var card = room.GetCard(msg.HandCardID);
+            player.RemoveCard(card);
+            player.Out();
+            SendEvent(EventDef.SOS.PlayerOut, msg);
+            Debug.LogError("OUT=> " + player.name + ": " + card.name);
         }
     }
 }

@@ -33,12 +33,15 @@ namespace RedStone.Data.SOS
                 {
                     whosTurn = p;
                     p.SetTurned(true);
+                    // 重置Effect
+                    p.SetEffect(PlayerData.Effect.None);
                 }
                 else
                 {
                     p.SetTurned(false);
                 }
             }
+
             state = (State)sync.State;
             leftCardCount = sync.LeftCardCount;
         }

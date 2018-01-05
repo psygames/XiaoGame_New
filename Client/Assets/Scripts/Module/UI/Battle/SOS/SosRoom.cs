@@ -146,13 +146,15 @@ namespace RedStone
 
         public void OnSendCard(Message.CBSendCardSync msg)
         {
-            GetPlayer(msg.TargetID).TakeCard(msg.CardID);
+            var card = data.GetCard(msg.CardID);
+            GetPlayer(msg.TargetID).TakeCard(card);
         }
 
         public void OnPlayCard(Message.CBPlayCardSync msg)
         {
             var from = GetPlayer(msg.FromID);
             from.PlayCard(data.GetCard(msg.CardID));
+            clock.gameObject.SetActive(false);
 
             var target = GetPlayer(msg.TargetID);
             if (target != null)
@@ -163,6 +165,63 @@ namespace RedStone
         {
             var player = GetPlayer(msg.ResultInfos.First(a => a.IsWin).PlayrID).data;
             hint.Show("恭喜 {0} 获得最终胜利！".FormatStr(player.name));
+        }
+
+        public void OnCardEffect(Message.CBCardEffectSync msg)
+        {
+            var fromPlayer = data.GetPlayer(msg.FromPlayerID);
+            var fromCard = data.GetCard(msg.FromCardID);
+            int cardTableID = fromCard.tableID;
+
+            if (cardTableID == 1) // 侦察
+            {
+                var target = data.GetPlayer(msg.TargetID);
+                var targetCard = data.GetCard(msg.TargetCardID);
+                hint.Show("【{0}】的手牌是【{1}】".FormatStr(target.name, targetCard.name));
+            }
+            else if (cardTableID == 2) //混乱
+            {
+                var targetCard = data.GetCard(msg.TargetCardID);
+                hint.Show("【{0}】技能后，你获得【{1}】".FormatStr(fromCard.name, targetCard.name));
+                GetPlayer(msg.TargetID).ChangeCard(targetCard);
+            }
+            else if (cardTableID == 3) // 变革
+            {
+                var targetCard = data.GetCard(msg.TargetCardID);
+                hint.Show("【{0}】技能后，你获得【{1}】".FormatStr(fromCard.name, targetCard.name));
+                GetPlayer(msg.TargetID).ChangeCard(targetCard);
+            }
+            else if (cardTableID == 4) // 壁垒
+            {
+                hint.Show("【{0}】获得壁垒保护效果，一回合内无敌".FormatStr(fromPlayer.name));
+                GetPlayer(msg.TargetID).InvincibleOneRound();
+            }
+            else if (cardTableID == 5) // 猜卡牌TableID
+            {
+
+            }
+            else if (cardTableID == 6) // 猜拳，我日
+            {
+
+            }
+            else if (cardTableID == 7) // 霸道 太阳
+            {
+
+            }
+            else if (cardTableID == 8) // 交换
+            {
+                var targetCard = data.GetCard(msg.TargetCardID);
+                hint.Show("【{0}】技能后，你获得【{1}】".FormatStr(fromCard.name, targetCard.name));
+                GetPlayer(msg.TargetID).ChangeCard(targetCard);
+            }
+            else if (cardTableID == 9) // 开溜（只限制出牌阶段，出牌类型，出牌后无效果）
+            {
+
+            }
+            else if (cardTableID == 10)
+            {
+
+            }
         }
 
         public void OnDropCard(Message.CBPlayerDropCardSync msg)
@@ -177,13 +236,10 @@ namespace RedStone
             p.Out(data.GetCard(msg.HandCardID));
         }
 
-
-
         void ShowAimTargetLine(Transform from, Transform to)
         {
             aimTargetLine.Show(UIHelper.GetUIPosition(from), UIHelper.GetUIPosition(to));
         }
-
 
         // Refresh
         void RefreshUI()

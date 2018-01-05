@@ -66,7 +66,7 @@ namespace RedStone.SOS
 
         public void Shuffle()
         {
-            int n = m_leftCards.Count;
+            int n = m_leftCards.Count * 2;
             while (n-- > 0)
             {
                 int i = rand.Next(m_leftCards.Count);

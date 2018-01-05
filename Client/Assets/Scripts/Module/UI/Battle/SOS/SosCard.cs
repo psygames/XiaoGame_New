@@ -17,6 +17,7 @@ namespace RedStone
         public Text effect;
         public Image bg;
         public Image image;
+        public Image star;
         public Image titleBg;
         public RectTransform descPosTrans;
         public RectTransform descSizeTrans;
@@ -48,6 +49,7 @@ namespace RedStone
             image.SetSprite(card.image);
             bg.SetSprite(card.bg);
             titleBg.SetSprite(card.titleBg, false);
+            star.SetSprite("sos_card_star_0" + data.star);
         }
 
         private float m_holdCounter = 0;
