@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,15 +11,20 @@ namespace RedStone
     // TODO: GAME MODE, GAME ID, GROUP
     public class MatchPoolProxy : MCProxyBase
     {
+        const int NEED_PLAYERS = 4;
+        const int WAIT_TIMES = 20;
+
         public override void OnInit()
         {
             base.OnInit();
         }
 
         public List<long> m_users = new List<long>();
+        private float m_waitTime = 0;
 
         public void Add(long uid, int gameID, int gameMode, int groupID)
         {
+            m_waitTime = WAIT_TIMES;
             if (!m_users.Contains(uid))
                 m_users.Add(uid);
             else
@@ -34,12 +39,12 @@ namespace RedStone
 
         public List<long> GetMatched()
         {
-            // 3 Players for Peasants vs Landlord 
-            int needSize = 1;
-            if (m_users.Count >= needSize)
+            if (m_users.Count >= NEED_PLAYERS
+                || m_users.Count > 0 && m_waitTime <= 0)
             {
                 List<long> result = new List<long>();
-                while (result.Count < needSize)
+                while (result.Count < NEED_PLAYERS
+                    && m_users.Count > 0)
                 {
                     result.Add(m_users[0]);
                     m_users.RemoveAt(0);
@@ -58,6 +63,8 @@ namespace RedStone
         public override void OnUpdate()
         {
             base.OnUpdate();
+
+            m_waitTime -= Time.deltaTime;
 
             CheckMatch();
         }

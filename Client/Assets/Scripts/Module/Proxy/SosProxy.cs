@@ -176,13 +176,6 @@ namespace RedStone
             var fromCard = room.GetCard(msg.FromCardID);
             int cardTableID = fromCard.tableID;
 
-
-            if (cardTableID != 1 && msg.TargetID != room.mainPlayer.id)
-            {
-                Debug.LogError("{0}技能目标错误：{1}".FormatStr(fromCard.name, msg.TargetID));
-                return;
-            }
-
             if (cardTableID == 1) // 侦察
             {
 
@@ -238,8 +231,6 @@ namespace RedStone
             player.RemoveCard(card);
 
             SendEvent(EventDef.SOS.DropCard, msg);
-
-            Debug.LogError("DROP=> " + player.name + ": " + card.name);
         }
 
         void OnPlayerOutSync(CBPlayerOutSync msg)
@@ -249,7 +240,6 @@ namespace RedStone
             player.RemoveCard(card);
             player.Out();
             SendEvent(EventDef.SOS.PlayerOut, msg);
-            Debug.LogError("OUT=> " + player.name + ": " + card.name);
         }
     }
 }

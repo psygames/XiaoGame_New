@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,7 +74,10 @@ namespace RedStone
             }
             else
             {
-                count = counter.counter;
+                count = counter.counter + 1;
+                var query = Builders<CounterDB>.Filter.Where(a => a.dbName == dbName);
+                var update = Builders<CounterDB>.Update.Set(a => a.counter, count);
+                counterDao.UpdateOne(query, update);
             }
             return count;
         }

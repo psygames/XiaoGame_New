@@ -331,22 +331,40 @@ namespace RedStone.SOS
             }
             else if (cardTableID == 5) // 猜测
             {
+                msg.TargetID = target.id;
+                msg.TargetCardID = extend;
                 if (extend == target.oneCard.tableID) // 猜卡牌TableID
                 {
                     PlayerOut(target);
+                    msg.Result = 1;
                 }
+                else
+                {
+                    msg.Result = 0;
+                }
+                SendToAll(msg);
                 waitFor = 5;
             }
             else if (cardTableID == 6) // 决斗
             {
+                msg.TargetID = target.id;
                 if (from.oneCard.point > target.oneCard.point)
                 {
                     PlayerOut(target);
+                    msg.Result = 1;
                 }
+                else
+                {
+                    msg.Result = 0;
+                }
+                SendToAll(msg);
                 waitFor = 5;
             }
             else if (cardTableID == 7) // 霸道 太阳
             {
+                msg.TargetID = target.id;
+                msg.TargetCardID = target.oneCard.id;
+
                 bool isOut = false;
                 if (target.oneCard.tableID == 10) // 弃置月亮航站，直接出局
                 {
@@ -362,6 +380,7 @@ namespace RedStone.SOS
                 {
                     SendCard(target);
                 }
+                SendToAll(msg);
             }
             else if (cardTableID == 8) // 交换
             {

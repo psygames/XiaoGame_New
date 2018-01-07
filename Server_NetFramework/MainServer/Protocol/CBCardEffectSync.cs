@@ -22,14 +22,14 @@ namespace Message {
     static CBCardEffectSyncReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZDQkNhcmRFZmZlY3RTeW5jLnByb3RvEgdtZXNzYWdlImQKEENCQ2FyZEVm",
+            "ChZDQkNhcmRFZmZlY3RTeW5jLnByb3RvEgdtZXNzYWdlInQKEENCQ2FyZEVm",
             "ZmVjdFN5bmMSFAoMZnJvbVBsYXllcklEGAEgASgFEhIKCmZyb21DYXJkSUQY",
             "AiABKAUSEAoIdGFyZ2V0SUQYAyABKAUSFAoMdGFyZ2V0Q2FyZElEGAQgASgF",
-            "YgZwcm90bzM="));
+            "Eg4KBnJlc3VsdBgFIAEoBWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBCardEffectSync), global::Message.CBCardEffectSync.Parser, new[]{ "FromPlayerID", "FromCardID", "TargetID", "TargetCardID" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.CBCardEffectSync), global::Message.CBCardEffectSync.Parser, new[]{ "FromPlayerID", "FromCardID", "TargetID", "TargetCardID", "Result" }, null, null, null)
           }));
     }
     #endregion
@@ -64,6 +64,7 @@ namespace Message {
       fromCardID_ = other.fromCardID_;
       targetID_ = other.targetID_;
       targetCardID_ = other.targetCardID_;
+      result_ = other.result_;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -115,6 +116,17 @@ namespace Message {
       }
     }
 
+    /// <summary>Field number for the "result" field.</summary>
+    public const int ResultFieldNumber = 5;
+    private int result_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Result {
+      get { return result_; }
+      set {
+        result_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CBCardEffectSync);
@@ -132,6 +144,7 @@ namespace Message {
       if (FromCardID != other.FromCardID) return false;
       if (TargetID != other.TargetID) return false;
       if (TargetCardID != other.TargetCardID) return false;
+      if (Result != other.Result) return false;
       return true;
     }
 
@@ -142,6 +155,7 @@ namespace Message {
       if (FromCardID != 0) hash ^= FromCardID.GetHashCode();
       if (TargetID != 0) hash ^= TargetID.GetHashCode();
       if (TargetCardID != 0) hash ^= TargetCardID.GetHashCode();
+      if (Result != 0) hash ^= Result.GetHashCode();
       return hash;
     }
 
@@ -168,6 +182,10 @@ namespace Message {
         output.WriteRawTag(32);
         output.WriteInt32(TargetCardID);
       }
+      if (Result != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Result);
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -184,6 +202,9 @@ namespace Message {
       }
       if (TargetCardID != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TargetCardID);
+      }
+      if (Result != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Result);
       }
       return size;
     }
@@ -204,6 +225,9 @@ namespace Message {
       }
       if (other.TargetCardID != 0) {
         TargetCardID = other.TargetCardID;
+      }
+      if (other.Result != 0) {
+        Result = other.Result;
       }
     }
 
@@ -229,6 +253,10 @@ namespace Message {
           }
           case 32: {
             TargetCardID = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Result = input.ReadInt32();
             break;
           }
         }

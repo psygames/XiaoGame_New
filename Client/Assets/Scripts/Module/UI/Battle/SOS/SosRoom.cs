@@ -191,10 +191,11 @@ namespace RedStone
             var fromPlayer = data.GetPlayer(msg.FromPlayerID);
             var fromCard = data.GetCard(msg.FromCardID);
             int cardTableID = fromCard.tableID;
+            int result = msg.Result;
+            var target = data.GetPlayer(msg.TargetID);
 
             if (cardTableID == 1) // 侦察
             {
-                var target = data.GetPlayer(msg.TargetID);
                 var targetCard = data.GetCard(msg.TargetCardID);
                 hint.Show("【{0}】的手牌是【{1}】".FormatStr(target.name, targetCard.name));
             }
@@ -217,15 +218,34 @@ namespace RedStone
             }
             else if (cardTableID == 5) // 猜卡牌TableID
             {
-
+                var targetCardTable = TableManager.instance.GetData<TableSosCard>(msg.TargetCardID);
+                if (result == 0)
+                {
+                    hint.Show("【{0}】猜测【{1}】错误！".FormatStr(fromPlayer.name, targetCardTable.name));
+                }
+                else
+                {
+                    hint.Show("【{0}】猜测【{1}】正确，玩家【{2}】出局！"
+                        .FormatStr(fromPlayer.name, targetCardTable.name, target.name));
+                }
             }
-            else if (cardTableID == 6) // 猜拳，我日
+            else if (cardTableID == 6) // 决斗
             {
-
+                if (result == 1)
+                {
+                    hint.Show("【{0}】决斗胜利，玩家【{1}】出局！"
+                        .FormatStr(fromPlayer.name, target.name));
+                }
+                else
+                {
+                    hint.Show("【{0}】决斗【{1}】失败。"
+                        .FormatStr(fromPlayer.name, target.name));
+                }
             }
             else if (cardTableID == 7) // 霸道 太阳
             {
-
+                hint.Show("【{0}】使用【{1}】技能，强制【{2}】弃置手牌！"
+                        .FormatStr(fromPlayer.name, fromCard.table.effect, target.name));
             }
             else if (cardTableID == 8) // 交换
             {
@@ -239,7 +259,8 @@ namespace RedStone
             }
             else if (cardTableID == 10)
             {
-
+                hint.Show("【{0}】主动使用【{1}】，出局！"
+                        .FormatStr(fromPlayer.name, fromCard.name));
             }
         }
 

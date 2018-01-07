@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Message;
@@ -25,6 +25,7 @@ namespace RedStone
             this.sessionID = sessionID;
             RegisterMsg<CMLoginRequest>(OnLogin);
             RegisterMsg<CMMatchRequest>(OnBeginMatch);
+            RegisterMsg<CMMatchCancel>(OnCancelMatch);
             RegisterMsg<CMCancelReconnect>(OnCancelReconnect);
         }
 
