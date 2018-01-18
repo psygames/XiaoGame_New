@@ -26,13 +26,24 @@ ps:不要放在Resources目录下（不然会被打包到安装包中）
 
 
 ### 插件  
-*  
-/Plugins/YLWebSocket  
+*  /Plugins/YLWebSocket  
 对浏览器WebSocket的支持  
 
-*  
-/Plugins/ugui_tween_tool  
+*  /Plugins/ugui_tween_tool  
 uTween 插件
 
 ## 脚本
-*  /Scripts/System
+*  /Scripts/System/Core  
+Singleton单例基类  
+LT是多语言简化类  
+ExtMethod是扩展方法  
+
+*  /Scripts/System/Protocol
+全部proto生成后的协议文件，通过 项目根路径/Tools/protogen 生成工具生成的。对应proto文件在/Tools/protogen/proto中
+
+* /Scripts/System/Tools  
+一些工具类，看名字大概知道其作用。  
+特殊说明下：  
+GameObjectHelper中SetListContent经常用于创建多个相同prefab。（参考脚本 /Scripts/Module/UI/Battle/SOS/SosGuessPanel.cs）  
+UIHelper 包含N多UI的辅助功能，详见类方法。  
+EventDef 事件声明，发送和监听的时间名在这里写。
