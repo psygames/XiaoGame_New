@@ -22,7 +22,7 @@ namespace Message {
     static ProtonumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSq+BAoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5wcm90b251bS5wcm90bxIHbWVzc2FnZSrqBAoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
             "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
             "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxIWChFDTUNh",
@@ -33,9 +33,10 @@ namespace Message {
             "Q0JQbGF5Q2FyZBDbDxITCg5DQlBsYXlDYXJkU3luYxDcDxITCg5DQlNlbmRD",
             "YXJkU3luYxDeDxIXChJDQkJhdHRsZVJlc3VsdFN5bmMQ4A8SFQoQQ0JDYXJk",
             "RWZmZWN0U3luYxDiDxIZChRDQlBsYXllckRyb3BDYXJkU3luYxDkDxIUCg9D",
-            "QlBsYXllck91dFN5bmMQ5g8SEwoOQk1Mb2dpblJlcXVlc3QQuRcSEQoMQk1M",
-            "b2dpblJlcGx5ELoXEhgKE0JNQ3JlYXRlUm9vbVJlcXVlc3QQuxcSFgoRQk1D",
-            "cmVhdGVSb29tUmVwbHkQvBdiBnByb3RvMw=="));
+            "QlBsYXllck91dFN5bmMQ5g8SEgoNQ0JTZW5kTWVzc2FnZRDnDxIWChFDQlNl",
+            "bmRNZXNzYWdlU3luYxDoDxITCg5CTUxvZ2luUmVxdWVzdBC5FxIRCgxCTUxv",
+            "Z2luUmVwbHkQuhcSGAoTQk1DcmVhdGVSb29tUmVxdWVzdBC7FxIWChFCTUNy",
+            "ZWF0ZVJvb21SZXBseRC8F2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -78,6 +79,8 @@ namespace Message {
     [pbr::OriginalName("CBCardEffectSync")] CbcardEffectSync = 2018,
     [pbr::OriginalName("CBPlayerDropCardSync")] CbplayerDropCardSync = 2020,
     [pbr::OriginalName("CBPlayerOutSync")] CbplayerOutSync = 2022,
+    [pbr::OriginalName("CBSendMessage")] CbsendMessage = 2023,
+    [pbr::OriginalName("CBSendMessageSync")] CbsendMessageSync = 2024,
     /// <summary>
     ///Battle -> Main
     /// </summary>

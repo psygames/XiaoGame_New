@@ -1,0 +1,8 @@
+syntax = "proto3";
+package message;
+
+message CBSendMessageSync
+{
+    int32 fromPlayerID = 1;
+    string content = 2;
+}

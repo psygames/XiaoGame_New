@@ -9,6 +9,7 @@ namespace RedStone.Data.SOS
     {
         public int id { get; private set; }
         public string name { get; private set; }
+        public string numTag { get { return "<color=#ffff00>{0}号玩家</color>".FormatStr(seat); } }
         public int level { get; private set; }
         public int gold { get; private set; }
         public bool isMain { get; private set; }
@@ -16,10 +17,20 @@ namespace RedStone.Data.SOS
         public bool isTurned { get { return state == State.Turn; } }
         public State state { get; private set; }
         public Effect effect { get; private set; }
+        public string headIcon { get; private set; }
 
         private List<CardData> m_handCards = new List<CardData>();
         public List<CardData> handCards { get { return m_handCards; } }
-        public CardData oneCard { get { return m_handCards[0]; } }
+        public CardData oneCard { get { return m_handCards.Count > 0 ? m_handCards[0] : null; } }
+
+        public PlayerData()
+        {
+            int index = UnityEngine.Random.Range(0, 8);
+            if (index < 4)
+                headIcon = "user_icon_man" + index;
+            else
+                headIcon = "user_icon_woman" + index % 4;
+        }
 
         public void SetData(Message.BattlePlayerInfo info)
         {
@@ -91,7 +102,9 @@ namespace RedStone.Data.SOS
                 int index = m_handCards.QuickFindIndex(a => a.id <= 0);
                 if (index >= 0)
                     m_handCards.RemoveAt(index);
-
+                else
+                    UnityEngine.Debug.LogError("移除卡牌不存在，{0}"
+                        .FormatStr(card == null ? "index:" + index.ToString() : "id:" + card.id.ToString()));
             }
         }
 

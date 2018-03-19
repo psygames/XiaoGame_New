@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Google Play game services IDs.
+Save this file as res/values/games-ids.xml in your project.
+-->
+<resources>
+  <string name="app_id">1069843549040</string>
+  <string name="Score">CgkI8JaUvZEfEAIQAQ</string>
+  <string name="Total_Kills">CgkI8JaUvZEfEAIQAg</string>
+  <string name="Assist_Kills">CgkI8JaUvZEfEAIQAw</string>
+  <string name="Headshots">CgkI8JaUvZEfEAIQBA</string>
+  <string name="Shots_Accuracy">CgkI8JaUvZEfEAIQBQ</string>
+  <string name="Total_Driven">CgkI8JaUvZEfEAIQBg</string>
+  <string name="Legion_Score">CgkI8JaUvZEfEAIQBw</string>
+</resources>

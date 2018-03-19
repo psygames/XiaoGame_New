@@ -28,6 +28,7 @@ namespace RedStone
             public const string CardEffect = "SOS.CardEffect";
             public const string DropCard = "SOS.DropCard";
             public const string PlayerOut = "SOS.PlayerOut";
+            public const string SendMessageSync = "SOS.SendMessage";
         }
     }
 }

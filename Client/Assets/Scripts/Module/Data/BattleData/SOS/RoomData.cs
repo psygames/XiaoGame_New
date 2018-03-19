@@ -15,6 +15,7 @@ namespace RedStone.Data.SOS
         private List<CardData> m_cards = new List<CardData>();
         public PlayerData whosTurn { get; private set; }
         public int leftCardCount { get; private set; }
+        public int playedCardCount { get { return Math.Max(0, m_cards.Count - leftCardCount - m_players.Count); } }
         private CardData m_defaultCard = new CardData();
 
 

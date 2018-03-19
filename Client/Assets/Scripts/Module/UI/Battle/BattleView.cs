@@ -8,6 +8,7 @@ namespace RedStone
     public class BattleView : ViewBase
     {
         public SosRoom room;
+        public Data.SOS.RoomData roomData { get { return GF.GetProxy<SosProxy>().room; } }
 
         private void Start()
         {
@@ -28,28 +29,28 @@ namespace RedStone
             Register<Message.CBCardEffectSync>(EventDef.SOS.CardEffect, room.OnCardEffect);
             Register<Message.CBPlayerDropCardSync>(EventDef.SOS.DropCard, room.OnDropCard);
             Register<Message.CBPlayerOutSync>(EventDef.SOS.PlayerOut, room.OnPlayerOut);
+            Register<Message.CBSendMessageSync>(EventDef.SOS.SendMessageSync, room.OnSendMessageSync);
         }
-
-
 
         public override void OnOpen()
         {
             base.OnOpen();
         }
 
-        void OnClickReady()
+        void OnClickExit()
         {
-            GetProxy<SosProxy>().Ready();
-        }
-
-        void OnClickPlayCard()
-        {
-            room.OnClickPlayCard();
-        }
-
-        void OnClickBack()
-        {
+            if (roomData.state != Data.SOS.RoomData.State.End)
+            {
+                Toast.instance.Show("当前状态不能退出房间");
+                return;
+            }
+            GF.GetProxy<SosProxy>().Close();
             GF.ChangeState<HallState>();
+        }
+
+        void OnClickSendMessage()
+        {
+            room.OnClickSendMessage();
         }
     }
 }

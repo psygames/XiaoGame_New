@@ -41,6 +41,7 @@ namespace RedStone.SOS
             RegisterMsg<CBJoinBattleRequest>(OnJoinBattle);
             RegisterMsg<CBReady>(OnReady);
             RegisterMsg<CBPlayCard>(OnPlayCard);
+            RegisterMsg<CBSendMessage>(OnPlayerSendMessage);
         }
 
         void InitPlayers()
@@ -226,9 +227,17 @@ namespace RedStone.SOS
             Debug.Log("{0}\t已准备", player.user.name);
         }
 
+        void OnPlayerSendMessage(Player player, CBSendMessage msg)
+        {
+            CBSendMessageSync sync = new CBSendMessageSync();
+            sync.FromPlayerID = player.id;
+            sync.Content = msg.Content;
+            SendToAll(sync);
+        }
+
         void OnPlayCard(Player player, CBPlayCard msg)
         {
-            if (m_whosTurn != player)
+            if (m_whosTurn != player || m_isThisTrunPlayedCard)
             {
                 Debug.LogError("{0}\t出牌，但是不是他的回个，已禁止！", player.name);
                 return;
@@ -708,9 +717,10 @@ namespace RedStone.SOS
             {
                 CBPlayCard msg = new CBPlayCard();
                 msg.CardID = RandPlayerCardID(m_whosTurn);
-                if (GetCard(msg.CardID).type == CardType.ForOneTarget)
+                var card = GetCard(msg.CardID);
+                if (card.type == CardType.ForOneTarget)
                     msg.TargetID = RandTargetID(m_whosTurn);
-                if (msg.CardID == 5) //猜测
+                if (card.tableID == 5) //猜测
                 {
                     List<Card> rnds = new List<Card>(m_cardMgr.leftCards);
                     foreach (var p in alivePlayers)

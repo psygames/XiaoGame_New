@@ -19,7 +19,7 @@ namespace RedStone
         {
             var room = GF.GetProxy<SosProxy>().room;
             var player = room.GetPlayer(info.PlayrID);
-            playerName.text = player.name;
+            playerName.text = player.numTag;
             if (info.State == (int)PlayerData.State.Out)
             {
                 emptyObj.SetActive(false);

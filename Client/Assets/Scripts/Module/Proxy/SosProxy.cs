@@ -38,6 +38,7 @@ namespace RedStone
             RegisterMessage<CBCardEffectSync>(OnCardEffectSync);
             RegisterMessage<CBPlayerDropCardSync>(OnDropCardSync);
             RegisterMessage<CBPlayerOutSync>(OnPlayerOutSync);
+            RegisterMessage<CBSendMessageSync>(OnSendMessageSync);
         }
 
         private void InitSocket()
@@ -78,6 +79,12 @@ namespace RedStone
             }
         }
 
+        public void Close()
+        {
+            if (isConnected && network != null && network.socket != null)
+                network.socket.Close();
+        }
+
         public void Login()
         {
             CBLoginRequest req = new CBLoginRequest();
@@ -110,7 +117,7 @@ namespace RedStone
             SendMessage(req);
         }
 
-        public void PlayCard(int cardId, int target = 0,int extend = 0)
+        public void PlayCard(int cardId, int target = 0, int extend = 0)
         {
             CBPlayCard msg = new CBPlayCard();
             msg.CardID = cardId;
@@ -119,6 +126,12 @@ namespace RedStone
             SendMessage(msg);
         }
 
+        public void SendChatMessage(string content)
+        {
+            CBSendMessage msg = new CBSendMessage();
+            msg.Content = content;
+            SendMessage(msg);
+        }
 
         // On Network Message
         void OnJoined(CBJoinBattleReply msg)
@@ -236,10 +249,18 @@ namespace RedStone
         void OnPlayerOutSync(CBPlayerOutSync msg)
         {
             var player = room.GetPlayer(msg.PlayerID);
-            var card = room.GetCard(msg.HandCardID);
-            player.RemoveCard(card);
+            if (msg.HandCardID > 0 && player.oneCard != null)
+            {
+                var card = room.GetCard(msg.HandCardID);
+                player.RemoveCard(card);
+            }
             player.Out();
             SendEvent(EventDef.SOS.PlayerOut, msg);
+        }
+
+        void OnSendMessageSync(CBSendMessageSync msg)
+        {
+            SendEvent(EventDef.SOS.SendMessageSync, msg);
         }
     }
 }

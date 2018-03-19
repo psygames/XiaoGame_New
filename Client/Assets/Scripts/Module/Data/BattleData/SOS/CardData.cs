@@ -10,6 +10,7 @@ namespace RedStone.Data.SOS
         public int id;
         public int tableID;
         public string name { get { return table.name; } }
+        public string nameRT { get { return "<color=#ff8000>{0}</color>".FormatStr(name); } }
         public int point { get { return table.point; } }
         public int star { get { return table.star; } }
         public CardType type { get { return (CardType)table.type; } }
@@ -17,6 +18,8 @@ namespace RedStone.Data.SOS
         public string image { get { return table.image; } }
         public string bg { get { return table.image + "_bg"; } }
         public string titleBg { get { return table.image + "_title_bg"; } }
+        public string effect { get { return table.effect; } }
+        public string effectRT { get { return "<color=#ff8000>{0}</color>".FormatStr(effect); } }
 
         public void SetData(int id, int tableID)
         {

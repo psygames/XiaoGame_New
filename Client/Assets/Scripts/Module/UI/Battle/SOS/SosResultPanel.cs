@@ -29,7 +29,7 @@ namespace RedStone
 
             var winner = data.ResultInfos.First(a => a.IsWin);
             if (winner != null)
-                title.text = "恭喜 {0} 获得最终胜利！".FormatStr(room.GetPlayer(winner.PlayrID).name);
+                title.text = "恭喜 {0} 获得最终胜利！".FormatStr(room.GetPlayer(winner.PlayrID).numTag);
             else
                 title.text = "没有获胜玩家";
 

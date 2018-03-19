@@ -110,6 +110,8 @@
     <Compile Include="Protocol\CBReadySync.cs" />
     <Compile Include="Protocol\CBRoomSync.cs" />
     <Compile Include="Protocol\CBSendCardSync.cs" />
+    <Compile Include="Protocol\CBSendMessage.cs" />
+    <Compile Include="Protocol\CBSendMessageSync.cs" />
     <Compile Include="Protocol\CMCancelReconnect.cs" />
     <Compile Include="Protocol\CMLoginReply.cs" />
     <Compile Include="Protocol\CMLoginRequest.cs" />
@@ -150,4 +152,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)Resource" "$(TargetDir)Resource" /s /i /y
+xcopy "$(ProjectDir)$(OutDir)..\$(ConfigurationName)" "$(SolutionDir)Publish\Main" /s /i /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

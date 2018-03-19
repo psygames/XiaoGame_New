@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using Plugins;
+using System.Collections.Generic;
+
 namespace RedStone
 {
     public class GameManager : Core.SingletonBehaviour<GameManager>
@@ -14,12 +16,14 @@ namespace RedStone
         {
             base.Awake();
 
-            CreateInstance();
-            Init();
         }
 
         private void Start()
         {
+            Debug.Log("客户端运行");
+            CreateInstance();
+            Init();
+
             ChangeGameState<HallLoadingState>();
         }
 
@@ -44,16 +48,7 @@ namespace RedStone
             ProxyManager.instance.Init();
             UIManager.instance.Init();
             TaskManger.instance.Init();
-        }
 
-        private void OnGUI()
-        {
-            return;
-            GUIStyle fontStyle = new GUIStyle();
-            fontStyle.normal.background = null;    //设置背景填充  
-            fontStyle.normal.textColor = new Color(1, 0, 0);   //设置字体颜色  
-            fontStyle.fontSize = 20;       //字体大小  
-            GUI.Label(new Rect(0, 0, 200, 200), UUID.DEVICE, fontStyle);
         }
 
         private void Update()

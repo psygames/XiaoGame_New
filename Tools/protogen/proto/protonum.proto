@@ -32,6 +32,8 @@ enum ProtoNum
 	CBCardEffectSync = 2018;
 	CBPlayerDropCardSync = 2020;
 	CBPlayerOutSync = 2022;
+	CBSendMessage = 2023;
+	CBSendMessageSync = 2024;
 
 	//Battle -> Main
 	BMLoginRequest = 3001;

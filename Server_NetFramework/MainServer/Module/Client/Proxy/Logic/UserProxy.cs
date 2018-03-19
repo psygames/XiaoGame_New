@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -103,7 +103,7 @@ namespace RedStone
 
         public UserData GetData(long uid)
         {
-            return m_userDatas.Values.First(a => a.uid == uid);
+            return m_userDatas.Values.FirstOrDefault(a => a.uid == uid);
         }
 
         public UserMessageHandle GetHandle(long uid)
