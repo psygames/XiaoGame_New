@@ -2,10 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
 using System.Net.NetworkInformation;
- 
+
 using System.Net.Sockets;
 using System;
- namespace RedStone
+namespace RedStone
 {
     public class DeviceID
     {
@@ -63,7 +63,7 @@ using System;
             }
             catch (Exception e)
             {
-				Logger.LogError(this, "GetIPv6 error:{0}", e);
+                Logger.LogError(this, "GetIPv6 error:{0}", e);
             }
 
         }
@@ -86,9 +86,9 @@ using System;
 #if UNITY_EDITOR
         private void getUUID()
         {
-			_uuid = "19AAB430-9CB8-4325-ACC5-D7D386B68960" + GetMacAddress ();
+            _uuid = "19AAB430-9CB8-4325-ACC5-D7D386B68960" + GetMacAddress();
 
-		}
+        }
 
         private void getMacAddress()
         {
@@ -209,6 +209,10 @@ using System;
                 {
                     s_instance = new DeviceID();
                 }
+#if UNITY_EDITOR
+                if (GameManager.instance != null)
+                    return s_instance._uuid + GameManager.instance.UUIDSuffix;
+#endif
                 return s_instance._uuid;
             }
         }

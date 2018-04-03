@@ -115,7 +115,7 @@ namespace EditorTools
     public class AtlasPackerHelper : AssetPostprocessor
     {
         public static AtlasTextureFormatList list = null;
-        public const string ATLAS_TEXTURE_FORMAT_CONFIG_PATH = "Assets/Editor/Config/AtlasTextureFormat.json";
+        public const string ATLAS_TEXTURE_FORMAT_CONFIG_PATH = EditorConfig.CONFIG_PATH + "AtlasTextureFormat.json";
         public const int MAX_TEXTURE_SIZE = 4096;
         public static void Init()
         {
@@ -443,7 +443,7 @@ namespace EditorTools
             for (int i = 0; i < directories.Length; i++)
             {
                 var holderName = directories[i].Substring(directories[i].IndexOf("ResourcesUI/") + "ResourcesUI/".Length);
-                textureHolder.paths[i] = "Atlas/" +  holderName;
+                textureHolder.paths[i] = "Atlas/" + holderName;
             }
             for (int i = 0; i < spriteList.Count; ++i)
             {

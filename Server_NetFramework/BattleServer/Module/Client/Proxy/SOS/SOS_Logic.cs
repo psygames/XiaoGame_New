@@ -24,7 +24,7 @@ namespace RedStone.SOS
         const float END_KEEP_TIME = 20f;
 
 
-        private float m_whosTurnCounter = 0;
+        private float m_whosTurnCountDown = 0;
         private State m_state = State.WaitJoin;
         private List<Player> m_players = new List<Player>();
         private List<Player> alivePlayers { get { return m_players.Where(a => a.state != Player.State.Out).ToList(); } }
@@ -179,7 +179,7 @@ namespace RedStone.SOS
 
         void UpdateTurnTime()
         {
-            m_whosTurnCounter = Math.Max(m_whosTurnCounter - Time.deltaTime, 0);
+            m_whosTurnCountDown = Math.Max(m_whosTurnCountDown - Time.deltaTime, 0);
         }
 
         void OnJoinBattle(Player player, CBJoinBattleRequest msg)
@@ -467,7 +467,7 @@ namespace RedStone.SOS
         private Player m_whosTurn = null;
         public void TurnNext()
         {
-            m_whosTurnCounter = WHOS_TURN_TIME;
+            m_whosTurnCountDown = WHOS_TURN_TIME;
             m_isThisTrunPlayedCard = false;
 
             bool turnChanged = false;
@@ -701,52 +701,68 @@ namespace RedStone.SOS
             }
             else if (m_state == State.Started)
             {
+                UpdateTurn();
                 UpdateAIPlay();
             }
         }
 
-        private bool m_isThisTrunPlayedCard = false;
-        private float m_aiThinkTime = 15;
-
-        void UpdateAIPlay()
+        void UpdateTurn()
         {
-            if (m_whosTurn.isAI
-                && !m_isThisTrunPlayedCard
-                && m_whosTurnCounter <= WHOS_TURN_TIME - m_aiThinkTime
-                && m_whosTurn.handCards.Count > 0)
+            if (!m_whosTurn.isAI
+                && m_whosTurnCountDown <= 0)
             {
-                CBPlayCard msg = new CBPlayCard();
-                msg.CardID = RandPlayerCardID(m_whosTurn);
-                var card = GetCard(msg.CardID);
-                if (card.type == CardType.ForOneTarget)
-                    msg.TargetID = RandTargetID(m_whosTurn);
-                if (card.tableID == 5) //猜测
-                {
-                    List<Card> rnds = new List<Card>(m_cardMgr.leftCards);
-                    foreach (var p in alivePlayers)
-                    {
-                        rnds.AddRange(p.handCards);
-                    }
-                    int rndIndex = rand.Next(0, rnds.Count);
-                    msg.Extend = rnds[rndIndex].tableID;
-                }
-                OnPlayCard(m_whosTurn, msg);
-                m_aiThinkTime = rand.Next(8, 20);
+                RandomPlayCard();
             }
         }
 
+        private void RandomPlayCard()
+        {
+            CBPlayCard msg = new CBPlayCard();
+            msg.CardID = RandomPlayerCardID(m_whosTurn);
+            var card = GetCard(msg.CardID);
+            if (card.type == CardType.ForOneTarget)
+                msg.TargetID = RandomTargetID(m_whosTurn);
+            if (card.tableID == 5) //猜测
+            {
+                List<Card> rnds = new List<Card>(m_cardMgr.leftCards);
+                foreach (var p in alivePlayers)
+                {
+                    rnds.AddRange(p.handCards);
+                }
+                int rndIndex = rand.Next(0, rnds.Count);
+                msg.Extend = rnds[rndIndex].tableID;
+            }
+            OnPlayCard(m_whosTurn, msg);
+        }
 
-        private int RandTargetID(Player p)
+        private int RandomTargetID(Player p)
         {
             int index = rand.Next(alivePlayers.Count - 1);
             return alivePlayers.Where(a => a != p).ToList()[index].id;
         }
 
-        private int RandPlayerCardID(Player p)
+        private int RandomPlayerCardID(Player p)
         {
             if (p.handCards.Any(a => a.tableID == 10)) // 不出月亮
                 return p.handCards.First(a => a.tableID != 10).id;
             return p.handCards[rand.Next(p.handCards.Count)].id;
         }
+
+        private bool m_isThisTrunPlayedCard = false;
+        private float m_aiThinkTime = 10;
+
+        void UpdateAIPlay()
+        {
+            if (m_whosTurn.isAI
+                && !m_isThisTrunPlayedCard
+                && m_whosTurnCountDown <= WHOS_TURN_TIME - m_aiThinkTime
+                && m_whosTurn.handCards.Count > 0)
+            {
+                RandomPlayCard();
+                m_aiThinkTime = rand.Next(7, 15);
+            }
+        }
+
+
     }
 }

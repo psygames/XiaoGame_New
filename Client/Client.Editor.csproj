@@ -274,6 +274,9 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/Plugins/Newtonsoft/Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Client.Plugins.csproj">
@@ -288,7 +291,7 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\Scripts\AtlasPackerHelper.cs" />
     <Compile Include="Assets\Editor\Scripts\EditorConfig.cs" />
-    <Compile Include="Assets\Editor\Scripts\ProtoGenEditor.cs" />
+    <Compile Include="Assets\Editor\Scripts\GameManagerEditor.cs" />
     <Compile Include="Assets\Editor\UI\AnimateProgressBarEditor.cs" />
     <Compile Include="Assets\Editor\UI\ButtonEditor.cs" />
     <Compile Include="Assets\Editor\UI\DecorateEditor.cs" />

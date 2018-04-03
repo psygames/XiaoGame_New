@@ -3,7 +3,7 @@ namespace RedStone
 {
     public class NetConfig
     {
-        public const string LISTENER_IP = "47.100.28.149";
+        public const string LISTENER_IP = "127.0.0.1";
         public const int LISTENER_PORT = 8740;
 
         public const string SERVER_IP = "127.0.0.1";

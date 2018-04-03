@@ -10,3 +10,4 @@ Tools/protogen/source/client/dist
 *.spec
 Tools/protogen/source/.idea/
 Server_NetFramework/packages/
+Server_NetFramework/Publish/
