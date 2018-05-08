@@ -14,6 +14,12 @@ namespace RedStone
         /// </summary>
         public ServerNetworkManager forClient { get; private set; }
 
+        public NetworkManager()
+        {
+            forClient = new ServerNetworkManager();
+            forServer = new ClientNetworkManager();
+        }
+
         public void Init()
         {
             InitForClient();
@@ -22,24 +28,17 @@ namespace RedStone
 
         private void InitForServer()
         {
-            forServer = new ClientNetworkManager();
-            var socket = new NetworkLib.WebSocketClient();
+            var socket = new WebSocketClient();
             socket.Setup(NetConfig.SERVER_IP, NetConfig.SERVER_PORT);
-            var serializer = new ProtoSerializer();
-            serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadProtoNum(typeof(Message.ProtoNum));
-            forServer.Init(socket, serializer);
+            forServer.Init(socket);
             Logger.LogInfo("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
         }
 
         private void InitForClient()
         {
-            forClient = new ServerNetworkManager();
-            var listener = new NetworkLib.WebSocketServer();
+            var listener = new WebSocketServer();
             listener.Setup("0.0.0.0", NetConfig.LISTENER_PORT);
             var serializer = new ProtoSerializer();
-            serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadProtoNum(typeof(Message.ProtoNum));
             forClient.Init(listener, serializer);
             Logger.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(listener.address));
         }

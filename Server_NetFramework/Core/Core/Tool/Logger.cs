@@ -18,19 +18,24 @@ public class Logger
 
     public static void LogInfo(string str, params object[] parms)
     {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(str, parms);
+        LogWithColor(str, ConsoleColor.Green, parms);
     }
 
     public static void Log(string str, params object[] parms)
     {
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine(str, parms);
+        LogWithColor(str, ConsoleColor.White, parms);
     }
 
     public static void LogError(string str, params object[] parms)
     {
-        Console.ForegroundColor = ConsoleColor.Red;
+        LogWithColor(str, ConsoleColor.DarkRed, parms);
+    }
+
+    private static void LogWithColor(string str, ConsoleColor color, params object[] parms)
+    {
+        var lastColor = Console.ForegroundColor;
+        Console.ForegroundColor = color;
         Console.WriteLine(str, parms);
+        Console.ForegroundColor = lastColor;
     }
 }

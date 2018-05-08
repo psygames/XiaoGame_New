@@ -18,11 +18,10 @@ namespace Plugins
         static void TestProtoSerializer()
         {
             ProtoSerializer serializer = new ProtoSerializer();
-            serializer.LoadProtoNum(typeof(Message.ProtoNumTest));
             LoginRequest msg = new LoginRequest();
             msg.SessionID = "hello";
             byte[] data = serializer.Serialize(msg);
-
+            
             var deMsg = serializer.Deserialize(data);
         }
 

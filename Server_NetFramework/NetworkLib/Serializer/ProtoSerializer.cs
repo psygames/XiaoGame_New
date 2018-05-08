@@ -8,38 +8,41 @@ using Google.Protobuf;
 
 namespace NetworkLib
 {
-    public class ProtoSerializer : IProtoSerializer
+    public class ProtoSerializer : ISerializer
     {
         private Dictionary<string, int> m_protocolNum = new Dictionary<string, int>();
         private Dictionary<int, string> m_numProtocal = new Dictionary<int, string>();
 
-        public Func<string, Type> getTypeFunc { get; set; }
-
-        public void LoadProtoNum(Type protoNumEnumType)
+        public void Init()
         {
+            LoadProtoNum();
+        }
+
+        private void LoadProtoNum()
+        {
+            var assembly = Assembly.GetEntryAssembly();
+            var protoNumEnumType = assembly.GetType("Message.ProtoNum");
+            m_protocolNum.Clear();
+            m_numProtocal.Clear();
+
             foreach (var value in Enum.GetValues(protoNumEnumType))
             {
                 int protoNum = (int)value;
                 string protoName = Enum.GetName(protoNumEnumType, protoNum);
-                /*
-                protoName = protoNumEnumType.GetField(protoName).GetCustomAttributes(true).ToList().First
-                        (a => a.AttributeType == typeof(Google.Protobuf.Reflection.OriginalNameAttribute))
-                            .ConstructorArguments[0].Value.ToString();
-                            */
                 protoName = protoNumEnumType.Namespace + "." + protoName;
                 m_protocolNum.Add(protoName, protoNum);
                 m_numProtocal.Add(protoNum, protoName);
             }
         }
 
-        public byte[] Serialize(IMessage proto)
+        public byte[] Serialize(object proto)
         {
-            byte[] data = _Serialize(proto);
+            byte[] data = _Serialize(proto as IMessage);
             AddHeader(ref data, proto.GetType());
             return data;
         }
 
-        public IMessage Deserialize(byte[] data)
+        public object Deserialize(byte[] data)
         {
             if (data.Length < 2)
             {
@@ -72,9 +75,7 @@ namespace NetworkLib
 
         private Type GetType(string name)
         {
-            if (getTypeFunc != null)
-                return getTypeFunc(name);
-            return Type.GetType(name);
+            return Assembly.GetEntryAssembly().GetType(name);
         }
 
         private Type HeaderToType(byte[] header)

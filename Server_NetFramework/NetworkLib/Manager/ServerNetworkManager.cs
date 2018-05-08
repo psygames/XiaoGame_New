@@ -6,24 +6,39 @@ namespace NetworkLib
     public class ServerNetworkManager
     {
         private EventManager m_eventMgr = null;
-        private IProtoSerializer m_serializer = null;
-        private ServerBase m_server = null;
+        private ISerializer m_serializer = null;
+        private IServer m_server = null;
 
+        public bool isInit { get; private set; }
         public IServer server { get { return m_server; } }
 
-        public ServerNetworkManager()
+        public ServerNetworkManager(IServer server, ISerializer serializer)
         {
             m_eventMgr = new EventManager();
-            m_serializer = new ProtoSerializer();
-        }
-
-        public void Init(IServer server, IProtoSerializer serializer)
-        {
+            m_server = server;
             m_serializer = serializer;
-            m_server = server as ServerBase;
-            m_server.onReceived = OnReceived;
         }
 
+        public void Init()
+        {
+            m_serializer.Init();
+
+            if (isInit && m_server != null)
+            {
+                m_server.onReceived -= OnReceived;
+                m_server.onConnected -= OnConnected;
+                m_server.onClosed -= OnClosed;
+            }
+            m_socket = socket;
+            m_socket.onReceived += OnReceived;
+            m_socket.onConnected += OnConnected;
+            m_socket.onClosed += OnClosed;
+            isInit = true;
+        }
+
+        void OnConnected(string sessionID) {
+
+        }
         void OnReceived(string sessionID, byte[] data)
         {
             object obj = m_serializer.Deserialize(data);

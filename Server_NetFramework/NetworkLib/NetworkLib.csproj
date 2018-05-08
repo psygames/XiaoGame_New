@@ -58,9 +58,9 @@
     <Compile Include="Network\Interface\IServer.cs" />
     <Compile Include="Network\Interface\ISession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tool\IProtoSerializer.cs" />
+    <Compile Include="Serializer\ISerializer.cs" />
     <Compile Include="Tool\NetTool.cs" />
-    <Compile Include="Tool\ProtoSerializer.cs" />
+    <Compile Include="Serializer\ProtoSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

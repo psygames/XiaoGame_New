@@ -6,9 +6,10 @@ namespace NetworkLib
     public class ClientNetworkManager
     {
         protected EventManager m_eventMgr = null;
-        protected IProtoSerializer m_serializer = null;
+        protected ISerializer m_serializer = null;
         protected IClient m_socket = null;
 
+        public bool isInit { get; private set; }
         public IClient socket { get { return m_socket; } }
         public Action onConnected { get; set; }
         public Action onClosed { get; set; }
@@ -19,13 +20,20 @@ namespace NetworkLib
             m_serializer = new ProtoSerializer();
         }
 
-        public void Init(IClient socket, IProtoSerializer serializer)
+        public void Init(IClient socket)
         {
-            m_serializer = serializer;
+            m_serializer.Init();
+            if (isInit && m_socket != null)
+            {
+                m_socket.onReceived -= OnReceived;
+                m_socket.onConnected -= OnConnected;
+                m_socket.onClosed -= OnClosed;
+            }
             m_socket = socket;
-            m_socket.onReceived = OnReceived;
-            m_socket.onConnected = OnConnected;
-            m_socket.onClosed = OnClosed;
+            m_socket.onReceived += OnReceived;
+            m_socket.onConnected += OnConnected;
+            m_socket.onClosed += OnClosed;
+            isInit = true;
         }
 
         public void RegisterNetwork<T>(Action<T> action)
@@ -43,6 +51,7 @@ namespace NetworkLib
             };
             RegisterNetwork(_action);
         }
+
         protected virtual void OnReceived(byte[] data)
         {
             object obj = m_serializer.Deserialize(data);
