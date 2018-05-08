@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Message;
+using NetworkLib;
 
 namespace RedStone
 {
@@ -14,7 +15,7 @@ namespace RedStone
 
             network.socket.onConnected = () =>
             {
-                Debug.LogInfo("连接主服成功！");
+                Logger.LogInfo("连接主服成功！");
                 Login();
             };
 
@@ -23,18 +24,17 @@ namespace RedStone
 
         public void Connenct()
         {
-            Debug.LogInfo("开始连接主服...");
+            Logger.LogInfo("开始连接主服...");
             network.socket.Connect();
         }
 
         public void Login()
         {
             BMLoginRequest msg = new BMLoginRequest();
-            var serv = NetworkManager.instance.forClient.server as Plugins.Network.WebSocketServer;
-            msg.ListenerAddress = Plugins.NetTool.GetAddress(NetConfig.LISTENER_IP, NetConfig.LISTENER_PORT);
+            msg.ListenerAddress = NetTool.GetAddress(NetConfig.LISTENER_IP, NetConfig.LISTENER_PORT);
             SendMessage<BMLoginRequest, BMLoginReply>(msg, (reply) =>
             {
-                Debug.Log($"登录主服成功, 战场名: {reply.Name}");
+                Logger.Log($"登录主服成功, 战场名: {reply.Name}");
             });
         }
 

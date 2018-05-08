@@ -211,8 +211,8 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/software/develop/unity2017/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets/Scripts/Plugins/Google.Protobuf/Google.Protobuf.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/Plugins/Newtonsoft/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
@@ -220,8 +220,17 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets/Plugins/Newtonsoft/Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Core">
+      <HintPath>Assets/Scripts/Plugins/Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkLib">
+      <HintPath>Assets/Scripts/Plugins/NetworkLib.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets/Scripts/Plugins/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets/Scripts/Plugins/Google.Protobuf.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -271,7 +280,6 @@
     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
     <None Include="Assets\Plugins\Android\res\values\version.xml" />
     <None Include="Assets\Plugins\Android\res\xml\file_paths.xml" />
-    <None Include="Assets\Resources\Config\protoNum.txt" />
     <None Include="Assets\Resources\Languages\fontstyle_cn.xml" />
     <None Include="Assets\Resources\Languages\fontstyle_en.xml" />
     <None Include="Assets\Resources\Languages\string_cn.xml" />
@@ -284,8 +292,8 @@
     <None Include="Assets\Resources\xml\TableSosCard.xml" />
     <None Include="Assets\Resources\xml\TableTextColor.xml" />
     <None Include="Assets\Resources\xmlList.txt" />
-    <None Include="Assets\Scripts\Plugins\Google.Protobuf\Google.Protobuf.xml" />
-    <None Include="Assets\Scripts\Plugins\Mono.Xml" />
+    <None Include="Assets\Scripts\Plugins\Google.Protobuf.xml" />
+    <None Include="Assets\Scripts\Plugins\websocket-sharp.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

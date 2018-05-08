@@ -11,7 +11,7 @@ namespace RedStone
     public class UserMessageHandle
     {
         public string sessionID { get; private set; }
-        private Plugins.EventManager m_eventMgr = new Plugins.EventManager();
+        private EventManager m_eventMgr = new EventManager();
 
         public UserDaoProxy dao { get { return ProxyManager.instance.GetProxy<UserDaoProxy>(); } }
         public UserProxy userProxy { get { return ProxyManager.instance.GetProxy<UserProxy>(); } }
@@ -33,7 +33,7 @@ namespace RedStone
         {
             data.Logout();
             dao.Logout(data.uid);
-            Debug.Log($"{data.uid} logout");
+            Logger.Log($"{data.uid} logout");
         }
 
         private void OnLogin(CMLoginRequest msg)
@@ -42,7 +42,7 @@ namespace RedStone
             data.SetData(sessionID, db);
             data.Login();
 
-            Debug.Log($"{data.uid} login");
+            Logger.Log($"{data.uid} login");
 
             CMLoginReply reply = new CMLoginReply();
             reply.PlayerInfo = new PlayerInfo();

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package message;
+
+// 客户端 -> 主服 开始游戏请求
+message CMMatchRequest
+{
+    int32 gameID = 1;
+    int32 gameMode = 2;
+    int32 groupID = 3;
+}

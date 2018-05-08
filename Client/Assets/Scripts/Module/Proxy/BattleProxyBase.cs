@@ -1,11 +1,12 @@
 using UnityEngine;
 using System.Collections;
+using NetworkLib;
 
 namespace RedStone
 {
     public class BattleProxyBase : ProxyBase
     {
-        public override Plugins.ClientNetworkManager network
+        public override ClientNetworkManager network
         {
             get
             {

@@ -24,7 +24,7 @@ namespace RedStone
 
             // start server
             NetworkManager.instance.forClient.server.Start();
-            Debug.LogInfo("战场服务器已启动");
+            Logger.LogInfo("战场服务器已启动");
             // connect to main server
             ProxyManager.instance.GetProxy<MainServerProxy>().Connenct();
 

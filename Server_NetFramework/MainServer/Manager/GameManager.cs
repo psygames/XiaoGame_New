@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Timers;
 using Plugins;
 using Core;
@@ -19,9 +19,9 @@ namespace RedStone
 
             // 
             NetworkManager.instance.serverForBattle.server.Start();
-            Debug.LogInfo("网络监听（战场） 已启动");
+            Logger.LogInfo("网络监听（战场） 已启动");
             NetworkManager.instance.serverForClient.server.Start();
-            Debug.LogInfo("网络监听（客户端） 已启动");
+            Logger.LogInfo("网络监听（客户端） 已启动");
 
 
             m_updater.Start();

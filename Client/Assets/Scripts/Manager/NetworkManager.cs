@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Plugins;
 using UnityEngine;
+using NetworkLib;
 
 namespace RedStone
 {
@@ -30,9 +30,9 @@ namespace RedStone
         private void InitMainServer()
         {
             main = new ClientNetworkMangerEx();
-            var socket = new Plugins.Network.WebSocketClient();
+            var socket = new WebSocketClient();
             socket.Setup(GameManager.instance.serverAddress, 8730);
-            var serializer = new Plugins.ProtoSerializer();
+            var serializer = new ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));
             main.Init(socket, serializer);

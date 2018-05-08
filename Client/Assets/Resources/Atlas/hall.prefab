@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1345582821443152}
+  m_RootGameObject: {fileID: 1287155496495872}
   m_IsPrefabParent: 1
---- !u!1 &1345582821443152
+--- !u!1 &1287155496495872
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4583683197036992}
-  - component: {fileID: 114311327289655232}
+  - component: {fileID: 4590252123750122}
+  - component: {fileID: 114333222613510600}
   m_Layer: 0
   m_Name: hall
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4583683197036992
+--- !u!4 &4590252123750122
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1345582821443152}
+  m_GameObject: {fileID: 1287155496495872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114311327289655232
+--- !u!114 &114333222613510600
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1345582821443152}
+  m_GameObject: {fileID: 1287155496495872}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d1a35e011771364892584a9dab50468, type: 3}
@@ -54,4 +54,14 @@ MonoBehaviour:
   atlasName: hall
   allSprites:
   - {fileID: 21300000, guid: dcbc57ddf460d3b4793146a65f4f7904, type: 3}
+  - {fileID: 21300000, guid: 3ee38bacbda14f645adcc85d7395dd57, type: 3}
   - {fileID: 21300000, guid: fdc794d591e56eb47aa5d796f95a6c2a, type: 3}
+  - {fileID: 21300000, guid: 0f7a8a30813e21f4c92075d60d8d4ebe, type: 3}
+  - {fileID: 21300000, guid: d2d66fd30163ae141811601b3f1e0cd4, type: 3}
+  - {fileID: 21300000, guid: 153ccfd5ddbd14640b8c989f98445787, type: 3}
+  - {fileID: 21300000, guid: fb31340bb9d66bb469bc8cf913f9d12d, type: 3}
+  - {fileID: 21300000, guid: 2940b80ba4f2bf64d8d08fdd0eab943f, type: 3}
+  - {fileID: 21300000, guid: 67191dc9f70d7064ca0b5b580285531e, type: 3}
+  - {fileID: 21300000, guid: 843d23ee1c8b56a41b8bc97dbe70ba56, type: 3}
+  - {fileID: 21300000, guid: 65f5a43a45f97464ba701d1b4476e0e0, type: 3}
+  - {fileID: 21300000, guid: 59d8302524486c745a42506e0401a927, type: 3}

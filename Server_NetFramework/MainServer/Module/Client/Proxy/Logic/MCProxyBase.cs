@@ -1,8 +1,10 @@
-﻿using System;
+using System;
+using NetworkLib;
+
 namespace RedStone
 {
     public class MCProxyBase : ProxyBaseServer
     {
-        public override Plugins.ServerNetworkManager network { get { return NetworkManager.instance.serverForClient; } }
+        public override ServerNetworkManager network { get { return NetworkManager.instance.serverForClient; } }
     }
 }

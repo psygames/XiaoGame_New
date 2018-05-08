@@ -1,30 +1,33 @@
-﻿using System;
-using Core;
-public class Time
+using System;
+
+namespace Core
 {
-    public static float deltaTime
+    public class Time
     {
-        get
+        public static float deltaTime
         {
-            if (s_updater == null)
-                return 0;
-            return s_updater.deltaTime;
+            get
+            {
+                if (s_updater == null)
+                    return 0;
+                return s_updater.deltaTime;
+            }
         }
-    }
 
-    public static float time
-    {
-        get
+        public static float time
         {
-            if (s_updater == null)
-                return 0;
-            return s_updater.time;
+            get
+            {
+                if (s_updater == null)
+                    return 0;
+                return s_updater.time;
+            }
         }
-    }
 
-    private static Updater s_updater = null;
-    public static void SetUpdater(Updater updater)
-    {
-        s_updater = updater;
+        private static Updater s_updater = null;
+        public static void SetUpdater(Updater updater)
+        {
+            s_updater = updater;
+        }
     }
 }

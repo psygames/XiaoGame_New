@@ -6,6 +6,8 @@ package message;
 enum ProtoNum
 {
 	Unknown = 0;
+	//Common
+	Heartbeat = 101;
 
 	//Client -> Main
 	CMLoginRequest = 1001;

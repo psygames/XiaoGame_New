@@ -28,7 +28,7 @@ namespace RedStone
             if (!m_users.Contains(uid))
                 m_users.Add(uid);
             else
-                Debug.LogError($"duplicated match user : {uid}");
+                Logger.LogError($"duplicated match user : {uid}");
         }
 
         public void Remove(long uid)

@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Core</RootNamespace>
     <AssemblyName>Core</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,23 +35,47 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Common\Color.cs" />
     <Compile Include="Core\Common\ForUnityEngineNS.cs" />
+    <Compile Include="Core\Common\IUpdateable.cs" />
+    <Compile Include="Core\Common\Updater.cs" />
     <Compile Include="Core\Singleton\Singleton.cs" />
     <Compile Include="Core\Tool\BitConvert.cs" />
-    <Compile Include="Core\Tool\Debug.cs" />
+    <Compile Include="Core\Tool\Logger.cs" />
     <Compile Include="Core\Tool\ExtMethods.cs" />
     <Compile Include="Core\Tool\FileHelper.cs" />
+    <Compile Include="Manager\TableManager.cs" />
     <Compile Include="Core\Tool\Time.cs" />
-    <Compile Include="Framework\IUpdateable.cs" />
-    <Compile Include="Framework\Updater.cs" />
+    <Compile Include="Manager\EventManager.cs" />
+    <Compile Include="Manager\TaskManger.cs" />
+    <Compile Include="Mono.Xml\MiniParser.cs" />
+    <Compile Include="Mono.Xml\SecurityParser.cs" />
+    <Compile Include="Mono.Xml\SmallXmlParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Mono.Xml\ChangeLog" />
+    <None Include="Mono.Xml\ChangeLog.meta" />
+    <None Include="Mono.Xml\MiniParser.cs.meta" />
+    <None Include="Mono.Xml\SecurityParser.cs.meta" />
+    <None Include="Mono.Xml\SmallXmlParser.cs.meta" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnityEngine\UnityEngine.csproj">
+      <Project>{616ebeda-6846-44b6-95c8-35bd69f9d387}</Project>
+      <Name>UnityEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
 </Project>

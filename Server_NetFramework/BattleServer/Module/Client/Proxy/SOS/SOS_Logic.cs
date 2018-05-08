@@ -210,7 +210,7 @@ namespace RedStone.SOS
 
             SendTo(player.id, rep);
 
-            Debug.Log("{0}\t加入房间", player.user.name);
+            Logger.Log("{0}\t加入房间", player.user.name);
         }
 
         void OnReady(Player player, CBReady msg)
@@ -224,7 +224,7 @@ namespace RedStone.SOS
             sync.FromID = player.id;
             SendToAll(sync);
 
-            Debug.Log("{0}\t已准备", player.user.name);
+            Logger.Log("{0}\t已准备", player.user.name);
         }
 
         void OnPlayerSendMessage(Player player, CBSendMessage msg)
@@ -239,7 +239,7 @@ namespace RedStone.SOS
         {
             if (m_whosTurn != player || m_isThisTrunPlayedCard)
             {
-                Debug.LogError("{0}\t出牌，但是不是他的回个，已禁止！", player.name);
+                Logger.LogError("{0}\t出牌，但是不是他的回个，已禁止！", player.name);
                 return;
             }
 
@@ -253,16 +253,16 @@ namespace RedStone.SOS
             if (msg.Extend > 0)
             {
                 if (target != null)
-                    Debug.Log("{0}\t出牌\t{1}\t指向\t{2}\tExt\t{3}", player.name, card.table.effect, target.name, msg.Extend);
+                    Logger.Log("{0}\t出牌\t{1}\t指向\t{2}\tExt\t{3}", player.name, card.table.effect, target.name, msg.Extend);
                 else
-                    Debug.Log("{0}\t出牌\t{1}\tExt\t{2}", player.name, card.table.effect, msg.Extend);
+                    Logger.Log("{0}\t出牌\t{1}\tExt\t{2}", player.name, card.table.effect, msg.Extend);
             }
             else
             {
                 if (target != null)
-                    Debug.Log("{0}\t出牌\t{1}\t指向\t{2}", player.name, card.table.effect, target.name);
+                    Logger.Log("{0}\t出牌\t{1}\t指向\t{2}", player.name, card.table.effect, target.name);
                 else
-                    Debug.Log("{0}\t出牌\t{1}", player.name, card.table.effect);
+                    Logger.Log("{0}\t出牌\t{1}", player.name, card.table.effect);
             }
 
             CBPlayCardSync sync = new CBPlayCardSync();
@@ -290,7 +290,7 @@ namespace RedStone.SOS
 
             if (target != null && target.effect == Player.Effect.InvincibleOneRound)
             {
-                Debug.LogError("玩家 {0} 无敌状态，技能 {1} 无效", target.name, card.table.effect);
+                Logger.LogError("玩家 {0} 无敌状态，技能 {1} 无效", target.name, card.table.effect);
                 return 1;
             }
 
@@ -486,7 +486,7 @@ namespace RedStone.SOS
 
             if (!turnChanged)
             {
-                Debug.LogError("Turn Not Changed --> {0}", m_whosTurn.name);
+                Logger.LogError("Turn Not Changed --> {0}", m_whosTurn.name);
                 return;
             }
 
@@ -511,12 +511,12 @@ namespace RedStone.SOS
         {
             if (m_cardMgr.leftCards.Count <= 0)
             {
-                Debug.LogInfo("没有卡牌了，等待结算。");
+                Logger.LogInfo("没有卡牌了，等待结算。");
                 return;
             }
             if (alivePlayers.Count <= 1)
             {
-                Debug.LogInfo("只剩下一个玩家，等待结算。");
+                Logger.LogInfo("只剩下一个玩家，等待结算。");
                 return;
             }
             TurnNext();
@@ -536,7 +536,7 @@ namespace RedStone.SOS
 
         private void LogStatus(string title)
         {
-            Debug.LogError("-------------------  " + title + "  --------------------");
+            Logger.LogError("-------------------  " + title + "  --------------------");
             foreach (var p in m_players)
             {
                 if (p.handCards.Count > 0)
@@ -545,18 +545,18 @@ namespace RedStone.SOS
                     foreach (var card in p.handCards)
                         cardStr += card.table.effect + "|";
                     cardStr = cardStr.TrimEnd('|');
-                    Debug.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), cardStr.PadRight(10), p.state);
+                    Logger.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), cardStr.PadRight(10), p.state);
                 }
                 else
-                    Debug.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), "空".PadRight(10), p.state);
+                    Logger.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), "空".PadRight(10), p.state);
             }
-            Debug.LogError("---------------------------------------------------");
+            Logger.LogError("---------------------------------------------------");
         }
 
         // SEND CARDS
         public void GameBegin()
         {
-            Debug.LogInfo("Game Start!!!");
+            Logger.LogInfo("Game Start!!!");
             m_whosTurn = m_players.First(a => a.seat == 1);
             m_cardMgr.Reset();
             GameBegin_SyncCards();
@@ -593,7 +593,7 @@ namespace RedStone.SOS
         {
             Card card = m_cardMgr.TakeCard();
 
-            Debug.Log("{1}\t获得\t{0}", card.table.effect, player.name);
+            Logger.Log("{1}\t获得\t{0}", card.table.effect, player.name);
 
             player.AddCard(card);
 

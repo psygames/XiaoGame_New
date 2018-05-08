@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RedStone.Data;
+using Core;
 
 
 namespace RedStone
@@ -54,7 +55,7 @@ namespace RedStone
 
             room.SetUsers(users);
             NewPvL(room.id);
-            Debug.LogInfo("房间创建【{0}】", room.id);
+            Logger.LogInfo("房间创建【{0}】", room.id);
             return room;
         }
 
@@ -74,7 +75,7 @@ namespace RedStone
             {
                 var user = GetProxy<UserProxy>().GetUserBySession(sessionID);
                 if (user == null)
-                    Debug.LogError($"User Msg Handle Failed : {user.name}");
+                    Logger.LogError($"User Msg Handle Failed : {user.name}");
                 else if (token == user.token)
                     action(msg);
             });
@@ -83,7 +84,7 @@ namespace RedStone
         //TODO: Register Room Dismiss Event
         private void OnRoomDismiss(int roomID)
         {
-            Debug.LogInfo("房间销毁 【{0}】", roomID);
+            Logger.LogInfo("房间销毁 【{0}】", roomID);
             m_pvlLogics.Remove(roomID);
             GetProxy<RoomProxy>().RemoveRoom(roomID);
         }

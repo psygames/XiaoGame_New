@@ -64,47 +64,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Manager\ClientNetworkManager.cs" />
     <Compile Include="Manager\DBManager.cs" />
-    <Compile Include="Manager\EventManager.cs" />
-    <Compile Include="Manager\ServerNetworkManager.cs" />
-    <Compile Include="Manager\TableManager.cs" />
-    <Compile Include="Manager\TaskManger.cs" />
     <Compile Include="Math\MathHelper.cs" />
-    <Compile Include="Math\Vector2.cs" />
-    <Compile Include="Math\Vector3.cs" />
-    <Compile Include="Mono.Xml\MiniParser.cs" />
-    <Compile Include="Mono.Xml\SecurityParser.cs" />
-    <Compile Include="Mono.Xml\SmallXmlParser.cs" />
-    <Compile Include="Network\Base\ClientBase.cs" />
-    <Compile Include="Network\Base\ServerBase.cs" />
-    <Compile Include="Network\Base\SessionBase.cs" />
-    <Compile Include="Network\Imp\Websocket\WebSocketClient.cs" />
-    <Compile Include="Network\Imp\Websocket\WebSocketServer.cs" />
-    <Compile Include="Network\Imp\Websocket\WebSocketSession.cs" />
-    <Compile Include="Network\Interface\IClient.cs" />
-    <Compile Include="Network\Interface\IServer.cs" />
-    <Compile Include="Network\Interface\ISession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Test\LoginRequest.cs" />
     <Compile Include="Test\Program.cs" />
     <Compile Include="Test\ProtoNumTest.cs" />
-    <Compile Include="Tool\IProtoSerializer.cs" />
-    <Compile Include="Tool\NetTool.cs" />
-    <Compile Include="Tool\ProtoSerializer.cs" />
+    <Compile Include="Tool\Time.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mono.Xml\ChangeLog" />
-    <None Include="Mono.Xml\ChangeLog.meta" />
-    <None Include="Mono.Xml\MiniParser.cs.meta" />
-    <None Include="Mono.Xml\SecurityParser.cs.meta" />
-    <None Include="Mono.Xml\SmallXmlParser.cs.meta" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
       <Project>{02934897-1180-4a65-b3e5-a7b7ff267ca7}</Project>
       <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetworkLib\NetworkLib.csproj">
+      <Project>{43d645eb-c042-4801-87c5-de7ddd86335f}</Project>
+      <Name>NetworkLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine\UnityEngine.csproj">
+      <Project>{616ebeda-6846-44b6-95c8-35bd69f9d387}</Project>
+      <Name>UnityEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

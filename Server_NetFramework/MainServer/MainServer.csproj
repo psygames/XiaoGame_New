@@ -121,9 +121,6 @@
     <Compile Include="Protocol\CMMatchSuccess.cs" />
     <Compile Include="Protocol\Infos.cs" />
     <Compile Include="Protocol\ProtoNum.cs" />
-    <Compile Include="Tools\EventDefine.cs" />
-    <Compile Include="Tools\GUID.cs" />
-    <Compile Include="Tools\LogicHelper.cs" />
     <Compile Include="Tools\MyPath.cs" />
     <Compile Include="Tools\NetConfig.cs" />
   </ItemGroup>
@@ -146,9 +143,17 @@
       <Project>{02934897-1180-4a65-b3e5-a7b7ff267ca7}</Project>
       <Name>Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NetworkLib\NetworkLib.csproj">
+      <Project>{43d645eb-c042-4801-87c5-de7ddd86335f}</Project>
+      <Name>NetworkLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Plugins\Plugins.csproj">
       <Project>{9e8e2055-f2ba-49bf-bd99-7ce87d9b402a}</Project>
       <Name>Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnityEngine\UnityEngine.csproj">
+      <Project>{616ebeda-6846-44b6-95c8-35bd69f9d387}</Project>
+      <Name>UnityEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

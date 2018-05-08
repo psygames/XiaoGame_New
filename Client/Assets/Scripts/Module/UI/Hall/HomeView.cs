@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RedStone.UI;
@@ -7,7 +7,6 @@ namespace RedStone
 {
     public class HomeView : ViewBase
     {
-        public Text btnText;
         public GameObject matching;
 
         private bool m_isMatching = false;
@@ -49,14 +48,6 @@ namespace RedStone
 
         private void RefreshUI()
         {
-            if (m_isMatching)
-            {
-                btnText.text = "取消";
-            }
-            else
-            {
-                btnText.text = "开始";
-            }
             matching.SetActive(m_isMatching);
         }
 
@@ -70,6 +61,17 @@ namespace RedStone
             {
                 GF.GetProxy<HallProxy>().CancelMatch();
             }
+        }
+
+        void OnClickExit()
+        {
+            MessageBox.Show("退出游戏", "确定退出游戏吗？", MessageBoxStyle.OKCancelClose, (res) =>
+               {
+                   if (Application.isEditor && UnityEditor.EditorApplication.isPlaying)
+                       UnityEditor.EditorApplication.isPlaying = false;
+                   else
+                       Application.Quit();
+               });
         }
     }
 }

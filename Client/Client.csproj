@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -213,8 +211,8 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/software/develop/unity2017/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>Assets/Scripts/Plugins/Google.Protobuf/Google.Protobuf.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets/Plugins/Newtonsoft/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
@@ -222,8 +220,17 @@
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>C:/Users/Administrator/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets/Plugins/Newtonsoft/Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Core">
+      <HintPath>Assets/Scripts/Plugins/Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NetworkLib">
+      <HintPath>Assets/Scripts/Plugins/NetworkLib.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>Assets/Scripts/Plugins/websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>Assets/Scripts/Plugins/Google.Protobuf.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -293,106 +300,6 @@
     <Compile Include="Assets\Scripts\Module\UI\Hall\HomeView.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\Items\MessageBoxItem.cs" />
     <Compile Include="Assets\Scripts\Module\UI\Hall\LoadingView.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ClientNetworkManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\EventManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Manager\ServerNetworkManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Base\ClientBase.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Base\ServerBase.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Base\SessionBase.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Imp\Websocket\WebSocketClient.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Imp\Websocket\WebSocketServer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Imp\Websocket\WebSocketSession.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Interface\IClient.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Interface\IServer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Network\Interface\ISession.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Tool\IProtoSerializer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Tool\NetTool.cs" />
-    <Compile Include="Assets\Scripts\Plugins\CustomPlugin\Tool\ProtoSerializer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\Mono.Xml\MiniParser.cs" />
-    <Compile Include="Assets\Scripts\Plugins\Mono.Xml\SecurityParser.cs" />
-    <Compile Include="Assets\Scripts\Plugins\Mono.Xml\SmallXmlParser.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\ByteOrder.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\CloseEventArgs.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\CloseStatusCode.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\CompressionMethod.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\ErrorEventArgs.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Ext.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Fin.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\HttpBase.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\HttpRequest.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\HttpResponse.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\LogData.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Logger.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\LogLevel.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Mask.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\MessageEventArgs.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\AuthenticationBase.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\AuthenticationChallenge.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\AuthenticationResponse.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\AuthenticationSchemes.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\Chunk.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ChunkedRequestStream.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ChunkStream.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ClientSslConfiguration.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\Cookie.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\CookieCollection.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\CookieException.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\EndPointListener.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\EndPointManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpBasicIdentity.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpConnection.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpDigestIdentity.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpHeaderInfo.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpHeaderType.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListener.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerAsyncResult.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerContext.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerException.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerPrefix.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerPrefixCollection.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerRequest.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpListenerResponse.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpRequestHeader.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpResponseHeader.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpStatusCode.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpStreamAsyncResult.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpUtility.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\HttpVersion.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\InputChunkState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\InputState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\LineState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\NetworkCredential.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\QueryStringCollection.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ReadBufferState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\RequestStream.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ResponseStream.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\ServerSslConfiguration.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\SslConfiguration.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\WebHeaderCollection.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\WebSockets\HttpListenerWebSocketContext.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\WebSockets\TcpListenerWebSocketContext.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Net\WebSockets\WebSocketContext.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Opcode.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\PayloadData.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Rsv.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\HttpRequestEventArgs.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\HttpServer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\IWebSocketSession.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\ServerState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketBehavior.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketServer.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketServiceHost.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketServiceHost`1.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketServiceManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\Server\WebSocketSessionManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\WebSocket.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\WebSocketException.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\WebSocketFrame.cs" />
-    <Compile Include="Assets\Scripts\Plugins\websocket-sharp\WebSocketState.cs" />
-    <Compile Include="Assets\Scripts\Plugins\YLWebSocket\Demo\SimpleMessagePackTool.cs" />
-    <Compile Include="Assets\Scripts\Plugins\YLWebSocket\Demo\TestWebSocket.cs" />
-    <Compile Include="Assets\Scripts\Plugins\YLWebSocket\WebSocket.cs" />
-    <Compile Include="Assets\Scripts\Plugins\YLWebSocket\WebSocketManager.cs" />
     <Compile Include="Assets\Scripts\Properties\TableAudio.cs" />
     <Compile Include="Assets\Scripts\Properties\TableConst.cs" />
     <Compile Include="Assets\Scripts\Properties\TableLanguage.cs" />
@@ -405,10 +312,7 @@
     <Compile Include="Assets\Scripts\System\Core\Math\Math2D\TRect.cs" />
     <Compile Include="Assets\Scripts\System\Core\Singleton\Singleton.cs" />
     <Compile Include="Assets\Scripts\System\Core\Singleton\SingletonBehaviour.cs" />
-    <Compile Include="Assets\Scripts\System\Core\Tool\BitConvert.cs" />
     <Compile Include="Assets\Scripts\System\Core\Tool\DontDestory.cs" />
-    <Compile Include="Assets\Scripts\System\Core\Tool\ExtMethods.cs" />
-    <Compile Include="Assets\Scripts\System\Core\Tool\FileHelper.cs" />
     <Compile Include="Assets\Scripts\System\Core\Tool\LT.cs" />
     <Compile Include="Assets\Scripts\System\Enum\ELayer.cs" />
     <Compile Include="Assets\Scripts\System\Protocol\BMCreateRoomReply.cs" />
@@ -580,7 +484,6 @@
     <None Include="Assets\Plugins\Android\res\values\styles.xml" />
     <None Include="Assets\Plugins\Android\res\values\version.xml" />
     <None Include="Assets\Plugins\Android\res\xml\file_paths.xml" />
-    <None Include="Assets\Resources\Config\protoNum.txt" />
     <None Include="Assets\Resources\Languages\fontstyle_cn.xml" />
     <None Include="Assets\Resources\Languages\fontstyle_en.xml" />
     <None Include="Assets\Resources\Languages\string_cn.xml" />
@@ -593,8 +496,8 @@
     <None Include="Assets\Resources\xml\TableSosCard.xml" />
     <None Include="Assets\Resources\xml\TableTextColor.xml" />
     <None Include="Assets\Resources\xmlList.txt" />
-    <None Include="Assets\Scripts\Plugins\Google.Protobuf\Google.Protobuf.xml" />
-    <None Include="Assets\Scripts\Plugins\Mono.Xml" />
+    <None Include="Assets\Scripts\Plugins\Google.Protobuf.xml" />
+    <None Include="Assets\Scripts\Plugins\websocket-sharp.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

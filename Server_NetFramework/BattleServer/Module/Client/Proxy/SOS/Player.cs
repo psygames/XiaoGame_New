@@ -72,7 +72,7 @@ namespace RedStone.SOS
         {
             if (m_handCards.Count != 1)
             {
-                Debug.LogError("手牌数量不正确，不能换牌！");
+                Logger.LogError("手牌数量不正确，不能换牌！");
                 return;
             }
             m_handCards[0] = card;

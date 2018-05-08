@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using Plugins;
 using System.Collections.Generic;
 
 namespace RedStone
@@ -16,12 +15,13 @@ namespace RedStone
 
         public const string PREFS_UUID_SUFFIX = "GLOBAL_UUID_SUFFIX";
         public const string PREFS_SERVER_ADDRESS = "GLOBAL_SERVER_ADDRESS";
+        public const string DEFAULT_SERVER_ADDRESS = "47.100.28.149";
 
         protected override void Awake()
         {
             base.Awake();
 
-            serverAddress = "47.100.28.149";
+            serverAddress = DEFAULT_SERVER_ADDRESS;
             UUIDSuffix = "";
 #if UNITY_EDITOR
             var customAddress = LocalDataUtil.Get(PREFS_SERVER_ADDRESS, "");
@@ -38,7 +38,6 @@ namespace RedStone
 
         private void Start()
         {
-            Debug.Log("客户端运行");
             CreateInstance();
             Init();
 

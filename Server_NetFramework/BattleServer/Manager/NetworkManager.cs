@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using Plugins;
+using System;
+using NetworkLib;
 
 namespace RedStone
 {
@@ -24,25 +23,25 @@ namespace RedStone
         private void InitForServer()
         {
             forServer = new ClientNetworkManager();
-            var socket = new Plugins.Network.WebSocketClient();
+            var socket = new NetworkLib.WebSocketClient();
             socket.Setup(NetConfig.SERVER_IP, NetConfig.SERVER_PORT);
-            var serializer = new Plugins.ProtoSerializer();
+            var serializer = new ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));
             forServer.Init(socket, serializer);
-            Debug.LogInfo("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
+            Logger.LogInfo("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
         }
 
         private void InitForClient()
         {
             forClient = new ServerNetworkManager();
-            var listener = new Plugins.Network.WebSocketServer();
+            var listener = new NetworkLib.WebSocketServer();
             listener.Setup("0.0.0.0", NetConfig.LISTENER_PORT);
-            var serializer = new Plugins.ProtoSerializer();
+            var serializer = new ProtoSerializer();
             serializer.getTypeFunc = (name) => { return Type.GetType(name); };
             serializer.LoadProtoNum(typeof(Message.ProtoNum));
             forClient.Init(listener, serializer);
-            Debug.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(listener.address));
+            Logger.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(listener.address));
         }
     }
 }

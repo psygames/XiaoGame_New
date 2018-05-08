@@ -42,7 +42,7 @@ namespace RedStone
             var user = m_users.Values.First(a => a.token == msg.Token);
             if (user == null)
             {
-                Debug.LogError($"{sessionID}'s token {msg.Token} is wrong, refuse login.");
+                Logger.LogError($"{sessionID}'s token {msg.Token} is wrong, refuse login.");
             }
             else
             {

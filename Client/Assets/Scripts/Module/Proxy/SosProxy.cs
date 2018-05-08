@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using Message;
-using Plugins;
 using RedStone.Data.SOS;
 using System.Collections.Generic;
+using NetworkLib;
 
 namespace RedStone
 {
@@ -46,7 +46,7 @@ namespace RedStone
             //Init
             string ip = NetTool.GetIP(serverInfo.Address);
             int port = NetTool.GetPort(serverInfo.Address);
-            var socket = new Plugins.Network.WebSocketClient();
+            var socket = new WebSocketClient();
             socket.Setup(ip, port);
             var serializer = new ProtoSerializer();
             serializer.getTypeFunc = (name) => { return System.Type.GetType(name); };
