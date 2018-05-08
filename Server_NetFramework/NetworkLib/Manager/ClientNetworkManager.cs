@@ -9,31 +9,41 @@ namespace NetworkLib
         protected ISerializer m_serializer = null;
         protected IClient m_socket = null;
 
-        public bool isInit { get; private set; }
-        public IClient socket { get { return m_socket; } }
         public Action onConnected { get; set; }
         public Action onClosed { get; set; }
+        public ClientBase socket { get { return m_socket as ClientBase; } }
 
-        public ClientNetworkManager()
+        public ClientNetworkManager(IClient client, ISerializer serializer)
         {
             m_eventMgr = new EventManager();
-            m_serializer = new ProtoSerializer();
-        }
+            m_serializer = serializer;
+            m_socket = client;
 
-        public void Init(IClient socket)
-        {
-            m_serializer.Init();
-            if (isInit && m_socket != null)
-            {
-                m_socket.onReceived -= OnReceived;
-                m_socket.onConnected -= OnConnected;
-                m_socket.onClosed -= OnClosed;
-            }
-            m_socket = socket;
             m_socket.onReceived += OnReceived;
             m_socket.onConnected += OnConnected;
             m_socket.onClosed += OnClosed;
-            isInit = true;
+        }
+
+        ~ClientNetworkManager()
+        {
+            m_socket.onReceived -= OnReceived;
+            m_socket.onConnected -= OnConnected;
+            m_socket.onClosed -= OnClosed;
+        }
+
+        public void Init(string ip, int port)
+        {
+            m_serializer.Init();
+            m_socket.Setup(ip, port);
+        }
+
+        public void Connect()
+        {
+            m_socket.Connect();
+        }
+        public void Close()
+        {
+            m_socket.Close();
         }
 
         public void RegisterNetwork<T>(Action<T> action)

@@ -43,15 +43,7 @@ namespace RedStone
 
         private void InitSocket()
         {
-            //Init
-            string ip = NetTool.GetIP(serverInfo.Address);
-            int port = NetTool.GetPort(serverInfo.Address);
-            var socket = new WebSocketClient();
-            socket.Setup(ip, port);
-            var serializer = new ProtoSerializer();
-            serializer.getTypeFunc = (name) => { return System.Type.GetType(name); };
-            serializer.LoadProtoNum(typeof(ProtoNum));
-            network.Init(socket, serializer);
+            network.Init(NetTool.GetIP(serverInfo.Address), NetTool.GetPort(serverInfo.Address));
 
             Debug.Log("Init Network (Battle) [{0}]".FormatStr(serverInfo.Address));
 

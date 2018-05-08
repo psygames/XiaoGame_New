@@ -13,8 +13,8 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-            network.server.onConnected = OnClientConnected;
-            network.server.onClosed = OnClientClosed;
+            network.onConnected = OnClientConnected;
+            network.onClosed = OnClientClosed;
             network.RegisterNetworkAll(OnClientMessage);
         }
 

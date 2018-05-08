@@ -12,8 +12,8 @@ namespace RedStone
 
         public NetworkManager()
         {
-            serverForBattle = new ServerNetworkManager();
-            serverForClient = new ServerNetworkManager();
+            serverForBattle = new ServerNetworkManager(new WebSocketServer(), new ProtoSerializer());
+            serverForClient = new ServerNetworkManager(new WebSocketServer(), new ProtoSerializer());
         }
 
         public void Init()
@@ -24,18 +24,14 @@ namespace RedStone
 
         private void InitForBattle()
         {
-            var server = new WebSocketServer();
-            server.Setup("0.0.0.0", 8731);
-            serverForBattle.Init(server, new ProtoSerializer());
-            Logger.LogInfo("初始化网络监听（战场） [{0}]", server.address);
+            serverForBattle.Init("0.0.0.0", 8731);
+            Logger.LogInfo("初始化网络监听（战场） [{0}]", serverForBattle.server.address);
         }
 
         private void InitForClient()
         {
-            var server = new WebSocketServer();
-            server.Setup("0.0.0.0", 8730);
-            serverForClient.Init(server, new ProtoSerializer());
-            Logger.LogInfo("初始化网络监听（客户端） [{0}]", server.address);
+            serverForClient.Init("0.0.0.0", 8730);
+            Logger.LogInfo("初始化网络监听（客户端） [{0}]", serverForClient.server.address);
         }
     }
 }

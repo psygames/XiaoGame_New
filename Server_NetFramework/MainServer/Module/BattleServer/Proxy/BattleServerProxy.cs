@@ -28,8 +28,8 @@ namespace RedStone
         {
             base.OnInit();
 
-            network.server.onConnected = OnConnected;
-            network.server.onClosed = OnClosed;
+            network.onConnected = OnConnected;
+            network.onClosed = OnClosed;
             RegisterMessage<BMLoginRequest>(OnLogin);
         }
 

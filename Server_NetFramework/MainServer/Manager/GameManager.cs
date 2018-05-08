@@ -18,9 +18,9 @@ namespace RedStone
             ProxyManager.CreateInstance().Init();
 
             // 
-            NetworkManager.instance.serverForBattle.server.Start();
+            NetworkManager.instance.serverForBattle.Start();
             Logger.LogInfo("网络监听（战场） 已启动");
-            NetworkManager.instance.serverForClient.server.Start();
+            NetworkManager.instance.serverForClient.Start();
             Logger.LogInfo("网络监听（客户端） 已启动");
 
 

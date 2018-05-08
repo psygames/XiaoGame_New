@@ -5,40 +5,60 @@ namespace NetworkLib
 {
     public class ServerNetworkManager
     {
-        private EventManager m_eventMgr = null;
-        private ISerializer m_serializer = null;
-        private IServer m_server = null;
+        protected EventManager m_eventMgr = null;
+        protected ISerializer m_serializer = null;
+        protected IServer m_server = null;
 
-        public bool isInit { get; private set; }
-        public IServer server { get { return m_server; } }
+        public Action<string> onConnected { get; set; }
+        public Action<string> onClosed { get; set; }
+        public ServerBase server { get { return m_server as ServerBase; } }
 
         public ServerNetworkManager(IServer server, ISerializer serializer)
         {
             m_eventMgr = new EventManager();
             m_server = server;
             m_serializer = serializer;
+
+            m_server.onReceived += OnReceived;
+            m_server.onConnected += OnConnected;
+            m_server.onClosed += OnClosed;
         }
 
-        public void Init()
+        ~ServerNetworkManager()
+        {
+            m_server.onReceived -= OnReceived;
+            m_server.onConnected -= OnConnected;
+            m_server.onClosed -= OnClosed;
+        }
+
+        public void Init(string ip, int port)
         {
             m_serializer.Init();
-
-            if (isInit && m_server != null)
-            {
-                m_server.onReceived -= OnReceived;
-                m_server.onConnected -= OnConnected;
-                m_server.onClosed -= OnClosed;
-            }
-            m_socket = socket;
-            m_socket.onReceived += OnReceived;
-            m_socket.onConnected += OnConnected;
-            m_socket.onClosed += OnClosed;
-            isInit = true;
+            m_server.Setup(ip, port);
         }
 
-        void OnConnected(string sessionID) {
-
+        public void Start()
+        {
+            m_server.Start();
         }
+
+        public void Stop()
+        {
+            m_server.Stop();
+        }
+
+        void OnConnected(string sessionID)
+        {
+            if (onConnected != null)
+                onConnected.Invoke(sessionID);
+        }
+
+        void OnClosed(string sessionID)
+        {
+            if (onClosed != null)
+                onClosed.Invoke(sessionID);
+        }
+
         void OnReceived(string sessionID, byte[] data)
         {
             object obj = m_serializer.Deserialize(data);

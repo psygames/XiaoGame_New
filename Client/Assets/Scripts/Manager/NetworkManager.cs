@@ -7,14 +7,14 @@ namespace RedStone
 {
     public class NetworkManager : Core.Singleton<NetworkManager>
     {
-        /// <summary>
-        /// 连接主服
-        /// </summary>
         public ClientNetworkMangerEx battle { get; private set; }
-        /// <summary>
-        /// 监听客户端
-        /// </summary>
         public ClientNetworkMangerEx main { get; private set; }
+
+        public NetworkManager()
+        {
+            main = new ClientNetworkMangerEx(new WebSocketClient(), new ProtoSerializer());
+            battle = new ClientNetworkMangerEx(new WebSocketClient(), new ProtoSerializer());
+        }
 
         public void Init()
         {
@@ -24,19 +24,12 @@ namespace RedStone
 
         private void InitBattleServer()
         {
-            battle = new ClientNetworkMangerEx();
         }
 
         private void InitMainServer()
         {
-            main = new ClientNetworkMangerEx();
-            var socket = new WebSocketClient();
-            socket.Setup(GameManager.instance.serverAddress, 8730);
-            var serializer = new ProtoSerializer();
-            serializer.getTypeFunc = (name) => { return Type.GetType(name); };
-            serializer.LoadProtoNum(typeof(Message.ProtoNum));
-            main.Init(socket, serializer);
-            Debug.Log("初始化网络连接（主服） [{0}]".FormatStr(socket.address));
+            main.Init(GameManager.instance.serverAddress, 8730);
+            Debug.Log("初始化网络连接（主服） [{0}]".FormatStr(main.socket.address));
         }
 
         public void Close()
@@ -56,6 +49,12 @@ namespace RedStone
 
         public class ClientNetworkMangerEx : ClientNetworkManager
         {
+            public ClientNetworkMangerEx(IClient client, ISerializer serializer)
+                : base(client, serializer)
+            {
+
+            }
+
             protected override void OnReceived(byte[] data)
             {
                 object obj = m_serializer.Deserialize(data);

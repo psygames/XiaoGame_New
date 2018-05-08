@@ -13,7 +13,7 @@ namespace RedStone
         {
             base.OnInit();
 
-            network.socket.onConnected = () =>
+            network.onConnected = () =>
             {
                 Logger.LogInfo("连接主服成功！");
                 Login();
@@ -25,7 +25,7 @@ namespace RedStone
         public void Connenct()
         {
             Logger.LogInfo("开始连接主服...");
-            network.socket.Connect();
+            network.Connect();
         }
 
         public void Login()

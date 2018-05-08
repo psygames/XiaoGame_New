@@ -29,6 +29,9 @@ namespace NetworkLib
             {
                 int protoNum = (int)value;
                 string protoName = Enum.GetName(protoNumEnumType, protoNum);
+                var attr = (Google.Protobuf.Reflection.OriginalNameAttribute)(protoNumEnumType.GetField(protoName)
+                    .GetCustomAttributes(typeof(Google.Protobuf.Reflection.OriginalNameAttribute), false).FirstOrDefault());
+                protoName = attr.Name;
                 protoName = protoNumEnumType.Namespace + "." + protoName;
                 m_protocolNum.Add(protoName, protoNum);
                 m_numProtocal.Add(protoNum, protoName);
