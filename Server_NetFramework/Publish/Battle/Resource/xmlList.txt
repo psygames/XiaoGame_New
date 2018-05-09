@@ -1,8 +1,0 @@
-[ForCSharp]
-TableLanguage
-TableName
-TableTextColor
-TableSosCard
-TableAudio
-TableConst
-[ForJava]

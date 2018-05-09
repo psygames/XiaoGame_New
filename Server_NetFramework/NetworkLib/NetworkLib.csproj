@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,6 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Google.Protobuf, Version=3.0.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
@@ -81,9 +83,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y "$(TargetDir)Core.dll" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
-xcopy /y "$(TargetPath)" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
-
+    <PostBuildEvent>rd /s /q "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib" 
+xcopy /y /i /e "$(SolutionDir)NetworkLib/Manager" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Manager"
+xcopy /y /i /e "$(SolutionDir)NetworkLib/Network" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Network"
+xcopy /y /i /e "$(SolutionDir)NetworkLib/Serializer" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Serializer"
+xcopy /y /i /e "$(SolutionDir)NetworkLib/Tool" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Tool"
 xcopy /y "$(TargetDir)Google.Protobuf.dll" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
 xcopy /y "$(TargetDir)Google.Protobuf.xml" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
 

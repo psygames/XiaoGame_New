@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -52,7 +52,29 @@ public class Logger : MonoBehaviour
 			stream = null;
 		}
 	}
-	static StringBuilder byteBuilder = new StringBuilder();
+
+    public static void LogBytes(string content, byte[] b, int length)
+    {
+        LogBytes(default(object), content, b, length);
+    }
+
+    public static void Log(string content, params object[] param)
+    {
+        Log(default(object), content,param);
+    }
+
+
+    public static void LogWarning(string content, params object[] param)
+    {
+        LogWarning(default(object), content, param);
+    }
+
+    public static void LogError(string content, params object[] param)
+    {
+        LogError(default(object), content, param);
+    }
+
+    static StringBuilder byteBuilder = new StringBuilder();
 	public static void LogBytes(object obj, string content, byte[] b, int length)
 	{
 		byteBuilder.Length = 0;

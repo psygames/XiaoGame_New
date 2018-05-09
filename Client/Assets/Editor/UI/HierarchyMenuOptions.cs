@@ -22,7 +22,7 @@ class HierarchyMenuOptions
     static void OnHierarchyGUI(int instanceID, Rect selectionRect)
     {
         if (Event.current != null && selectionRect.Contains(Event.current.mousePosition)
-            && Event.current.button == 1 && Event.current.type == EventType.mouseUp)
+            && Event.current.button == 1 && Event.current.type == EventType.MouseUp)
         {
             GameObject selectedGameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
 

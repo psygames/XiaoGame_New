@@ -39,18 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Common\ForUnityEngineNS.cs" />
-    <Compile Include="Core\Common\IUpdateable.cs" />
-    <Compile Include="Core\Common\Updater.cs" />
-    <Compile Include="Core\Singleton\Singleton.cs" />
-    <Compile Include="Core\Tool\BitConvert.cs" />
-    <Compile Include="Core\Tool\Logger.cs" />
-    <Compile Include="Core\Tool\ExtMethods.cs" />
-    <Compile Include="Core\Tool\FileHelper.cs" />
-    <Compile Include="Manager\TableManager.cs" />
-    <Compile Include="Core\Tool\Time.cs" />
+    <Compile Include="Common\ForUnityEngineNS.cs" />
+    <Compile Include="Common\Singleton\Singleton.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Tool\BitConvert.cs" />
+    <Compile Include="Tool\ExtMethods.cs" />
+    <Compile Include="Tool\FileHelper.cs" />
     <Compile Include="Manager\EventManager.cs" />
-    <Compile Include="Manager\TaskManger.cs" />
     <Compile Include="Mono.Xml\MiniParser.cs" />
     <Compile Include="Mono.Xml\SecurityParser.cs" />
     <Compile Include="Mono.Xml\SmallXmlParser.cs" />
@@ -75,7 +70,11 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>rd /s /q "$(SolutionDir)../Client/Assets/Scripts/Plugins/Core" 
+xcopy /y /i /e "$(SolutionDir)Core/Common" "$(SolutionDir)../Client/Assets/Scripts/Plugins/Core/Common"
+xcopy /y /i /e "$(SolutionDir)Core/Manager" "$(SolutionDir)../Client/Assets/Scripts/Plugins/Core/Manager"
+xcopy /y /i /e "$(SolutionDir)Core/Mono.Xml" "$(SolutionDir)../Client/Assets/Scripts/Plugins/Core/Mono.Xml"
+xcopy /y /i /e "$(SolutionDir)Core/Tool" "$(SolutionDir)../Client/Assets/Scripts/Plugins/Core/Tool"
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
