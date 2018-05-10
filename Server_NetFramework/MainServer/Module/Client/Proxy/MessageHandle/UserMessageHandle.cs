@@ -4,6 +4,7 @@ using System.Text;
 using Message;
 using RedStone.Data;
 using System.Linq;
+using NetworkLib;
 
 namespace RedStone
 {
@@ -27,6 +28,7 @@ namespace RedStone
             RegisterMsg<CMMatchRequest>(OnBeginMatch);
             RegisterMsg<CMMatchCancel>(OnCancelMatch);
             RegisterMsg<CMCancelReconnect>(OnCancelReconnect);
+            RegisterMsg<HeartbeatRequest>(OnHeartbeat);
         }
 
         public void Logout()
@@ -34,6 +36,11 @@ namespace RedStone
             data.Logout();
             dao.Logout(data.uid);
             Logger.Log($"{data.uid} logout");
+        }
+
+        private void OnHeartbeat(HeartbeatRequest msg)
+        {
+            Logger.Log($"{data.uid} heartbeat -> num: {msg.number}");
         }
 
         private void OnLogin(CMLoginRequest msg)
@@ -61,13 +68,13 @@ namespace RedStone
                 reply.BattleServerInfo = new BattleServerInfo();
                 reply.BattleServerInfo.Address = room.battleServer.address;
                 reply.BattleServerInfo.Name = room.battleServer.name;
-                reply.BattleServerInfo.Token = room.userTokens.First(a=>a.Uid == data.uid).Token;
+                reply.BattleServerInfo.Token = room.userTokens.First(a => a.Uid == data.uid).Token;
                 reply.BattleServerInfo.State = room.battleServer.state.ToString();
             }
 
             SendMessage(reply);
 
-            if(reply.IsInBattle)
+            if (reply.IsInBattle)
                 data.SetState(UserState.Game);
             else
                 data.SetState(UserState.Hall);

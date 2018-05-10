@@ -42,7 +42,6 @@
     <Compile Include="Common\ForUnityEngineNS.cs" />
     <Compile Include="Common\Singleton\Singleton.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="Tool\BitConvert.cs" />
     <Compile Include="Tool\ExtMethods.cs" />
     <Compile Include="Tool\FileHelper.cs" />
     <Compile Include="Manager\EventManager.cs" />

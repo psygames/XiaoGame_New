@@ -63,7 +63,7 @@ namespace RedStone
             }
             catch (Exception e)
             {
-                Logger.LogError(this, "GetIPv6 error:{0}", e);
+                Logger.LogError("GetIPv6 error:{0}", e);
             }
 
         }

@@ -5,7 +5,7 @@ using NetworkLib;
 
 namespace RedStone
 {
-    public class NetworkManager : Core.Singleton<NetworkManager>
+    public class NetworkManager : Core.Singleton<NetworkManager>, IDisposable
     {
         public ServerNetworkManager serverForBattle { get; private set; }
         public ServerNetworkManager serverForClient { get; private set; }
@@ -32,6 +32,13 @@ namespace RedStone
         {
             serverForClient.Init("0.0.0.0", 8730);
             Logger.LogInfo("初始化网络监听（客户端） [{0}]", serverForClient.server.address);
+        }
+
+
+        public void Dispose()
+        {
+            serverForBattle.Dispose();
+            serverForClient.Dispose();
         }
     }
 }

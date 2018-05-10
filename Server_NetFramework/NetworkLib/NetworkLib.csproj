@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="Manager\ClientNetworkManager.cs" />
     <Compile Include="Manager\ServerNetworkManager.cs" />
+    <Compile Include="Message\HeartbeatReply.cs" />
+    <Compile Include="Message\HeartbeatRequest.cs" />
     <Compile Include="Network\Base\ClientBase.cs" />
     <Compile Include="Network\Base\ServerBase.cs" />
     <Compile Include="Network\Base\SessionBase.cs" />
@@ -88,6 +90,8 @@ xcopy /y /i /e "$(SolutionDir)NetworkLib/Manager" "$(SolutionDir)../Client/Asset
 xcopy /y /i /e "$(SolutionDir)NetworkLib/Network" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Network"
 xcopy /y /i /e "$(SolutionDir)NetworkLib/Serializer" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Serializer"
 xcopy /y /i /e "$(SolutionDir)NetworkLib/Tool" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Tool"
+xcopy /y /i /e "$(SolutionDir)NetworkLib/Message" "$(SolutionDir)../Client/Assets/Scripts/Plugins/NetworkLib/Message"
+
 xcopy /y "$(TargetDir)Google.Protobuf.dll" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
 xcopy /y "$(TargetDir)Google.Protobuf.xml" "$(SolutionDir)../Client/Assets/Scripts/Plugins"
 

@@ -12,7 +12,7 @@ namespace RedStone
 
 
         public bool isLogin { get; private set; }
-        public bool isConnected { get; private set; }
+        public bool isConnected { get { return network.socket.state == NetworkLib.ClientBase.State.Connected; } }
 
         public HallProxy()
         {
@@ -21,17 +21,21 @@ namespace RedStone
 
         public override void OnInit()
         {
-            isConnected = false;
             isLogin = false;
 
             network.onConnected = () =>
             {
-                isConnected = true;
-                Debug.Log("Network Connect Success (Main Server).");
+                Logger.Log("Network Connect Success (Main Server).");
                 Login();
             };
 
+            network.onTimeout = () =>
+            {
+                Logger.LogError("Main Server Timeout!!!");
+            };
+
             network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
+            network.RegisterNetwork<NetworkLib.HeartbeatReply>(OnHeartbeatReply);
         }
 
         public void Connect()
@@ -122,6 +126,10 @@ namespace RedStone
             battleServerInfo = msg.BattleServerInfo;
             SendEvent(EventDef.MatchSuccess);
             GF.ChangeState<BattleLoadingState>();
+        }
+        void OnHeartbeatReply(NetworkLib.HeartbeatReply msg)
+        {
+            Logger.Log("heartbeat reply num: {0}", msg.number);
         }
 
     }

@@ -37,11 +37,13 @@ namespace NetworkLib
 
         public override void Start()
         {
+            base.Start();
             _server.Start();
         }
 
         public override void Stop()
         {
+            base.Stop();
             _server.Stop();
         }
     }

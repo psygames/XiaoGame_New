@@ -6,6 +6,11 @@ namespace NetworkLib
     public class ServerBase : IServer
     {
         public Dictionary<string, ISession> sessions { get; private set; }
+        public virtual State state { get; private set; }
+        public virtual string ip { get; protected set; }
+        public virtual int port { get; protected set; }
+        public virtual string address { get { return "{0}:{1}".FormatStr(ip, port); } }
+
         public Action<string> onConnected { get; set; }
         public Action<string> onClosed { get; set; }
         public Action<string, byte[]> onReceived { get; set; }
@@ -16,13 +21,15 @@ namespace NetworkLib
             this.port = port;
         }
 
-        public virtual void Start() { }
+        public virtual void Start()
+        {
+            state = State.Start;
+        }
 
-        public virtual void Stop() { }
-
-        public virtual string ip { get; protected set; }
-        public virtual int port { get; protected set; }
-        public virtual string address { get { return "{0}:{1}".FormatStr(ip, port); } }
+        public virtual void Stop()
+        {
+            state = State.Stop;
+        }
 
         public ServerBase()
         {
@@ -74,6 +81,13 @@ namespace NetworkLib
             ISession session = null;
             sessions.TryGetValue(sessionID, out session);
             return session;
+        }
+
+        public enum State
+        {
+            None = 0,
+            Start,
+            Stop,
         }
     }
 }

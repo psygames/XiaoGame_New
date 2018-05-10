@@ -5,26 +5,34 @@ namespace NetworkLib
 {
     public class ClientBase : IClient
     {
+        public virtual State state { get; private set; }
         public virtual void Setup(string ip, int port)
         {
             this.ip = ip;
             this.port = port;
         }
         public virtual void Send(byte[] data) { }
-        public virtual void Connect() { }
-        public virtual void Close() { }
-
+        public virtual void Connect()
+        {
+            state = State.Connecting;
+        }
+        public virtual void Close()
+        {
+            state = State.Closing;
+        }
 
         public virtual void OnConnected()
         {
             if (onConnected != null)
                 onConnected.Invoke();
+            state = State.Connected;
         }
 
         public virtual void OnClosed()
         {
             if (onClosed != null)
                 onClosed.Invoke();
+            state = State.Closed;
         }
 
         public virtual void OnReceived(byte[] data)
@@ -39,5 +47,14 @@ namespace NetworkLib
         public Action<byte[]> onReceived { get; set; }
         public Action onClosed { get; set; }
         public Action onConnected { get; set; }
+
+        public enum State
+        {
+            None = 0,
+            Connecting,
+            Connected,
+            Closing,
+            Closed,
+        }
     }
 }

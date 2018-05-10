@@ -38,6 +38,7 @@ namespace RedStone
 
         private void OnApplicationQuit()
         {
+            NetworkManager.instance.Dispose();
         }
 
         public void Update()

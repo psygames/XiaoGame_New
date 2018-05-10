@@ -19,16 +19,19 @@ namespace NetworkLib
         public override string address { get { return _socket.Url.AbsoluteUri; } }
         public override void Send(byte[] data)
         {
+            base.Send(data);
             _socket.SendAsync(data, null);
         }
 
         public override void Connect()
         {
+            base.Connect();
             _socket.ConnectAsync();
         }
 
         public override void Close()
         {
+            base.Close();
             _socket.CloseAsync();
         }
 

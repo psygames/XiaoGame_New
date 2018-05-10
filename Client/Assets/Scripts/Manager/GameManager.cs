@@ -86,7 +86,7 @@ namespace RedStone
 
         private void OnApplicationQuit()
         {
-            NetworkManager.instance.Close();
+            NetworkManager.instance.Dispose();
         }
 
 

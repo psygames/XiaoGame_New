@@ -94,7 +94,7 @@ namespace NetworkLib
 
         private Type HeaderToType(byte[] header)
         {
-            int num = BitConvert.ToUshort(header);
+            int num = BitConverter.ToUInt16(header, 0);
             if (!m_numProtocal.ContainsKey(num))
             {
                 Logger.LogError("not found protonum: " + num);
@@ -110,7 +110,7 @@ namespace NetworkLib
         private byte[] TypeToHeader(Type t)
         {
             int num = m_protocolNum[t.ToString()];
-            return BitConvert.ToBytes((ushort)num);
+            return BitConverter.GetBytes((ushort)num);
         }
 
         private void AddHeader(ref byte[] data, Type type)

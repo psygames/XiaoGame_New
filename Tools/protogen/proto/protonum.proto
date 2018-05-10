@@ -6,8 +6,6 @@ package message;
 enum ProtoNum
 {
 	Unknown = 0;
-	//Common
-	Heartbeat = 101;
 
 	//Client -> Main
 	CMLoginRequest = 1001;
@@ -42,5 +40,5 @@ enum ProtoNum
 	BMLoginReply = 3002;
 	BMCreateRoomRequest = 3003;
 	BMCreateRoomReply = 3004;
-
+	
 }

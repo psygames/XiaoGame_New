@@ -1,34 +1,45 @@
 using System;
+using System.Collections.Generic;
+using System.Threading;
 using Core;
 
 namespace NetworkLib
 {
-    public class ServerNetworkManager
+    public class ServerNetworkManager : IDisposable
     {
         protected EventManager m_eventMgr = null;
         protected ISerializer m_serializer = null;
         protected IServer m_server = null;
+        private Timer m_timer = null;
 
         public Action<string> onConnected { get; set; }
         public Action<string> onClosed { get; set; }
+        public Action<string> onTimeout { get; set; }
         public ServerBase server { get { return m_server as ServerBase; } }
 
-        public ServerNetworkManager(IServer server, ISerializer serializer)
+        private float m_timeoutDuration;
+
+        public ServerNetworkManager(IServer server, ISerializer serializer, float timeout = 2f)
         {
             m_eventMgr = new EventManager();
             m_server = server;
             m_serializer = serializer;
+
+            m_timer = new Timer(new TimerCallback(OnTimerCallback));
+            m_timer.Change(0, (int)(timeout * 1000 * 0.5f));
+            m_timeoutDuration = timeout;
 
             m_server.onReceived += OnReceived;
             m_server.onConnected += OnConnected;
             m_server.onClosed += OnClosed;
         }
 
-        ~ServerNetworkManager()
+        public void Dispose()
         {
             m_server.onReceived -= OnReceived;
             m_server.onConnected -= OnConnected;
             m_server.onClosed -= OnClosed;
+            m_timer.Dispose();
         }
 
         public void Init(string ip, int port)
@@ -47,22 +58,63 @@ namespace NetworkLib
             m_server.Stop();
         }
 
-        void OnConnected(string sessionID)
+        protected virtual void OnConnected(string sessionID)
         {
             if (onConnected != null)
                 onConnected.Invoke(sessionID);
         }
 
-        void OnClosed(string sessionID)
+        protected virtual void OnClosed(string sessionID)
         {
             if (onClosed != null)
                 onClosed.Invoke(sessionID);
         }
 
-        void OnReceived(string sessionID, byte[] data)
+        protected virtual void OnReceived(string sessionID, byte[] data)
         {
-            object obj = m_serializer.Deserialize(data);
-            m_eventMgr.Send(obj.GetType().Name, sessionID, obj);
+            object obj = null;
+            var protocolNum = GetProtocolNum(data);
+            if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
+            {
+                obj = DeserialzeHeartbeat(data);
+            }
+            else
+            {
+                obj = m_serializer.Deserialize(data);
+            }
+
+            OnReceivedHandle(sessionID, obj);
+
+            if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
+            {
+                HandleHeartbeatRequest(sessionID, obj as HeartbeatRequest);
+            }
+        }
+
+        private void HandleHeartbeatRequest(string sessionID, HeartbeatRequest msg)
+        {
+            m_sessionHeartbeatTime[sessionID] = time;
+            ReplyHeartbeat(sessionID, msg.number);
+        }
+
+        private ushort GetProtocolNum(byte[] data)
+        {
+            byte[] head = new byte[2];
+            Array.Copy(data, head, 2);
+            return BitConverter.ToUInt16(head, 0);
+        }
+
+        private HeartbeatRequest DeserialzeHeartbeat(byte[] data)
+        {
+            byte[] body = new byte[data.Length - 2];
+            Array.Copy(data, 2, body, 0, data.Length - 2);
+            HeartbeatRequest msg = HeartbeatRequest.Parse(body);
+            return msg;
+        }
+
+        protected virtual void OnReceivedHandle(string sessionID, object data)
+        {
+            m_eventMgr.Send(data.GetType().Name, sessionID, data);
         }
 
         public void RegisterNetworkAll(Action<string, object> action)
@@ -95,7 +147,7 @@ namespace NetworkLib
 
         public void Send<T>(string sessionID, T msg)
         {
-            var data = m_serializer.Serialize(msg as Google.Protobuf.IMessage);
+            var data = m_serializer.Serialize(msg);
             m_server.Send(sessionID, data);
         }
 
@@ -103,6 +155,47 @@ namespace NetworkLib
         {
             RegisterNetworkOnce(sessionID, action);
             Send(sessionID, msg);
+        }
+
+        private void OnTimerCallback(object _sta)
+        {
+            lock (this)
+            {
+                if (server.state != ServerBase.State.Start)
+                    return;
+                CheckTimeout();
+            }
+        }
+
+        private void ReplyHeartbeat(string sessionID, int number)
+        {
+            HeartbeatReply msg = new HeartbeatReply();
+            msg.number = number;
+            m_server.Send(sessionID, msg.Serialize());
+        }
+
+        private double time { get { return DateTime.Now.Ticks * 0.0000001d; } }
+        private Dictionary<string, double> m_sessionHeartbeatTime = new Dictionary<string, double>();
+        private HashSet<string> m_timeoutSessions = new HashSet<string>();
+
+        private void CheckTimeout()
+        {
+            foreach (var se in server.sessions)
+            {
+                if (m_sessionHeartbeatTime.ContainsKey(se.Key)
+                    && !m_timeoutSessions.Contains(se.Key)
+                    && time - m_sessionHeartbeatTime[se.Key] > m_timeoutDuration)
+                {
+                    m_timeoutSessions.Add(se.Key);
+                    OnTimeout(se.Key);
+                }
+            }
+        }
+
+        protected void OnTimeout(string sessionID)
+        {
+            if (onTimeout != null)
+                onTimeout.Invoke(sessionID);
         }
     }
 }

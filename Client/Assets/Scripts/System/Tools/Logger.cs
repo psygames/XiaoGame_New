@@ -87,18 +87,18 @@ public class Logger : MonoBehaviour
 		LogLevel (ELogLevel.Bytes, obj, content, byteBuilder.ToString ());
 	}
 
-	public static void Log(object obj, string content, params object[] param)
+	private static void Log(object obj, string content, params object[] param)
 	{
 		LogLevel(ELogLevel.Debug, obj, content, param);
 	}
 
 
-	public static void LogWarning(object obj, string content, params object[] param)
+    private static void LogWarning(object obj, string content, params object[] param)
 	{
 		LogLevel(ELogLevel.Warning, obj, content, param);
 	}
 
-	public static void LogError(object obj, string content, params object[] param)
+    private static void LogError(object obj, string content, params object[] param)
 	{
 		LogLevel(ELogLevel.Error, obj, content, param);
 	}

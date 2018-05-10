@@ -34,10 +34,17 @@ namespace RedStone
 
         public void Close()
         {
-            if (battle.socket != null)
+            if (battle.socket != null && battle.socket.state != ClientBase.State.None)
                 battle.socket.Close();
-            if (main.socket != null)
+            if (main.socket != null && main.socket.state != ClientBase.State.None)
                 main.socket.Close();
+        }
+
+        public void Dispose()
+        {
+            Close();
+            battle.Dispose();
+            main.Dispose();
         }
 
         public void Update()
@@ -55,11 +62,9 @@ namespace RedStone
 
             }
 
-            protected override void OnReceived(byte[] data)
+            protected override void OnReceivedHandle(object data)
             {
-                object obj = m_serializer.Deserialize(data);
-
-                m_msgQueue.Enqueue(obj);
+                m_msgQueue.Enqueue(data);
             }
 
             private bool m_triggerConnected = false;

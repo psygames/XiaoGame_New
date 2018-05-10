@@ -15,11 +15,17 @@ namespace RedStone
             base.OnInit();
             network.onConnected = OnClientConnected;
             network.onClosed = OnClientClosed;
+            network.onTimeout = OnTimeout;
             network.RegisterNetworkAll(OnClientMessage);
         }
 
         private Dictionary<string, UserMessageHandle> m_clientHandles = new Dictionary<string, UserMessageHandle>();
         private Dictionary<string, UserData> m_userDatas = new Dictionary<string, UserData>();
+
+        private void OnTimeout(string sessionID)
+        {
+            Logger.LogError($"{sessionID} is timeout!!!");
+        }
 
         private void OnClientClosed(string sessionID)
         {
