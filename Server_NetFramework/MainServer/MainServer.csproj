@@ -63,12 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\TableAudio.cs" />
-    <Compile Include="Config\TableConst.cs" />
-    <Compile Include="Config\TableLanguage.cs" />
-    <Compile Include="Config\TableName.cs" />
-    <Compile Include="Config\TableSosCard.cs" />
-    <Compile Include="Config\TableTextColor.cs" />
     <Compile Include="Manager\GameManager.cs" />
     <Compile Include="Manager\NetworkManager.cs" />
     <Compile Include="Manager\ProxyManager.cs" />
@@ -121,8 +115,13 @@
     <Compile Include="Protocol\CMMatchSuccess.cs" />
     <Compile Include="Protocol\Infos.cs" />
     <Compile Include="Protocol\ProtoNum.cs" />
+    <Compile Include="Table\TableAudio.cs" />
+    <Compile Include="Table\TableConst.cs" />
+    <Compile Include="Table\TableLanguage.cs" />
+    <Compile Include="Table\TableName.cs" />
+    <Compile Include="Table\TableSosCard.cs" />
+    <Compile Include="Table\TableTextColor.cs" />
     <Compile Include="Tools\MyPath.cs" />
-    <Compile Include="Tools\NetConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

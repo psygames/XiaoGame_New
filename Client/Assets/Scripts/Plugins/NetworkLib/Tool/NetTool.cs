@@ -49,8 +49,8 @@ namespace NetworkLib
 
         public static int GetPort(string address)
         {
-            int begin = address.LastIndexOf(":");
-            if (begin < 0)
+            int begin = address.LastIndexOf(":") + 1;
+            if (begin <= 0)
                 return -1;
             string portStr = address.Substring(begin);
             int port = -1;

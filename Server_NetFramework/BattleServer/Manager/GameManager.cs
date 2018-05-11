@@ -14,13 +14,13 @@ namespace RedStone
         public void Start()
         {
             eventManager = new EventManager();
+            NetConfig.Init();
             TaskManger.CreateInstance().Init();
             TableManager.CreateInstance();
             TableManager.instance.getTypeFunc = (name) => { return Type.GetType(name); };
             TableManager.instance.Init();
             NetworkManager.CreateInstance().Init();
             ProxyManager.CreateInstance().Init();
-
 
             // start server
             NetworkManager.instance.forClient.server.Start();

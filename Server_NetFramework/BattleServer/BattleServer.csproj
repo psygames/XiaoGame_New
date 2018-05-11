@@ -50,6 +50,9 @@
     <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
+    <Reference Include="INIFileParser, Version=2.5.2.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,12 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\TableAudio.cs" />
-    <Compile Include="Config\TableConst.cs" />
-    <Compile Include="Config\TableLanguage.cs" />
-    <Compile Include="Config\TableName.cs" />
-    <Compile Include="Config\TableSosCard.cs" />
-    <Compile Include="Config\TableTextColor.cs" />
     <Compile Include="GameData\DataBase.cs" />
     <Compile Include="GameData\RoomData.cs" />
     <Compile Include="GameData\UserData.cs" />
@@ -114,12 +111,19 @@
     <Compile Include="Protocol\CMMatchSuccess.cs" />
     <Compile Include="Protocol\Infos.cs" />
     <Compile Include="Protocol\ProtoNum.cs" />
+    <Compile Include="Table\TableAudio.cs" />
+    <Compile Include="Table\TableConst.cs" />
+    <Compile Include="Table\TableLanguage.cs" />
+    <Compile Include="Table\TableName.cs" />
+    <Compile Include="Table\TableSosCard.cs" />
+    <Compile Include="Table\TableTextColor.cs" />
     <Compile Include="Tools\MyPath.cs" />
-    <Compile Include="Tools\NetConfig.cs" />
+    <Compile Include="Config\NetConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Resource\Config.ini" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resource\xmlList.txt" />
