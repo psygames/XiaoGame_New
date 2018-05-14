@@ -10,24 +10,17 @@ namespace NetworkLib
         protected EventManager m_eventMgr = null;
         protected ISerializer m_serializer = null;
         protected IServer m_server = null;
-        private Timer m_timer = null;
+        protected HeartbeatServer m_heartbeat = null;
 
         public Action<string> onConnected { get; set; }
         public Action<string> onClosed { get; set; }
-        public Action<string> onTimeout { get; set; }
         public ServerBase server { get { return m_server as ServerBase; } }
 
-        private float m_timeoutDuration;
-
-        public ServerNetworkManager(IServer server, ISerializer serializer, float timeout = 2f)
+        public ServerNetworkManager(IServer server, ISerializer serializer)
         {
             m_eventMgr = new EventManager();
             m_server = server;
             m_serializer = serializer;
-
-            m_timer = new Timer(new TimerCallback(OnTimerCallback));
-            m_timer.Change(0, (int)(timeout * 1000 * 0.5f));
-            m_timeoutDuration = timeout;
 
             m_server.onReceived += OnReceived;
             m_server.onConnected += OnConnected;
@@ -39,7 +32,6 @@ namespace NetworkLib
             m_server.onReceived -= OnReceived;
             m_server.onConnected -= OnConnected;
             m_server.onClosed -= OnClosed;
-            m_timer.Dispose();
         }
 
         public void Init(string ip, int port)
@@ -77,17 +69,13 @@ namespace NetworkLib
             if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
             {
                 obj = DeserialzeHeartbeat(data);
+                OnReceivedHandle(sessionID, obj);
+                HandleHeartbeatRequest(sessionID, obj as HeartbeatRequest);
             }
             else
             {
                 obj = m_serializer.Deserialize(data);
-            }
-
-            OnReceivedHandle(sessionID, obj);
-
-            if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
-            {
-                HandleHeartbeatRequest(sessionID, obj as HeartbeatRequest);
+                OnReceivedHandle(sessionID, obj);
             }
         }
 
@@ -102,14 +90,6 @@ namespace NetworkLib
             byte[] head = new byte[2];
             Array.Copy(data, head, 2);
             return BitConverter.ToUInt16(head, 0);
-        }
-
-        private HeartbeatRequest DeserialzeHeartbeat(byte[] data)
-        {
-            byte[] body = new byte[data.Length - 2];
-            Array.Copy(data, 2, body, 0, data.Length - 2);
-            HeartbeatRequest msg = HeartbeatRequest.Parse(body);
-            return msg;
         }
 
         protected virtual void OnReceivedHandle(string sessionID, object data)
