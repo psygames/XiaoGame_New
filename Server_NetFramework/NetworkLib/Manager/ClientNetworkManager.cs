@@ -13,6 +13,7 @@ namespace NetworkLib
         public Action onClosed { get; set; }
         public ClientBase socket { get { return m_socket as ClientBase; } }
         public HeartbeatClient heartbeat { get { return m_heartbeat; } }
+        public bool isConneted { get { return socket.state == ClientBase.State.Connected; } }
 
         public ClientNetworkManager(IClient client, ISerializer serializer)
         {
@@ -23,6 +24,8 @@ namespace NetworkLib
             m_socket.onReceived += OnReceived;
             m_socket.onConnected += OnConnected;
             m_socket.onClosed += OnClosed;
+
+            UseHeartbeat();
         }
 
         public void UseHeartbeat(float interval = 1f, float timeout = 10f)

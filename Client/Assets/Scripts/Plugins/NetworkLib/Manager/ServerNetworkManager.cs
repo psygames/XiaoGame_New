@@ -10,28 +10,29 @@ namespace NetworkLib
         protected EventManager m_eventMgr = null;
         protected ISerializer m_serializer = null;
         protected IServer m_server = null;
-        private Timer m_timer = null;
+        protected HeartbeatServer m_heartbeat = null;
 
         public Action<string> onConnected { get; set; }
         public Action<string> onClosed { get; set; }
-        public Action<string> onTimeout { get; set; }
         public ServerBase server { get { return m_server as ServerBase; } }
+        public HeartbeatServer heartbeat { get { return m_heartbeat; } }
 
-        private float m_timeoutDuration;
-
-        public ServerNetworkManager(IServer server, ISerializer serializer, float timeout = 2f)
+        public ServerNetworkManager(IServer server, ISerializer serializer)
         {
             m_eventMgr = new EventManager();
             m_server = server;
             m_serializer = serializer;
 
-            m_timer = new Timer(new TimerCallback(OnTimerCallback));
-            m_timer.Change(0, (int)(timeout * 1000 * 0.5f));
-            m_timeoutDuration = timeout;
-
             m_server.onReceived += OnReceived;
             m_server.onConnected += OnConnected;
             m_server.onClosed += OnClosed;
+
+            UseHeartbeat();
+        }
+
+        public void UseHeartbeat(float timeout = 10f)
+        {
+            m_heartbeat = new HeartbeatServer(timeout, server);
         }
 
         public void Dispose()
@@ -39,7 +40,6 @@ namespace NetworkLib
             m_server.onReceived -= OnReceived;
             m_server.onConnected -= OnConnected;
             m_server.onClosed -= OnClosed;
-            m_timer.Dispose();
         }
 
         public void Init(string ip, int port)
@@ -76,25 +76,17 @@ namespace NetworkLib
             var protocolNum = GetProtocolNum(data);
             if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
             {
-                obj = DeserialzeHeartbeat(data);
+                if (m_heartbeat != null)
+                {
+                    obj = m_heartbeat.HandleMessage(sessionID, data);
+                    OnReceivedHandle(sessionID, obj);
+                }
             }
             else
             {
                 obj = m_serializer.Deserialize(data);
+                OnReceivedHandle(sessionID, obj);
             }
-
-            OnReceivedHandle(sessionID, obj);
-
-            if (protocolNum == HeartbeatRequest.PROTOCOL_NUM)
-            {
-                HandleHeartbeatRequest(sessionID, obj as HeartbeatRequest);
-            }
-        }
-
-        private void HandleHeartbeatRequest(string sessionID, HeartbeatRequest msg)
-        {
-            m_sessionHeartbeatTime[sessionID] = time;
-            ReplyHeartbeat(sessionID, msg.number);
         }
 
         private ushort GetProtocolNum(byte[] data)
@@ -102,14 +94,6 @@ namespace NetworkLib
             byte[] head = new byte[2];
             Array.Copy(data, head, 2);
             return BitConverter.ToUInt16(head, 0);
-        }
-
-        private HeartbeatRequest DeserialzeHeartbeat(byte[] data)
-        {
-            byte[] body = new byte[data.Length - 2];
-            Array.Copy(data, 2, body, 0, data.Length - 2);
-            HeartbeatRequest msg = HeartbeatRequest.Parse(body);
-            return msg;
         }
 
         protected virtual void OnReceivedHandle(string sessionID, object data)
@@ -155,47 +139,6 @@ namespace NetworkLib
         {
             RegisterNetworkOnce(sessionID, action);
             Send(sessionID, msg);
-        }
-
-        private void OnTimerCallback(object _sta)
-        {
-            lock (this)
-            {
-                if (server.state != ServerBase.State.Start)
-                    return;
-                CheckTimeout();
-            }
-        }
-
-        private void ReplyHeartbeat(string sessionID, int number)
-        {
-            HeartbeatReply msg = new HeartbeatReply();
-            msg.number = number;
-            m_server.Send(sessionID, msg.Serialize());
-        }
-
-        private double time { get { return DateTime.Now.Ticks * 0.0000001d; } }
-        private Dictionary<string, double> m_sessionHeartbeatTime = new Dictionary<string, double>();
-        private HashSet<string> m_timeoutSessions = new HashSet<string>();
-
-        private void CheckTimeout()
-        {
-            foreach (var se in server.sessions)
-            {
-                if (m_sessionHeartbeatTime.ContainsKey(se.Key)
-                    && !m_timeoutSessions.Contains(se.Key)
-                    && time - m_sessionHeartbeatTime[se.Key] > m_timeoutDuration)
-                {
-                    m_timeoutSessions.Add(se.Key);
-                    OnTimeout(se.Key);
-                }
-            }
-        }
-
-        protected void OnTimeout(string sessionID)
-        {
-            if (onTimeout != null)
-                onTimeout.Invoke(sessionID);
         }
     }
 }

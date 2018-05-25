@@ -13,17 +13,13 @@ namespace RedStone
         public NetworkManager()
         {
             main = new ClientNetworkMangerEx(new WebSocketClient(), new ProtoSerializer());
+
             battle = new ClientNetworkMangerEx(new WebSocketClient(), new ProtoSerializer());
         }
 
         public void Init()
         {
             InitMainServer();
-            InitBattleServer();
-        }
-
-        private void InitBattleServer()
-        {
         }
 
         private void InitMainServer()

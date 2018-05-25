@@ -109,6 +109,24 @@ public class GameManagerEditor : UnityEditor.Editor
                 newips.ReleaseToPool();
             }
         }
+
+
+        /*-------------- Trigger Heartbeat Timeout -------------*/
+        if (Application.isPlaying && GUILayout.Button("Trigger Heartbeat Timeout(Main)"))
+        {
+            if(NetworkManager.instance != null && NetworkManager.instance.main != null)
+            {
+                NetworkManager.instance.main.heartbeat.TestTriggerTimeout();
+            }
+        }
+
+        if (Application.isPlaying && GUILayout.Button("Trigger Heartbeat Timeout(Battle)"))
+        {
+            if (NetworkManager.instance != null && NetworkManager.instance.battle != null)
+            {
+                NetworkManager.instance.battle.heartbeat.TestTriggerTimeout();
+            }
+        }
     }
 }
 

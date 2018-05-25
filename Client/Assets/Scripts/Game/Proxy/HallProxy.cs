@@ -12,7 +12,9 @@ namespace RedStone
 
 
         public bool isLogin { get; private set; }
-        public bool isConnected { get { return network.socket.state == NetworkLib.ClientBase.State.Connected; } }
+        public bool isConnected { get { return network.isConneted; } }
+
+        private bool m_needReconnnect = false;
 
         public HallProxy()
         {
@@ -26,21 +28,74 @@ namespace RedStone
             network.onConnected = () =>
             {
                 Logger.Log("Network Connect Success (Main Server).");
-                Login();
+                if (m_needReconnnect)
+                {
+                    SendReconnectMsg();
+                }
+                else
+                {
+                    Login();
+                }
             };
 
-            network.onTimeout = () =>
+            network.heartbeat.onTimeout = () =>
             {
                 Logger.LogError("Main Server Timeout!!!");
+                Reconnect();
             };
 
             network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
             network.RegisterNetwork<NetworkLib.HeartbeatReply>(OnHeartbeatReply);
         }
 
+        public void Reconnect(int retryNum = 1, int retryCount = 5)
+        {
+            // Close 处理
+            if (network.isConneted)
+            {
+                network.Close();
+                network.onClosed = () =>
+                {
+                    Reconnect();
+                    network.onClosed = null;
+                };
+                return;
+            }
+
+
+            Logger.Log("Try to reconnect({0}).".FormatStr(retryNum));
+            m_needReconnnect = true;
+            network.socket.Connect();
+
+            Task.WaitFor(3f, () =>
+            {
+                if (!isConnected && retryNum < retryCount)
+                {
+                    Reconnect(retryNum + 1);
+                }
+                else
+                {
+                    Logger.LogError("Reconnect Failed.");
+                    network.Close();
+                }
+            });
+        }
+
         public void Connect()
         {
+            m_needReconnnect = false;
             network.socket.Connect();
+        }
+
+        public void SendReconnectMsg()
+        {
+            CMLoginRequest req = new CMLoginRequest();
+            req.DeviceID = DeviceID.UUID;
+            network.Send<CMLoginRequest, CMLoginReply>(req
+            , (reply) =>
+            {
+                playerData.SetData(reply.PlayerInfo);
+            });
         }
 
         public void Login()
@@ -50,29 +105,24 @@ namespace RedStone
             network.Send<CMLoginRequest, CMLoginReply>(req
             , (reply) =>
              {
-                 //TODO:重连Or 退出
+                 playerData.SetData(reply.PlayerInfo);
+                 isLogin = true;
+
                  if (reply.IsInBattle)
                  {
-                     playerData.SetData(reply.PlayerInfo);
-
-                     MessageBox.Show("战斗提示", "已经在战场中，是否重连！", MessageBoxStyle.OKCancelClose, (result) =>
+                     MessageBox.Show("战斗提示", "已经在战场中，是否重连！"
+                         , MessageBoxStyle.OKCancelClose, (result) =>
                      {
                          if (result.result == MessageBoxResultType.OK)
                          {
-                             CancelReconnect(1, 1); //TODO:重连
-                             isLogin = true;
+                             //TODO:重连
+                             CancelReconnect(1, 1);
                          }
                          else
                          {
                              CancelReconnect(1, 1);
-                             isLogin = true;
                          }
                      });
-                 }
-                 else
-                 {
-                     isLogin = true;
-                     playerData.SetData(reply.PlayerInfo);
                  }
              });
         }
@@ -129,7 +179,7 @@ namespace RedStone
         }
         void OnHeartbeatReply(NetworkLib.HeartbeatReply msg)
         {
-            Logger.Log("heartbeat reply num: {0}", msg.number);
+            // Logger.Log("heartbeat reply num: {0}", msg.number);
         }
 
     }

@@ -40,7 +40,7 @@ namespace RedStone
 
         private void OnHeartbeat(HeartbeatRequest msg)
         {
-            Logger.Log($"{data.uid} heartbeat -> num: {msg.number}");
+            // Logger.Log($"{data.uid} heartbeat -> num: {msg.number}");
         }
 
         private void OnLogin(CMLoginRequest msg)

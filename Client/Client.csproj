@@ -340,10 +340,12 @@
     <Compile Include="Assets\Scripts\Plugins\Core\Mono.Xml\SmallXmlParser.cs" />
     <Compile Include="Assets\Scripts\Plugins\Core\Tool\ExtMethods.cs" />
     <Compile Include="Assets\Scripts\Plugins\Core\Tool\FileHelper.cs" />
+    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Heartbeat\HeartbeatClient.cs" />
+    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Heartbeat\HeartbeatServer.cs" />
+    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Heartbeat\Message\HeartbeatReply.cs" />
+    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Heartbeat\Message\HeartbeatRequest.cs" />
     <Compile Include="Assets\Scripts\Plugins\NetworkLib\Manager\ClientNetworkManager.cs" />
     <Compile Include="Assets\Scripts\Plugins\NetworkLib\Manager\ServerNetworkManager.cs" />
-    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Message\HeartbeatReply.cs" />
-    <Compile Include="Assets\Scripts\Plugins\NetworkLib\Message\HeartbeatRequest.cs" />
     <Compile Include="Assets\Scripts\Plugins\NetworkLib\Network\Base\ClientBase.cs" />
     <Compile Include="Assets\Scripts\Plugins\NetworkLib\Network\Base\ServerBase.cs" />
     <Compile Include="Assets\Scripts\Plugins\NetworkLib\Network\Base\SessionBase.cs" />

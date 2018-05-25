@@ -15,7 +15,7 @@ namespace RedStone
             base.OnInit();
             network.onConnected = OnClientConnected;
             network.onClosed = OnClientClosed;
-            network.onTimeout = OnTimeout;
+            network.heartbeat.onTimeout = OnTimeout;
             network.RegisterNetworkAll(OnClientMessage);
         }
 
@@ -24,16 +24,16 @@ namespace RedStone
 
         private void OnTimeout(string sessionID)
         {
-            Logger.LogError($"{sessionID} is timeout!!!");
+            if (m_clientHandles.ContainsKey(sessionID))
+            {
+                //TODO:这里需要考虑心跳超时后的，断连，数据清理，Session缓存交换，
+                Logger.LogError($"{sessionID} is timeout!!!");
+            }
         }
 
         private void OnClientClosed(string sessionID)
         {
-            if (m_userDatas[sessionID].isOnline)
-            {
-                m_clientHandles[sessionID].Logout();
-            }
-
+            m_clientHandles[sessionID].Logout();
             m_clientHandles.Remove(sessionID);
             m_userDatas.Remove(sessionID);
         }

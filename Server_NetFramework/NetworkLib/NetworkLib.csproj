@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Heartbeat\HeartbeatServer.cs" />
     <Compile Include="Heartbeat\HeartbeatClient.cs" />
     <Compile Include="Manager\ClientNetworkManager.cs" />
     <Compile Include="Manager\ServerNetworkManager.cs" />
