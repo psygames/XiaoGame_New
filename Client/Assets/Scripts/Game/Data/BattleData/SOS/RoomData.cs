@@ -26,16 +26,14 @@ namespace RedStone.Data.SOS
             state = State.WaitJoin;
         }
 
-        public void RoomSync(Message.CBRoomSync sync)
+        public void SetState(int whosTurn, int state, int leftCardCount)
         {
             foreach (var p in m_players)
             {
-                if (p.id == sync.WhoseTurn)
+                if (p.id == whosTurn)
                 {
-                    whosTurn = p;
+                    this.whosTurn = p;
                     p.SetTurned(true);
-                    // 重置Effect
-                    p.SetEffect(PlayerData.Effect.None);
                 }
                 else
                 {
@@ -43,8 +41,17 @@ namespace RedStone.Data.SOS
                 }
             }
 
-            state = (State)sync.State;
-            leftCardCount = sync.LeftCardCount;
+            this.state = (State)state;
+            this.leftCardCount = leftCardCount;
+        }
+
+        public void RoomSync(Message.CBRoomSync sync)
+        {
+            SetState(sync.WhoseTurn, sync.State, sync.LeftCardCount);
+            //TODO: 新回合玩家清除EFFECT
+            var whos = m_players.First(a => a.id == sync.WhoseTurn);
+            if (whos != null)
+                whos.SetEffect(PlayerData.Effect.None);
         }
 
         public void SetCards(IList<Message.CardInfo> infos)

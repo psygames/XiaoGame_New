@@ -1,0 +1,9 @@
+syntax = "proto3";
+package message;
+
+// 客户端 -> 战场 重连请求
+message CBReconnectRequest
+{
+    string sessionID = 1;
+    string token = 2;
+}

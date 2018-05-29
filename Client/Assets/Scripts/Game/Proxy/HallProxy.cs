@@ -15,6 +15,7 @@ namespace RedStone
         public bool isConnected { get { return network.isConneted; } }
 
         private bool m_needReconnnect = false;
+        public bool needReconnectBattle { get; private set; }
 
         public HallProxy()
         {
@@ -48,43 +49,70 @@ namespace RedStone
             network.RegisterNetwork<NetworkLib.HeartbeatReply>(OnHeartbeatReply);
         }
 
+
+        public void Connect()
+        {
+            m_needReconnnect = false;
+            network.Connect();
+
+            Task.WaitFor(3f, () =>
+            {
+                if (!GF.GetProxy<HallProxy>().isConnected)
+                {
+                    MessageBox.Show("连接失败", "连接服务器失败，是否重新连接？", MessageBoxStyle.OKClose
+                    , (result) =>
+                    {
+                        if (result.result == MessageBoxResultType.OK)
+                        {
+                            Connect();
+                        }
+                    });
+                }
+            });
+        }
+
         public void Reconnect(int retryNum = 1, int retryCount = 5)
         {
             // Close 处理
             if (network.isConneted)
             {
-                network.Close();
                 network.onClosed = () =>
                 {
                     Reconnect();
                     network.onClosed = null;
                 };
+                network.Close();
                 return;
             }
 
 
-            Logger.Log("Try to reconnect({0}).".FormatStr(retryNum));
+            Logger.Log("Try to reconnect MainServer({0}).".FormatStr(retryNum));
             m_needReconnnect = true;
-            network.socket.Connect();
+            network.Connect();
 
             Task.WaitFor(3f, () =>
             {
+                if (isConnected)
+                    return;
+
                 if (!isConnected && retryNum < retryCount)
                 {
                     Reconnect(retryNum + 1);
                 }
                 else
                 {
-                    Logger.LogError("Reconnect Failed.");
+                    Logger.LogError("Reconnect MainServer Failed.");
                     network.Close();
+
+                    MessageBox.Show("重连大厅失败", "是否继续尝试重连？", MessageBoxStyle.OKCancelClose, (result) =>
+                    {
+                        if (result.result == MessageBoxResultType.OK)
+                        {
+                            Reconnect();
+                        }
+                    });
                 }
             });
-        }
-
-        public void Connect()
-        {
-            m_needReconnnect = false;
-            network.socket.Connect();
         }
 
         public void SendReconnectMsg()
@@ -115,8 +143,8 @@ namespace RedStone
                      {
                          if (result.result == MessageBoxResultType.OK)
                          {
-                             //TODO:重连
-                             CancelReconnect(1, 1);
+                             battleServerInfo = reply.BattleServerInfo;
+                             ReconnectToBattle();
                          }
                          else
                          {
@@ -125,6 +153,12 @@ namespace RedStone
                      });
                  }
              });
+        }
+
+        private void ReconnectToBattle()
+        {
+            needReconnectBattle = true;
+            GF.ChangeState<BattleLoadingState>();
         }
 
         public void BeginMatch(int gameID, int gameMode)
@@ -175,6 +209,7 @@ namespace RedStone
         {
             battleServerInfo = msg.BattleServerInfo;
             SendEvent(EventDef.MatchSuccess);
+            needReconnectBattle = false;
             GF.ChangeState<BattleLoadingState>();
         }
         void OnHeartbeatReply(NetworkLib.HeartbeatReply msg)

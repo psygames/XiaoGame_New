@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class Logger
+public static class Logger
 {
 
     public static void Log(object obj)
@@ -31,11 +31,15 @@ public class Logger
         LogWithColor(str, ConsoleColor.DarkRed, parms);
     }
 
+    private static object sync_tag = new object();
     private static void LogWithColor(string str, ConsoleColor color, params object[] parms)
     {
-        var lastColor = Console.ForegroundColor;
-        Console.ForegroundColor = color;
-        Console.WriteLine(str, parms);
-        Console.ForegroundColor = lastColor;
+        lock (sync_tag)
+        {
+            var lastColor = Console.ForegroundColor;
+            Console.ForegroundColor = color;
+            Console.WriteLine(str, parms);
+            Console.ForegroundColor = lastColor;
+        }
     }
 }

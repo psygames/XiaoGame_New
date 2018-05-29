@@ -72,6 +72,17 @@ namespace RedStone
             RefreshUI();
         }
 
+        public void OnReconnected()
+        {
+            Reset();
+            InitPlayers();
+            foreach (var p in m_players)
+            {
+                p.RefreshUI();
+            }
+            RefreshUI();
+        }
+
         public void OnRoomSync()
         {
             if (m_lastTurn != data.whosTurn)

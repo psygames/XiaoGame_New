@@ -12,7 +12,7 @@ namespace RedStone
     public class MatchPoolProxy : MCProxyBase
     {
         const int NEED_PLAYERS = 4;
-        const int WAIT_TIMES = 30;
+        const int WAIT_TIMES = 10;
 
         public override void OnInit()
         {

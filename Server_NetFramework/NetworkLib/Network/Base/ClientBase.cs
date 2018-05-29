@@ -23,16 +23,16 @@ namespace NetworkLib
 
         public virtual void OnConnected()
         {
+            state = State.Connected;
             if (onConnected != null)
                 onConnected.Invoke();
-            state = State.Connected;
         }
 
         public virtual void OnClosed()
         {
+            state = State.Closed;
             if (onClosed != null)
                 onClosed.Invoke();
-            state = State.Closed;
         }
 
         public virtual void OnReceived(byte[] data)

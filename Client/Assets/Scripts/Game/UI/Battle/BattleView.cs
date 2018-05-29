@@ -21,6 +21,7 @@ namespace RedStone
             room.Init();
 
             Register(EventDef.SOS.Joined, room.OnJoined);
+            Register(EventDef.SOS.Reconnected, room.OnReconnected);
             Register<int>(EventDef.SOS.Ready, room.OnReady);
             Register(EventDef.SOS.RoomSync, room.OnRoomSync);
             Register<Message.CBSendCardSync>(EventDef.SOS.SendCard, room.OnSendCard);

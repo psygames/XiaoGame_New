@@ -34,11 +34,13 @@ enum ProtoNum
 	CBPlayerOutSync = 2022;
 	CBSendMessage = 2023;
 	CBSendMessageSync = 2024;
+	CBReconnectRequest = 2025;
+	CBReconnectReply = 2026;
 
 	//Battle -> Main
 	BMLoginRequest = 3001;
 	BMLoginReply = 3002;
 	BMCreateRoomRequest = 3003;
 	BMCreateRoomReply = 3004;
-	
+
 }

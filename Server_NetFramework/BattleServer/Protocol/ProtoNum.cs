@@ -22,7 +22,7 @@ namespace Message {
     static ProtoNumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5Qcm90b051bS5wcm90bxIHbWVzc2FnZSrqBAoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5Qcm90b051bS5wcm90bxIHbWVzc2FnZSqaBQoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
             "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
             "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxIWChFDTUNh",
@@ -34,9 +34,10 @@ namespace Message {
             "YXJkU3luYxDeDxIXChJDQkJhdHRsZVJlc3VsdFN5bmMQ4A8SFQoQQ0JDYXJk",
             "RWZmZWN0U3luYxDiDxIZChRDQlBsYXllckRyb3BDYXJkU3luYxDkDxIUCg9D",
             "QlBsYXllck91dFN5bmMQ5g8SEgoNQ0JTZW5kTWVzc2FnZRDnDxIWChFDQlNl",
-            "bmRNZXNzYWdlU3luYxDoDxITCg5CTUxvZ2luUmVxdWVzdBC5FxIRCgxCTUxv",
-            "Z2luUmVwbHkQuhcSGAoTQk1DcmVhdGVSb29tUmVxdWVzdBC7FxIWChFCTUNy",
-            "ZWF0ZVJvb21SZXBseRC8F2IGcHJvdG8z"));
+            "bmRNZXNzYWdlU3luYxDoDxIXChJDQlJlY29ubmVjdFJlcXVlc3QQ6Q8SFQoQ",
+            "Q0JSZWNvbm5lY3RSZXBseRDqDxITCg5CTUxvZ2luUmVxdWVzdBC5FxIRCgxC",
+            "TUxvZ2luUmVwbHkQuhcSGAoTQk1DcmVhdGVSb29tUmVxdWVzdBC7FxIWChFC",
+            "TUNyZWF0ZVJvb21SZXBseRC8F2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -81,6 +82,8 @@ namespace Message {
     [pbr::OriginalName("CBPlayerOutSync")] CbplayerOutSync = 2022,
     [pbr::OriginalName("CBSendMessage")] CbsendMessage = 2023,
     [pbr::OriginalName("CBSendMessageSync")] CbsendMessageSync = 2024,
+    [pbr::OriginalName("CBReconnectRequest")] CbreconnectRequest = 2025,
+    [pbr::OriginalName("CBReconnectReply")] CbreconnectReply = 2026,
     /// <summary>
     ///Battle -> Main
     /// </summary>

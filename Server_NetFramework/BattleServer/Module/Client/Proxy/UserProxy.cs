@@ -16,19 +16,28 @@ namespace RedStone
         public override void OnInit()
         {
             base.OnInit();
-            network.server.onClosed = OnClosed;
+            network.onConnected = OnConnected;
+            network.onClosed = OnClosed;
             RegisterMessage<CBLoginRequest>(OnLogin);
+            RegisterMessage<CBReconnectRequest>(OnReconnect);
+        }
+
+        private void OnConnected(string sessionID)
+        {
+            Logger.Log($"{sessionID} socket connected.");
         }
 
         private void OnClosed(string sessionID)
         {
-            GetUserBySession(sessionID).SetState(UserState.Offline);
+            Logger.Log($"{sessionID} socket closed.");
+            var user = GetUserBySession(sessionID);
+            if (user != null)
+                user.SetState(UserState.Offline);
         }
 
         public UserData AddUser(Message.PlayerInfo playerInfo, int roomID, bool isAI)
         {
-            UserData user = null;
-            user = new UserData();
+            UserData user = new UserData();
             string token = Guid.NewGuid().ToString(); //Gen Token
             user.SetData(playerInfo, roomID, token, isAI);
             user.SetState(isAI ? UserState.Login : UserState.Offline);
@@ -39,20 +48,40 @@ namespace RedStone
 
         void OnLogin(string sessionID, CBLoginRequest msg)
         {
-            var user = m_users.Values.First(a => a.token == msg.Token);
-            if (user == null)
+            UserData user = null;
+            if (!m_users.TryGetValue(msg.Token, out user))
             {
-                Logger.LogError($"{sessionID}'s token {msg.Token} is wrong, refuse login.");
+                Logger.LogError($"LOGIN => {sessionID}'s token {msg.Token} is wrong, refuse login.");
+                return;
             }
-            else
-            {
-                user.SetSessionID(sessionID);
-                user.SetState(UserState.Login);
-            }
+
+            user.SetSessionID(sessionID);
+            user.SetState(UserState.Login);
 
             CBLoginReply rep = new CBLoginReply();
             rep.RoomID = user.roomID;
             SendMessage(sessionID, rep);
+        }
+
+        void OnReconnect(string sessionID, CBReconnectRequest msg)
+        {
+            UserData user = null;
+            if (!m_users.TryGetValue(msg.Token, out user))
+            {
+                Logger.LogError($"RECONNECT => {sessionID}'s token {msg.Token} is wrong, refuse reconnect.");
+                return;
+            }
+
+            SOS.SOS_Logic sosLogic = GetProxy<BattleServerProxy>().GetSosLogic(user.roomID);
+
+            user.SetSessionID(sessionID);
+            if (sosLogic.state == SOS.SOS_Logic.State.Started)
+                user.SetState(UserState.Battle);
+            else
+                user.SetState(UserState.Login);
+
+            CBReconnectReply reply = sosLogic.GetReconnectData(user.uid);
+            SendMessage(sessionID, reply);
         }
 
 
@@ -63,7 +92,7 @@ namespace RedStone
 
         public UserData GetUserBySession(string sessionID)
         {
-            return m_users.Values.First(a => a.sessionID == sessionID);
+            return m_users.Values.FirstOrDefault(a => a.sessionID == sessionID);
         }
 
         public void RemoveUser(string token)

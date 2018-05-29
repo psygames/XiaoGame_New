@@ -69,7 +69,7 @@ namespace RedStone
             return name;
         }
 
-        public void RegisterUserMsg<T>(string token, Action<T> action)
+        public void RegisterUserTokenMsg<T>(string token, Action<T> action)
         {
             RegisterMessage<T>((sessionID, msg) =>
             {
@@ -91,6 +91,13 @@ namespace RedStone
 
 
         #region PvL
+        public SOS.SOS_Logic GetSosLogic(int roomID)
+        {
+            SOS.SOS_Logic logic = null;
+            m_pvlLogics.TryGetValue(roomID, out logic);
+            return logic;
+        }
+
         private Dictionary<int, SOS.SOS_Logic> m_pvlLogics = new Dictionary<int, SOS.SOS_Logic>();
         public void NewPvL(int id)
         {

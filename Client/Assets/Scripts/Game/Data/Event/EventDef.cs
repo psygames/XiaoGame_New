@@ -29,6 +29,8 @@ namespace RedStone
             public const string DropCard = "SOS.DropCard";
             public const string PlayerOut = "SOS.PlayerOut";
             public const string SendMessageSync = "SOS.SendMessage";
+            public const string HeartbeatTimeout = "SOS.HeartbeatTimeout";
+            public const string Reconnected = "SOS.Reconnected";
         }
     }
 }

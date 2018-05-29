@@ -40,7 +40,19 @@ namespace RedStone.Data.SOS
             gold = info.Gold;
             isMain = info.IsSelf;
             seat = info.Seat;
-            state = info.Joined ? State.Joined : State.None;
+            state = (State)info.State;
+            effect = (Effect)info.Effect;
+            SetHandCards(info.HandCards);
+        }
+
+        private void SetHandCards(IList<int> handcards)
+        {
+            m_handCards.Clear();
+            foreach (var cardId in handcards)
+            {
+                var cardData = GF.GetProxy<SosProxy>().room.GetCard(cardId);
+                AddCard(cardData);
+            }
         }
 
         public void IncrGold(int gold)
@@ -125,8 +137,8 @@ namespace RedStone.Data.SOS
 
         public enum Effect
         {
-            None,
-            InvincibleOneRound,
+            None = 0,
+            InvincibleOneRound = 1,
         }
     }
 }

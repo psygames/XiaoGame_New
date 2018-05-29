@@ -30,7 +30,7 @@ namespace NetworkLib
             UseHeartbeat();
         }
 
-        public void UseHeartbeat(float timeout = 10f)
+        public void UseHeartbeat(float timeout = 3f)
         {
             m_heartbeat = new HeartbeatServer(timeout, server);
         }

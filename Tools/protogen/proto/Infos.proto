@@ -34,7 +34,9 @@ message BattlePlayerInfo
     int32 level = 4;  // 当前等级
     int32 seat = 5;   // 座位
     bool isSelf = 6;  // 是否是自己
-    bool joined = 7;  // 是否加入战场
+    int32 state = 7;   // 玩家状态，None = 0, Joined = 1, Ready = 2, Turn = 3, NotTurn = 4, Out = 5,
+    int32 effect = 8; // BUF效果，0-None，1-InvincibleOneRound
+    repeated int32 handCards = 9;   //当前手牌
 }
 
 message BattleResultPlayerInfo

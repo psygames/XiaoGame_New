@@ -98,6 +98,8 @@
     <Compile Include="Protocol\CBPlayerOutSync.cs" />
     <Compile Include="Protocol\CBReady.cs" />
     <Compile Include="Protocol\CBReadySync.cs" />
+    <Compile Include="Protocol\CBReconnectReply.cs" />
+    <Compile Include="Protocol\CBReconnectRequest.cs" />
     <Compile Include="Protocol\CBRoomSync.cs" />
     <Compile Include="Protocol\CBSendCardSync.cs" />
     <Compile Include="Protocol\CBSendMessage.cs" />

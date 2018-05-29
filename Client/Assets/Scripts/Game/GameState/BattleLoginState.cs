@@ -9,27 +9,23 @@ namespace RedStone
     {
         public override void Enter(params object[] param)
         {
+            GF.GetProxy<SosProxy>().Reset();
+            GF.GetProxy<SosProxy>().InitSocket();
             Connect();
         }
 
         private void Connect()
         {
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_RESPONSE, 50));
-            GF.GetProxy<SosProxy>().Connect();
-            Task.WaitFor(3, () =>
+            if (GF.GetProxy<HallProxy>().needReconnectBattle)
             {
-                if (!GF.GetProxy<SosProxy>().isConnected)
-                {
-                    MessageBox.Show("连接失败", "连接战场失败，是否重新连接？", MessageBoxStyle.OKClose
-                    , (result) =>
-                    {
-                        if (result.result == MessageBoxResultType.OK)
-                        {
-                            Connect();
-                        }
-                    });
-                }
-            });
+                GF.GetProxy<SosProxy>().Reconnect();
+            }
+            else
+            {
+                GF.GetProxy<SosProxy>().Connect();
+                
+            }
         }
 
         public override void Leave()

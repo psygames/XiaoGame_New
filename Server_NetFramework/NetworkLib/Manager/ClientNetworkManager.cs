@@ -28,7 +28,7 @@ namespace NetworkLib
             UseHeartbeat();
         }
 
-        public void UseHeartbeat(float interval = 1f, float timeout = 10f)
+        public void UseHeartbeat(float interval = 1f, float timeout = 3f)
         {
             m_heartbeat = new HeartbeatClient(interval, timeout, socket);
         }

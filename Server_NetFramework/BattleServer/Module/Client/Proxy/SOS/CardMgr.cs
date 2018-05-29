@@ -35,8 +35,8 @@ namespace RedStone.SOS
     {
         Random rand = new Random();
 
-        public List<Card> m_allCards = new List<Card>();
-        public List<Card> m_leftCards = new List<Card>();
+        private List<Card> m_allCards = new List<Card>();
+        private List<Card> m_leftCards = new List<Card>();
 
         public List<Card> allCards { get { return m_allCards; } }
         public List<Card> leftCards { get { return m_leftCards; } }

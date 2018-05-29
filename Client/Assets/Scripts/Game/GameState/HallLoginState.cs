@@ -16,20 +16,6 @@ namespace RedStone
         {
             GF.Send(EventDef.HallLoading, new LoadingStatus(LTKey.LOADING_WAIT_RESPONSE, 50));
             GF.GetProxy<HallProxy>().Connect();
-            Task.WaitFor(3f, () =>
-            {
-                if (!GF.GetProxy<HallProxy>().isConnected)
-                {
-                    MessageBox.Show("连接失败", "连接服务器失败，是否重新连接？", MessageBoxStyle.OKClose
-                    , (result) =>
-                    {
-                        if (result.result == MessageBoxResultType.OK)
-                        {
-                            Connect();
-                        }
-                    });
-                }
-            });
         }
 
         public override void Leave()

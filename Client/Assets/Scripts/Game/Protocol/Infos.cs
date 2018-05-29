@@ -27,21 +27,22 @@ namespace Message {
             "KAUSCwoDZXhwGAUgASgFIk8KEEJhdHRsZVNlcnZlckluZm8SDwoHYWRkcmVz",
             "cxgBIAEoCRIMCgRuYW1lGAIgASgJEg0KBXN0YXRlGAMgASgJEg0KBXRva2Vu",
             "GAQgASgJIioKDkJhdHRsZVJvb21JbmZvEgoKAmlkGAEgASgFEgwKBG5hbWUY",
-            "AiABKAkidwoQQmF0dGxlUGxheWVySW5mbxIKCgJpZBgBIAEoBRIMCgRuYW1l",
-            "GAIgASgJEgwKBGdvbGQYAyABKAUSDQoFbGV2ZWwYBCABKAUSDAoEc2VhdBgF",
-            "IAEoBRIOCgZpc1NlbGYYBiABKAgSDgoGam9pbmVkGAcgASgIImwKFkJhdHRs",
-            "ZVJlc3VsdFBsYXllckluZm8SDwoHcGxheXJJRBgBIAEoBRINCgVzdGF0ZRgC",
-            "IAEoBRINCgVjYXJkcxgDIAMoBRINCgVpc1dpbhgEIAEoCBIUCgxyZXdhcmRB",
-            "bW91bnQYBSABKAUiJwoIQ2FyZEluZm8SCgoCaWQYASABKAUSDwoHdGFibGVJ",
-            "RBgCIAEoBSItCg9QbGF5ZXJUb2tlbkluZm8SCwoDdWlkGAEgASgDEg0KBXRv",
-            "a2VuGAIgASgJYgZwcm90bzM="));
+            "AiABKAkimQEKEEJhdHRsZVBsYXllckluZm8SCgoCaWQYASABKAUSDAoEbmFt",
+            "ZRgCIAEoCRIMCgRnb2xkGAMgASgFEg0KBWxldmVsGAQgASgFEgwKBHNlYXQY",
+            "BSABKAUSDgoGaXNTZWxmGAYgASgIEg0KBXN0YXRlGAcgASgFEg4KBmVmZmVj",
+            "dBgIIAEoBRIRCgloYW5kQ2FyZHMYCSADKAUibAoWQmF0dGxlUmVzdWx0UGxh",
+            "eWVySW5mbxIPCgdwbGF5cklEGAEgASgFEg0KBXN0YXRlGAIgASgFEg0KBWNh",
+            "cmRzGAMgAygFEg0KBWlzV2luGAQgASgIEhQKDHJld2FyZEFtb3VudBgFIAEo",
+            "BSInCghDYXJkSW5mbxIKCgJpZBgBIAEoBRIPCgd0YWJsZUlEGAIgASgFIi0K",
+            "D1BsYXllclRva2VuSW5mbxILCgN1aWQYASABKAMSDQoFdG9rZW4YAiABKAli",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerInfo), global::Message.PlayerInfo.Parser, new[]{ "Uid", "Name", "Gold", "Level", "Exp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleServerInfo), global::Message.BattleServerInfo.Parser, new[]{ "Address", "Name", "State", "Token" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleRoomInfo), global::Message.BattleRoomInfo.Parser, new[]{ "Id", "Name" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf", "Joined" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattlePlayerInfo), global::Message.BattlePlayerInfo.Parser, new[]{ "Id", "Name", "Gold", "Level", "Seat", "IsSelf", "State", "Effect", "HandCards" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.BattleResultPlayerInfo), global::Message.BattleResultPlayerInfo.Parser, new[]{ "PlayrID", "State", "Cards", "IsWin", "RewardAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.CardInfo), global::Message.CardInfo.Parser, new[]{ "Id", "TableID" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Message.PlayerTokenInfo), global::Message.PlayerTokenInfo.Parser, new[]{ "Uid", "Token" }, null, null, null)
@@ -677,7 +678,9 @@ namespace Message {
       level_ = other.level_;
       seat_ = other.seat_;
       isSelf_ = other.isSelf_;
-      joined_ = other.joined_;
+      state_ = other.state_;
+      effect_ = other.effect_;
+      handCards_ = other.handCards_.Clone();
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -769,18 +772,45 @@ namespace Message {
       }
     }
 
-    /// <summary>Field number for the "joined" field.</summary>
-    public const int JoinedFieldNumber = 7;
-    private bool joined_;
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private int state_;
     /// <summary>
-    /// 是否加入战场
+    /// 玩家状态，None = 0, Joined = 1, Ready = 2, Turn = 3, NotTurn = 4, Out = 5,
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Joined {
-      get { return joined_; }
+    public int State {
+      get { return state_; }
       set {
-        joined_ = value;
+        state_ = value;
       }
+    }
+
+    /// <summary>Field number for the "effect" field.</summary>
+    public const int EffectFieldNumber = 8;
+    private int effect_;
+    /// <summary>
+    /// BUF效果，0-None，1-InvincibleOneRound
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Effect {
+      get { return effect_; }
+      set {
+        effect_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "handCards" field.</summary>
+    public const int HandCardsFieldNumber = 9;
+    private static readonly pb::FieldCodec<int> _repeated_handCards_codec
+        = pb::FieldCodec.ForInt32(74);
+    private readonly pbc::RepeatedField<int> handCards_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    ///当前手牌
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<int> HandCards {
+      get { return handCards_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -802,7 +832,9 @@ namespace Message {
       if (Level != other.Level) return false;
       if (Seat != other.Seat) return false;
       if (IsSelf != other.IsSelf) return false;
-      if (Joined != other.Joined) return false;
+      if (State != other.State) return false;
+      if (Effect != other.Effect) return false;
+      if(!handCards_.Equals(other.handCards_)) return false;
       return true;
     }
 
@@ -815,7 +847,9 @@ namespace Message {
       if (Level != 0) hash ^= Level.GetHashCode();
       if (Seat != 0) hash ^= Seat.GetHashCode();
       if (IsSelf != false) hash ^= IsSelf.GetHashCode();
-      if (Joined != false) hash ^= Joined.GetHashCode();
+      if (State != 0) hash ^= State.GetHashCode();
+      if (Effect != 0) hash ^= Effect.GetHashCode();
+      hash ^= handCards_.GetHashCode();
       return hash;
     }
 
@@ -850,10 +884,15 @@ namespace Message {
         output.WriteRawTag(48);
         output.WriteBool(IsSelf);
       }
-      if (Joined != false) {
+      if (State != 0) {
         output.WriteRawTag(56);
-        output.WriteBool(Joined);
+        output.WriteInt32(State);
       }
+      if (Effect != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Effect);
+      }
+      handCards_.WriteTo(output, _repeated_handCards_codec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -877,9 +916,13 @@ namespace Message {
       if (IsSelf != false) {
         size += 1 + 1;
       }
-      if (Joined != false) {
-        size += 1 + 1;
+      if (State != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(State);
       }
+      if (Effect != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Effect);
+      }
+      size += handCards_.CalculateSize(_repeated_handCards_codec);
       return size;
     }
 
@@ -906,9 +949,13 @@ namespace Message {
       if (other.IsSelf != false) {
         IsSelf = other.IsSelf;
       }
-      if (other.Joined != false) {
-        Joined = other.Joined;
+      if (other.State != 0) {
+        State = other.State;
       }
+      if (other.Effect != 0) {
+        Effect = other.Effect;
+      }
+      handCards_.Add(other.handCards_);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -944,7 +991,16 @@ namespace Message {
             break;
           }
           case 56: {
-            Joined = input.ReadBool();
+            State = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            Effect = input.ReadInt32();
+            break;
+          }
+          case 74:
+          case 72: {
+            handCards_.AddEntriesFrom(input, _repeated_handCards_codec);
             break;
           }
         }

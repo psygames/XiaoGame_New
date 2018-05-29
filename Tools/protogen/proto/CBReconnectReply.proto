@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "Infos.proto";
+package message;
+
+// 客户端 -> 战场 重连返回数据
+message CBReconnectReply
+{
+    BattleRoomInfo roomInfo = 1;
+    repeated CardInfo cards = 2;
+    repeated BattlePlayerInfo playerInfos = 3;
+    int32 roomState = 4;  // 1 - wait others, 2 - game, 3 - end
+    int32 whoseTurn = 5;
+    int32 leftCardCount = 6;
+    float leftTurnTime = 7;
+    int32 lastPlayedCardId = 8;
+}

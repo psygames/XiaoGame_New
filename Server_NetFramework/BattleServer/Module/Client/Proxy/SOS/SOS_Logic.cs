@@ -25,12 +25,13 @@ namespace RedStone.SOS
 
 
         private float m_whosTurnCountDown = 0;
-        private State m_state = State.WaitJoin;
+        public State state { get; private set; }
         private List<Player> m_players = new List<Player>();
         private List<Player> alivePlayers { get { return m_players.Where(a => a.state != Player.State.Out).ToList(); } }
 
         public void Init(int roomID)
         {
+            state = State.WaitJoin;
             m_roomID = roomID;
             roomRemainTime = ROOM_MAX_TIME;
             m_endKeepCD = END_KEEP_TIME;
@@ -76,7 +77,7 @@ namespace RedStone.SOS
             CheckAllReady();
             CheckEnd();
 
-            EndKeepTime();
+            UpdateEndKeepTime();
             UpdateTurnTime();
             UpdateAI();
         }
@@ -84,9 +85,9 @@ namespace RedStone.SOS
         #region Check State
 
         private float m_endKeepCD = 0;
-        private void EndKeepTime()
+        private void UpdateEndKeepTime()
         {
-            if (m_state != State.End)
+            if (state != State.End)
                 return;
 
             m_endKeepCD -= Time.deltaTime;
@@ -95,7 +96,7 @@ namespace RedStone.SOS
         private float roomRemainTime = 0;
         private void CheckEnd()
         {
-            if (m_state != State.Started)
+            if (state != State.Started)
                 return;
 
             roomRemainTime -= Time.deltaTime;
@@ -117,24 +118,24 @@ namespace RedStone.SOS
 
         public void CheckAllJoined()
         {
-            if (m_state != State.WaitJoin)
+            if (state != State.WaitJoin)
                 return;
 
             if (m_players.All(a => a.state == Player.State.Joined))
             {
-                m_state = State.WaitReady;
+                state = State.WaitReady;
                 RoomSync();
             }
         }
 
         public void CheckAllReady()
         {
-            if (m_state != State.WaitReady)
+            if (state != State.WaitReady)
                 return;
 
             if (m_players.All(a => a.state == Player.State.Ready))
             {
-                m_state = State.Started;
+                state = State.Started;
                 RoomSync();
                 GameBegin();
             }
@@ -152,7 +153,7 @@ namespace RedStone.SOS
                 }
             }
             SendResult(winner);
-            m_state = State.End;
+            state = State.End;
             RoomSync();
         }
 
@@ -182,9 +183,54 @@ namespace RedStone.SOS
             m_whosTurnCountDown = Math.Max(m_whosTurnCountDown - Time.deltaTime, 0);
         }
 
+        public CBReconnectReply GetReconnectData(long uid)
+        {
+            var player = m_players.FirstOrDefault(a => a.uid == uid);
+            CBReconnectReply rep = new CBReconnectReply();
+            foreach (var p in m_players)
+            {
+                BattlePlayerInfo info = new BattlePlayerInfo();
+                info.Id = p.id;
+                info.IsSelf = p == player;
+                info.Level = p.user.level;
+                info.Name = p.user.name;
+                info.Gold = p.gold;
+                info.Seat = p.seat;
+                info.State = (int)p.state;
+                foreach (var card in p.handCards)
+                {
+                    if (p == player)
+                        info.HandCards.Add(card.id);
+                    else
+                        info.HandCards.Add(0); // 其他玩家不同步卡牌，防作弊
+                }
+                rep.PlayerInfos.Add(info);
+            }
+
+            foreach (var card in m_cardMgr.allCards)
+            {
+                CardInfo info = new CardInfo();
+                info.Id = card.id;
+                info.TableID = card.tableID;
+                rep.Cards.Add(info);
+            }
+
+            rep.RoomInfo = new BattleRoomInfo();
+            rep.RoomInfo.Id = room.id;
+            rep.RoomInfo.Name = room.name;
+            if (m_whosTurn != null)
+                rep.WhoseTurn = m_whosTurn.id;
+            rep.RoomState = (int)state;
+            rep.LeftCardCount = m_cardMgr.leftCards.Count;
+            rep.LeftTurnTime = m_whosTurnCountDown;
+            rep.LastPlayedCardId = 0;
+
+            return rep;
+        }
+
         void OnJoinBattle(Player player, CBJoinBattleRequest msg)
         {
-            if (m_state != State.WaitJoin)
+            if (state != State.WaitJoin)
                 return;
 
             player.user.SetState(UserState.Battle);
@@ -195,16 +241,20 @@ namespace RedStone.SOS
             rep.Info.Id = m_roomID;
             rep.Info.Name = room.name;
 
-            foreach (var d in m_players)
+            foreach (var p in m_players)
             {
                 BattlePlayerInfo info = new BattlePlayerInfo();
-                info.Id = d.id;
-                info.IsSelf = d == player;
-                info.Level = d.user.level;
-                info.Name = d.user.name;
-                info.Gold = d.gold;
-                info.Seat = d.seat;
-                info.Joined = d.state == Player.State.Joined;
+                info.Id = p.id;
+                info.IsSelf = p == player;
+                info.Level = p.user.level;
+                info.Name = p.user.name;
+                info.Gold = p.gold;
+                info.Seat = p.seat;
+                info.State = (int)p.state;
+                foreach (var card in p.handCards)
+                {
+                    info.HandCards.Add(card.id);
+                }
                 rep.PlayerInfos.Add(info);
             }
 
@@ -215,7 +265,7 @@ namespace RedStone.SOS
 
         void OnReady(Player player, CBReady msg)
         {
-            if (m_state != State.WaitReady)
+            if (state != State.WaitReady)
                 return;
 
             player.SetState(Player.State.Ready);
@@ -239,7 +289,7 @@ namespace RedStone.SOS
         {
             if (m_whosTurn != player || m_isThisTrunPlayedCard)
             {
-                Logger.LogError("{0}\t出牌，但是不是他的回个，已禁止！", player.name);
+                Logger.LogError("{0}\t出牌，但不是他的回合，已禁止！", player.name);
                 return;
             }
 
@@ -441,10 +491,11 @@ namespace RedStone.SOS
 
         public bool CheckCanDismiss()
         {
-            if (m_state == State.End && m_endKeepCD <= 0)
+            if (state == State.End && m_endKeepCD <= 0)
                 return true;
 
-            if (m_state == State.Started)
+            /* 玩家全部掉线情况（注释此代码，等待玩家重连！）
+            if (state == State.Started)
             {
                 bool noPlayer = true;
                 foreach (var p in m_players)
@@ -457,6 +508,7 @@ namespace RedStone.SOS
                 }
                 return noPlayer;
             }
+            */
             return false;
         }
 
@@ -527,7 +579,7 @@ namespace RedStone.SOS
         public void RoomSync()
         {
             CBRoomSync sync = new CBRoomSync();
-            sync.State = (int)m_state;
+            sync.State = (int)state;
             sync.LeftCardCount = m_cardMgr.leftCards.Count;
             if (m_whosTurn != null)
                 sync.WhoseTurn = m_whosTurn.id;
@@ -619,10 +671,10 @@ namespace RedStone.SOS
 
         public enum State
         {
-            WaitJoin,
-            WaitReady,
-            Started,
-            End,
+            WaitJoin = 0,
+            WaitReady = 1,
+            Started = 2,
+            End = 3,
         }
 
         public void SendToAll<T>(T msg, int[] exceptIds = null)
@@ -652,7 +704,7 @@ namespace RedStone.SOS
         {
             foreach (var user in room.users)
             {
-                battleProxy.RegisterUserMsg<T>(user.token, (msg) =>
+                battleProxy.RegisterUserTokenMsg<T>(user.token, (msg) =>
                 {
                     Action queAct = () =>
                     {
@@ -683,7 +735,7 @@ namespace RedStone.SOS
         // AI
         public void UpdateAI()
         {
-            if (m_state == State.WaitJoin)
+            if (state == State.WaitJoin)
             {
                 foreach (var p in m_players)
                 {
@@ -691,7 +743,7 @@ namespace RedStone.SOS
                         OnJoinBattle(p, null);
                 }
             }
-            else if (m_state == State.WaitReady)
+            else if (state == State.WaitReady)
             {
                 foreach (var p in m_players)
                 {
@@ -699,7 +751,7 @@ namespace RedStone.SOS
                         OnReady(p, null);
                 }
             }
-            else if (m_state == State.Started)
+            else if (state == State.Started)
             {
                 UpdateTurn();
                 UpdateAIPlay();

@@ -12,13 +12,15 @@ namespace RedStone
         public BattleServerInfo serverInfo { get { return GetProxy<HallProxy>().battleServerInfo; } }
         public RoomData room { get; private set; }
 
-        public bool isConnected { get { return network.socket.state == ClientBase.State.Connected; } }
+        public bool isConnected { get { return network.isConneted; } }
         public bool isLogin { get; private set; }
+        private bool m_needReconnnect = false;
 
         public void Reset()
         {
             room = new RoomData();
             isLogin = false;
+            m_needReconnnect = false;
         }
 
         public SosProxy()
@@ -40,39 +42,123 @@ namespace RedStone
             RegisterMessage<CBSendMessageSync>(OnSendMessageSync);
         }
 
-        private void InitSocket()
+        public void InitSocket()
         {
             network.Init(NetTool.GetIP(serverInfo.Address), NetTool.GetPort(serverInfo.Address));
 
-            Debug.Log("Init Network (Battle) [{0}]".FormatStr(serverInfo.Address));
+            Logger.Log("Init Network (Battle) [{0}]", serverInfo.Address);
 
+            network.heartbeat.onTimeout = OnTimeout;
             network.onConnected = () =>
             {
-                Debug.Log("Network Connect Success (Battle Server).");
-                Login();
+                Logger.Log("Network Connect Success (Battle Server).");
+                if (m_needReconnnect)
+                    SendReconnect();
+                else
+                    Login();
             };
-
-
         }
 
         public void Connect()
         {
-            Reset();
-            if (serverInfo != null)
+            if (serverInfo == null)
             {
-                InitSocket();
-                network.socket.Connect();
+                Logger.LogError("BattleServerInfo is NULL");
+                return;
             }
-            else
+
+            network.Connect();
+
+            Task.WaitFor(3, () =>
             {
-                Debug.LogError("BattleServerInfo is NULL");
+                if (isConnected)
+                    return;
+
+                MessageBox.Show("连接失败", "连接战场失败，是否重新连接？", MessageBoxStyle.OKClose
+                , (result) =>
+                {
+                    if (result.result == MessageBoxResultType.OK)
+                    {
+                        Connect();
+                    }
+                });
+            });
+        }
+
+        public void Reconnect(int retryNum = 1, int retryCount = 5)
+        {
+            // CLOSE
+            if (network.isConneted)
+            {
+                Logger.Log("Close current socket (BattleServer).");
+
+                network.onClosed = () =>
+                {
+                    network.onClosed = null;
+                    Logger.Log("Current socket Closed (BattleServer)");
+                    Reconnect();
+                };
+                network.Close();
+                return;
             }
+
+            Logger.Log("Try to reconnect BattleServer({0}).", retryNum);
+            m_needReconnnect = true;
+            network.Connect();
+
+            Task.WaitFor(3f, () =>
+            {
+                if (isConnected)
+                    return;
+
+                if (!isConnected && retryNum < retryCount)
+                {
+                    Reconnect(retryNum + 1);
+                }
+                else
+                {
+                    Logger.LogError("Reconnect BattleServer Failed.");
+                    network.Close();
+                    MessageBox.Show("重连战场失败", "是否继续尝试重连？", MessageBoxStyle.OKCancelClose, (result) =>
+                    {
+                        if (result.result == MessageBoxResultType.OK)
+                        {
+                            Reconnect();
+                        }
+                    });
+                }
+            });
         }
 
         public void Close()
         {
             if (isConnected && network != null && network.socket != null)
-                network.socket.Close();
+                network.Close();
+        }
+
+        private void OnTimeout()
+        {
+            SendEvent(EventDef.SOS.HeartbeatTimeout);
+            Reconnect();
+        }
+
+        private void SendReconnect()
+        {
+            CBReconnectRequest msg = new CBReconnectRequest();
+            msg.SessionID = "";//TODO:LAST SESSION ID
+            msg.Token = serverInfo.Token;
+            SendMessage<CBReconnectRequest, CBReconnectReply>(msg, (rep) =>
+            {
+                Reset();
+                isLogin = true;
+
+                room.SetData(rep.RoomInfo);
+                room.SetCards(rep.Cards);
+                room.SetPlayers(rep.PlayerInfos);
+                room.SetState(rep.WhoseTurn, rep.RoomState, rep.LeftCardCount);
+
+                SendEvent(EventDef.SOS.Reconnected);
+            });
         }
 
         public void Login()
@@ -128,7 +214,6 @@ namespace RedStone
         {
             Toast.instance.ShowNormal("加入战场成功！");
 
-            room = new RoomData();
             room.SetData(msg.Info);
             room.SetPlayers(msg.PlayerInfos);
 
