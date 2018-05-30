@@ -149,6 +149,16 @@ namespace RedStone
             msg.Token = serverInfo.Token;
             SendMessage<CBReconnectRequest, CBReconnectReply>(msg, (rep) =>
             {
+                if (rep.RoomState == (int)RoomData.State.Dismiss)
+                {
+                    room.SetState(0, rep.RoomState, 0);
+                    MessageBox.Show("房间已解散", "点击确认，退出房间！", MessageBoxStyle.OK, (res) =>
+                    {
+                        GF.ChangeState<HallState>();
+                    });
+                    return;
+                }
+
                 Reset();
                 isLogin = true;
 

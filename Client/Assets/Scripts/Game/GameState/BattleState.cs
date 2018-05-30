@@ -14,6 +14,7 @@ namespace RedStone
 
         public override void Leave()
         {
+            GF.GetProxy<SosProxy>().Close();
             UIManager.instance.Unload<BattleView>();
         }
 

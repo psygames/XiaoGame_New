@@ -45,7 +45,6 @@ namespace RedStone
                 Toast.instance.Show("当前状态不能退出房间");
                 return;
             }
-            GF.GetProxy<SosProxy>().Close();
             GF.ChangeState<HallState>();
         }
 

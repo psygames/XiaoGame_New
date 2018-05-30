@@ -28,6 +28,7 @@ namespace RedStone.Data.SOS
 
         public void SetState(int whosTurn, int state, int leftCardCount)
         {
+            this.whosTurn = null;
             foreach (var p in m_players)
             {
                 if (p.id == whosTurn)
@@ -93,11 +94,11 @@ namespace RedStone.Data.SOS
 
         public enum State
         {
-            WaitJoin,
-            WaitReady,
-            Started,
-            End,
+            WaitJoin = 0,
+            WaitReady = 1,
+            Started = 2,
+            End = 3,
+            Dismiss = 4,
         }
-
     }
 }
