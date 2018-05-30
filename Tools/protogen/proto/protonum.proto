@@ -15,6 +15,7 @@ enum ProtoNum
 	CMMatchSuccess = 1006;
 	CMMatchCancel = 1007;
 	CMCancelReconnect = 1009;
+	CMPlayerInfoSync = 1012;
 
 	//Client -> Battle
 	CBLoginRequest = 2001;
@@ -42,5 +43,6 @@ enum ProtoNum
 	BMLoginReply = 3002;
 	BMCreateRoomRequest = 3003;
 	BMCreateRoomReply = 3004;
+	BMBattleResult = 3005;
 
 }

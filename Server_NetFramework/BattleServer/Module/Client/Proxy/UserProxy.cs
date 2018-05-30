@@ -72,6 +72,15 @@ namespace RedStone
                 return;
             }
 
+            if (GetProxy<RoomProxy>().GetRoom(user.roomID) == null)
+            {
+                Logger.LogError($"RECONNECT => {sessionID}'s token {msg.Token} is wrong, refuse reconnect.");
+                CBReconnectReply rep = new CBReconnectReply();
+                rep.RoomState = (int)SOS.SOS_Logic.State.Dismiss;
+                SendMessage(sessionID, rep);
+                return;
+            }
+
             SOS.SOS_Logic sosLogic = GetProxy<BattleServerProxy>().GetSosLogic(user.roomID);
 
             user.SetSessionID(sessionID);

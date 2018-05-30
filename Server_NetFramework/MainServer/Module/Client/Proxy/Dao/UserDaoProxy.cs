@@ -33,31 +33,69 @@ namespace RedStone
         {
             var user = usrDao.AsQueryable().FirstOrDefault(a => a.deviceID == deviceID);
             if (user == null)
-            {
-                user = new UserDB();
-                user.uid = GetCounter("UserDB");
-                user.deviceID = deviceID; ;
-                user.name = "Player" + user.uid;
-                user.level = 1;
-                user.exp = 0;
-                user.gold = 0;
-                user.isOnline = true;
-                usrDao.InsertOne(user);
-            }
-            else if (!user.isOnline)
-            {
-                var query = Builders<UserDB>.Filter.Where(a => a.deviceID == deviceID);
-                var update = Builders<UserDB>.Update.Set(a => a.isOnline, true);
-                user = usrDao.FindOneAndUpdate(query, update);
-            }
+                CreatUser(deviceID);
+
+            user.isOnline = true;
+            Update(user.uid, user);
             return user;
+        }
+
+        private void CreatUser(string deviceID)
+        {
+            var user = new UserDB();
+            user.uid = GetCounter("UserDB");
+            user.deviceID = deviceID; ;
+            user.name = "Player" + user.uid;
+            user.level = 1;
+            user.exp = 0;
+            user.gold = 0;
+            user.isOnline = false;
+            usrDao.InsertOne(user);
+        }
+
+        public void CalReuslt(long uid, int incrGold, int incrExp)
+        {
+            var u = GetUserDB(uid);
+            u.gold += incrGold;
+            u.exp += incrExp;
+            int levelUpExp = GetLevelUpExp(u.level);
+            while (u.exp >= levelUpExp)
+            {
+                u.level++;
+                u.exp -= levelUpExp;
+                levelUpExp = GetLevelUpExp(u.level);
+            }
+            while (u.exp < 0)
+            {
+                u.level--;
+                levelUpExp = GetLevelUpExp(u.level);
+                u.exp += levelUpExp;
+            }
+            Update(uid, u);
+        }
+
+        private int GetLevelUpExp(int level)
+        {
+            return (int)(Math.Pow(1.5f, level) * 100);
         }
 
         public void Logout(long uid)
         {
+            var u = GetUserDB(uid);
+            u.isOnline = true;
+            Update(uid, u);
+        }
+
+        private UserDB Update(long uid, UserDB user)
+        {
             var query = Builders<UserDB>.Filter.Where(a => a.uid == uid);
-            var update = Builders<UserDB>.Update.Set(a => a.isOnline, false);
-            usrDao.UpdateOne(query, update);
+            var update = Builders<UserDB>.Update
+                .Set(a => a.name, user.name)
+                .Set(a => a.gold, user.gold)
+                .Set(a => a.isOnline, user.isOnline)
+                .Set(a => a.level, user.level)
+                .Set(a=>a.exp ,user.exp);
+            return usrDao.FindOneAndUpdate(query, update);
         }
 
 

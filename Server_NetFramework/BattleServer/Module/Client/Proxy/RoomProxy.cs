@@ -36,7 +36,9 @@ namespace RedStone
 
         public RoomData GetRoom(int roomID)
         {
-            return m_rooms[roomID];
+            RoomData room = null;
+            m_rooms.TryGetValue(roomID, out room);
+            return room;
         }
     }
 }

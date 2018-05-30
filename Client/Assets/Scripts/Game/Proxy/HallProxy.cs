@@ -45,8 +45,9 @@ namespace RedStone
                 Reconnect();
             };
 
-            network.RegisterNetwork<CMMatchSuccess>(OnMatchSuccess);
-            network.RegisterNetwork<NetworkLib.HeartbeatReply>(OnHeartbeatReply);
+            RegisterMessage<CMMatchSuccess>(OnMatchSuccess);
+            RegisterMessage<NetworkLib.HeartbeatReply>(OnHeartbeatReply);
+            RegisterMessage<CMPlayerInfoSync>(OnPlayerInfoSync);
         }
 
 
@@ -212,6 +213,12 @@ namespace RedStone
             needReconnectBattle = false;
             GF.ChangeState<BattleLoadingState>();
         }
+
+        void OnPlayerInfoSync(CMPlayerInfoSync msg)
+        {
+            playerData.SetData(msg.Info);
+        }
+
         void OnHeartbeatReply(NetworkLib.HeartbeatReply msg)
         {
             // Logger.Log("heartbeat reply num: {0}", msg.number);

@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 namespace RedStone.Data
 {
@@ -11,6 +12,7 @@ namespace RedStone.Data
         public string name { get; private set; }
         public int level { get; private set; }
         public int exp { get; private set; }
+        public int levelUpExp { get { return (int)(Mathf.Pow(1.5f, level) * 100); } }
         public int gold { get; private set; }
 
         public void SetData(Message.PlayerInfo info)

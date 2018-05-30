@@ -85,6 +85,7 @@
     <Compile Include="Module\Client\Proxy\MessageHandle\UserMessageHandle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protocol\BMBattleResult.cs" />
     <Compile Include="Protocol\BMCreateRoomReply.cs" />
     <Compile Include="Protocol\BMCreateRoomRequest.cs" />
     <Compile Include="Protocol\BMLoginReply.cs" />
@@ -99,9 +100,12 @@
     <Compile Include="Protocol\CBPlayCard.cs" />
     <Compile Include="Protocol\CBPlayCardSync.cs" />
     <Compile Include="Protocol\CBPlayerDropCardSync.cs" />
+    <Compile Include="Protocol\CBPlayerInfoSync.cs" />
     <Compile Include="Protocol\CBPlayerOutSync.cs" />
     <Compile Include="Protocol\CBReady.cs" />
     <Compile Include="Protocol\CBReadySync.cs" />
+    <Compile Include="Protocol\CBReconnectReply.cs" />
+    <Compile Include="Protocol\CBReconnectRequest.cs" />
     <Compile Include="Protocol\CBRoomSync.cs" />
     <Compile Include="Protocol\CBSendCardSync.cs" />
     <Compile Include="Protocol\CBSendMessage.cs" />
@@ -113,6 +117,7 @@
     <Compile Include="Protocol\CMMatchReply.cs" />
     <Compile Include="Protocol\CMMatchRequest.cs" />
     <Compile Include="Protocol\CMMatchSuccess.cs" />
+    <Compile Include="Protocol\CMPlayerInfoSync.cs" />
     <Compile Include="Protocol\Infos.cs" />
     <Compile Include="Protocol\ProtoNum.cs" />
     <Compile Include="Table\TableAudio.cs" />

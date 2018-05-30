@@ -22,22 +22,23 @@ namespace Message {
     static ProtoNumReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg5Qcm90b051bS5wcm90bxIHbWVzc2FnZSqaBQoIUHJvdG9OdW0SCwoHVW5r",
+            "Cg5Qcm90b051bS5wcm90bxIHbWVzc2FnZSrGBQoIUHJvdG9OdW0SCwoHVW5r",
             "bm93bhAAEhMKDkNNTG9naW5SZXF1ZXN0EOkHEhEKDENNTG9naW5SZXBseRDq",
             "BxITCg5DTU1hdGNoUmVxdWVzdBDrBxIRCgxDTU1hdGNoUmVwbHkQ7AcSEwoO",
             "Q01NYXRjaFN1Y2Nlc3MQ7gcSEgoNQ01NYXRjaENhbmNlbBDvBxIWChFDTUNh",
-            "bmNlbFJlY29ubmVjdBDxBxITCg5DQkxvZ2luUmVxdWVzdBDRDxIRCgxDQkxv",
-            "Z2luUmVwbHkQ0g8SGAoTQ0JKb2luQmF0dGxlUmVxdWVzdBDTDxIWChFDQkpv",
-            "aW5CYXR0bGVSZXBseRDUDxIMCgdDQlJlYWR5ENUPEhAKC0NCUmVhZHlTeW5j",
-            "ENYPEg8KCkNCUm9vbVN5bmMQ2A8SEwoOQ0JDYXJkSW5mb1N5bmMQ2g8SDwoK",
-            "Q0JQbGF5Q2FyZBDbDxITCg5DQlBsYXlDYXJkU3luYxDcDxITCg5DQlNlbmRD",
-            "YXJkU3luYxDeDxIXChJDQkJhdHRsZVJlc3VsdFN5bmMQ4A8SFQoQQ0JDYXJk",
-            "RWZmZWN0U3luYxDiDxIZChRDQlBsYXllckRyb3BDYXJkU3luYxDkDxIUCg9D",
-            "QlBsYXllck91dFN5bmMQ5g8SEgoNQ0JTZW5kTWVzc2FnZRDnDxIWChFDQlNl",
-            "bmRNZXNzYWdlU3luYxDoDxIXChJDQlJlY29ubmVjdFJlcXVlc3QQ6Q8SFQoQ",
-            "Q0JSZWNvbm5lY3RSZXBseRDqDxITCg5CTUxvZ2luUmVxdWVzdBC5FxIRCgxC",
-            "TUxvZ2luUmVwbHkQuhcSGAoTQk1DcmVhdGVSb29tUmVxdWVzdBC7FxIWChFC",
-            "TUNyZWF0ZVJvb21SZXBseRC8F2IGcHJvdG8z"));
+            "bmNlbFJlY29ubmVjdBDxBxIVChBDTVBsYXllckluZm9TeW5jEPQHEhMKDkNC",
+            "TG9naW5SZXF1ZXN0ENEPEhEKDENCTG9naW5SZXBseRDSDxIYChNDQkpvaW5C",
+            "YXR0bGVSZXF1ZXN0ENMPEhYKEUNCSm9pbkJhdHRsZVJlcGx5ENQPEgwKB0NC",
+            "UmVhZHkQ1Q8SEAoLQ0JSZWFkeVN5bmMQ1g8SDwoKQ0JSb29tU3luYxDYDxIT",
+            "Cg5DQkNhcmRJbmZvU3luYxDaDxIPCgpDQlBsYXlDYXJkENsPEhMKDkNCUGxh",
+            "eUNhcmRTeW5jENwPEhMKDkNCU2VuZENhcmRTeW5jEN4PEhcKEkNCQmF0dGxl",
+            "UmVzdWx0U3luYxDgDxIVChBDQkNhcmRFZmZlY3RTeW5jEOIPEhkKFENCUGxh",
+            "eWVyRHJvcENhcmRTeW5jEOQPEhQKD0NCUGxheWVyT3V0U3luYxDmDxISCg1D",
+            "QlNlbmRNZXNzYWdlEOcPEhYKEUNCU2VuZE1lc3NhZ2VTeW5jEOgPEhcKEkNC",
+            "UmVjb25uZWN0UmVxdWVzdBDpDxIVChBDQlJlY29ubmVjdFJlcGx5EOoPEhMK",
+            "DkJNTG9naW5SZXF1ZXN0ELkXEhEKDEJNTG9naW5SZXBseRC6FxIYChNCTUNy",
+            "ZWF0ZVJvb21SZXF1ZXN0ELsXEhYKEUJNQ3JlYXRlUm9vbVJlcGx5ELwXEhMK",
+            "DkJNQmF0dGxlUmVzdWx0EL0XYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Message.ProtoNum), }, null));
@@ -62,6 +63,7 @@ namespace Message {
     [pbr::OriginalName("CMMatchSuccess")] CmmatchSuccess = 1006,
     [pbr::OriginalName("CMMatchCancel")] CmmatchCancel = 1007,
     [pbr::OriginalName("CMCancelReconnect")] CmcancelReconnect = 1009,
+    [pbr::OriginalName("CMPlayerInfoSync")] CmplayerInfoSync = 1012,
     /// <summary>
     ///Client -> Battle
     /// </summary>
@@ -91,6 +93,7 @@ namespace Message {
     [pbr::OriginalName("BMLoginReply")] BmloginReply = 3002,
     [pbr::OriginalName("BMCreateRoomRequest")] BmcreateRoomRequest = 3003,
     [pbr::OriginalName("BMCreateRoomReply")] BmcreateRoomReply = 3004,
+    [pbr::OriginalName("BMBattleResult")] BmbattleResult = 3005,
   }
 
   #endregion

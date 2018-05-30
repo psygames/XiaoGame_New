@@ -14,6 +14,7 @@ namespace RedStone
         public const string MatchBegin = "MatchBegin";
         public const string MatchCancel = "MatchCancel";
         public const string MatchSuccess = "MatchSuccess";
+        public const string PlayerInfoUpdate = "PlayerInfoUpdate";
 
 
 

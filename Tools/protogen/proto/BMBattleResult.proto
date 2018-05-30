@@ -1,0 +1,19 @@
+syntax = "proto3";
+package message;
+
+// 战场 -> 主服 登录请求
+message BMBattleResult
+{
+    int32 roomID = 1;
+    repeated BMBattleResultUserInfo rankUsers = 2;
+}
+
+message BMBattleResultUserInfo
+{
+    int64 uid = 1;
+    int32 playerID = 2;
+    string playerName = 3;
+    int32 score = 4;
+    bool isAI = 5;
+    bool isOut = 6;
+}

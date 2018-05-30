@@ -8,6 +8,9 @@ namespace RedStone
     public class HomeView : ViewBase
     {
         public GameObject matching;
+        public Text gold;
+        public Text level;
+        public Text exp;
 
         private bool m_isMatching = false;
 
@@ -18,6 +21,7 @@ namespace RedStone
             Register(EventDef.MatchBegin, OnMatchBegin);
             Register(EventDef.MatchCancel, OnMatchCancel);
             Register(EventDef.MatchSuccess, OnMatchSuccess);
+            Register(EventDef.PlayerInfoUpdate, OnPlayerInfoUpdate);
         }
 
         public override void OnOpen()
@@ -46,9 +50,21 @@ namespace RedStone
             Debug.Log("Match Success!!!");
         }
 
+        void OnPlayerInfoUpdate()
+        {
+            RefreshUI();
+        }
+
         private void RefreshUI()
         {
+            if (!isActiveAndEnabled)
+                return;
             matching.SetActive(m_isMatching);
+            var data = GF.GetProxy<HallProxy>().playerData;
+
+            gold.text = "金币: {0}".FormatStr(data.gold);
+            level.text = "等级: {0}".FormatStr(data.level);
+            exp.text = "经验值: {0}/{1}".FormatStr(data.exp, data.levelUpExp);
         }
 
         void OnClickBattle()

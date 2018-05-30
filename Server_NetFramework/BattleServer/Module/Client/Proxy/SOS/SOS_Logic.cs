@@ -680,6 +680,7 @@ namespace RedStone.SOS
             WaitReady = 1,
             Started = 2,
             End = 3,
+            Dismiss = 4,
         }
 
         public void SendToAll<T>(T msg, int[] exceptIds = null)
