@@ -287,9 +287,14 @@ namespace RedStone.SOS
 
         void OnPlayCard(Player player, CBPlayCard msg)
         {
-            if (m_whosTurn != player || m_isThisTrunPlayedCard)
+            if (m_whosTurn != player)
             {
                 Logger.LogError("{0}\t出牌，但不是他的回合，已禁止！", player.name);
+                return;
+            }
+
+            if (m_isThisTrunPlayedCard)
+            {
                 return;
             }
 
@@ -761,7 +766,8 @@ namespace RedStone.SOS
         void UpdateTurn()
         {
             if (!m_whosTurn.isAI
-                && m_whosTurnCountDown <= 0)
+                && m_whosTurnCountDown <= 0
+                && !m_isThisTrunPlayedCard)
             {
                 RandomPlayCard();
             }
