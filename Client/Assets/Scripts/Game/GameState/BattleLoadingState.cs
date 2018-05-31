@@ -22,6 +22,7 @@ namespace RedStone
 
         public override void Leave()
         {
+
         }
 
         public override void Update()

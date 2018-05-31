@@ -34,8 +34,9 @@ namespace RedStone
 
         private void InitForClient()
         {
-            forClient.Init(NetConfig.LISTENER_IP, NetConfig.LISTENER_PORT);
-            Logger.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(forClient.server.address));
+            forClient.Init("0.0.0.0", NetConfig.LISTENER_PORT);
+            var addr = NetTool.GetAddress("0.0.0.0", NetConfig.LISTENER_PORT);
+            Logger.LogInfo("初始化网络监听（客户端） [{0}]".FormatStr(addr));
         }
     }
 }

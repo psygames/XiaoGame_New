@@ -25,7 +25,7 @@ namespace RedStone
         private void InitMainServer()
         {
             main.Init(GameManager.instance.serverAddress, 8730);
-            Debug.Log("初始化网络连接（主服） [{0}]".FormatStr(main.socket.address));
+            Logger.Log("初始化网络连接（主服） [{0}]".FormatStr(main.socket.address));
         }
 
         public void Close()

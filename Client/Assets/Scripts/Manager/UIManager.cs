@@ -55,7 +55,6 @@ namespace RedStone
 
         public void Unload<T>() where T : ViewBase
         {
-            //TODO: Unload Not Clear
             m_stack.Clear();
             var view = GetView<T>();
             if (view == null)
@@ -82,18 +81,19 @@ namespace RedStone
             m_prefabs.Add(name, prefabPath);
         }
 
-        private ViewBase GetView<T>()
+        public ViewBase GetView<T>()
         {
-            return m_views[typeof(T).ToString()];
+            ViewBase view = null;
+            m_views.TryGetValue(typeof(T).ToString(), out view);
+            return view;
         }
 
         public void Show<T>()
         {
-            Debug.Log("show view: " + typeof(T));
             string name = typeof(T).ToString();
             if (GetView<T>().isBottom)
             {
-                CloseAll();
+                PopStackAll();
             }
             UIContent content = new UIContent(name);
             m_stack.Push(content);
@@ -107,13 +107,22 @@ namespace RedStone
             m_views[name].OnOpen();
         }
 
-        public void CloseAll()
+        private void PopStackAll()
         {
             while (m_stack.Count > 0)
             {
                 UIContent content = m_stack.Pop() as UIContent;
                 m_views[content.name].gameObject.SetActive(false);
                 m_views[content.name].OnClose();
+            }
+        }
+
+        public void CloseAll()
+        {
+            foreach (var view in m_views)
+            {
+                view.Value.gameObject.SetActive(false);
+                view.Value.OnClose();
             }
         }
 

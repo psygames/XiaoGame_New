@@ -47,7 +47,7 @@ namespace RedStone
             m_isMatching = false;
             RefreshUI();
             //TODO: Match Success Effect
-            Debug.Log("Match Success!!!");
+            Logger.Log("Match Success!!!");
         }
 
         void OnPlayerInfoUpdate()

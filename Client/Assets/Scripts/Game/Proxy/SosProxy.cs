@@ -138,6 +138,7 @@ namespace RedStone
 
         private void OnTimeout()
         {
+            Logger.LogError("Battle Server Timeout!!!");
             SendEvent(EventDef.SOS.HeartbeatTimeout);
             Reconnect();
         }
@@ -154,6 +155,7 @@ namespace RedStone
                     room.SetState(0, rep.RoomState, 0);
                     MessageBox.Show("房间已解散", "点击确认，退出房间！", MessageBoxStyle.OK, (res) =>
                     {
+                        GF.GetProxy<HallProxy>().CancelReconnect(1,1);
                         GF.ChangeState<HallState>();
                     });
                     return;
@@ -218,8 +220,7 @@ namespace RedStone
             msg.Content = content;
             SendMessage(msg);
         }
-
-        // On Network Message
+        
         void OnJoined(CBJoinBattleReply msg)
         {
             Toast.instance.ShowNormal("加入战场成功！");

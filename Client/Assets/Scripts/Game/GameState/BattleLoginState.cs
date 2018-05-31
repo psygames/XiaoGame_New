@@ -24,13 +24,21 @@ namespace RedStone
             else
             {
                 GF.GetProxy<SosProxy>().Connect();
-                
+
             }
         }
 
         public override void Leave()
         {
-
+            if (GF.GetProxy<SosProxy>().room.state == Data.SOS.RoomData.State.Dismiss)
+            {
+                GF.GetProxy<SosProxy>().Close();
+                if (UIManager.instance.GetView<BattleView>() != null)
+                {
+                    UIManager.instance.Unload<BattleView>();
+                    UIManager.instance.CloseAll();
+                }
+            }
         }
 
 
