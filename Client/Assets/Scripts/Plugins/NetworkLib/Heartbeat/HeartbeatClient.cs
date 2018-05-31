@@ -12,6 +12,7 @@ namespace NetworkLib
         private Timer m_timerCheckTimeout = null;
         private ClientBase m_client = null;
         private float m_timeoutDuration;
+        private float m_sendInterval;
 
         public bool isTimeout { get; protected set; }
         public Action onTimeout { get; set; }
@@ -19,15 +20,30 @@ namespace NetworkLib
         public HeartbeatClient(float interval, float timeout, ClientBase client)
         {
             m_timeoutDuration = timeout;
+            m_sendInterval = interval;
             m_client = client;
 
             m_timerHeartbeat = new Timer(new TimerCallback(OnTimerHeartbeatCallback));
-            m_timerHeartbeat.Change(0, (int)(interval * 1000));
-
             m_timerCheckTimeout = new Timer(new TimerCallback(OnTimerCheckTimeoutCallback));
-            m_timerCheckTimeout.Change(0, (int)(timeout * 1000 * 0.5f));
         }
 
+
+        public void Start()
+        {
+            m_heartbeatNumber = 1;
+            isTimeout = false;
+            m_heartbeatReplyTime = time;
+
+            m_timerHeartbeat.Change(0, (int)(m_sendInterval * 1000));
+            m_timerCheckTimeout.Change(0, (int)(m_timeoutDuration * 1000 * 0.5f));
+        }
+
+
+        public void Stop()
+        {
+            m_timerHeartbeat.Change(-1, -1);
+            m_timerCheckTimeout.Change(-1, -1);
+        }
 
         public void Dispose()
         {

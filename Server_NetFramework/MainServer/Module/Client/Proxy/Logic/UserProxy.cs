@@ -116,5 +116,20 @@ namespace RedStone
         {
             return m_clientHandles[GetData(uid).sessionID];
         }
+
+
+        public void InfoSync(long uid)
+        {
+            var info = GetProxy<UserDaoProxy>().GetUserDB(uid);
+            CMPlayerInfoSync msg = new CMPlayerInfoSync();
+            msg.Info = new PlayerInfo();
+            msg.Info.Uid = info.uid;
+            msg.Info.Name = info.name;
+            msg.Info.Level = info.level;
+            msg.Info.Exp = info.exp;
+            msg.Info.Gold = info.gold;
+            var user = GetProxy<UserProxy>().GetData(uid);
+            SendMessage(user.sessionID, msg);
+        }
     }
 }

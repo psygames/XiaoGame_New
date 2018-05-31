@@ -67,6 +67,12 @@ namespace RedStone
             }
             while (u.exp < 0)
             {
+                if (u.level <= 1)
+                {
+                    u.exp = 0;
+                    break;
+                }
+
                 u.level--;
                 levelUpExp = GetLevelUpExp(u.level);
                 u.exp += levelUpExp;

@@ -63,6 +63,11 @@ namespace RedStone.SOS
             return m_players.FirstOrDefault(a => a.id == playerID);
         }
 
+        public List<Player> GetPlayers()
+        {
+            return m_players;
+        }
+
         public Card GetCard(int cardID)
         {
             return m_cardMgr.allCards.FirstOrDefault(a => a.id == cardID);
@@ -152,6 +157,17 @@ namespace RedStone.SOS
                     winner = p;
                 }
             }
+
+            winner.AddScore(70);
+            foreach (var p in m_players)
+            {
+                if (p.state != Player.State.Out && p.handCards.Count > 0)
+                {
+                    p.AddScore(30);
+                }
+            }
+
+
             SendResult(winner);
             state = State.End;
             RoomSync();
@@ -414,6 +430,7 @@ namespace RedStone.SOS
                 msg.TargetID = target.id;
                 if (from.oneCard.point > target.oneCard.point)
                 {
+                    from.AddScore(30);
                     PlayerOut(target);
                     msg.Result = 1;
                 }
@@ -439,6 +456,7 @@ namespace RedStone.SOS
                 if (m_cardMgr.isEmpty || isOut)
                 {
                     PlayerOut(target);
+                    from.AddScore(30);
                 }
                 else
                 {

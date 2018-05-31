@@ -10,7 +10,7 @@
   <LastAuthor>Kimi</LastAuthor>
   <Created>2006-09-16T00:00:00Z</Created>
   <LastSaved>2017-06-29T03:35:49Z</LastSaved>
-  <Version>16.00</Version>
+  <Version>14.00</Version>
  </DocumentProperties>
  <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <KSOProductBuildVer dt:dt="string">2052-10.1.0.6065</KSOProductBuildVer>
@@ -64,10 +64,6 @@
   <Style ss:ID="s69">
    <Font ss:FontName="宋体" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
    <NumberFormat/>
-  </Style>
-  <Style ss:ID="s70">
-   <Alignment ss:Vertical="Center"/>
-   <Font ss:FontName="Arial Unicode MS" x:Family="Swiss" ss:Color="#000000"/>
   </Style>
  </Styles>
  <Worksheet ss:Name="TableSosCard">
@@ -182,7 +178,7 @@
     <Cell ss:StyleID="s69"><Data ss:Type="Number">1</Data></Cell>
     <Cell><Data ss:Type="Number">8</Data></Cell>
     <Cell ss:StyleID="s64"><Data ss:Type="String">交换</Data></Cell>
-    <Cell ss:StyleID="s70"><Data ss:Type="String">sos_card_venus</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">sos_card_venus</Data></Cell>
     <Cell><Data ss:Type="Number">2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -226,7 +222,7 @@
    <SplitHorizontal>3</SplitHorizontal>
    <TopRowBottomPane>3</TopRowBottomPane>
    <SplitVertical>3</SplitVertical>
-   <LeftColumnRightPane>3</LeftColumnRightPane>
+   <LeftColumnRightPane>4</LeftColumnRightPane>
    <ActivePane>0</ActivePane>
    <Panes>
     <Pane>
@@ -242,8 +238,8 @@
     </Pane>
     <Pane>
      <Number>0</Number>
-     <ActiveRow>8</ActiveRow>
-     <ActiveCol>2</ActiveCol>
+     <ActiveRow>15</ActiveRow>
+     <ActiveCol>7</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>

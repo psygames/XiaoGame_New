@@ -83,10 +83,12 @@ namespace RedStone
         {
             MessageBox.Show("退出游戏", "确定退出游戏吗？", MessageBoxStyle.OKCancelClose, (res) =>
                {
-                   if (Application.isEditor && UnityEditor.EditorApplication.isPlaying)
+#if UNITY_EDITOR
+                   if (UnityEditor.EditorApplication.isPlaying)
                        UnityEditor.EditorApplication.isPlaying = false;
-                   else
-                       Application.Quit();
+#else
+                   Application.Quit();
+#endif
                });
         }
     }

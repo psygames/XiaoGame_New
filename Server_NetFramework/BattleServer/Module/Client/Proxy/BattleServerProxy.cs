@@ -85,6 +85,7 @@ namespace RedStone
         private void OnRoomDismiss(int roomID)
         {
             Logger.LogInfo("房间销毁 【{0}】", roomID);
+            GetProxy<MainServerProxy>().BattleEnd(roomID);
             m_pvlLogics.Remove(roomID);
             GetProxy<RoomProxy>().RemoveRoom(roomID);
         }

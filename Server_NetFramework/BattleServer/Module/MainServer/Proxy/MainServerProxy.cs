@@ -53,5 +53,23 @@ namespace RedStone
             }
             SendMessage(rep);
         }
+
+        public void BattleEnd(int roomID)
+        {
+            Message.BMBattleResult msg = new Message.BMBattleResult();
+            msg.RoomID = roomID;
+            foreach (var p in GetProxy<BattleServerProxy>().GetSosLogic(roomID).GetPlayers())
+            {
+                var pinfo = new Message.BMBattleResultUserInfo();
+                pinfo.PlayerName = p.name;
+                pinfo.PlayerID = p.id;
+                pinfo.Uid = p.uid;
+                pinfo.IsAI = p.isAI;
+                pinfo.IsOut = p.state == SOS.Player.State.Out;
+                pinfo.Score = p.score;
+                msg.RankUsers.Add(pinfo);
+            }
+            SendMessage(msg);
+        }
     }
 }

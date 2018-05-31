@@ -21,9 +21,19 @@ namespace NetworkLib
             m_server = server;
 
             m_timerCheckTimeout = new Timer(new TimerCallback(OnTimerCheckTimeoutCallback));
-            m_timerCheckTimeout.Change(0, (int)(timeout * 1000 * 0.5f));
         }
 
+        public void Start()
+        {
+            m_sessionHeartbeatTime.Clear();
+            m_timeoutSessions.Clear();
+            m_timerCheckTimeout.Change(0, (int)(m_timeoutDuration * 1000 * 0.5f));
+        }
+
+        public void Stop()
+        {
+            m_timerCheckTimeout.Change(-1, -1);
+        }
 
         public void Dispose()
         {

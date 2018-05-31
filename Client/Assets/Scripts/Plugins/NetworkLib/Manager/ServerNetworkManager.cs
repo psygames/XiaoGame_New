@@ -51,11 +51,13 @@ namespace NetworkLib
         public void Start()
         {
             m_server.Start();
+            m_heartbeat.Start();
         }
 
         public void Stop()
         {
             m_server.Stop();
+            m_heartbeat.Stop();
         }
 
         protected virtual void OnConnected(string sessionID)

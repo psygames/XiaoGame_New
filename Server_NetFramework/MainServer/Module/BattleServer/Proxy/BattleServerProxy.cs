@@ -69,26 +69,13 @@ namespace RedStone
                 int incrGold = uinfo.Score * 10;
                 int incrExp = uinfo.Score - 50;
                 GetProxy<UserDaoProxy>().CalReuslt(uinfo.Uid, incrGold, incrExp);
-                InfoSync(uinfo.Uid);
+                GetProxy<UserProxy>().InfoSync(uinfo.Uid);
             }
 
             //REMOVE ROOM
             var bs = GetData(sessionID);
             bs.RemoveRoom(msg.RoomID);
             Logger.Log($"战场（{bs.name}) 房间（{msg.RoomID}）战斗结束，移除房间列表！");
-        }
-
-        void InfoSync(long uid)
-        {
-            var info = GetProxy<UserDaoProxy>().GetUserDB(uid);
-            CMPlayerInfoSync msg = new CMPlayerInfoSync();
-            msg.Info.Uid = info.uid;
-            msg.Info.Name = info.name;
-            msg.Info.Level = info.level;
-            msg.Info.Exp = info.exp;
-            msg.Info.Gold = info.gold;
-            var user = GetProxy<UserProxy>().GetData(uid);
-            SendMessage(user.sessionID, msg);
         }
 
         public void CreateRoom(string battleSessionID, List<long> users, Action<RoomData> createdCallback)

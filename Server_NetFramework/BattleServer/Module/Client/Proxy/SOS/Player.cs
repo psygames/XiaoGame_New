@@ -21,6 +21,8 @@ namespace RedStone.SOS
         public List<Card> handCards { get { return m_handCards; } }
         public Card oneCard { get { return m_handCards.Count > 0 ? m_handCards[0] : null; } }
 
+        public int score { get; private set; }
+
         public void Init(UserData user, int id)
         {
             this.uid = user.uid;
@@ -32,9 +34,9 @@ namespace RedStone.SOS
             m_handCards.Clear();
         }
 
-        public void IncrGold(int count)
+        public void AddScore(int score)
         {
-            gold += count;
+            this.score += score;
         }
 
         public void SetState(State state)

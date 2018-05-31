@@ -105,12 +105,14 @@ namespace NetworkLib
 
         protected virtual void OnConnected()
         {
+            m_heartbeat.Start();
             if (onConnected != null)
                 onConnected.Invoke();
         }
 
         protected virtual void OnClosed()
         {
+            m_heartbeat.Stop();
             if (onClosed != null)
                 onClosed.Invoke();
         }
