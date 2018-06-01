@@ -27,7 +27,7 @@ namespace RedStone
             if (m_clientHandles.ContainsKey(sessionID))
             {
                 //TODO:这里需要考虑心跳超时后的，断连，数据清理，Session缓存交换，
-                Logger.LogError($"{sessionID} is timeout!!!");
+                Logger.LogError($"{sessionID} heartbeat timeout!!!");
             }
         }
 
@@ -129,7 +129,8 @@ namespace RedStone
             msg.Info.Exp = info.exp;
             msg.Info.Gold = info.gold;
             var user = GetProxy<UserProxy>().GetData(uid);
-            SendMessage(user.sessionID, msg);
+            if (user != null)
+                SendMessage(user.sessionID, msg);
         }
     }
 }

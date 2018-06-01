@@ -18,8 +18,14 @@ namespace RedStone
             base.OnInit();
             network.onConnected = OnConnected;
             network.onClosed = OnClosed;
+            network.heartbeat.onTimeout = OnTimeout;
             RegisterMessage<CBLoginRequest>(OnLogin);
             RegisterMessage<CBReconnectRequest>(OnReconnect);
+        }
+
+        private void OnTimeout(string sessionID)
+        {
+            Logger.LogError($"{sessionID} heartbeat timeout!!!");
         }
 
         private void OnConnected(string sessionID)
@@ -65,6 +71,8 @@ namespace RedStone
 
         void OnReconnect(string sessionID, CBReconnectRequest msg)
         {
+            Logger.Log($"{sessionID} Reconnect with token: {msg.Token} ");
+
             UserData user = null;
             if (!m_users.TryGetValue(msg.Token, out user))
             {

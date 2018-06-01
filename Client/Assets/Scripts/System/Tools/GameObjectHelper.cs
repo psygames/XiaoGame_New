@@ -201,21 +201,23 @@ public class GameObjectHelper
         return hp * 0.001f;
     }
 
-    public static T AddChild<T>(Transform parent, T prefab) where T : MonoBehaviour
+    public static T AddChild<T>(Transform parent, T prefab, bool keepPos = false) where T : MonoBehaviour
     {
         T t = GameObject.Instantiate(prefab) as T;
-        t.transform.SetParent(parent);
-        NormalizedTransform(t.gameObject);
+        t.transform.SetParent(parent, keepPos);
+        if(!keepPos)
+            NormalizedTransform(t.gameObject);
 
         return t;
     }
 
-    public static T AddChildAsync<T>(Transform parent, string prefabPath, Action<T> callback) where T : MonoBehaviour
+    public static T AddChildAsync<T>(Transform parent, string prefabPath, Action<T> callback, bool keepPos = false) where T : MonoBehaviour
     {
         var prefab = Resources.Load(prefabPath);
         T t = GameObject.Instantiate(prefab) as T;
-        t.transform.SetParent(parent);
-        NormalizedTransform(t.gameObject);
+        t.transform.SetParent(parent, keepPos);
+        if(!keepPos)
+            NormalizedTransform(t.gameObject);
         callback.Invoke(t);
         return t;
     }

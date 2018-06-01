@@ -614,16 +614,20 @@ namespace RedStone.SOS
             Logger.LogError("-------------------  " + title + "  --------------------");
             foreach (var p in m_players)
             {
+                string cardStr = "";
                 if (p.handCards.Count > 0)
                 {
-                    string cardStr = "";
                     foreach (var card in p.handCards)
                         cardStr += card.table.effect + "|";
                     cardStr = cardStr.TrimEnd('|');
-                    Logger.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), cardStr.PadRight(10), p.state);
                 }
                 else
-                    Logger.LogError("{0}\t{1}\t{2}\n", p.name.PadRight(12), "空".PadRight(10), p.state);
+                {
+                    cardStr = "空";
+                }
+                Logger.LogError("{0}\t{1}\t{2}\t{3}\n"
+                    , p.name.PadRight(12), cardStr.PadRight(10)
+                    , p.state.ToString().PadRight(10), p.score);
             }
             Logger.LogError("---------------------------------------------------");
         }
@@ -701,14 +705,19 @@ namespace RedStone.SOS
             Dismiss = 4,
         }
 
+        private bool CanSendTo(Player player)
+        {
+            return player != null && !player.isAI && player.user.state != UserState.Offline
+                    && !string.IsNullOrEmpty(player.user.sessionID)
+                    && battleProxy.network.server.GetSession(player.user.sessionID) != null;
+        }
+
         public void SendToAll<T>(T msg, int[] exceptIds = null)
         {
-            // Debug.Log("Send {0} to all ", msg.GetType().Name);
             foreach (var p in m_players)
             {
-                if (exceptIds != null && exceptIds.Contains(p.id))
-                    continue;
-                if (p.isAI || string.IsNullOrEmpty(p.user.sessionID))
+                if (exceptIds != null && exceptIds.Contains(p.id)
+                    || !CanSendTo(p))
                     continue;
                 battleProxy.SendMessage(p.user.sessionID, msg);
             }
@@ -716,9 +725,8 @@ namespace RedStone.SOS
 
         public void SendTo<T>(int playerId, T msg)
         {
-            // Debug.Log("Send {0} to {1} ", msg.GetType().Name, playerId);
             var p = m_players.First(a => a.id == playerId);
-            if (p.isAI)
+            if (!CanSendTo(p))
                 return;
             battleProxy.SendMessage(p.user.sessionID, msg);
         }

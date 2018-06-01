@@ -33,14 +33,14 @@ namespace RedStone
         {
             var user = usrDao.AsQueryable().FirstOrDefault(a => a.deviceID == deviceID);
             if (user == null)
-                CreatUser(deviceID);
+                user = CreatUser(deviceID);
 
             user.isOnline = true;
             Update(user.uid, user);
             return user;
         }
 
-        private void CreatUser(string deviceID)
+        private UserDB CreatUser(string deviceID)
         {
             var user = new UserDB();
             user.uid = GetCounter("UserDB");
@@ -51,6 +51,7 @@ namespace RedStone
             user.gold = 0;
             user.isOnline = false;
             usrDao.InsertOne(user);
+            return user;
         }
 
         public void CalReuslt(long uid, int incrGold, int incrExp)

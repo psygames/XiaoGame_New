@@ -3,6 +3,8 @@ using System.Timers;
 using Plugins;
 using Core;
 using System;
+using System.IO;
+using System.Diagnostics;
 
 namespace RedStone
 {
@@ -14,6 +16,9 @@ namespace RedStone
         public void Start()
         {
             eventManager = new EventManager();
+
+            ConfigConsole();
+
             NetConfig.Init();
             TaskManger.CreateInstance().Init();
             TableManager.CreateInstance();
@@ -51,5 +56,14 @@ namespace RedStone
             TaskManger.instance.Update();
         }
 
+
+        private void ConfigConsole()
+        {
+            Process.GetCurrentProcess().OutputDataReceived += 
+            (sender, evt) =>
+            {
+
+            };
+        }
     }
 }

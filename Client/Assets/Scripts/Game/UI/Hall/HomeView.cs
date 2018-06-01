@@ -82,14 +82,16 @@ namespace RedStone
         void OnClickExit()
         {
             MessageBox.Show("退出游戏", "确定退出游戏吗？", MessageBoxStyle.OKCancelClose, (res) =>
-               {
+            {
+                if (res.result != MessageBoxResultType.OK)
+                    return;
 #if UNITY_EDITOR
-                   if (UnityEditor.EditorApplication.isPlaying)
-                       UnityEditor.EditorApplication.isPlaying = false;
+                if (UnityEditor.EditorApplication.isPlaying)
+                    UnityEditor.EditorApplication.isPlaying = false;
 #else
-                   Application.Quit();
+                Application.Quit();
 #endif
-               });
+            });
         }
     }
 }

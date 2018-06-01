@@ -75,7 +75,7 @@ namespace RedStone
             {
                 var user = GetProxy<UserProxy>().GetUserBySession(sessionID);
                 if (user == null)
-                    Logger.LogError($"User Msg Handle Failed : {user.name}");
+                    Logger.LogError($"User Msg Handle Failed , session: {sessionID}, token: {token}");
                 else if (token == user.token)
                     action(msg);
             });
