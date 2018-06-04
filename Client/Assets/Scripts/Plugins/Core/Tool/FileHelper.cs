@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,8 +21,6 @@ namespace Core
 						fi[i].Delete();
 				}
 			}
-
-			Console.WriteLine("clear folder succeed :" + folderPath);
 		}
 
 		public static string ReadText(String path)

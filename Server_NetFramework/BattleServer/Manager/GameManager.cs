@@ -17,7 +17,7 @@ namespace RedStone
         {
             eventManager = new EventManager();
 
-            ConfigConsole();
+            ExceptionHandle();
 
             NetConfig.Init();
             TaskManger.CreateInstance().Init();
@@ -57,13 +57,15 @@ namespace RedStone
         }
 
 
-        private void ConfigConsole()
+        private void ExceptionHandle()
         {
-            Process.GetCurrentProcess().OutputDataReceived += 
-            (sender, evt) =>
-            {
+            AppDomain.CurrentDomain.UnhandledException += UnhandledException;
+        }
 
-            };
+        private void UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Exception excp = (Exception)e.ExceptionObject;
+            Logger.Log(excp.Message + "\n" + excp.StackTrace);
         }
     }
 }
