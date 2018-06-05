@@ -40,11 +40,19 @@ public static class Logger
             Console.WriteLine(str, parms);
             Console.ForegroundColor = lastColor;
 
-            if (newLogAction != null)
-            {
-                newLogAction.Invoke(level, str.FormatStr(parms));
-            }
+            WriteToFile(str.FormatStr(parms), level);
         }
+    }
+
+    private static void WriteToFile(string str, LogLevel level)
+    {
+        string ext = System.IO.Path.GetExtension(saveFilePath);
+        string dir = System.IO.Path.GetDirectoryName(saveFilePath);
+        string path = System.IO.Path.GetFileNameWithoutExtension(saveFilePath);
+        string dateStr = DateTime.Now.ToString("_yyyy_MM_dd");
+        path = System.IO.Path.Combine(dir, path) + dateStr + ext;
+        string spline = DateTime.Now.ToString("-> hh:mm:ss.fff \r\n");
+        Core.FileHelper.WriteText(spline + str + "\r\n\r\n", path, true);
     }
 
     private static ConsoleColor GetLogLevelColor(LogLevel level)
@@ -59,8 +67,13 @@ public static class Logger
             return ConsoleColor.White;
     }
 
-
-    public static Action<LogLevel, string> newLogAction = null;
+    private static string saveFilePath = "";
+    private static bool saveFileSplitWithDate = false;
+    public static void SetFilePath(string _filePath, bool dateSplit = true)
+    {
+        saveFilePath = _filePath;
+        saveFileSplitWithDate = dateSplit;
+    }
 }
 
 public enum LogLevel
