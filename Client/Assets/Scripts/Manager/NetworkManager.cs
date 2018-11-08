@@ -58,24 +58,35 @@ namespace RedStone
 
             }
 
+            private object m_lockTag = new object();
+            private Queue<object> m_msgQueue = new Queue<object>();
+            private bool m_triggerConnected = false;
+            private bool m_triggerClosed = false;
+
             protected override void OnReceivedHandle(object data)
             {
-                m_msgQueue.Enqueue(data);
+                lock (m_lockTag)
+                {
+                    m_msgQueue.Enqueue(data);
+                }
             }
 
-            private bool m_triggerConnected = false;
             protected override void OnConnected()
             {
-                m_triggerConnected = true;
+                lock (m_lockTag)
+                {
+                    m_triggerConnected = true;
+                }
             }
 
-            private bool m_triggerClosed = false;
             protected override void OnClosed()
             {
-                m_triggerClosed = true;
+                lock (m_lockTag)
+                {
+                    m_triggerClosed = true;
+                }
             }
 
-            private Queue<object> m_msgQueue = new Queue<object>();
 
             public void Update()
             {
@@ -84,22 +95,25 @@ namespace RedStone
 
             private void HandlePoolMsg()
             {
-                while (m_msgQueue.Count > 0)
+                lock (m_lockTag)
                 {
-                    var obj = m_msgQueue.Dequeue();
-                    m_eventMgr.Send(obj.GetType().Name, obj);
-                }
+                    while (m_msgQueue.Count > 0)
+                    {
+                        var obj = m_msgQueue.Dequeue();
+                        m_eventMgr.Send(obj.GetType().Name, obj);
+                    }
 
-                if (m_triggerConnected)
-                {
-                    base.OnConnected();
-                    m_triggerConnected = false;
-                }
+                    if (m_triggerConnected)
+                    {
+                        base.OnConnected();
+                        m_triggerConnected = false;
+                    }
 
-                if (m_triggerClosed)
-                {
-                    base.OnClosed();
-                    m_triggerClosed = false;
+                    if (m_triggerClosed)
+                    {
+                        base.OnClosed();
+                        m_triggerClosed = false;
+                    }
                 }
             }
         }
